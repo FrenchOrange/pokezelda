@@ -1,0 +1,42 @@
+SpriteMons:
+; entries correspond to SPRITE_* constants past SPRITE_POKEMON
+	table_width 1, SpriteMons
+	db UNOWN
+	db GEODUDE
+	db PERSIAN
+	db WEEDLE
+	db SHELLDER
+	db ODDISH
+	db GENGAR
+	db ZUBAT
+	db MAGIKARP
+	db SQUIRTLE
+	db TOGEPI
+	db BUTTERFREE
+	db DIGLETT
+	db POLIWAG
+	db PIKACHU
+	db CLEFAIRY
+	db CHARMANDER
+	db POLIWRATH
+	db STARMIE
+	db BULBASAUR
+	db JIGGLYPUFF
+	db GRIMER
+	db EKANS
+	db PARAS
+	db TENTACOOL
+	db MOLTRES
+	db MACHOP
+	db VOLTORB
+	db SLOWBRO
+	db RHYDON
+	db PIDGEY
+	db MILTANK
+	db GYARADOS
+	db LUGIA
+	db HO_OH
+	db SLOWPOKE
+	db GROWLITHE
+	db JYNX
+	assert_table_length NUM_POKEMON_SPRITES

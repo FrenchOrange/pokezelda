@@ -1,0 +1,319 @@
+
+NOTES:
+* Heabutt tree and Rock Smash 'mon now have more varied levels, and the encounter rates have been tweaked as to make Pineco, Aipom, and Shuckle more common.
+* Geodude, Kingler, and Slugma have been added to the Rock Smash Pokémon encounter table.
+* The Goldenrod Game Corner Prize Pokémon were changed to Abra (level 10 / 200 coins), Clefairy (level 12 / 800 coins), and Pikachu (level 12 / 1500 coins).
+* The Celadon Game Corner Prize Pokémon were changed to Eevee (level 15 / 6666 coins), Larvitar (level 18 / 8888 coins), and Porygon (level 20 / 9999 coins).
+* The Kanto legendary birds are no longer set to have a flee value. So don't worry about that!
+
+
+LOCATIONS:
+
+#001
+Bulbasaur
+Gift from Melanie in Cerulean City's Pokémon Center (if high friendship)
+
+#004
+Charmander
+Gift from Damian on Route 24 (if caught over 50 Pokémon)
+
+#007
+Squirtle
+Gift from the officer in Vermilion City (after returning Machine Part)
+
+#019
+Rattata
+Made less frequent
+Removed from Mt.Mortar (1F Inside)
+
+#020
+Raticate
+Removed from Route 38/39 (Day/Morn)
+Removed from Mt.Mortar 2F/B1F
+
+#037
+Vulpix
+Added to Burned Tower 1F and Route 8
+
+#039
+Jigglypuff
+Removed from Route 34.
+
+#041
+Zubat
+Made more common (Burned Tower 1F, Nite)
+Added to Sprout Tower and Tin Tower (Nite)
+Removed from a handful of places
+
+#042
+Golbat
+Made less frequent
+
+#043
+Oddish
+Added to Route 33/35 (Nite)
+
+#048
+Venonat
+Added to Route 43 (Morn) and Route 44 (Morn/Day)
+
+#049
+Venomoth
+Added to the Bug Catching Contest as a rare find
+Removed from Route 9/10
+
+#056
+Mankey
+Added to Route 45 and Route 9
+
+#057
+Primeape
+Added to Route 45 (Nite) and Route 9
+
+#063
+Abra
+Removed from Route 34/35 (Nite)
+
+#074
+Geodude
+Added as a potential Rock Smash encounter
+
+#077
+Geodude
+Added to Route 17
+
+#081
+Magnemite
+Moved from Route 38/39 to Route 34 (replaces Jigglypuff)
+Added to Route 10 (replaces Marowak and Venomoth)
+
+#088
+Grimer
+Added to Route 34 (Surf)
+
+#090
+Shellder
+Added to Whirl Island (Nite), and Olivine/Vermilion Port (Surf)
+
+#091
+Cloyster
+Added to Whirl Island (Nite)
+
+#092
+Gastly
+Added to Rock Tunnel (Nite)
+
+#099
+Kingler
+Added as a potential Rock Smash encounter
+
+#105
+Marowak
+Removed from Route 9/10
+
+#108
+Lickitung
+Made less frequent (Route 44, Morn/Day)
+
+#109
+Koffing
+Added to Route 7/8 (Day, replaces Kadabra)
+
+#110
+Weezing
+Removed from Burned Tower
+
+#116
+Horsea
+Added to Dragon Den B1F (Surf)
+
+#120
+Staryu
+Added to Whirl Island (Nite)
+
+#121
+Starmie
+Added to Whirl Island (Nite)
+
+#121
+Mr.Mime
+Added to Route 11
+
+#125
+Electabuzz
+Added to Route 43 (replaces Ratticate)
+
+#126
+Magmar
+Moved from Mt.Silver to Burned Tower
+Added to Victory Road
+
+#126
+Tauros
+Added to Route 14/15/16
+
+#138
+Omanyte
+Gift from a Scientist in the Pewter City Museum
+
+#140
+Kabuto
+Gift from an ex-Safari Zone worker in Fuchsia City
+
+#144
+Articuno
+Added to Seafoam Islands B4F (available after 16 badges)
+
+#145
+Zapdos
+Added to Kanto Power Plant (available after 16 badges)
+
+#146
+Moltres
+Added to Victory Road 2F (available after 16 badges)
+
+#150
+Mewtwo
+Added to Cerulean Cave B1F (available after 16 badges)
+
+#151
+Mew
+(It's a secret to everybody!)
+
+
+
+
+#161
+Sentret
+Added to Route 44 (Morn/Day)
+
+#163
+Hoothoot
+Added to Route 38/39 (Nite)
+
+#165
+Ledyba
+Added to Route 30 (Day)
+
+#167
+Spinarak
+Added to Route 29 (Nite)
+
+#178
+Xatu
+Added to Ruins of Alph (outside)
+
+#179
+Mareep
+Added to Route 38/39 (Morn/Day, replaces Magnemite)
+
+#180
+Flaaffy
+Added to Route 38/39 (Morn/Day, replaces Raticate)
+
+#188
+Skiploom
+Added to Route 36 (Morn)
+
+#190
+Aipom
+Made more common (headbutt trees)
+
+#191
+Sunkern
+Made more common (National Park, Day)
+Added to National Park (Morn)
+
+#193
+Yanma
+Made more common (Route 35 Morn/Day, removed from Nite)
+
+#198
+Murkrow
+Added to Route 34/35/38/39/42 (Nite)
+
+#200
+Misdreavus
+Added to Burned Tower (Nite), and Route 37/42 (Nite)
+Made more common (Mt.Silver, Nite)
+
+#202
+Wobbuffet
+Made more common (Dark Cave)
+Added to Mt.Mortar (1F Inside/2F/B1F, replaces Rattata/Raticate)
+
+#203
+Girafarig
+Added to Route 43 (Morn/Day) and Ruins of Alph (outside)
+
+#204
+Pineco
+Made more common (headbutt trees)
+
+#206
+Dunsparce
+Made more common (Dark Cave)
+
+#207
+Gligar
+Made more common (Route 45 Nite)
+
+#211
+Qwilfish
+Added to Route 32 (Surf)
+
+#213
+Shuckle
+Made more common (Rock Smash boulders)
+
+#215
+Sneasel
+Added to Ice Path B2F (both) and Mt.Silver (Nite)
+
+#216
+Teddiursa
+Made more common (Dark Cave)
+
+#218
+Slugma
+Added as a potential Rock Smash encounter
+
+#221
+Piloswine
+Added to Ice Path B3F
+
+#223
+Remoraid
+Added to Route 41 (Surf)
+
+#225
+Delibird
+Added to Ice Path 1F (Morn/Day) and made more common (Nite)
+
+#228
+Houndour
+Added to Route 34/35 (Nite, replaces Abra), Route 39 (Nite, replaces Magnemite), and Route 42
+
+#232
+Donphan
+Added to Route 45 (Nite)
+
+#234
+Stantler
+Added to Route 37 (Day)
+
+#235
+Smeargle
+Added to Route 36 (Morn/Day)
+
+#236
+Tyrogue
+Added to Mt.Silver (Morn/Day)
+
+#246
+Larvitar
+Made more common (Mt.Silver)
+
+#251
+Celebi
+Restored GS Ball event (Ilex Forest)

@@ -52,5 +52,5 @@ OlivinePharmacySpeechHouse_MapEvents:
 
 	def_object_events
 	object_event  4,  3, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePharmacySpeechHouseTeacherScript, -1
-	object_event  8,  4, SPRITE_RHYDON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePharmacySpeechHouseRhydonScript, -1
+	object_event  8,  4, SPRITE_RHYDON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivinePharmacySpeechHouseRhydonScript, -1
 

@@ -1730,34 +1730,31 @@ LoadMobileAdapterPalette:
 	ret
 
 MobileTradeSpritesGFX:
-INCBIN "gfx/mobile/mobile_trade_sprites.2bpp.lz"
+	ret
 
 MobileTradeGFX:
-INCBIN "gfx/mobile/mobile_trade.2bpp.lz"
+	ret
 
 MobileTradeTilemapLZ:
-INCBIN "gfx/mobile/mobile_trade.tilemap.lz"
+	ret
 
 MobileTradeAttrmapLZ:
-INCBIN "gfx/mobile/mobile_trade.attrmap.lz"
-
-UnusedMobilePulsePalettes: ; unreferenced
-INCLUDE "gfx/mobile/unused_mobile_pulses.pal"
+	ret
 
 MobileTradeBGPalettes:
-INCLUDE "gfx/mobile/mobile_trade_bg.pal"
+	ret
 
 MobileTradeOB1Palettes:
-INCLUDE "gfx/mobile/mobile_trade_ob1.pal"
+	ret
 
 MobileTradeOB2Palettes:
-INCLUDE "gfx/mobile/mobile_trade_ob2.pal"
+	ret
 
 MobileCable1GFX:
-INCBIN "gfx/mobile/mobile_cable_1.2bpp"
+	ret
 
 MobileCable2GFX:
-INCBIN "gfx/mobile/mobile_cable_2.2bpp"
+	ret
 
 MobileAdapterPalettes:
-INCLUDE "gfx/mobile/mobile_adapters.pal"
+	ret

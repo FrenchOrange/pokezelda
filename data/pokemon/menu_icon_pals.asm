@@ -29,7 +29,7 @@ MonMenuIconPals:
 	icon_pals BROWN, GREEN ; FEAROW
 	icon_pals PINK, BROWN ; EKANS
 	icon_pals PINK, BROWN ; ARBOK
-	icon_pals BROWN, PINK ; PIKACHU
+	icon_pals RED, PINK ; PIKACHU
 	icon_pals RED, BROWN ; RAICHU
 	icon_pals BROWN, GREEN ; SANDSHREW
 	icon_pals BROWN, RED ; SANDSLASH
@@ -71,7 +71,7 @@ MonMenuIconPals:
 	icon_pals BROWN, BLUE ; KADABRA
 	icon_pals BROWN, GREEN ; ALAKAZAM
 	icon_pals BLUE, GREEN ; MACHOP
-	icon_pals PINK, GREEN ; MACHOKE
+	icon_pals BLUE, GREEN ; MACHOKE
 	icon_pals BLUE, GREEN ; MACHAMP
 	icon_pals GREEN, BROWN ; BELLSPROUT
 	icon_pals GREEN, BROWN ; WEEPINBELL
@@ -128,7 +128,7 @@ MonMenuIconPals:
 	icon_pals PINK, BLUE ; STARMIE
 	icon_pals PINK, GREEN ; MR__MIME
 	icon_pals GREEN, RED ; SCYTHER
-	icon_pals PINK, PINK ; JYNX
+	icon_pals RED, PINK ; JYNX
 	icon_pals BROWN, GREEN ; ELECTABUZZ
 	icon_pals RED, PINK ; MAGMAR
 	icon_pals BROWN, BLUE ; PINSIR
@@ -205,7 +205,7 @@ MonMenuIconPals:
 	icon_pals BLUE, PINK ; MURKROW
 	icon_pals PINK, BLUE ; SLOWKING
 	icon_pals BLUE, BROWN ; MISDREAVUS
-	icon_pals BLUE, BLUE ; UNOWN
+	icon_pals BROWN, BLUE ; UNOWN
 	icon_pals BLUE, PINK ; WOBBUFFET
 	icon_pals PINK, BLUE ; GIRAFARIG
 	icon_pals GREEN, RED ; PINECO
@@ -239,7 +239,7 @@ MonMenuIconPals:
 	icon_pals BLUE, RED ; DONPHAN
 	icon_pals PINK, BLUE ; PORYGON2
 	icon_pals BROWN, GREEN ; STANTLER
-	icon_pals BROWN, GREEN ; SMEARGLE
+	icon_pals GREEN, PINK ; SMEARGLE
 	icon_pals PINK, BLUE ; TYROGUE
 	icon_pals BROWN, BLUE ; HITMONTOP
 	icon_pals PINK, PINK ; SMOOCHUM
@@ -253,9 +253,9 @@ MonMenuIconPals:
 	icon_pals GREEN, GREEN ; LARVITAR
 	icon_pals BLUE, PINK ; PUPITAR
 	icon_pals GREEN, PINK ; TYRANITAR
-	icon_pals BLUE, PINK ; LUGIA
-	icon_pals RED, BROWN ; HO_OH
-	icon_pals GREEN, PINK ; CELEBI
+	icon_pals BLUE,   PINK   ; LUGIA
+	icon_pals RED,    BROWN  ; HO_OH
+	icon_pals GREEN,  PINK   ; CELEBI
 	assert_table_length NUM_POKEMON
 
 	icon_pals RED,    RED    ; 252

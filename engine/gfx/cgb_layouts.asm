@@ -467,10 +467,10 @@ _CGB_GSIntro:
 	ret
 
 .ShellderLaprasBGPalette:
-INCLUDE "gfx/intro/gs_shellder_lapras_bg.pal"
+	ret
 
 .ShellderLaprasOBPals:
-INCLUDE "gfx/intro/gs_shellder_lapras_ob.pal"
+	ret
 
 .JigglypuffPikachuScene:
 	ld de, wBGPals1
@@ -496,7 +496,6 @@ INCLUDE "gfx/intro/gs_shellder_lapras_ob.pal"
 	ret
 
 _CGB_BetaPoker:
-	ld hl, BetaPokerPals
 	ld de, wBGPals1
 	ld bc, 5 palettes
 	ld a, BANK(wBGPals1)
@@ -569,12 +568,10 @@ _CGB_Evolution:
 	ret
 
 _CGB_GSTitleScreen:
-	ld hl, UnusedGSTitleBGPals
 	ld de, wBGPals1
 	ld bc, 5 palettes
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
-	ld hl, UnusedGSTitleOBPals
 	ld de, wOBPals1
 	ld bc, 2 palettes
 	ld a, BANK(wOBPals1)
@@ -1080,4 +1077,4 @@ GS_CGB_MysteryGift: ; unreferenced
 	ret
 
 .MysteryGiftPalette:
-INCLUDE "gfx/mystery_gift/gs_mystery_gift.pal"
+	ret

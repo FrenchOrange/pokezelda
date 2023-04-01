@@ -21,7 +21,7 @@
 	const MAINMENUITEM_DEBUG_ROOM     ; 6
 
 MobileMenuGFX:
-INCBIN "gfx/mobile/mobile_menu.2bpp"
+	ret
 
 MainMenu:
 .loop

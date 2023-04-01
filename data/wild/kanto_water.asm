@@ -16,6 +16,20 @@ KantoWaterWildMons:
 	db 35, SEAKING
 	end_water_wildmons
 
+	def_water_wildmons SEAFOAM_ISLANDS_B3F
+	db 4 percent ; encounter rate
+	db 31, SEEL
+	db 33, SHELLDER
+	db 40, DEWGONG
+	end_water_wildmons
+
+	def_water_wildmons SEAFOAM_ISLANDS_B4F
+	db 4 percent ; encounter rate
+	db 31, SEEL
+	db 33, SHELLDER
+	db 40, DEWGONG
+	end_water_wildmons
+
 	def_water_wildmons TOHJO_FALLS
 	db 4 percent ; encounter rate
 	db 20, GOLDEEN

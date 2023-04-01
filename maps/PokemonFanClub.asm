@@ -3,8 +3,8 @@
 	const POKEMONFANCLUB_RECEPTIONIST
 	const POKEMONFANCLUB_CLEFAIRY_GUY
 	const POKEMONFANCLUB_TEACHER
-	const POKEMONFANCLUB_FAIRY
-	const POKEMONFANCLUB_ODDISH
+	const POKEMONFANCLUB_CLEFAIRY
+	const POKEMONFANCLUB_BAYLEEF
 
 PokemonFanClub_MapScripts:
 	def_scene_scripts
@@ -80,7 +80,7 @@ PokemonFanClubClefairyGuyScript:
 	waitsfx
 	giveitem LOST_ITEM
 	iffalse .NoRoom
-	disappear POKEMONFANCLUB_FAIRY
+	disappear POKEMONFANCLUB_CLEFAIRY
 	writetext PokemonFanClubPlayerReceivedDollText
 	playsound SFX_KEY_ITEM
 	waitsfx
@@ -316,4 +316,4 @@ PokemonFanClub_MapEvents:
 	object_event  4,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokemonFanClubClefairyGuyScript, -1
 	object_event  9,  2, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokemonFanClubTeacherScript, -1
 	object_event  4,  4, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, PokemonFanClubClefairyDollScript, EVENT_VERMILION_FAN_CLUB_DOLL
-	object_event  9,  3, SPRITE_ODDISH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PokemonFanClubBayleefScript, -1
+	object_event  9,  3, SPRITE_BAYLEEF, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PokemonFanClubBayleefScript, -1

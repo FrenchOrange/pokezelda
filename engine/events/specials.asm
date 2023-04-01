@@ -206,14 +206,6 @@ CardFlip:
 	call StartGameCornerGame
 	ret
 
-UnusedMemoryGame:
-	call CheckCoinsAndCoinCase
-	ret c
-	ld a, BANK(_MemoryGame)
-	ld hl, _MemoryGame
-	call StartGameCornerGame
-	ret
-
 StartGameCornerGame:
 	call FarQueueScript
 	call FadeToMenu

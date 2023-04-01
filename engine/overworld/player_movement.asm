@@ -781,6 +781,26 @@ ENDM
 
 .GetOutOfWater:
 	push bc
+	ld a, [wPlayerState]
+	cp PLAYER_SURF_PIKA
+	jr z, .PikachuPaletteCheck
+;.NormalPaletteCheck:
+	ld a, [wPlayerGender]
+	and a
+	jr nz, .Finish
+	ld a, (PAL_NPC_RED << 4)
+	ld d, a
+	farcall _SetPlayerPalette
+	jr .Finish
+
+.PikachuPaletteCheck:
+	ld a, [wPlayerGender]
+	and a
+	jr z, .Finish
+	ld a, (PAL_NPC_BLUE << 4)
+	ld d, a
+	farcall _SetPlayerPalette
+.Finish:
 	ld a, PLAYER_NORMAL
 	ld [wPlayerState], a
 	call UpdatePlayerSprite ; UpdateSprites

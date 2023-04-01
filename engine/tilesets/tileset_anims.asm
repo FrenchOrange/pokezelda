@@ -420,7 +420,7 @@ AnimateTorchTile:
 	ld a, [wTileAnimationTimer]
 	and %101
 
-; hl = [.FountainTileFramePointers + a * 2]
+; hl = [.TorchTileFramePointers + a * 2]
 	add a
 	add l
 	ld l, a

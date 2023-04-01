@@ -44,7 +44,7 @@ FontsExtra_SolidBlackGFX:
 INCBIN "gfx/font/black.1bpp"
 
 MobilePhoneTilesGFX:
-INCBIN "gfx/mobile/phone_tiles.2bpp"
+	ret
 
 MapEntryFrameGFX:
 INCBIN "gfx/frames/map_entry_sign.2bpp"

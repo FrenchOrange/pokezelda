@@ -8,30 +8,30 @@
 	const FUCHSIACITY_YOUNGSTER2
 
 FuchsiaCity_MapScripts:
-	def_scene_scripts
+    def_scene_scripts
 
-	def_callbacks
-	callback MAPCALLBACK_NEWMAP, .FlyPoint
-	callback MAPCALLBACK_TILES, .ClearRocks
+    def_callbacks
+    callback MAPCALLBACK_NEWMAP, .FlyPoint
+    callback MAPCALLBACK_TILES, .OpenCloseDoor
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_FUCHSIA
-	endcallback
+    setflag ENGINE_FLYPOINT_FUCHSIA
+    endcallback
 
+.OpenCloseDoor:
+    readvar VAR_DEXCAUGHT
+    ifgreater 249, .ClearRocks
+    changeblock 18, 2, $91 ; door
 .ClearRocks:
-	readvar VAR_DEXCAUGHT
-	ifgreater 4, .Done
-;	ifgreater 249, .Done
-	changeblock 18, 2, $91 ; door
-	checkevent EVENT_CINNABAR_ROCKS_CLEARED
-	iftrue .Done
-	changeblock 16, 36, $7a ; rock
-	changeblock 18, 36, $7a ; rock
-	changeblock 20, 36, $7a ; rock
-	changeblock 22, 38, $7a ; rock
-	changeblock 18, 40, $7a ; rock
+    checkevent EVENT_CINNABAR_ROCKS_CLEARED
+    iftrue .Done
+    changeblock 16, 36, $7a ; rock
+    changeblock 18, 36, $7a ; rock
+    changeblock 20, 36, $7a ; rock
+    changeblock 22, 38, $7a ; rock
+    changeblock 18, 40, $7a ; rock
 .Done:
-	endcallback
+    endcallback
 
 FuchsiaCityFisher1Script:
 	faceplayer

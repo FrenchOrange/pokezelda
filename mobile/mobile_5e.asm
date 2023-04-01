@@ -1,21 +1,20 @@
 MobileCardGFX::
-INCBIN "gfx/mobile/card.2bpp"
+	ret
 
 ChrisSilhouetteGFX::
-INCBIN "gfx/mobile/chris_silhouette.2bpp"
+	ret
 
 KrisSilhouetteGFX::
-INCBIN "gfx/mobile/kris_silhouette.2bpp"
+	ret
 
 MobileCard2GFX::
-INCBIN "gfx/mobile/card_2.2bpp"
+	ret
 
 CardLargeSpriteAndFolderGFX::
-INCBIN "gfx/mobile/card_large_sprite.2bpp"
-INCBIN "gfx/mobile/card_folder.2bpp"
+	ret
 
 CardSpriteGFX::
-INCBIN "gfx/mobile/card_sprite.2bpp"
+	ret
 
 Function17a68f::
 	call Function17a6a8
@@ -922,20 +921,20 @@ Palette_17ac95:
 	RGB 31, 31,  0
 
 DialpadTilemap:
-INCBIN "gfx/mobile/dialpad.tilemap"
+	ret
 
 DialpadAttrmap:
-INCBIN "gfx/mobile/dialpad.attrmap"
+	ret
 
 DialpadGFX:
-INCBIN "gfx/mobile/dialpad.2bpp"
+	ret
 
 DialpadCursorGFX:
-INCBIN "gfx/mobile/dialpad_cursor.2bpp"
+	ret
 
 Palette_17b4b5:
 	RGB  2,  6, 10
 	RGB 24, 30, 29
 
 MobileCardListGFX::
-INCBIN "gfx/mobile/card_list.2bpp"
+	ret

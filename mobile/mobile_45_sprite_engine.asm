@@ -308,7 +308,7 @@ Unknown_116005:
 	dbsprite   1,   2, 0, 0, $63, $01
 
 MobileDialingGFX::
-INCBIN "gfx/mobile/dialing.2bpp"
+	ret
 
 Function11615a:
 	xor a

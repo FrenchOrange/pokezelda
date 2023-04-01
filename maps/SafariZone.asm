@@ -1,3 +1,6 @@
+	object_const_def
+	const SAFARIZONE_DOG_GUY
+
 SafariZone_MapScripts:
 	def_scene_scripts
 
@@ -8,7 +11,7 @@ SafariZoneCameoScript:
 	opentext
 	countseencaught
 	readvar VAR_DEXCAUGHT
-	ifgreater 149, .MewScript
+	ifgreater 249, .MewScript
 	writetext SafariZoneCameoHello
 	waitbutton
 	closetext
@@ -26,7 +29,7 @@ SafariZoneCameoScript:
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .NoRoom
 	writetext ReceivedMewText
-	playsound SFX_CAUGHT_MON
+	playsound SFX_DEX_FANFARE_230_PLUS
 	waitsfx
 	givepoke MEW, 10, NO_ITEM, GiftMewName, GiftMewOTName
 	setevent EVENT_GOT_MEW
@@ -76,11 +79,36 @@ SafariZoneCameoHello:
 	done
 
 SafariZoneCameoTakeThisMewText:
-	text "Arf! Arf!"
+	text "Howdy! The name's"
+	line "FRENCHORANGE."
+
+	para "I made the hack"
+	line "you're playing"
+	cont "right now!"
+
+	para "I'm so happy you"
+	line "checked out this"
+	cont "dumb project that"
+
+	para "began as a mere"
+	line "tileset overhaul."
+
+	para "But enough with"
+	line "the chit-chat!"
+
+	para "For coming such a"
+	line "long way, you"
+	cont "deserve a gift."
+
+	para "Don't you agree?"
 	done
 
 SafariZoneCameoCareForItText:
-	text "CARE."
+	text "As a gift from me"
+	line "to you. Congrats!"
+
+	para "<PLAYER>, you are"
+	line "SUPER PLAYER!!"
 	done
 
 ReceivedMewText:
@@ -89,15 +117,40 @@ ReceivedMewText:
 	done
 
 SafariZoneCameoPartyFullText:
-	text "FULL!"
+	text "Oh err… Looks like"
+	line "your team is full."
+
+	para "That's okay! Just"
+	line "go to the nearest"
+	cont "POKéMON CENTER."
 	done
 
 SafariZoneCameoNoMewText:
-	text "SAY NO."
+	text "Sure! I'm not going"
+	line "anywhere anyway."
+
+	para "Like, literally."
+	line "I don't have any"
+	cont "walking frames."
 	done
 
 SafariZoneCameoAfterText:
-	text "AFTER."
+	text "Your #DEX is"
+	line "now complete!"
+
+	para "What's left to do?"
+	line "Well you tell me!"
+
+	para "Level up your team"
+	line "some more, fill"
+	cont "out the UNOWN DEX,"
+
+	para "or maybe even do a"
+	line "living #DEX!"
+
+	para "Regardless of what"
+	line "you do now, thanks"
+	cont "again for playing!"
 	done
 
 SafariZoneSignText:

@@ -1359,11 +1359,10 @@ Unknown_1172e9:
 	db $4, $10, $10, $6
 
 PichuBorderMobileOBPalettes:
-INCLUDE "gfx/mobile/pichu_border_ob.pal"
+	ret
 
 PichuBorderMobileBGPalettes:
-INCLUDE "gfx/mobile/pichu_border_bg.pal"
+	ret
 
 PichuBorderMobileTilemapAttrmap:
-INCBIN "gfx/mobile/pichu_border.tilemap"
-INCBIN "gfx/mobile/pichu_border.attrmap"
+	ret

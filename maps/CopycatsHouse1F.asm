@@ -1,7 +1,7 @@
 	object_const_def
 	const COPYCATSHOUSE1F_POKEFAN_M
 	const COPYCATSHOUSE1F_POKEFAN_F
-	const COPYCATSHOUSE1F_CLEFAIRY
+	const COPYCATSHOUSE1F_BLISSEY
 
 CopycatsHouse1F_MapScripts:
 	def_scene_scripts
@@ -85,4 +85,4 @@ CopycatsHouse1F_MapEvents:
 	def_object_events
 	object_event  4,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FPokefanMScript, -1
 	object_event  7,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FPokefanFScript, -1
-	object_event  8,  2, SPRITE_CLEFAIRY, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FBlisseyScript, -1
+	object_event  8,  2, SPRITE_BLISSEY, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CopycatsHouse1FBlisseyScript, -1

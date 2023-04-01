@@ -1,7 +1,16 @@
+	object_const_def
+	const ROUTE10_LASS
+	const ROUTE10_ROCKER
+
 Route10_MapScripts:
 	def_scene_scripts
-	const ROUTE10_LASS
+
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, .FlyPoint
+
+.FlyPoint:
+	setflag ENGINE_FLYPOINT_ROCK_TUNNEL
+	endcallback
 
 PowerPlantSign:
 	jumptext PowerPlantSignText

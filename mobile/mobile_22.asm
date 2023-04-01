@@ -515,7 +515,7 @@ Function893fe: ; unreferenced
 	ret
 
 EZChatCursorGFX:
-INCBIN "gfx/mobile/ez_chat_cursor.2bpp"
+	ret
 
 Function8942b:
 	ld de, vTiles0 tile $02

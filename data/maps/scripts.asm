@@ -248,6 +248,7 @@ INCLUDE "maps/LancesRoom.asm"
 INCLUDE "maps/HallOfFame.asm"
 INCLUDE "maps/Route12.asm"
 INCLUDE "maps/CeruleanBikeShop.asm"
+INCLUDE "maps/Route4East.asm"
 
 
 SECTION "Map Scripts 14", ROMX
@@ -398,7 +399,6 @@ INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
 INCLUDE "maps/SilverCaveOutside.asm"
-INCLUDE "maps/Route4East.asm"
 INCLUDE "maps/SafariZoneRestHouse.asm"
 
 
@@ -448,6 +448,7 @@ INCLUDE "maps/VermilionCity.asm"
 INCLUDE "maps/Route9.asm"
 INCLUDE "maps/CinnabarPokecenter1F.asm"
 INCLUDE "maps/FuchsiaCityFisherHouse.asm"
+INCLUDE "maps/Route10South.asm"
 
 
 SECTION "Map Scripts 24", ROMX
@@ -479,7 +480,6 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/Route10.asm"
-INCLUDE "maps/Route10South.asm"
 INCLUDE "maps/ViridianNorthGate.asm"
 INCLUDE "maps/ViridianSouthGate.asm"
 INCLUDE "maps/Route11Gate.asm"

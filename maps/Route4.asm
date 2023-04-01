@@ -1,9 +1,15 @@
 	object_const_def
+	const ROUTE4_TEACHER
 
 Route4_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_NEWMAP, .FlyPoint
+
+.FlyPoint:
+	setflag ENGINE_FLYPOINT_MT_MOON
+	endcallback
 
 TrainerTeacherSandra:
 	trainer TEACHER, SANDRA, EVENT_BEAT_TEACHER_SANDRA, TeacherSandraSeenText, TeacherSandraBeatenText, 0, .Script
@@ -29,13 +35,13 @@ TeacherSandraBeatenText:
 	done
 
 TeacherSandraAfterBattleText:
-	text "In the far past,"
+	text "In ancient times,"
 	line "this mountain was"
 	cont "deep underwater."
 
-	para "This because of"
-	line "tectonic plates"
-	cont "and bla bla…"
+	para "This is because"
+	line "tectonic plates…"
+	cont "And blabla… Bla…"
 
 	para "Are you taking"
 	line "notes already?"

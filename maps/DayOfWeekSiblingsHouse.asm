@@ -72,12 +72,12 @@ DayOfWeekSiblingsHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, ROUTE_26, 3
-	warp_event  3,  7, ROUTE_26, 3
+	warp_event  4,  7, ROUTE_26, 3
+	warp_event  5,  7, ROUTE_26, 3
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  3,  3, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayOfWeekSiblingsHousePokedexScript, -1
+	object_event  5,  3, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayOfWeekSiblingsHousePokedexScript, -1

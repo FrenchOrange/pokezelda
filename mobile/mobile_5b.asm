@@ -203,16 +203,16 @@ MobileSystemSplashScreen_InitGFX:
 	ret
 
 .Tiles:
-INCBIN "gfx/mobile/mobile_splash.2bpp"
+	ret
 
 .Tilemap:
-INCBIN "gfx/mobile/mobile_splash.tilemap"
+	ret
 
 .Attrmap:
-INCBIN "gfx/mobile/mobile_splash.attrmap"
+	ret
 
 MobileSplashScreenPalettes:
-INCLUDE "gfx/mobile/mobile_splash.pal"
+	ret
 
 Function16c943:
 	ld a, [wd003]
@@ -755,7 +755,7 @@ Function16cc90:
 	ret
 
 MobileAdapterCheckGFX:
-INCBIN "gfx/mobile/mobile_splash_check.2bpp"
+	ret
 
 Unknown_16cfa3:
 	RGB 31, 31, 31

@@ -310,6 +310,146 @@ KantoGrassWildMons:
 	db 41, MAGMAR
 	end_grass_wildmons
 
+	def_grass_wildmons SEAFOAM_ISLANDS_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 30, SHELLDER
+	db 30, HORSEA
+	db 28, PSYDUCK
+	db 38, GOLDUCK
+	; day
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 30, SHELLDER
+	db 30, HORSEA
+	db 28, PSYDUCK
+	db 38, GOLDUCK
+	; nite
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 30, SHELLDER
+	db 30, STARYU
+	db 30, KRABBY
+	db 38, SLOWBRO
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLANDS_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 32, SHELLDER
+	db 32, HORSEA
+	db 37, SEADRA
+	db 38, DEWGONG
+	; day
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 32, SHELLDER
+	db 32, HORSEA
+	db 37, SEADRA
+	db 38, DEWGONG
+	; nite
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 32, SHELLDER
+	db 30, STARYU
+	db 37, KINGLER
+	db 38, CLOYSTER
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLANDS_B2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 32, SHELLDER
+	db 32, HORSEA
+	db 37, SEADRA
+	db 38, DEWGONG
+	; day
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 32, SHELLDER
+	db 32, HORSEA
+	db 37, SEADRA
+	db 38, DEWGONG
+	; nite
+	db 30, SEEL
+	db 30, SLOWPOKE
+	db 29, GOLBAT
+	db 32, SHELLDER
+	db 30, STARYU
+	db 37, KINGLER
+	db 38, CLOYSTER
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLANDS_B3F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 31, SEEL
+	db 31, SLOWPOKE
+	db 33, SHELLDER
+	db 33, HORSEA
+	db 39, SEADRA
+	db 40, DEWGONG
+	db 40, JYNX
+	; day
+	db 31, SEEL
+	db 31, SLOWPOKE
+	db 33, SHELLDER
+	db 33, HORSEA
+	db 39, SEADRA
+	db 40, DEWGONG
+	db 40, JYNX
+	; nite
+	db 31, SEEL
+	db 31, SLOWPOKE
+	db 33, SHELLDER
+	db 33, STARMIE
+	db 37, KINGLER
+	db 38, CLOYSTER
+	db 40, JYNX
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_ISLANDS_B4F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 31, SEEL
+	db 31, SLOWPOKE
+	db 33, SHELLDER
+	db 33, HORSEA
+	db 39, SEADRA
+	db 40, DEWGONG
+	db 40, JYNX
+	; day
+	db 31, SEEL
+	db 31, SLOWPOKE
+	db 33, SHELLDER
+	db 33, HORSEA
+	db 39, SEADRA
+	db 40, DEWGONG
+	db 40, JYNX
+	; nite
+	db 31, SEEL
+	db 31, SLOWPOKE
+	db 33, SHELLDER
+	db 33, STARMIE
+	db 37, KINGLER
+	db 38, CLOYSTER
+	db 40, JYNX
+	end_grass_wildmons
+
 	def_grass_wildmons TOHJO_FALLS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn

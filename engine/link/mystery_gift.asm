@@ -1879,7 +1879,7 @@ InitNameCardLayout:
 	dbsprite 14,  1, 4, 1, $07, 0
 
 CardTradeGFX:
-INCBIN "gfx/mystery_gift/card_trade.2bpp"
+	ret
 
 CardTradeSpriteGFX:
-INCBIN "gfx/mystery_gift/card_sprite.2bpp"
+	ret

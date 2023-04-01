@@ -109,6 +109,16 @@ PlayersRadioText4:
 	line "#MON CHANNEL…"
 	done
 
+DebugBattle:
+	opentext
+	givepoke RHYDON, 100
+	closetext
+	loadwildmon RHYDON, 30
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
+	startbattle
+	reloadmapafterbattle
+	end
+
 DebugSign:
 	setflag ENGINE_POKEDEX
 	setflag ENGINE_POKEGEAR
@@ -132,6 +142,7 @@ DebugSign:
 	setflag ENGINE_EARTHBADGE
 	giveitem MASTER_BALL, 99
 	giveitem RARE_CANDY, 99
+	giveitem MAX_REPEL, 99
 	giveitem HM_CUT
 	giveitem HM_FLY
 	giveitem HM_SURF
@@ -167,6 +178,7 @@ PlayersHouse2F_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, PlayersHouseRadioScript
 	bg_event  7,  1, BGEVENT_READ, PlayersHouseBookshelfScript
 	bg_event  8,  0, BGEVENT_IFSET, PlayersHousePosterScript
+	bg_event  2,  0, BGEVENT_READ, DebugBattle
 	bg_event  3,  0, BGEVENT_READ, DebugSign
 
 	def_object_events

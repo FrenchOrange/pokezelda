@@ -272,3 +272,6 @@ NUM_ICONS EQU const_value - 1
 	const PAL_ICON_GREEN  ; 2
 	const PAL_ICON_BROWN  ; 3
 	const PAL_ICON_PINK   ; 4
+	const PAL_ICON_DUMMY1 ; 5
+	const PAL_ICON_DUMMY2 ; 6
+	const PAL_ICON_DUMMY3 ; 7

@@ -3228,7 +3228,7 @@ EZChat_GetCategoryWordsByKana:
 INCLUDE "data/pokemon/ezchat_order.asm"
 
 SelectStartGFX:
-INCBIN "gfx/mobile/select_start.2bpp"
+	ret
 
 EZChatSlowpokeLZ:
 INCBIN "gfx/pokedex/slowpoke.2bpp.lz"

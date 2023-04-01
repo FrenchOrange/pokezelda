@@ -110,7 +110,7 @@ MG_Mobile_Layout_CreatePalBoxes:
 	ret
 
 Palette_MysteryGiftMobile:
-INCLUDE "gfx/mystery_gift/mg_mobile.pal"
+	ret
 
 LoadOW_BGPal7::
 	ld hl, Palette_TextBG7
@@ -163,7 +163,7 @@ _CrystalCGB_MobileLayout1:
 	ret
 
 .TextPalette:
-INCLUDE "gfx/mystery_gift/mobile_text.pal"
+	ret
 
 .Function49480:
 	hlcoord 0, 0, wAttrmap
@@ -208,10 +208,10 @@ _CrystalCGB_NameCard:
 	ret
 
 .BGPalette:
-INCLUDE "gfx/mystery_gift/name_card_bg.pal"
+	ret
 
 .OBPalette:
-INCLUDE "gfx/mystery_gift/name_card_ob.pal"
+	ret
 
 Function49742:
 	ld hl, .MobileBorderPalettes
@@ -223,7 +223,7 @@ Function49742:
 	ret
 
 .MobileBorderPalettes:
-INCLUDE "gfx/trade/mobile_border.pal"
+	ret
 
 _InitMG_Mobile_LinkTradePalMap:
 	hlcoord 0, 0, wAttrmap

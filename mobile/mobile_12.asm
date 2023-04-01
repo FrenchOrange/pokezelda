@@ -1004,10 +1004,10 @@ Function488b9:
 	ret
 
 MobileUpArrowGFX:
-INCBIN "gfx/mobile/up_arrow.1bpp"
+	ret
 
 MobileDownArrowGFX:
-INCBIN "gfx/mobile/down_arrow.1bpp"
+	ret
 
 Function488d3:
 	call Function48283

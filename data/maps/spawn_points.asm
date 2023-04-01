@@ -16,11 +16,11 @@ SpawnPoints:
 	spawn PEWTER_CITY,                13, 26
 	spawn ROUTE_4,		          11,  6
 	spawn CERULEAN_CITY,              19, 18
-	spawn ROUTE_10,		          11, 20
 	spawn VERMILION_CITY,             11,  4
+	spawn ROUTE_10,		          11, 20
 	spawn LAVENDER_TOWN,               5,  6
-	spawn SAFFRON_CITY,               11, 30
 	spawn CELADON_CITY,               41, 10
+	spawn SAFFRON_CITY,               11, 30
 	spawn FUCHSIA_CITY,               19, 28
 	spawn CINNABAR_ISLAND,            11, 12
 	spawn ROUTE_23,                    9,  6

@@ -1095,11 +1095,5 @@ asm_1064ed:
 	ldh [rSVBK], a
 	ret
 
-Function10650a: ; unreferenced
-	ld de, MobilePhoneTilesGFX
-	lb bc, BANK(MobilePhoneTilesGFX), 17
-	call Get2bpp
-	ret
-
 MobileDialingFrameGFX:
-INCBIN "gfx/mobile/dialing_frame.2bpp"
+	ret

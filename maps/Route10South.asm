@@ -1,7 +1,10 @@
-Route10South_MapScripts:
-	def_scene_scripts
+	object_const_def
 	const ROUTE10SOUTH_POKEFAN_M1
 	const ROUTE10SOUTH_POKEFAN_M2
+
+Route10South_MapScripts:
+	def_scene_scripts
+
 	def_callbacks
 
 RockTunnelSouthSign:

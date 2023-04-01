@@ -287,13 +287,13 @@ Function170d02:
 	ret
 
 PichuAnimatedMobileGFX:
-INCBIN "gfx/mobile/pichu_animated.2bpp.lz"
+	ret
 
 ElectroBallMobileGFX:
-INCBIN "gfx/mobile/electro_ball.2bpp.lz"
+	ret
 
 PichuBorderMobileGFX:
-INCBIN "gfx/mobile/pichu_border.2bpp"
+	ret
 
 Function1719c8:
 	ldh a, [hInMenu]
@@ -747,28 +747,28 @@ Function171d2b:
 	ret
 
 MobilePasswordPalettes:
-INCLUDE "gfx/mobile/mobile_password.pal"
+	ret
 
 AsciiFontGFX:
-INCBIN "gfx/mobile/ascii_font.2bpp"
+	ret
 
 PasswordTopTilemap:
-INCBIN "gfx/mobile/password_top.tilemap"
+	ret
 
 PasswordBottomTilemap:
-INCBIN "gfx/mobile/password_bottom.tilemap"
+	ret
 
 PasswordShiftTilemap:
-INCBIN "gfx/mobile/password_shift.tilemap"
+	ret
 
 ChooseMobileCenterTilemap:
-INCBIN "gfx/mobile/mobile_center.tilemap"
+	ret
 
 MobilePasswordAttrmap:
-INCBIN "gfx/mobile/password.attrmap"
+	ret
 
 ChooseMobileCenterAttrmap:
-INCBIN "gfx/mobile/mobile_center.attrmap"
+	ret
 
 PasswordSlowpokeLZ:
 INCBIN "gfx/pokedex/slowpoke.2bpp.lz"
@@ -863,16 +863,10 @@ Palette_172edf:
 	RGB  0,  0,  0
 
 Stadium2N64GFX:
-INCBIN "gfx/mobile/stadium2_n64.2bpp"
+	ret
 
 Stadium2N64Tilemap:
-if DEF(_CRYSTAL11)
-; Crystal 1.1 corrupted this tilemap by treating $0a bytes as Unix newlines,
-; and converting them to $0d $0a Windows newlines.
-INCBIN "gfx/mobile/stadium2_n64_corrupt.tilemap"
-else
-INCBIN "gfx/mobile/stadium2_n64.tilemap"
-endc
+	ret
 
 Stadium2N64Attrmap:
-INCBIN "gfx/mobile/stadium2_n64.attrmap"
+	ret

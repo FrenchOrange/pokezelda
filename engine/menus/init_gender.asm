@@ -26,6 +26,7 @@ InitGender:
 	call LoadGenderScreenLightBlueTile
 	call WaitBGMap2
 	call SetPalettes
+.ReselectGender	
 	ld hl, AreYouABoyOrAreYouAGirlText
 	call PrintText
 	ld hl, .MenuHeader
@@ -41,7 +42,7 @@ InitGender:
 	call PrintText
 
 	call YesNoBox
-	jr c, InitGender
+	jr c, .ReselectGender
 	ret
 
 .MenuHeader:

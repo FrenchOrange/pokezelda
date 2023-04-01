@@ -195,8 +195,8 @@ Binoculars2:
 Binoculars3:
 	jumptext Binoculars3Text
 
-PokeDollVendingMachine:
-	jumptext PokeDollVendingMachineText
+CapsuleToysVendingMachine:
+	jumptext CapsuleToysVendingMachineText
 
 GoldenrodDeptStoreRoofPokefanFText:
 	text "Whew, I'm tired."
@@ -215,15 +215,22 @@ GoldenrodDeptStoreRoofFisherText:
 
 	para "I'm going to be"
 	line "back every day to"
-
-	para "collect all the"
-	line "dolls!"
+	cont "collect them all!"
 	done
 
 GoldenrodDeptStoreRoofTwinText:
 	text "They have special"
 	line "sales here every"
 	cont "so often."
+
+	para "They sell rare"
+	line "POKéMON DOLLs."
+
+	para "Even that huge"
+	line "ONIX DOLL! The one"
+
+	para "that is almost"
+	line "life-sized!"
 	done
 
 GoldenrodDeptStoreRoofSuperNerdOhWowText:
@@ -249,7 +256,7 @@ GoldenrodDeptStoreRoofPokefanMText:
 
 GoldenrodDeptStoreRoofTeacherText:
 	text "Oh, everything is"
-	line "so cheap!"
+	line "so cute!"
 
 	para "I bought so much,"
 	line "my PACK's crammed!"
@@ -265,8 +272,8 @@ GoldenrodDeptStoreRoofBugCatcherText:
 	para "So I came to buy"
 	line "some FULL HEAL."
 
-	para "I wonder if"
-	line "there's any left?"
+	para "Welp… There goes"
+	line "my pocket change."
 	done
 
 Binoculars1Text:
@@ -304,9 +311,10 @@ Binoculars3Text:
 	line "going everywhere!"
 	done
 
-PokeDollVendingMachineText:
+CapsuleToysVendingMachineText:
 	text "A vending machine"
-	line "for #MON dolls?"
+	line "for #MON"
+	cont "capsule toys?"
 
 	para "Insert money, then"
 	line "turn the crank…"
@@ -363,7 +371,7 @@ GoldenrodDeptStoreRoof_MapEvents:
 	bg_event 15,  3, BGEVENT_RIGHT, Binoculars1
 	bg_event 15,  5, BGEVENT_RIGHT, Binoculars2
 	bg_event 15,  6, BGEVENT_RIGHT, Binoculars3
-	bg_event  3,  0, BGEVENT_UP, PokeDollVendingMachine
+	bg_event  3,  0, BGEVENT_UP, CapsuleToysVendingMachine
 
 	def_object_events
 	object_event  1,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofClerkScript, EVENT_GOLDENROD_SALE_OFF

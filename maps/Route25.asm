@@ -56,7 +56,7 @@ Route25PreDate1Script:
 	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	setscene SCENE_ROUTE25_NOTHING
 	special RestartMapMusic
-	setevent EVENT_DECO_STARMIE_DOLL
+	setevent EVENT_DECO_STARYU_DOLL
 	end
 
 Route25PreDate2Script:
@@ -91,7 +91,7 @@ Route25PreDate2Script:
 	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	setscene SCENE_ROUTE25_NOTHING
 	special RestartMapMusic
-	setevent EVENT_DECO_STARMIE_DOLL
+	setevent EVENT_DECO_STARYU_DOLL
 	end
 
 Route25PreDate3Script:
@@ -127,7 +127,7 @@ Route25PreDate3Script:
 	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	setscene SCENE_ROUTE25_NOTHING
 	special RestartMapMusic
-	setevent EVENT_DECO_STARMIE_DOLL
+	setevent EVENT_DECO_STARYU_DOLL
 	end
 
 Route25PreDate4Script:
@@ -163,7 +163,7 @@ Route25PreDate4Script:
 	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	setscene SCENE_ROUTE25_NOTHING
 	special RestartMapMusic
-	setevent EVENT_DECO_STARMIE_DOLL
+	setevent EVENT_DECO_STARYU_DOLL
 	end
 
 Route25PreDate5Script:
@@ -199,7 +199,7 @@ Route25PreDate5Script:
 	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	setscene SCENE_ROUTE25_NOTHING
 	special RestartMapMusic
-	setevent EVENT_DECO_STARMIE_DOLL
+	setevent EVENT_DECO_STARYU_DOLL
 	end
 
 Route25PreDate6Script:
@@ -235,7 +235,7 @@ Route25PreDate6Script:
 	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	setscene SCENE_ROUTE25_NOTHING
 	special RestartMapMusic
-	setevent EVENT_DECO_STARMIE_DOLL
+	setevent EVENT_DECO_STARYU_DOLL
 	end
 
 TrainerSchoolboyDudley:

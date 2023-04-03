@@ -1,15 +1,15 @@
 
-Graphical Bugs:
+- - Graphical Bugs - -
 * The title screen is still in progress.
 * The torch animation doesn't loop properly.
 * Colored Daycare icons left to debug.
 
 
-Miscellaneous Bugs:
+- - Miscellaneous Bugs - -
 * Wrong Shuckie dialogue when it's the last Pokémon on your team.
 * Puzzle in Lt.Surge's gym left to debug.
 
 
-Script Bugs:
+- - Script Bugs - -
 * The Victory Road boulder puzzles have not yet been implemented. Uses cheats to bypass this area if needed.
 * The Seafoam Islands boulder puzzles have not yet been implemented. Look out as Articuno's room seems to cause crashes.

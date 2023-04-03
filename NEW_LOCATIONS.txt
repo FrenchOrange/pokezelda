@@ -1,13 +1,13 @@
 
-NOTES:
-* Heabutt tree and Rock Smash 'mon now have more varied levels, and the encounter rates have been tweaked as to make Pineco, Aipom, and Shuckle more common.
+- - NOTES - -
+* Heabutt and Rock Smash 'mon now have more varied levels, and the encounter rates have been tweaked as to make Pineco, Aipom, and Shuckle more common.
 * Geodude, Kingler, and Slugma have been added to the Rock Smash Pokémon encounter table.
 * The Goldenrod Game Corner Prize Pokémon were changed to Abra (level 10 / 200 coins), Clefairy (level 12 / 800 coins), and Pikachu (level 12 / 1500 coins).
 * The Celadon Game Corner Prize Pokémon were changed to Eevee (level 15 / 6666 coins), Larvitar (level 18 / 8888 coins), and Porygon (level 20 / 9999 coins).
 * The Kanto legendary birds are no longer set to have a flee value. So don't worry about that.
 
 
-LOCATIONS:
+- - LOCATIONS - -
 
 #001
 Bulbasaur
@@ -19,7 +19,7 @@ Gift from Damian on Route 24 (if caught over 50 Pokémon)
 
 #007
 Squirtle
-Gift from the officer in Vermilion City (after returning Machine Part)
+Gift from Officer Jenny in Vermilion City (after returning the Machine Part)
 
 #019
 Rattata

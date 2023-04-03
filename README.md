@@ -7,7 +7,7 @@ While the story and progression have not been changed, here's some new things yo
 * Overhauled overworld and interior graphics, alongside some UI elements.
 * Tweaked trainer teams, namely harder rosters for important trainers, such as Gym Leaders.
 * An expanded Kanto, with restored dungeons, more trainers, and more items.
-* More sensible Pokémon distribution (as seen [here](LOCATIONS.txt), and more generous HM compatibility.
+* More sensible Pokémon distribution as seen [here](NEW_LOCATIONS.txt), and more generous HM compatibility.
 * Fixed off-model Pokémon sprites. Palettes were also improved for a good amount of Pokémon.
 * Some QOL features, like "Running Shoes" (works by holding down B), and an automatic Repel reuse message.
 * Fixed [bugs and glitches](https://github.com/pret/pokecrystal/blob/master/docs/bugs_and_glitches.md), aside from multiplayer-related issues, as to ensure compatibility with base GSC.

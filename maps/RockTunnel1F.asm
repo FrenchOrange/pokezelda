@@ -119,7 +119,7 @@ HikerFrederickAfterBattleText:
 	cont "steps behind me."
 
 	para "But that's just"
-	line "echo… Right?"
+	line "an echo… Right?"
 	done
 
 PicnickerDianeSeenText:

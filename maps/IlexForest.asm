@@ -793,11 +793,11 @@ Text_CharcoalMasterIntro:
 
 Text_CharcoalMasterOutro:
 	text "That's the CUT HM."
-	line "You're to young to"
+	line "You're too young to"
 	cont "cut down trees, so"
 
 	para "stick to clearing"
-	line "small bushes."
+	line "out small bushes."
 
 	para "Of course, you"
 	line "have to have the"

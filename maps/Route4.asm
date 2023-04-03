@@ -23,7 +23,7 @@ TrainerTeacherSandra:
 	end
 
 TeacherSandraSeenText:
-	text "A field trip in"
+	text "A field trip to"
 	line "MT.MOON would be"
 	cont "wonderful, don't"
 	cont "you think?"

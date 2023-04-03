@@ -58,8 +58,7 @@ Route4PokecenterTwinText:
 	cont "almost spot the"
 
 	para "CLEFAIRY living"
-	line "on the moon's"
-	cont "surface."
+	line "on its surface."
 	done
 
 Route4Pokecenter1F_MapEvents:

@@ -1,6 +1,7 @@
 	object_const_def
 	const GOLDENRODFLOWERSHOP_TEACHER
 	const GOLDENRODFLOWERSHOP_FLORIA
+	const GOLDENRODFLOWERSHOP_BELLOSSOM
 
 GoldenrodFlowerShop_MapScripts:
 	def_scene_scripts
@@ -282,6 +283,22 @@ GoldenrodFlowerShopTeacherTakeCare:
 	line "Take care!"
 	done
 
+FlowerShopBellossomScript:
+	cry BELLOSSOM
+	opentext
+	writetext FlowerShopBellossomText
+	waitbutton
+	closetext
+	end
+
+FlowerShopBellossomText:
+	text "BELLOSSOM's dance"
+	line "spreads a lovely"
+	cont "aroma around."
+
+	para "You feel relaxed…"
+	done
+
 GoldenrodFlowerShop_MapEvents:
 	db 0, 0 ; filler
 
@@ -296,3 +313,4 @@ GoldenrodFlowerShop_MapEvents:
 	def_object_events
 	object_event  4,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FlowerShopTeacherScript, -1
 	object_event  7,  6, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FlowerShopFloriaScript, EVENT_FLORIA_AT_FLOWER_SHOP
+	object_event  6,  2, SPRITE_BELLOSSOM, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FlowerShopBellossomScript, -1

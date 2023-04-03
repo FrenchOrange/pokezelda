@@ -43,7 +43,13 @@ Route32Pokecenter1FFishingGuruScript:
 	end
 
 Route32Pokecenter1FCooltrainerFScript:
-	jumptextfaceplayer Route32Pokecenter1FCooltrainerFText
+	faceplayer
+	opentext
+	writetext Route32Pokecenter1FCooltrainerFText
+	waitbutton
+	closetext
+	turnobject ROUTE32POKECENTER1F_COOLTRAINER_F, RIGHT
+	end
 
 Route32Pokecenter1FQuagsireScript:
 	opentext

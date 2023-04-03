@@ -234,7 +234,7 @@ SuperNerdJayAfterText:
 
 	para "But a handful came"
 	line "to the surface a"
-	cont "year of so ago."
+	cont "year or so ago."
 	done
 
 SuperNerdDaveSeenText:
@@ -294,7 +294,7 @@ ScientistNortonBeatenText:
 ScientistNortonAfterText:
 	text "It was either a"
 	line "GYM in SEAFOAM, or"
-	cont "on in a volcano."
+	cont "one in a volcano."
 
 	para "I'll let you guess"
 	line "what idea got shut"
@@ -330,32 +330,26 @@ SeafoamGymGuideText:
 
 	para "This GYM has many"
 	line "trainers and rocks"
-	cont "in the way from"
-	cont "the rebuilding."
+	cont "in the way."
 
-	para "It sure won't be"
-	line "easy to get to"
-	cont "BLAINE!"
+	para "Reaching BLAINE is"
+	line "no easy task!"
 
-	para "But keep your cool"
-	line "and defeat the"
-	cont "trainers one by"
-
-	para "one, and you will"
-	line "find the path!"
+	para "Keeping your cool"
+	line "is key to finding"
+	cont "the right path!"
 	done
 
 SeafoamGymGuideWinText:
-	text "The GYM LEADER"
-	line "rebuilding his GYM"
+	text "The GYM LEADER who"
+	line "lost everything,"
 	cont "and the trainer"
 
-	para "from JOHTO who has"
-	line "come to challenge"
-	cont "that GYM LEADER…"
+	para "from JOHTO who"
+	line "challenged him…"
 
-	para "I have witnessed a"
-	line "hot battle!"
+	para "We all witnessed"
+	line "a burning battle!"
 	done
 
 SeafoamGym_MapEvents:

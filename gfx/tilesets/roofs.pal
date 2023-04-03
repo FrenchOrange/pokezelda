@@ -43,7 +43,7 @@
 	RGB 12,03,18, 09,03,15 ; nite
 
 ; group 11 (Goldenrod)
-	RGB 25,25,00, 20,17,08 ; morn/day
+	RGB 28,24,00, 20,17,08 ; morn/day
 	RGB 12,12,00, 10,09,05 ; nite
 
 ; group 12 (Vermilion)

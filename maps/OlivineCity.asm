@@ -137,6 +137,7 @@ OlivineCityRivalLeavesTopMovement:
 	step UP
 	step UP
 	step UP
+	step UP
 	step_end
 
 OlivineCityRivalLeavesBottomMovement:
@@ -146,6 +147,7 @@ OlivineCityRivalLeavesBottomMovement:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	step UP
 	step UP
 	step UP
 	step UP

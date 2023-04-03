@@ -10,7 +10,20 @@ CeladonMansionRoofFisherScript:
 	jumptextfaceplayer CeladonMansionRoofFisherText
 
 CeladonMansionRoofGraffiti:
-	jumptext CeladonMansionRoofGraffitiText
+	opentext
+	checkevent EVENT_ADDED_MOUSTACHE_TO_GRAFFITI
+	iftrue .AddedMoustache
+	writetext CeladonMansionRoofGraffitiText
+	waitbutton
+	closetext
+	setevent EVENT_ADDED_MOUSTACHE_TO_GRAFFITI
+	end
+
+.AddedMoustache:
+	writetext CeladonMansionRoofMoustacheGraffitiText
+	waitbutton
+	closetext
+	end
 
 CeladonMansionRoofFisherText:
 	text "High places--I do"
@@ -29,6 +42,14 @@ CeladonMansionRoofGraffitiText:
 
 	para "<PLAYER> added a"
 	line "moustache!"
+	done
+
+CeladonMansionRoofMoustacheGraffitiText:
+	text "A crude drawing of"
+	line "someone's face, now"
+
+	para "complete with a"
+	line "dapper moustache."
 	done
 
 CeladonMansionRoof_MapEvents:

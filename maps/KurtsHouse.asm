@@ -437,10 +437,12 @@ KurtsHouseKurtExitHouseMovement:
 	big_step DOWN
 	big_step DOWN
 	big_step DOWN
+	big_step DOWN
 	step_end
 
 KurtsHouseKurtGoAroundPlayerThenExitHouseMovement:
 	big_step RIGHT
+	big_step DOWN
 	big_step DOWN
 	big_step DOWN
 	big_step DOWN

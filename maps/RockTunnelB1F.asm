@@ -80,7 +80,7 @@ MediumMargretSeenText:
 	cont "to cleanse this"
 	cont "place of spirits."
 
-	para "Could you me an"
+	para "Could you be an"
 	line "apparition?"
 	done
 

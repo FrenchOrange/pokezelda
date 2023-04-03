@@ -106,7 +106,20 @@ CeladonGameCornerPoster1Script:
 	jumptext CeladonGameCornerPoster1Text
 
 CeladonGameCornerPoster2Script:
-	jumptext CeladonGameCornerPoster2Text
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .PlayerIsFemale
+	opentext
+	writetext CeladonGameCornerPoster2MaleText
+	waitbutton
+	closetext
+	end
+
+.PlayerIsFemale:
+	opentext
+	writetext CeladonGameCornerPoster2FemaleText
+	waitbutton
+	closetext
+	end
 
 CeladonGameCornerLuckySlotMachineScript:
 	random 6
@@ -160,12 +173,6 @@ CeladonGameCornerPokefanMText:
 	done
 
 CeladonGameCornerTeacherText:
-if DEF(_CRYSTAL_AU)
-	text "The weather"
-	line "outside is very"
-	cont "nice."
-	done
-else
 	text "It's this machine"
 	line "I want."
 
@@ -175,15 +182,8 @@ else
 	para "should pay out"
 	line "today."
 	done
-endc
 
 CeladonGameCornerFishingGuruText:
-if DEF(_CRYSTAL_AU)
-	text "This machine looks"
-	line "the same as the"
-	cont "others."
-	done
-else
 	text "I think this slot"
 	line "machine will pay"
 	cont "out…"
@@ -191,19 +191,8 @@ else
 	para "The odds vary"
 	line "among machines."
 	done
-endc
 
 CeladonGameCornerFisherText1:
-if DEF(_CRYSTAL_AU)
-	text "Whoa!"
-
-	para "What? You want to"
-	line "play this machine?"
-
-	para "Here, take my"
-	line "coins."
-	done
-else
 	text "Gahahaha!"
 
 	para "The coins just"
@@ -215,7 +204,6 @@ else
 	para "I'll share my luck"
 	line "with you!"
 	done
-endc
 
 CeladonGameCornerFisherText2:
 	text "Gahahaha!"
@@ -237,11 +225,6 @@ CeladonGameCornerFisherNoCoinCaseText:
 	done
 
 CeladonGameCornerFisherFullCoinCaseText:
-if DEF(_CRYSTAL_AU)
-	text "Your COIN CASE is"
-	line "full."
-	done
-else
 	text "Hey, your COIN"
 	line "CASE is full, kid."
 
@@ -249,18 +232,13 @@ else
 	line "a winning streak"
 	cont "too."
 	done
-endc
 
 CeladonGymGuideText:
 	text "Hey! CHAMP in"
 	line "making!"
 
 	para "Are you playing"
-if DEF(_CRYSTAL_AU)
-	line "too?"
-else
 	line "the slots too?"
-endc
 
 	para "I'm trying to get"
 	line "enough coins for a"
@@ -271,19 +249,12 @@ endc
 	done
 
 CeladonGameCornerGrampsText:
-if DEF(_CRYSTAL_AU)
-	text "Is there any"
-	line "difference between"
-	cont "these lines?"
-	done
-else
 	text "Hmmm… The odds are"
 	line "surely better for"
 
 	para "PIKACHU's line,"
 	line "but… What to do?"
 	done
-endc
 
 CeladonGameCornerPoster1Text:
 	text "Hey!"
@@ -294,13 +265,29 @@ CeladonGameCornerPoster1Text:
 	para "There's nothing!"
 	done
 
-CeladonGameCornerPoster2Text:
-	text "Hey!"
+CeladonGameCornerPoster2MaleText:
+	text "A poster asking"
+	line "patrons to gamble"
+	cont "responsibly."
 
-	para "Underneath this"
-	line "poster…"
+	para "On it is also a"
+	line "picture of a lady"
+	cont "in a bunny outfit."
 
-	para "There's nothing!"
+	para "…For good measure?"
+	done
+
+CeladonGameCornerPoster2FemaleText:
+	text "A poster asking"
+	line "patrons to gamble"
+	cont "responsibly."
+
+	para "On it is also a"
+	line "picture of a very,"
+	cont "very pretty lady"
+	cont "in a bunny outfit."
+
+	para "For good measure?"
 	done
 
 CeladonGameCornerLighterText:
@@ -363,8 +350,8 @@ CeladonGameCorner_MapEvents:
 	bg_event 20,  9, BGEVENT_READ, CeladonGameCornerLuckySlotMachineScript
 	bg_event 20, 10, BGEVENT_READ, CeladonGameCornerLuckySlotMachineScript
 	bg_event 20, 11, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 17,  0, BGEVENT_READ, CeladonGameCornerPoster1Script
-	bg_event 11,  0, BGEVENT_READ, CeladonGameCornerPoster2Script
+	bg_event 11,  0, BGEVENT_READ, CeladonGameCornerPoster1Script
+	bg_event 17,  0, BGEVENT_READ, CeladonGameCornerPoster2Script
 
 	def_object_events
 	object_event  7,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerClerkScript, -1

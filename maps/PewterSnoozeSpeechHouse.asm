@@ -13,7 +13,13 @@ PewterSnoozeSpeechHouseGrampsScript:
 	jumptextfaceplayer PewterSnoozeSpeechHouseGrampsText
 
 PewterSnoozeSpeechHouseBugCatcherScript:
-	jumptextfaceplayer PewterSnoozeSpeechHouseBugCatcherText
+	faceplayer
+	opentext
+	writetext PewterSnoozeSpeechHouseBugCatcherText
+	waitbutton
+	closetext
+	turnobject PEWTERSNOOZESPEECHHOUSE_BUG_CATCHER, UP
+	end
 
 PewterSnoozeSpeechHousePokedexScript:
 	opentext

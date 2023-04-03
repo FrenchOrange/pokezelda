@@ -163,6 +163,7 @@ BurnedTowerSuicuneMovement3:
 	fast_jump_step DOWN
 	fast_jump_step DOWN
 	fast_jump_step DOWN
+	fast_jump_step DOWN
 	remove_sliding
 	step_end
 

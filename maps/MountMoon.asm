@@ -63,6 +63,7 @@ MountMoon_MapScripts:
 	closetext
 	applymovement MOUNTMOON_SILVER, MountMoonSilverMovementAfter
 	disappear MOUNTMOON_SILVER
+	pause 15
 	setscene SCENE_FINISHED
 	setevent EVENT_BEAT_RIVAL_IN_MT_MOON
 	playmapmusic
@@ -75,6 +76,7 @@ MountMoonSilverMovementBefore:
 	step_end
 
 MountMoonSilverMovementAfter:
+	step UP
 	step UP
 	step UP
 	step UP

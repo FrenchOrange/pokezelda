@@ -1,4 +1,45 @@
-Changelog
+
+- - Changelog - -
 
 1.0.0
 * Initial release
+
+
+1.1.0
+* Significant update:
+- Removed a couple of unused files and routines.
+- Removed all Mobile Adapter-exclusive graphics.
+- Implemented individual icons and palettes for each Pokémon.
+- Implemented fixed palette for Surf Lapras / Pikachu.
+- Implemented special Fuchsia City event.
+- Added wild encounters to Seafoam Islands.
+- Started working on the revamped title screen.
+
+- Updated a couple of tilesets.
+- Updated a couple of Pokémon icons.
+- Updated a couple of Pokémon sprites.
+- Updated a good amount of Pokémon palettes.
+- Updated a couple of overworld sprites.
+
+- Fixed issue where the Staryu Doll was accidentally made a Starmie Doll.
+- Fixed issue where you couldn't Fly to Route 4 and Route 10.
+- Fixed issue with the Saffron / Vermilion outdoor spriteset.
+
+
+1.1.1
+- Removed the code for the Australian version changes.
+- Implemented the bug fixes from version 1.1.
+- Expanded the "content" of a small handful of NPC houses.
+
+- Updated the Mansion tileset and its palette.
+- Updated Weedle's icon from Brown to Red.
+- Updated the icons for the Pidgey line.
+- Updated Goldenrod's roof palette to look more golden.
+- Updated some movement scripts so that characters properly walk off-screen.
+
+- Fixed issue where the Battle Tower exterior tileset was messed-up.
+- Fixed issue with the Roof colors of the custom House palette.
+- Fixed some typos and rewrote a handful of lines.
+- Fixed a layout inconsistency between Vermilion City and Route 11.
+- Fixed a layout error with the "Port Passage" map.
+- Fixed issue where the Pidgey in Violet City used the wrong sprite.

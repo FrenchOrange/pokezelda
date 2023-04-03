@@ -1,5 +1,6 @@
 	object_const_def
 	const GUIDEGENTSHOUSE_GRAMPS
+	const GUIDEGENTSHOUSE_POKEFAN_F
 
 GuideGentsHouse_MapScripts:
 	def_scene_scripts
@@ -10,7 +11,20 @@ GuideGentsHouseGuideGent:
 	jumptextfaceplayer GuideGentsHouseGuideGentText
 
 GuideGentsHouseDaughter:
-	jumptextfaceplayer GuideGentsHouseDaughterText
+	faceplayer
+	opentext
+	checkevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
+	iftrue .GuideGentsHouseDaughterDadsOutsideText
+	writetext GuideGentsHouseDaughterText
+	waitbutton
+	closetext
+	end
+
+.GuideGentsHouseDaughterDadsOutsideText:
+	writetext GuideGentsHouseDaughterDadsOutsideText
+	waitbutton
+	closetext
+	end
 
 GuideGentsHouseBookshelf:
 	jumpstd MagazineBookshelfScript
@@ -28,9 +42,20 @@ GuideGentsHouseGuideGentText:
 	line "with kindness!"
 	done
 
+GuideGentsHouseDaughterDadsOutsideText:
+	text "Dad loves showing"
+	line "the ropes to"
+	cont "newbie trainers."
+
+	para "He likes sitting"
+	line "at the edge of"
+	cont "town if you ever"
+	cont "need help."
+	done
+
 GuideGentsHouseDaughterText:
 	text "My father might be"
-	line "old, be he's still"
+	line "old, but he's still"
 	cont "as fast as ever."
 
 	para "If you want to go"

@@ -1,5 +1,6 @@
 	object_const_def
 	const ROUTE30BERRYHOUSE_POKEFAN_M
+	const ROUTE30BERRYHOUSE_WEEDLE
 
 Route30BerryHouse_MapScripts:
 	def_scene_scripts
@@ -44,6 +45,19 @@ Route30BerrySpeechHouseCheckTreesText:
 	cont "drop right off."
 	done
 
+Route30BerrySpeechHouseWeedleScript:
+	cry WEEDLE
+	opentext
+	writetext Route30BerrySpeechHouseWeedleText
+	waitbutton
+	closetext
+	end
+
+Route30BerrySpeechHouseWeedleText:
+	text "WEEDLE is nibbling"
+	line "on a BERRY… Cute!"
+	done
+
 Route30BerryHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -59,3 +73,4 @@ Route30BerryHouse_MapEvents:
 
 	def_object_events
 	object_event  4,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route30BerryHousePokefanMScript, -1
+	object_event  8,  5, SPRITE_WEEDLE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route30BerrySpeechHouseWeedleScript, -1

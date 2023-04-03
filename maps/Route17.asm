@@ -241,7 +241,9 @@ Route17Sign2Text:
 	done
 
 Route17Sign3Text:
-	text "ROUTE 16"
+	text "Watch your step!"
+	para "The slope makes"
+	line "it hard to steer!"
 	done
 
 Route17Sign4Text:

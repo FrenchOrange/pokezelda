@@ -7,14 +7,14 @@ While the story and progression have not been changed, here's some new things yo
 * Overhauled overworld and interior graphics, alongside some UI elements.
 * Tweaked trainer teams, namely harder rosters for important trainers, such as Gym Leaders.
 * An expanded Kanto, with restored dungeons, more trainers, and more items.
-* More sensible Pokémon distribution, and more generous HM compatibility.
+* More sensible Pokémon distribution (as seen [here](LOCATIONS.txt), and more generous HM compatibility.
 * Fixed off-model Pokémon sprites. Palettes were also improved for a good amount of Pokémon.
 * Some QOL features, like "Running Shoes" (works by holding down B), and an automatic Repel reuse message.
 * Fixed [bugs and glitches](https://github.com/pret/pokecrystal/blob/master/docs/bugs_and_glitches.md), aside from multiplayer-related issues, as to ensure compatibility with base GSC.
 * The Celebi event, now restored! To get it, simply head to Goldenrod's Pokémon Center after beating the League.
 
 ## Version
-The current version is **1.0.0**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
+The current version is **1.1.1**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
 
 If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 

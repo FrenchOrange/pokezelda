@@ -1,4 +1,4 @@
-roms := pokezelda.gbc pokezelda11.gbc pokezelda_au.gbc pokezelda_debug.gbc pokezelda11_debug.gbc
+roms := pokezelda.gbc pokezelda_debug.gbc
 
 rom_obj := \
 audio.o \
@@ -19,10 +19,7 @@ gfx/tilesets.o \
 lib/mobile/main.o
 
 pokezelda_obj         := $(rom_obj:.o=.o)
-pokezelda11_obj       := $(rom_obj:.o=11.o)
-pokezelda_au_obj      := $(rom_obj:.o=_au.o)
 pokezelda_debug_obj   := $(rom_obj:.o=_debug.o)
-pokezelda11_debug_obj := $(rom_obj:.o=11_debug.o)
 
 
 ### Build tools
@@ -43,24 +40,21 @@ RGBLINK ?= $(RGBDS)rgblink
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all crystal crystal11 crystal_au crystal_debug crystal11_debug clean tidy compare tools
+.PHONY: all crystal crystal_debug clean tidy compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
 all: crystal
 crystal:         pokezelda.gbc
-crystal11:       pokezelda11.gbc
-crystal_au:      pokezelda_au.gbc
 crystal_debug:   pokezelda_debug.gbc
-crystal11_debug: pokezelda11_debug.gbc
 
 clean: tidy
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" -o -name "*.sgb.tilemap" \) -delete
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 
 tidy:
-	$(RM) $(roms) $(pokezelda_obj) $(pokezelda11_obj) $(pokezelda_au_obj) $(pokezelda_debug_obj) $(pokezelda11_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
+	$(RM) $(roms) $(pokezelda_obj) $(pokezelda_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -77,10 +71,7 @@ RGBASMFLAGS += -E
 endif
 
 $(pokezelda_obj):         RGBASMFLAGS +=
-$(pokezelda11_obj):       RGBASMFLAGS += -D _CRYSTAL11
-$(pokezelda_au_obj):      RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL_AU
 $(pokezelda_debug_obj):   RGBASMFLAGS += -D _DEBUG
-$(pokezelda11_debug_obj): RGBASMFLAGS += -D _CRYSTAL11 -D _DEBUG
 
 rgbdscheck.o: rgbdscheck.asm
 	$(RGBASM) -o $@ $<
@@ -101,25 +92,16 @@ $(info $(shell $(MAKE) -C tools))
 
 # Dependencies for shared objects objects
 $(foreach obj, $(pokezelda_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
-$(foreach obj, $(pokezelda11_obj), $(eval $(call DEP,$(obj),$(obj:11.o=.asm))))
-$(foreach obj, $(pokezelda_au_obj), $(eval $(call DEP,$(obj),$(obj:_au.o=.asm))))
 $(foreach obj, $(pokezelda_debug_obj), $(eval $(call DEP,$(obj),$(obj:_debug.o=.asm))))
-$(foreach obj, $(pokezelda11_debug_obj), $(eval $(call DEP,$(obj),$(obj:11_debug.o=.asm))))
 
 endif
 
 
 pokezelda_opt         = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-pokezelda11_opt       = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-pokezelda_au_opt      = -Cjv -t PM_CRYSTAL -i BYTU -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
 pokezelda_debug_opt   = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-pokezelda11_debug_opt = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
 
 pokezelda_base         = us
-pokezelda11_base       = us
-pokezelda_au_base      = us
 pokezelda_debug_base   = dbg
-pokezelda11_debug_base = dbg
 
 %.gbc: $$(%_obj) layout.link
 	$(RGBLINK) -n $*.sym -m $*.map -l layout.link -o $@ $(filter %.o,$^)
@@ -248,18 +230,6 @@ gfx/font/unused_bold_font.1bpp: tools/gfx += --trim-whitespace
 
 gfx/sgb/sgb_border.2bpp: tools/gfx += --trim-whitespace
 gfx/sgb/sgb_border.sgb.tilemap: gfx/sgb/sgb_border.bin ; tr < $< -d '\000' > $@
-
-gfx/mobile/ascii_font.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/dialpad.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/dialpad_cursor.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/electro_ball.2bpp: tools/gfx += --remove-duplicates --remove-xflip --preserve=0x39
-gfx/mobile/mobile_splash.2bpp: tools/gfx += --remove-duplicates --remove-xflip
-gfx/mobile/card.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/card_2.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/card_folder.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/phone_tiles.2bpp: tools/gfx += --remove-whitespace
-gfx/mobile/pichu_animated.2bpp: tools/gfx += --trim-whitespace
-gfx/mobile/stadium2_n64.2bpp: tools/gfx += --trim-whitespace
 
 
 ### Catch-all graphics rules

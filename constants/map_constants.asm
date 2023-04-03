@@ -291,7 +291,7 @@ ENDM
 
 	newgroup VERMILION                                            ; 12
 	map_const ROUTE_11_GATE,                                7,  5 ;  NEW
-	map_const ROUTE_11,                                    29,  9 ;  2
+	map_const ROUTE_11,                                    29, 10 ;  2
 	map_const VERMILION_CITY,                              20, 18 ;  3
 	map_const VERMILION_FISHING_SPEECH_HOUSE,               6,  5 ;  4
 	map_const VERMILION_POKECENTER_1F,                      7,  5 ;  5

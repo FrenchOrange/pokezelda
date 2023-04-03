@@ -54,6 +54,7 @@ SpriteMons:
 	db MURKROW
 	db SPEAROW
 	db RATTATA
+	db BELLOSSOM
 	db HO_OH
 	db LUGIA
 	assert_table_length NUM_POKEMON_SPRITES

@@ -25,218 +25,62 @@ Route25_MapScripts:
 	end
 
 Route25PreDate1Script:
-	showemote EMOTE_QUESTION, PLAYER, 20
-	applymovement PLAYER, Route25PlayerMovement1
-	pause 20
-	showemote EMOTE_HEART, ROUTE25_MISTY, 15
-	pause 30
-	showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
-	pause 30
-	turnobject ROUTE25_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
-	pause 20
-	turnobject ROUTE25_MISTY, DOWN
-	applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
-	disappear ROUTE25_COOLTRAINER_M1
-	pause 15
-	playmusic MUSIC_BEAUTY_ENCOUNTER
-	turnobject ROUTE25_MISTY, UP
-	pause 10
-	applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement1
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route25MistyDateText
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement1
-	turnobject PLAYER, LEFT
-	applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
-	disappear ROUTE25_MISTY
-	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
-	setscene SCENE_ROUTE25_NOTHING
-	special RestartMapMusic
-	setevent EVENT_DECO_STARYU_DOLL
-	end
-
+    showemote EMOTE_QUESTION, PLAYER, 20
+    applymovement PLAYER, Route25PlayerMovement1
+    sjump Route25DateScript
 Route25PreDate2Script:
-	showemote EMOTE_QUESTION, PLAYER, 20
-	applymovement PLAYER, Route25PlayerMovement2
-	pause 20
-	showemote EMOTE_HEART, ROUTE25_MISTY, 15
-	pause 30
-	showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
-	pause 30
-	turnobject ROUTE25_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
-	pause 20
-	turnobject ROUTE25_MISTY, DOWN
-	applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
-	disappear ROUTE25_COOLTRAINER_M1
-	pause 15
-	playmusic MUSIC_BEAUTY_ENCOUNTER
-	turnobject ROUTE25_MISTY, UP
-	pause 10
-	applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement1
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route25MistyDateText
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement1
-	turnobject PLAYER, LEFT
-	applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
-	disappear ROUTE25_MISTY
-	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
-	setscene SCENE_ROUTE25_NOTHING
-	special RestartMapMusic
-	setevent EVENT_DECO_STARYU_DOLL
-	end
-
+    showemote EMOTE_QUESTION, PLAYER, 20
+    applymovement PLAYER, Route25PlayerMovement2
+    sjump Route25DateScript
 Route25PreDate3Script:
-	showemote EMOTE_QUESTION, PLAYER, 20
-	applymovement PLAYER, Route25PlayerMovement3
-	turnobject PLAYER, DOWN
-	pause 20
-	showemote EMOTE_HEART, ROUTE25_MISTY, 15
-	pause 30
-	showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
-	pause 30
-	turnobject ROUTE25_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
-	pause 20
-	turnobject ROUTE25_MISTY, DOWN
-	applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
-	disappear ROUTE25_COOLTRAINER_M1
-	pause 15
-	playmusic MUSIC_BEAUTY_ENCOUNTER
-	turnobject ROUTE25_MISTY, UP
-	pause 10
-	applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement1
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route25MistyDateText
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement1
-	turnobject PLAYER, LEFT
-	applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
-	disappear ROUTE25_MISTY
-	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
-	setscene SCENE_ROUTE25_NOTHING
-	special RestartMapMusic
-	setevent EVENT_DECO_STARYU_DOLL
-	end
-
+    showemote EMOTE_QUESTION, PLAYER, 20
+    applymovement PLAYER, Route25PlayerMovement3
+    sjump Route25DateScript
 Route25PreDate4Script:
-	showemote EMOTE_QUESTION, PLAYER, 20
-	applymovement PLAYER, Route25PlayerMovement4
-	turnobject PLAYER, DOWN
-	pause 20
-	showemote EMOTE_HEART, ROUTE25_MISTY, 15
-	pause 30
-	showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
-	pause 30
-	turnobject ROUTE25_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
-	pause 20
-	turnobject ROUTE25_MISTY, DOWN
-	applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
-	disappear ROUTE25_COOLTRAINER_M1
-	pause 15
-	playmusic MUSIC_BEAUTY_ENCOUNTER
-	turnobject ROUTE25_MISTY, UP
-	pause 10
-	applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement2
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route25MistyDateText
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement2
-	turnobject PLAYER, LEFT
-	applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
-	disappear ROUTE25_MISTY
-	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
-	setscene SCENE_ROUTE25_NOTHING
-	special RestartMapMusic
-	setevent EVENT_DECO_STARYU_DOLL
-	end
-
+    showemote EMOTE_QUESTION, PLAYER, 20
+    applymovement PLAYER, Route25PlayerMovement4
+    sjump Route25DateScript
 Route25PreDate5Script:
-	showemote EMOTE_QUESTION, PLAYER, 20
-	applymovement PLAYER, Route25PlayerMovement5
-	turnobject PLAYER, DOWN
-	pause 20
-	showemote EMOTE_HEART, ROUTE25_MISTY, 15
-	pause 30
-	showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
-	pause 30
-	turnobject ROUTE25_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
-	pause 20
-	turnobject ROUTE25_MISTY, DOWN
-	applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
-	disappear ROUTE25_COOLTRAINER_M1
-	pause 15
-	playmusic MUSIC_BEAUTY_ENCOUNTER
-	turnobject ROUTE25_MISTY, UP
-	pause 10
-	applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement2
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route25MistyDateText
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement2
-	turnobject PLAYER, LEFT
-	applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
-	disappear ROUTE25_MISTY
-	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
-	setscene SCENE_ROUTE25_NOTHING
-	special RestartMapMusic
-	setevent EVENT_DECO_STARYU_DOLL
-	end
-
+    showemote EMOTE_QUESTION, PLAYER, 20
+    applymovement PLAYER, Route25PlayerMovement5
+    sjump Route25DateScript
 Route25PreDate6Script:
-	showemote EMOTE_QUESTION, PLAYER, 20
-	applymovement PLAYER, Route25PlayerMovement6
-	turnobject PLAYER, DOWN
-	pause 20
-	showemote EMOTE_HEART, ROUTE25_MISTY, 15
-	pause 30
-	showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
-	pause 30
-	turnobject ROUTE25_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
-	pause 20
-	turnobject ROUTE25_MISTY, DOWN
-	applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
-	disappear ROUTE25_COOLTRAINER_M1
-	pause 15
-	playmusic MUSIC_BEAUTY_ENCOUNTER
-	turnobject ROUTE25_MISTY, UP
-	pause 10
-	applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement2
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext Route25MistyDateText
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement2
-	turnobject PLAYER, LEFT
-	applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
-	disappear ROUTE25_MISTY
-	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
-	setscene SCENE_ROUTE25_NOTHING
-	special RestartMapMusic
-	setevent EVENT_DECO_STARYU_DOLL
-	end
+    showemote EMOTE_QUESTION, PLAYER, 20
+    applymovement PLAYER, Route25PlayerMovement6
+    sjump Route25DateScript
+    
+Route25DateScript:
+    pause 20
+    showemote EMOTE_HEART, ROUTE25_MISTY, 15
+    pause 30
+    showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
+    pause 30
+    turnobject ROUTE25_COOLTRAINER_M1, UP
+    showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
+    pause 20
+    turnobject ROUTE25_MISTY, DOWN
+    applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
+    disappear ROUTE25_COOLTRAINER_M1
+    pause 15
+    playmusic MUSIC_BEAUTY_ENCOUNTER
+    turnobject ROUTE25_MISTY, UP
+    pause 10
+    applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement
+    turnobject PLAYER, RIGHT
+    opentext
+    writetext Route25MistyDateText
+    waitbutton
+    closetext
+    turnobject PLAYER, UP
+    applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement
+    turnobject PLAYER, LEFT
+    applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
+    disappear ROUTE25_MISTY
+    clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
+    setscene SCENE_ROUTE25_NOTHING
+    special RestartMapMusic
+    setevent EVENT_DECO_STARYU_DOLL    
+    end
 
 TrainerSchoolboyDudley:
 	trainer SCHOOLBOY, DUDLEY, EVENT_BEAT_SCHOOLBOY_DUDLEY, SchoolboyDudleySeenText, SchoolboyDudleyBeatenText, 0, .Script
@@ -360,6 +204,7 @@ Route25PlayerMovement1:
 	step RIGHT
 	step DOWN
 	step DOWN
+	step DOWN
 	step_end
 
 Route25PlayerMovement2:
@@ -368,6 +213,7 @@ Route25PlayerMovement2:
 	step RIGHT
 	step RIGHT
 	step DOWN
+	step DOWN
 	step_end
 
 Route25PlayerMovement3:
@@ -375,6 +221,7 @@ Route25PlayerMovement3:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	step DOWN
 	step_end
 
 Route25PlayerMovement4:
@@ -383,6 +230,7 @@ Route25PlayerMovement4:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	turn_head DOWN
 	step_end
 
 Route25PlayerMovement5:
@@ -392,6 +240,7 @@ Route25PlayerMovement5:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	turn_head DOWN
 	step_end
 
 Route25PlayerMovement6:
@@ -402,6 +251,7 @@ Route25PlayerMovement6:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	turn_head DOWN
 	step_end
 
 Route25MistysDateLeavesMovement:
@@ -409,27 +259,14 @@ Route25MistysDateLeavesMovement:
 	big_step DOWN
 	step_end
 
-Route25MistyApproachesPlayerMovement1:
-	step UP
-	step UP
-	step UP
-	step LEFT
-	step LEFT
-	step_end
-
-Route25MistyApproachesPlayerMovement2:
+Route25MistyApproachesPlayerMovement:
 	step UP
 	step UP
 	step LEFT
 	step LEFT
 	step_end
 
-Route25MistyLeavesPlayerMovement1:
-	step DOWN
-	step LEFT
-	step_end
-
-Route25MistyLeavesPlayerMovement2:
+Route25MistyLeavesPlayerMovement:
 	step UP
 	step LEFT
 	step_end

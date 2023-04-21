@@ -253,9 +253,8 @@ CheckCoinsAndCoinCase:
 	text_far _NoCoinCaseText
 	text_end
 
-ClearBGPalettesBufferScreen:
-	call ClearBGPalettes
-	call BufferScreen
+ColorPicker:
+	farcall DebugColorPicker
 	ret
 
 ScriptReturnCarry:

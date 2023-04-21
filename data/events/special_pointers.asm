@@ -55,7 +55,7 @@ SpecialsPointers::
 	add_special UnownPuzzle
 	add_special SlotMachine
 	add_special CardFlip
-	add_special ClearBGPalettesBufferScreen ; unused
+	add_special ColorPicker ; new
 	add_special FadeOutPalettes
 	add_special BattleTowerFade
 	add_special FadeBlackQuickly

@@ -32,7 +32,7 @@
 	const DEBUGCOLORMAIN_INITTMHM       ; 4
 	const DEBUGCOLORMAIN_TMHMJOYPAD     ; 5
 
-DebugColorPicker: ; unreferenced
+DebugColorPicker:
 ; A debug menu to test monster and trainer palettes at runtime.
 	ldh a, [hCGB]
 	and a
@@ -333,7 +333,7 @@ DebugColor_InitScreen:
 	ld a, UNOWN_A
 	ld [wUnownLetter], a
 	call GetPokemonName
-	hlcoord 4, 1
+	hlcoord 0, 2
 	call PlaceString
 	xor a
 	ld [wBoxAlignment], a
@@ -356,7 +356,7 @@ DebugColor_InitScreen:
 .normal
 	ld de, .NormalText
 .place_text
-	hlcoord 7, 17
+	hlcoord 9, 17
 	call PlaceString
 	hlcoord 0, 17
 	ld de, .SwitchText
@@ -368,7 +368,7 @@ DebugColor_InitScreen:
 	ld [wTrainerClass], a
 	callfar GetTrainerAttributes
 	ld de, wStringBuffer1
-	hlcoord 4, 1
+	hlcoord 0, 2
 	call PlaceString
 	ld de, vTiles2
 	callfar GetTrainerPic
@@ -385,13 +385,13 @@ DebugColor_InitScreen:
 	ret
 
 .ShinyText:
-	db "レア", DEBUGTEST_BLACK, DEBUGTEST_BLACK, "@" ; Rare (shiny)
+	db "SHINY@"
 
 .NormalText:
-	db "ノーマル@" ; Normal
+	db "NORMAL@"
 
 .SwitchText:
-	db DEBUGTEST_A, "きりかえ▶@" ; (A) Switches
+	db DEBUGTEST_A, " Switch▶@"
 
 DebugColor_LoadRGBMeter:
 	decoord 0, 11, wAttrmap
@@ -776,7 +776,7 @@ DebugColor_PrintTMHMMove:
 	ld a, [wTempTMHM]
 	ld [wPutativeTMHMMove], a
 	call GetMoveName
-	hlcoord 10, 12
+	hlcoord 08, 12
 	call PlaceString
 
 	ld a, [wDebugColorCurTMHM]
@@ -794,10 +794,10 @@ DebugColor_PrintTMHMMove:
 	ret
 
 .AbleText:
-	db "おぼえられる@" ; Learnable
+	db "Can Learn@" ; Learnable
 
 .NotAbleText:
-	db "おぼえられない@" ; Not learnable
+	db "Can't Learn@" ; Not learnable
 
 .GetNumberedTMHM:
 	cp NUM_TMS
@@ -1058,9 +1058,9 @@ DebugColor_PlaceCursor:
 	ret
 
 DebugColor_AreYouFinishedString:
-	db   "おわりますか？"                        ; Are you finished?
-	next "はい<DOT><DOT><DOT>", DEBUGTEST_A ; YES...(A)
-	next "いいえ<DOT><DOT>", DEBUGTEST_B     ; NO..(B)
+	db   "Move:"
+	next "YES<DOT><DOT><DOT>", DEBUGTEST_A
+	next "NO<DOT><DOT><DOT> ", DEBUGTEST_B
 	db   "@"
 
 DebugColor_UpArrowGFX:

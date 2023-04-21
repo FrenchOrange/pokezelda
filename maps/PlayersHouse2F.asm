@@ -109,15 +109,17 @@ PlayersRadioText4:
 	line "#MON CHANNEL…"
 	done
 
-DebugBattle:
+DebugColor:
 	opentext
-	givepoke RHYDON, 100
+	writetext DebugColorText
+	special ColorPicker
 	closetext
-	loadwildmon RHYDON, 30
-	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
-	startbattle
-	reloadmapafterbattle
 	end
+
+DebugColorText:
+	text "Entering the DEBUG"
+	line "COLOR PICKER…"
+	done
 
 DebugSign:
 	setflag ENGINE_POKEDEX
@@ -162,7 +164,6 @@ DebugSign:
 	waitsfx
 ;	warp VERMILION_CITY, 12, 20
 	warp ROUTE_16, 11,  8
-;	warp ROUTE_20, 58, 10
 	end
 
 PlayersHouse2F_MapEvents:
@@ -178,7 +179,7 @@ PlayersHouse2F_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, PlayersHouseRadioScript
 	bg_event  7,  1, BGEVENT_READ, PlayersHouseBookshelfScript
 	bg_event  8,  0, BGEVENT_IFSET, PlayersHousePosterScript
-	bg_event  2,  0, BGEVENT_READ, DebugBattle
+	bg_event  2,  0, BGEVENT_READ, DebugColor
 	bg_event  3,  0, BGEVENT_READ, DebugSign
 
 	def_object_events

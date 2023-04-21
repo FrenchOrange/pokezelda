@@ -43,3 +43,16 @@
 - Fixed a layout inconsistency between Vermilion City and Route 11.
 - Fixed a layout error with the "Port Passage" map.
 - Fixed issue where the Pidgey in Violet City used the wrong sprite.
+
+
+1.1.2
+- Restored the debug color picker for testing purposes.
+- Optimized Route 25's script.
+
+- Updated a couple of Pokémon palettes.
+- Updated a handful of trainer sprites.
+
+- Fixed issue with miscolored room decorations.
+- Fixed some issues related to the Bug-Catching Contest.
+
+

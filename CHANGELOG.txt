@@ -56,3 +56,7 @@
 - Fixed some issues related to the Bug-Catching Contest.
 
 
+1.1.3
+- Replaced a good amount of Pokémon sprites, courtesy of the amazing SoupPotato.
+- Slightly tweaked Chuck and Blue's sprites.
+- Fixed some vanilla inconsistencies with the lava in Clair's Gym.

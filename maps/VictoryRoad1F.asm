@@ -6,6 +6,7 @@
 	const VICTORYROAD1F_BOULDER1
 	const VICTORYROAD1F_BOULDER2
 	const VICTORYROAD1F_BOULDER3
+	const VICTORYROAD1F_BOULDER4
 
 VictoryRoad1F_MapScripts:
 	def_scene_scripts
@@ -26,19 +27,12 @@ VictoryRoad1F_MapScripts:
 	db -1 ; end
 
 .Boulder1:
-	setevent EVENT_SWITCH_IN_VICTORY_ROAD_1F
-	pause 30
-	scall .FX
-	refreshscreen
 	changeblock 18, 14, $4E ; switch
 	changeblock 10, 14, $03 ; wall
 	reloadmappart
-	disappear VICTORYROAD1F_BOULDER3
-	end
-
-.FX:
-	playsound SFX_STRENGTH
-	earthquake 80
+	clearevent EVENT_SWITCH_BOULDER_VICTORY_ROAD_1F
+	setevent EVENT_BOULDER_IN_VICTORY_ROAD_1F
+	setevent EVENT_SWITCH_IN_VICTORY_ROAD_1F
 	end
 
 VictoryRoad1FBoulder:
@@ -99,9 +93,9 @@ CooltrainermTylerAfterBattleText:
 
 CooltrainerfGemmaSeenText:
 	text "You just entered"
-	line "VICTORY ROAD. Do"
-	cont "you know what that"
-	cont "means?"
+	line "VICTORY ROAD."
+	cont "Do you know what"
+	cont "that means?"
 	done
 
 CooltrainerfGemmaBeatenText:
@@ -144,4 +138,5 @@ VictoryRoad1F_MapEvents:
 	object_event 14,  8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfGemma, -1
 	object_event  4, 13, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad1FBoulder, -1
 	object_event 16,  4, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad1FBoulder, -1
-	object_event  7, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad1FBoulder, -1
+	object_event  7, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad1FBoulder, EVENT_BOULDER_IN_VICTORY_ROAD_1F
+	object_event 19, 15, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad1FBoulder, EVENT_SWITCH_BOULDER_VICTORY_ROAD_1F

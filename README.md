@@ -14,7 +14,7 @@ While the story and progression have not been changed, here's some new things yo
 * The Celebi event, now restored! To get it, simply head to Goldenrod's Pokémon Center after beating the League.
 
 ## Version
-The current version is **1.1.2**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
+The current version is **1.1.3**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
 
 If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
@@ -24,6 +24,7 @@ Some HUGE thanks to:
 * The awesome folks who wrote down the various tutorials for Pokecrystal.
 * The Polished Crystal team, for some script changes and new trainer sprites.
 * Artist [LuigiTKO](https://twitter.com/LuigiTKO) for his gorgeous GSC-styled Pokémon icons (alongside some icons from Pokémon Showdown and Crystal Clear).
+* SoupPotato, creator of [Sourcrystal](https://github.com/SoupPotato/Sourcrystal), for some incredible new Pokémon sprites.
 * My friends Idain and Seasick, for graphical help, as well as general troubleshooting. I truly wouldn't have been able to finish this hack without them.
 * The original devs and artists over at Nintendo who worked on Link's Awakening and the Oracle games.
 

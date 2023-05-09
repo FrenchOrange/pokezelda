@@ -52,6 +52,10 @@ SafariZoneRestHouseBookshelf2Text:
 	line "sprites made by"
 	cont "the team over at"
 	cont "POLISHED CRYSTAL."
+
+	para "Updated #MON"
+	line "sprites made by"
+	cont "SoupPotato."
 	done
 
 SafariZoneRestHouseBookshelf3Text:

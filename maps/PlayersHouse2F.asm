@@ -163,8 +163,8 @@ DebugSign:
 	special FadeOutPalettes
 	waitsfx
 ;	warp VERMILION_CITY, 12, 20
-;	warp ROUTE_16, 11,  8
-	warp ROUTE_22, 6,  8
+	warp ROUTE_16, 11,  8
+;	warp ROUTE_22, 6,  8
 	end
 
 PlayersHouse2F_MapEvents:

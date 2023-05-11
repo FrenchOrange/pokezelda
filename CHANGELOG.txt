@@ -60,3 +60,10 @@
 - Replaced a good amount of Pokémon sprites, courtesy of the amazing SoupPotato.
 - Slightly tweaked Chuck and Blue's sprites.
 - Fixed some vanilla inconsistencies with the lava in Clair's Gym.
+
+
+1.1.4
+- Made it so that getting the Expn Card enables the Radio Card by default.
+- Updated the trade animation's Poké Ball graphics.
+- Updated Grimer and Muk's palettes.
+- Updated Grimer and Marowak's back sprites.

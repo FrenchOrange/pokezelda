@@ -276,7 +276,7 @@ INCLUDE "data/tilesets/ruins_of_alph_collision.asm"
 SECTION "Tileset Data 8", ROMX
 
 TilesetRuinsWordRoomMeta::
-INCBIN "data/tilesets/Ruins_word_room_metatiles.bin"
+INCBIN "data/tilesets/ruins_word_room_metatiles.bin"
 
 TilesetIcePathGFX::
 INCBIN "gfx/tilesets/ice_path.2bpp.lz"

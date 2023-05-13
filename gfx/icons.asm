@@ -289,3 +289,8 @@ UnownWIcon:     INCBIN "gfx/icons/unown_icons/unown_w.2bpp"
 UnownXIcon:     INCBIN "gfx/icons/unown_icons/unown_x.2bpp"
 UnownYIcon:     INCBIN "gfx/icons/unown_icons/unown_y.2bpp"
 UnownZIcon:     INCBIN "gfx/icons/unown_icons/unown_z.2bpp"
+
+
+SECTION "Flying Pikachu Icon", ROMX
+
+FlyingPikachuIcon::  INCBIN "gfx/icons/flying_pikachu.2bpp"

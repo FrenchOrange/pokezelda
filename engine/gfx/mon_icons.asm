@@ -416,11 +416,42 @@ Trade_LoadMonIconGFX:
 
 GetSpeciesIcon:
 ; Load species icon into VRAM at tile a
-	push de
 	ld a, MON_DVS
 	call GetPartyParamLocation
 	call SetMenuMonIconColor
 	ld a, [wTempIconSpecies]
+	cp PIKACHU
+	jr nz, .normal_check
+
+	ld a, e
+; Load icon graphics into VRAM starting from tile a.
+	ld l, a
+	ld h, 0
+; Load icon graphics into VRAM starting from tile hl.
+
+; One tile is 16 bytes long.
+rept 4
+	add hl, hl
+endr
+	ld de, vTiles0
+	add hl, de
+	push hl
+	ld de, FlyingPikachuIcon
+	lb bc, BANK("Flying Pikachu Icon"), 8
+	call GetGFXUnlessMobile
+	pop hl
+	ld de, 8 tiles
+	add hl, de
+	ld de, HeldItemIcons
+	lb bc, BANK(HeldItemIcons), 2
+	call GetGFXUnlessMobile
+	ld a, [wCurIconTile]
+	add 10
+	ld [wCurIconTile], a
+	ret
+
+.normal_check
+	push de
 	push hl
 	call ReadMonMenuIcon
 	pop hl
@@ -429,19 +460,40 @@ GetSpeciesIcon:
 	ld a, e
 	ld e, l
 	ld d, h
-	call GetIconGFX
-	ret
+	jr GetIconGFX
 
 FlyFunction_GetMonIcon:
-	push de
 	ld a, [wTempIconSpecies]
+	cp PIKACHU
+	jr nz, .normal_check
+	ld a, e
+; Load icon graphics into VRAM starting from tile a.
+	ld l, a
+	ld h, 0
+; Load icon graphics into VRAM starting from tile hl.
+
+; One tile is 16 bytes long.
+rept 4
+	add hl, hl
+endr
+	
+	ld de, vTiles0
+	add hl, de
+	ld de, FlyingPikachuIcon
+	lb bc, BANK("Flying Pikachu Icon"), 8
+	call GetGFXUnlessMobile
+	jr .get_icon_palette
+	
+.normal_check
+	push de
 	call ReadMonMenuIcon
 	ld [wCurIcon], a
 	pop de
 	ld a, e
 	ld de, wTempMonDVs
 	call GetIcon_a
-
+	; fallthrough
+.get_icon_palette
 	; Edit the OBJ 0 palette so that the flying Pokémon has the right colors.
 	ld a, MON_DVS
 	call GetPartyParamLocation
@@ -534,8 +586,6 @@ GetIconBank:
 	lb bc, BANK("Mon Icons 1"), 8
 	ret c
 	ld b, BANK("Mon Icons 2")
-;	ret c
-;	ld b, BANK("Mon Icons 3")
 	ret
 
 GetGFXUnlessMobile:

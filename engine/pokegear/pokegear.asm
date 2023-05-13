@@ -2014,13 +2014,11 @@ PokegearMap:
 	and a
 	jr nz, .kanto
 	call LoadTownMapGFX
-	call FillJohtoMap
-	ret
+	jp FillJohtoMap
 
 .kanto
 	call LoadTownMapGFX
-	call FillKantoMap
-	ret
+	jp FillKantoMap
 
 _FlyMap:
 	call ClearBGPalettes
@@ -2039,7 +2037,6 @@ _FlyMap:
 	lb bc, BANK(FlyMapLabelBorderGFX), 6
 	call Request1bpp
 	call FlyMap
-	call Pokegear_DummyFunction
 	ld b, SCGB_POKEGEAR_PALS
 	call GetSGBLayout
 	call SetPalettes
@@ -2244,9 +2241,6 @@ HasVisitedSpawn:
 
 INCLUDE "data/maps/flypoints.asm"
 
-Pokegear_DummyFunction:
-	ret
-
 FlyMap:
 	ld a, [wMapGroup]
 	ld b, a
@@ -2278,8 +2272,7 @@ FlyMap:
 	call FillJohtoMap
 	call .MapHud
 	pop af
-	call TownMapPlayerIcon
-	ret
+	jp TownMapPlayerIcon
 
 .KantoFlyMap:
 ; The event that there are no flypoints enabled in a map is not
@@ -2305,8 +2298,7 @@ FlyMap:
 	call FillKantoMap
 	call .MapHud
 	pop af
-	call TownMapPlayerIcon
-	ret
+	jp TownMapPlayerIcon
 
 .NoKanto:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
@@ -2776,8 +2768,7 @@ LoadTownMapGFX:
 	ld hl, TownMapGFX
 	ld de, vTiles2
 	lb bc, BANK(TownMapGFX), 48
-	call DecompressRequest2bpp
-	ret
+	jp DecompressRequest2bpp
 
 JohtoMap:
 INCBIN "gfx/pokegear/johto.bin"

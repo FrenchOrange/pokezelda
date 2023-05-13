@@ -579,9 +579,8 @@ FlyFunction:
 	jr c, .nostormbadge
 	call GetMapEnvironment
 	call CheckOutdoorMap
-	jr z, .outdoors
-	jr .indoors
-
+	jr nz, .indoors
+	; fallthrough
 .outdoors
 	xor a
 	ldh [hMapAnims], a

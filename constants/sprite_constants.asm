@@ -86,22 +86,21 @@
 	const SPRITE_SURF ; 53
 	const SPRITE_POKE_BALL ; 54
 	const SPRITE_POKEDEX ; 55
-	const SPRITE_FLYING_PIKACHU ; 56
-	const SPRITE_VIRTUAL_BOY ; 57
-	const SPRITE_OFFICER_JENNY ; 58
-	const SPRITE_ROCK ; 59
-	const SPRITE_BOULDER ; 5a
-	const SPRITE_SNES ; 5b
-	const SPRITE_FAMICOM ; 5c
-	const SPRITE_FRUIT_TREE ; 5d
-	const SPRITE_GOLD_TROPHY ; 5e
-	const SPRITE_SILVER_TROPHY ; 5f
-	const SPRITE_KRIS ; 60
-	const SPRITE_KRIS_BIKE ; 61
-	const SPRITE_RATTATA_BACK ; 62
-	const SPRITE_SUICUNE ; 63
-	const SPRITE_ENTEI ; 64
-	const SPRITE_RAIKOU ; 65
+	const SPRITE_VIRTUAL_BOY ; 56
+	const SPRITE_OFFICER_JENNY ; 78
+	const SPRITE_ROCK ; 58
+	const SPRITE_BOULDER ; 59
+	const SPRITE_SNES ; 5a
+	const SPRITE_FAMICOM ; 5b
+	const SPRITE_FRUIT_TREE ; 5c
+	const SPRITE_GOLD_TROPHY ; 5d
+	const SPRITE_SILVER_TROPHY ; 5e
+	const SPRITE_KRIS ; 5f
+	const SPRITE_KRIS_BIKE ; 60
+	const SPRITE_RATTATA_BACK ; 61
+	const SPRITE_SUICUNE ; 62
+	const SPRITE_ENTEI ; 63
+	const SPRITE_RAIKOU ; 64
 NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)

@@ -1,27 +1,27 @@
 	; DebugColor_GFX tile IDs
-	const_def $6a
-	const DEBUGTEST_TICKS_1 ; $6a
-	const DEBUGTEST_TICKS_2 ; $6b
-	const DEBUGTEST_WHITE   ; $6c
-	const DEBUGTEST_LIGHT   ; $6d
-	const DEBUGTEST_DARK    ; $6e
-	const DEBUGTEST_BLACK   ; $6f
-	const DEBUGTEST_0       ; $70
-	const DEBUGTEST_1       ; $71
-	const DEBUGTEST_2       ; $72
-	const DEBUGTEST_3       ; $73
-	const DEBUGTEST_4       ; $74
-	const DEBUGTEST_5       ; $75
-	const DEBUGTEST_6       ; $76
-	const DEBUGTEST_7       ; $77
-	const DEBUGTEST_8       ; $78
-	const DEBUGTEST_9       ; $79
-	const DEBUGTEST_A       ; $7a
-	const DEBUGTEST_B       ; $7b
-	const DEBUGTEST_C       ; $7c
-	const DEBUGTEST_D       ; $7d
-	const DEBUGTEST_E       ; $7e
-	const DEBUGTEST_F       ; $7f
+	const_def $5a
+	const DEBUGTEST_TICKS_1 ; $5a
+	const DEBUGTEST_TICKS_2 ; $5b
+	const DEBUGTEST_WHITE   ; $5c
+	const DEBUGTEST_LIGHT   ; $5d
+	const DEBUGTEST_DARK    ; $5e
+	const DEBUGTEST_BLACK   ; $5f
+	const DEBUGTEST_0       ; $60
+	const DEBUGTEST_1       ; $61
+	const DEBUGTEST_2       ; $62
+	const DEBUGTEST_3       ; $63
+	const DEBUGTEST_4       ; $64
+	const DEBUGTEST_5       ; $65
+	const DEBUGTEST_6       ; $66
+	const DEBUGTEST_7       ; $67
+	const DEBUGTEST_8       ; $68
+	const DEBUGTEST_9       ; $69
+	const DEBUGTEST_A       ; $6a
+	const DEBUGTEST_B       ; $6b
+	const DEBUGTEST_C       ; $6c
+	const DEBUGTEST_D       ; $6d
+	const DEBUGTEST_E       ; $6e
+	const DEBUGTEST_F       ; $6f
 
 	; DebugColorMain.Jumptable indexes
 	const_def
@@ -158,6 +158,11 @@ DebugColor_LoadGFX:
 	ld hl, DebugColor_GFX
 	ld de, vTiles2 tile DEBUGTEST_TICKS_1
 	ld bc, 22 tiles
+	call CopyBytes
+
+	ld hl, DebugColor_GFX tile 5
+	ld de, vTiles2 tile $7f
+	ld bc, 1 tiles
 	call CopyBytes
 
 	ld hl, DebugColor_UpArrowGFX
@@ -321,7 +326,7 @@ DebugColor_InitScreen:
 	inc a
 	ld [wCurPartySpecies], a
 	ld [wTextDecimalByte], a
-	hlcoord 0, 1
+	hlcoord 0, 0
 	ld de, wTextDecimalByte
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	call PrintNum
@@ -329,68 +334,65 @@ DebugColor_InitScreen:
 	and a
 	jr nz, .trainer
 
-; mon
-	ld a, UNOWN_A
-	ld [wUnownLetter], a
-	call GetPokemonName
-	hlcoord 0, 2
-	call PlaceString
-	xor a
-	ld [wBoxAlignment], a
-	hlcoord 12, 3
-	call _PrepMonFrontpic
-	ld de, vTiles2 tile $31
-	predef GetMonBackpic
-	ld a, $31
-	ldh [hGraphicStartTile], a
-	hlcoord 2, 4
-	lb bc, 6, 6
-	predef PlaceGraphic
-
-	ld a, [wDebugColorIsShiny]
-	and a
-	jr z, .normal
-; shiny
-	ld de, .ShinyText
-	jr .place_text
-.normal
-	ld de, .NormalText
-.place_text
-	hlcoord 9, 17
-	call PlaceString
-	hlcoord 0, 17
-	ld de, .SwitchText
-	call PlaceString
+	; mon	
+	ld a, UNOWN_A	
+	ld [wUnownLetter], a	
+	call GetPokemonName	
+	hlcoord 0, 1	
+	call PlaceString	
+	xor a	
+	ld [wBoxAlignment], a	
+	hlcoord 12, 3	
+	call _PrepMonFrontpic	
+	ld de, vTiles2 tile $31	
+	predef GetMonBackpic	
+	ld a, $31	
+	ldh [hGraphicStartTile], a	
+	hlcoord 2, 4	
+	lb bc, 6, 6	
+	predef PlaceGraphic	
+	ld a, [wDebugColorIsShiny]	
+	and a	
+	jr z, .normal	
+; shiny	
+	ld de, .ShinyText	
+	jr .place_text	
+.normal	
+	ld de, .NormalText	
+.place_text	
+	hlcoord 9, 17	
+	call PlaceString	
+	hlcoord 0, 17	
+	ld de, .SwitchText	
+	call PlaceString	
 	jr .done
 
-.trainer
-	ld a, [wTextDecimalByte]
-	ld [wTrainerClass], a
-	callfar GetTrainerAttributes
-	ld de, wStringBuffer1
-	hlcoord 0, 2
-	call PlaceString
-	ld de, vTiles2
-	callfar GetTrainerPic
-	xor a
-	ld [wTempEnemyMonSpecies], a
-	ldh [hGraphicStartTile], a
-	hlcoord 2, 3
-	lb bc, 7, 7
+.trainer	
+	ld a, [wTextDecimalByte]	
+	ld [wTrainerClass], a	
+	callfar GetTrainerAttributes	
+	ld de, wStringBuffer1	
+	hlcoord 0, 2	
+	call PlaceString	
+	ld de, vTiles2	
+	callfar GetTrainerPic	
+	xor a	
+	ld [wTempEnemyMonSpecies], a	
+	ldh [hGraphicStartTile], a	
+	hlcoord 2, 3	
+	lb bc, 7, 7	
 	predef PlaceGraphic
 
-.done
-	ld a, DEBUGCOLORMAIN_UPDATESCREEN
-	ld [wJumptableIndex], a
+.done	
+	ld a, DEBUGCOLORMAIN_UPDATESCREEN	
+	ld [wJumptableIndex], a	
 	ret
 
-.ShinyText:
-	db "SHINY@"
-
-.NormalText:
-	db "NORMAL@"
-
-.SwitchText:
+.ShinyText:	
+	db "SHINY@"	
+.NormalText:	
+	db "NORMAL@"	
+.SwitchText:	
 	db DEBUGTEST_A, " Switch▶@"
 
 DebugColor_LoadRGBMeter:
@@ -706,11 +708,11 @@ DebugColor_InitTMHM:
 	ret
 
 DebugColor_TMHMJoypad:
-	ld hl, hJoyPressed
-	ld a, [hl]
-	and B_BUTTON
-	jr nz, .cancel
-	call .scroll
+	ld hl, hJoyPressed	
+	ld a, [hl]	
+	and B_BUTTON	
+	jr nz, .cancel	
+	call .scroll	
 	ret
 
 .cancel
@@ -776,7 +778,7 @@ DebugColor_PrintTMHMMove:
 	ld a, [wTempTMHM]
 	ld [wPutativeTMHMMove], a
 	call GetMoveName
-	hlcoord 08, 12
+	hlcoord 8, 12
 	call PlaceString
 
 	ld a, [wDebugColorCurTMHM]
@@ -796,7 +798,7 @@ DebugColor_PrintTMHMMove:
 .AbleText:
 	db "Can Learn@" ; Learnable
 
-.NotAbleText:
+.NotAbleText:	
 	db "Can't Learn@" ; Not learnable
 
 .GetNumberedTMHM:
@@ -1058,9 +1060,9 @@ DebugColor_PlaceCursor:
 	ret
 
 DebugColor_AreYouFinishedString:
-	db   "Move:"
-	next "YES<DOT><DOT><DOT>", DEBUGTEST_A
-	next "NO<DOT><DOT><DOT> ", DEBUGTEST_B
+	db   "Move:"	
+	next "YES<DOT><DOT><DOT>", DEBUGTEST_A	
+	next "NO<DOT><DOT><DOT> ", DEBUGTEST_B	
 	db   "@"
 
 DebugColor_UpArrowGFX:
@@ -1435,10 +1437,4 @@ DebugTileset_CalculatePalette:
 	ld a, e
 	ld [hli], a
 	ld [hl], d
-	ret
-
-.dummy1: ; unreferenced
-	ret
-
-.dummy2: ; unreferenced
 	ret

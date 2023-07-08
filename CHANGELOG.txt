@@ -67,3 +67,13 @@
 - Updated the trade animation's Poké Ball graphics.
 - Updated Grimer and Muk's palettes.
 - Updated Grimer and Marowak's back sprites.
+
+
+1.1.5
+- Fixed some things related to the debug color picker.
+- Fixed a vanilla oversight with an itemball in Mahogany's Rocket Hideout.
+- Updated Silph Co.'s lobby slightly. Related to the aforementioned fix.
+
+- Replaced Mr.Mime and Kangaskhan's sprites with new ones, courtesy of SoupPotato.
+- Updated Chansey's back sprite.
+

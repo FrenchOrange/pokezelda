@@ -27,9 +27,13 @@ VictoryRoad1F_MapScripts:
 	db -1 ; end
 
 .Boulder1:
+	refreshscreen $86
+	playsound SFX_STRENGTH
+	earthquake 80
 	changeblock 18, 14, $4E ; switch
 	changeblock 10, 14, $03 ; wall
 	reloadmappart
+	closetext
 	clearevent EVENT_SWITCH_BOULDER_VICTORY_ROAD_1F
 	setevent EVENT_BOULDER_IN_VICTORY_ROAD_1F
 	setevent EVENT_SWITCH_IN_VICTORY_ROAD_1F

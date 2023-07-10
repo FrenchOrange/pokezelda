@@ -14,7 +14,7 @@ While the story and progression have not been changed, here's some new things yo
 * The Celebi event, now restored! To get it, simply head to Goldenrod's Pokémon Center after beating the League.
 
 ## Version
-The current version is **1.1.5**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
+The current version is **1.1.6**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
 
 If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 

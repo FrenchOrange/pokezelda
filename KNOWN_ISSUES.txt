@@ -11,5 +11,4 @@
 
 
 - - Script Bugs - -
-* The Victory Road boulder puzzles have not yet been implemented. Uses cheats to bypass this area if needed.
 * The Seafoam Islands boulder puzzles have not yet been implemented. Look out as Articuno's room seems to cause crashes.

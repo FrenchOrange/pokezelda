@@ -363,7 +363,7 @@ BlackbeltKoishiAfterBattleText:
 
 FirebreatherDickSeenText:
 	text "It's not hot enough"
-	line "this cave."
+	line "in this cave."
 
 	para "How about a battle"
 	line "to warm me up?"

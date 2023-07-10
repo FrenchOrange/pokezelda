@@ -77,3 +77,7 @@
 - Replaced Mr.Mime and Kangaskhan's sprites with new ones, courtesy of SoupPotato.
 - Updated Chansey's back sprite.
 
+
+1.1.6
+- Knocked down one of the main known issues (Victory Road boulder puzzles), all thanks to my pal Seasick.
+- Fixed a typo in the dialogue of one of the Victory Road 2F Firebreathers.

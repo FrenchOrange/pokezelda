@@ -10,11 +10,68 @@
 	const VICTORYROAD2F_BOULDER1
 	const VICTORYROAD2F_BOULDER2
 	const VICTORYROAD2F_BOULDER3
+	const VICTORYROAD2F_BOULDER2_SWITCH
+	const VICTORYROAD2F_BOULDER3_SWITCH
 
 VictoryRoad2F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_CMDQUEUE, .SetUpStoneTable
+	callback MAPCALLBACK_TILES, VictoryRoad2FSwitchCallback
+	
+.SetUpStoneTable:
+	writecmdqueue .CommandQueue
+	endcallback
+
+.CommandQueue:
+	cmdqueue CMDQUEUE_STONETABLE, .StoneTable ; check if any stones are sitting on a warp
+
+.StoneTable:
+	stonetable  9, VICTORYROAD2F_BOULDER2, .Boulder1
+	stonetable 10, VICTORYROAD2F_BOULDER3, .Boulder2
+	db -1 ; end
+
+.Boulder1:
+	refreshscreen $86
+	playsound SFX_STRENGTH
+	earthquake 80
+	changeblock  2, 18, $20 ; switch
+	changeblock  8, 10, $01 ; wall
+	changeblock  8, 12, $03 ; wall
+	reloadmappart
+	closetext
+	appear VICTORYROAD2F_BOULDER2_SWITCH
+	disappear VICTORYROAD2F_BOULDER2
+	setevent EVENT_WEST_SWITCH_IN_VICTORY_ROAD_2F
+	end	
+
+.Boulder2:
+	refreshscreen $86
+	playsound SFX_STRENGTH
+	earthquake 80
+	changeblock 10, 18, $20 ; switch
+	changeblock 24, 16, $03 ; wall
+	reloadmappart
+	closetext
+	appear VICTORYROAD2F_BOULDER3_SWITCH
+	disappear VICTORYROAD2F_BOULDER3
+	setevent EVENT_EAST_SWITCH_IN_VICTORY_ROAD_2F
+	end		
+	
+VictoryRoad2FSwitchCallback:
+	checkevent EVENT_WEST_SWITCH_IN_VICTORY_ROAD_2F
+	iffalse .Switch1NotTriggered
+	changeblock  2, 18, $20 ; switch
+	changeblock  8, 10, $01 ; wall
+	changeblock  8, 12, $03 ; wall
+.Switch1NotTriggered:
+	checkevent EVENT_EAST_SWITCH_IN_VICTORY_ROAD_2F
+	iffalse .Switch2NotTriggered
+	changeblock 10, 18, $20 ; switch
+	changeblock 24, 16, $03 ; wall
+.Switch2NotTriggered	
+	endcallback	
 
 VictoryRoadRivalUp:
 	turnobject PLAYER, LEFT
@@ -379,6 +436,8 @@ VictoryRoad2F_MapEvents:
 	warp_event  3,  3, VICTORY_ROAD_3F, 4
 	warp_event 13,  3, VICTORY_ROAD_CHAMBER, 1
 	warp_event 24, 18, VICTORY_ROAD_3F, 5
+	warp_event  3, 18, VICTORY_ROAD_2F, 1 ; switch 1
+	warp_event 11, 18, VICTORY_ROAD_2F, 1 ; switch 2
 
 	def_coord_events
 	coord_event 33, 10, SCENE_DEFAULT, VictoryRoadRivalUp
@@ -397,5 +456,7 @@ VictoryRoad2F_MapEvents:
 	object_event 16, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerFirebreatherNed, -1
 	object_event 28,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerJugglerHarle, -1
 	object_event  7,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, -1
-	object_event  6, 16, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, -1
+	object_event  6, 16, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, EVENT_VICTORY_ROAD_2F_BOULDER_1
 	object_event 25, 18, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, EVENT_BOULDER_IN_VICTORY_ROAD_2F
+	object_event  3, 18, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, EVENT_VICTORY_ROAD_2F_BOULDER_1_SWITCH ; West Boulder in place
+	object_event 11, 18, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad2FBoulder, EVENT_VICTORY_ROAD_2F_BOULDER_2_SWITCH ; East Boulder in place

@@ -7,12 +7,14 @@
 	const VICTORYROAD3F_BOULDER2
 	const VICTORYROAD3F_BOULDER3
 	const VICTORYROAD3F_BOULDER4
+	const VICTORYROAD3F_BOULDER3_SWITCH
 
 VictoryRoad3F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_CMDQUEUE, .SetUpStoneTable
+	callback MAPCALLBACK_TILES, VictoryRoad3FSwitchCallback
 
 .SetUpStoneTable:
 	writecmdqueue .CommandQueue
@@ -23,6 +25,7 @@ VictoryRoad3F_MapScripts:
 
 .StoneTable:
 	stonetable 5, VICTORYROAD3F_BOULDER4, .Boulder1
+	stonetable 6, VICTORYROAD3F_BOULDER3, .Boulder2
 	db -1 ; end
 
 .Boulder1:
@@ -44,6 +47,27 @@ VictoryRoad3F_MapScripts:
 	playsound SFX_STRENGTH
 	earthquake 80
 	end
+	
+.Boulder2:
+	refreshscreen $86
+	playsound SFX_STRENGTH
+	earthquake 80
+	changeblock  4,  6, $24 ; switch
+	changeblock  8, 12, $03 ; wall
+	reloadmappart
+	closetext
+	appear VICTORYROAD3F_BOULDER3_SWITCH
+	disappear VICTORYROAD3F_BOULDER3
+	setevent EVENT_SWITCH_IN_VICTORY_ROAD_3F
+	end
+	
+VictoryRoad3FSwitchCallback:
+	checkevent EVENT_SWITCH_IN_VICTORY_ROAD_3F
+	iffalse .SwitchNotTriggered
+	changeblock  4,  6, $24 ; switch
+	changeblock  8, 12, $03 ; wall
+.SwitchNotTriggered:
+	endcallback	
 
 VictoryRoad3FBoulder:
 	jumpstd StrengthBoulderScript
@@ -154,6 +178,7 @@ VictoryRoad3F_MapEvents:
 	warp_event 29, 17, VICTORY_ROAD_2F, 5
 	warp_event  4,  2, VICTORY_ROAD_2F, 6
 	warp_event 24, 17, VICTORY_ROAD_2F, 8 ; hole
+	warp_event  5,  7, VICTORY_ROAD_3F, 1 ; switch
 
 	def_coord_events
 
@@ -161,10 +186,11 @@ VictoryRoad3F_MapEvents:
 
 	def_object_events
 	object_event 28,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoad3FTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
-	object_event  7, 15, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainermSteve, -1
+	object_event  7, 15, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermSteve, -1
 	object_event  9, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfAlexa, -1
 	object_event 28,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerJugglerCarlos, -1
 	object_event 26, 12, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, -1
 	object_event 15, 14, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, -1
-	object_event 24,  5, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, -1
+	object_event 24,  5, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, EVENT_VICTORY_ROAD_3F_BOULDER
 	object_event 23, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, EVENT_BOULDER_IN_VICTORY_ROAD_3F
+	object_event  5,  7, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoad3FBoulder, EVENT_VICTORY_ROAD_3F_BOULDER_SWITCH

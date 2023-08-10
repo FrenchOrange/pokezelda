@@ -175,8 +175,8 @@ AI_TryItem:
 	ld b, h
 	ld c, l
 	ld hl, AI_Items
-	ld de, wEnemyTrainerItem1
 .loop
+	ld de, wEnemyTrainerItem1
 	ld a, [hl]
 	and a
 	inc a

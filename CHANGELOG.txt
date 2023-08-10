@@ -81,3 +81,12 @@
 1.1.6
 - Knocked down one of the main known issues (Victory Road boulder puzzles), all thanks to my pal Seasick.
 - Fixed a typo in the dialogue of one of the Victory Road 2F Firebreathers.
+
+
+1.1.7
+- Fixed a vanilla bug related to enemy trainer item use. Bugfix courtesy of Idain.
+- Nerfed Cooltrainer Nick's Bug-Catching Contest score, to make it easier for the player to win.
+
+- Reverted SonicBoom's animation to its Japanese counterpart.
+- Tweaked Chris and Kris' fishing sprites to better match their regular standing sprites.
+- Adjusted Pikachu's palette to not be as overly saturated.

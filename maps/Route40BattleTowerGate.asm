@@ -6,11 +6,6 @@ Route40BattleTowerGate_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, .ShowSailor
-
-.ShowSailor:
-	clearevent EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
-	endcallback
 
 Route40BattleTowerGateRockerScript:
 	jumptextfaceplayer Route40BattleTowerGateRockerText
@@ -54,5 +49,5 @@ Route40BattleTowerGate_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  5,  3, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40BattleTowerGateRockerScript, EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
+	object_event  5,  3, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40BattleTowerGateRockerScript, -1
 	object_event  9,  5, SPRITE_TWIN, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route40BattleTowerGateTwinScript, -1

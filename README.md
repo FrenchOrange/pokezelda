@@ -10,11 +10,13 @@ While the story and progression are unchanged, here's some new things you can ex
 * More sensible Pokémon distribution (as seen [here](NEW_LOCATIONS.txt)), and more generous HM compatibility.
 * Fixed off-model Pokémon sprites. Palettes were also improved for a good amount of Pokémon.
 * Some QOL features, like "Running Shoes" (works by holding down B), and an automatic Repel reuse message.
-* Fixed [bugs and glitches](https://github.com/pret/pokecrystal/blob/master/docs/bugs_and_glitches.md), aside from multiplayer-related issues, as to ensure compatibility with base GSC.
+* Fixed [bugs and glitches](https://github.com/pret/pokecrystal/blob/master/docs/bugs_and_glitches.md).
 * The Celebi event, now restored! To get it, simply head to Goldenrod's Pokémon Center after beating the League.
 
+(Do note that this rom hack is not compatible with base GSC.)*
+
 ## Version
-The current version is **1.1.7**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
+The current version is **1.1.8**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
 
 If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 

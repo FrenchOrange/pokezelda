@@ -344,6 +344,13 @@ _LookAdorableDecoText::
 	text "."
 	done
 
+_LookBrandNewDecoText::
+	text "It's a brand-new"
+	line "@"
+	text_ram wStringBuffer3
+	text "."
+	done
+
 _LookGiantDecoText::
 	text "A giant doll! It's"
 	line "fluffy and cuddly."

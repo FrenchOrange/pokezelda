@@ -90,3 +90,17 @@
 - Reverted SonicBoom's animation to its Japanese counterpart.
 - Tweaked Chris and Kris' fishing sprites to better match their regular standing sprites.
 - Adjusted Pikachu's palette to not be as overly saturated.
+
+
+1.1.8
+- Reverted edits made to the Sage and Picnicker sprites.
+- Adjusted Nurse Joy's overworld sprite.
+- Fixed the shiny Pokémon egg palette.
+- Updated Quilava and Lanturn's back sprites.
+- Updated Hoothoot and Furret's sprites. Thanks to Chikorita Lover for the help.
+- Updated Misdreavus' sprites, courtesy of SoupPotato.
+- Updated Poliwhirl's sprite.
+- Updated Forretress' palette.
+- Updated the Pidgey line's menu icons.
+- Gave the game console decorations a different, more appropriate flavor text string.
+

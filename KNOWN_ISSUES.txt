@@ -11,4 +11,4 @@
 
 
 - - Script Bugs - -
-* The Seafoam Islands boulder puzzles have not yet been implemented. Look out as Articuno's room seems to cause crashes.
+* The Seafoam Islands boulder puzzles have not yet been implemented. Articuno's room seems to cause crashes.

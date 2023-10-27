@@ -10,13 +10,27 @@ TreeMons:
 	dw TreeMonSet_Forest
 	dw TreeMonSet_Rock
 	assert_table_length NUM_TREEMON_SETS
-	dw TreeMonSet_City ; unused
 
 ; Two tables each (common, rare).
 ; Structure:
 ;	db  %, species, level
 
 TreeMonSet_City:
+; common
+	db 50, VENONAT,    15
+	db 30, VENONAT,    15
+	db 10, ABRA,       15
+	db  5, ABRA,       15
+	db  5, LEDIAN,     18
+	db -1
+; rare
+	db 50, VENONAT,    15
+	db 30, MAGNEMITE,  15
+	db 10, ABRA,       15
+	db  5, ABRA,       15
+	db  5, LEDIAN,     18
+	db -1
+
 TreeMonSet_Canyon:
 ; common
 	db 40, SPEAROW,    10

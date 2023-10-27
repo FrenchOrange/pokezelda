@@ -1025,29 +1025,44 @@ DecorationDesc_NullPoster:
 
 DecorationDesc_LeftOrnament:
 	ld a, [wDecoLeftOrnament]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_Ornament
 
 DecorationDesc_RightOrnament:
 	ld a, [wDecoRightOrnament]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_Ornament
 
 DecorationDesc_Console:
 	ld a, [wDecoConsole]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_GameConsole
 
-DecorationDesc_OrnamentOrConsole:
+DecorationDesc_Ornament:
 	ld c, a
 	ld de, wStringBuffer3
 	call GetDecorationName_c_de
-	ld b, BANK(.OrnamentConsoleScript)
-	ld de, .OrnamentConsoleScript
+	ld b, BANK(.OrnamentScript)
+	ld de, .OrnamentScript
 	ret
 
-.OrnamentConsoleScript:
+.OrnamentScript:
 	jumptext .LookAdorableDecoText
 
 .LookAdorableDecoText:
 	text_far _LookAdorableDecoText
+	text_end
+
+DecorationDesc_GameConsole:
+	ld c, a
+	ld de, wStringBuffer3
+	call GetDecorationName_c_de
+	ld b, BANK(.ConsoleScript)
+	ld de, .ConsoleScript
+	ret
+
+.ConsoleScript:
+	jumptext .LookBrandNewDecoText
+
+.LookBrandNewDecoText:
+	text_far _LookBrandNewDecoText
 	text_end
 
 DecorationDesc_GiantOrnament:

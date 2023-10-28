@@ -54,6 +54,8 @@ DebugColorPicker:
 	call DebugColor_InitMonOrTrainerColor
 	call EnableLCD
 	ld de, MUSIC_NONE
+	call PlayMusic	
+	ld de, MUSIC_MT_MOON_SQUARE
 	call PlayMusic
 
 	xor a ; DEBUGCOLORMAIN_INITSCREEN
@@ -312,12 +314,12 @@ DebugColor_InitScreen:
 	lb bc, 7, 18
 	ld a, DEBUGTEST_WHITE
 	call DebugColor_FillBoxWithByte
-	hlcoord 11, 0
-	lb bc, 2, 3
+	hlcoord 10, 0
+	lb bc, 1, 4
 	ld a, DEBUGTEST_LIGHT
 	call DebugColor_FillBoxWithByte
-	hlcoord 16, 0
-	lb bc, 2, 3
+	hlcoord 15, 0
+	lb bc, 1, 4
 	ld a, DEBUGTEST_DARK
 	call DebugColor_FillBoxWithByte
 	call DebugColor_LoadRGBMeter
@@ -326,7 +328,7 @@ DebugColor_InitScreen:
 	inc a
 	ld [wCurPartySpecies], a
 	ld [wTextDecimalByte], a
-	hlcoord 0, 0
+	hlcoord 1, 0
 	ld de, wTextDecimalByte
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	call PrintNum
@@ -338,7 +340,7 @@ DebugColor_InitScreen:
 	ld a, UNOWN_A	
 	ld [wUnownLetter], a	
 	call GetPokemonName	
-	hlcoord 0, 1	
+	hlcoord 1, 2	
 	call PlaceString	
 	xor a	
 	ld [wBoxAlignment], a	
@@ -360,10 +362,13 @@ DebugColor_InitScreen:
 .normal	
 	ld de, .NormalText	
 .place_text	
-	hlcoord 9, 17	
+	hlcoord 1, 1	
 	call PlaceString	
-	hlcoord 0, 17	
+	hlcoord 1, 17	
 	ld de, .SwitchText	
+	call PlaceString
+	hlcoord 13, 17	
+	ld de, .ModeText	
 	call PlaceString	
 	jr .done
 
@@ -372,7 +377,10 @@ DebugColor_InitScreen:
 	ld [wTrainerClass], a	
 	callfar GetTrainerAttributes	
 	ld de, wStringBuffer1	
-	hlcoord 0, 2	
+	hlcoord 1, 2	
+	call PlaceString
+	hlcoord 1, 17	
+	ld de, .PokemonModeText	
 	call PlaceString	
 	ld de, vTiles2	
 	callfar GetTrainerPic	
@@ -393,7 +401,11 @@ DebugColor_InitScreen:
 .NormalText:	
 	db "NORMAL@"	
 .SwitchText:	
-	db DEBUGTEST_A, " Switch▶@"
+	db DEBUGTEST_A, "▶Color@"
+.ModeText:	
+	db DEBUGTEST_B, "▶Mode@"
+.PokemonModeText:	
+	db DEBUGTEST_A, "▶Pokemon@"	
 
 DebugColor_LoadRGBMeter:
 	decoord 0, 11, wAttrmap
@@ -474,10 +486,10 @@ DebugColor_UpdatePalettes:
 	ld c, 1
 	call DebugColor_LoadPalettes_White_Col1_Col2_Black
 
-	hlcoord 10, 2
+	hlcoord 10, 1
 	ld de, wDebugLightColor
 	call DebugColor_PrintHexColor
-	hlcoord 15, 2
+	hlcoord 15, 1
 	ld de, wDebugDarkColor
 	call DebugColor_PrintHexColor
 
@@ -568,6 +580,9 @@ DebugColor_Joypad:
 
 .tmhm
 ; Enter the TM/HM checker.
+	ld a, [wDebugColorIsTrainer]
+	and a
+	ret nz
 	ld a, DEBUGCOLORMAIN_INITTMHM
 	ld [wJumptableIndex], a
 	ret
@@ -576,8 +591,9 @@ DebugColor_Joypad:
 ; Toggle between the normal and shiny mon colors.
 	ld a, [wDebugColorIsTrainer]
 	and a
-	ret nz
-
+	jr z, .SwapColor
+	jp DebugColorPicker_SwapMode
+.SwapColor
 	ld a, [wDebugColorIsShiny]
 	xor %00000100
 	ld [wDebugColorIsShiny], a
@@ -697,9 +713,15 @@ DebugColor_InitTMHM:
 	ld bc, SCREEN_WIDTH * 8
 	ld a, DEBUGTEST_BLACK
 	call ByteFill
-	hlcoord 2, 12
+	hlcoord 2, 11
 	ld de, DebugColor_AreYouFinishedString
 	call PlaceString
+	hlcoord 1, 17
+	ld de, SwapText_Trainer
+	call PlaceString
+	hlcoord 13, 17
+	ld de, SwapText_Back
+	call PlaceString	
 	xor a
 	ld [wDebugColorCurTMHM], a
 	call DebugColor_PrintTMHMMove
@@ -707,11 +729,20 @@ DebugColor_InitTMHM:
 	ld [wJumptableIndex], a
 	ret
 
+SwapText_Trainer:	
+	db DEBUGTEST_A,"▶Trainer@"
+	
+SwapText_Back:	
+	db DEBUGTEST_B,"▶Back@"	
+
 DebugColor_TMHMJoypad:
 	ld hl, hJoyPressed	
 	ld a, [hl]	
 	and B_BUTTON	
-	jr nz, .cancel	
+	jr nz, .cancel
+	ld a, [hl]	
+	and A_BUTTON
+	jr nz, DebugColorPicker_SwapMode	
 	call .scroll	
 	ret
 
@@ -719,7 +750,7 @@ DebugColor_TMHMJoypad:
 	ld a, DEBUGCOLORMAIN_INITSCREEN
 	ld [wJumptableIndex], a
 	ret
-
+	
 .exit ; unreferenced
 	ld hl, wJumptableIndex
 	set 7, [hl]
@@ -760,15 +791,23 @@ DebugColor_TMHMJoypad:
 	ld [wDebugColorCurTMHM], a
 	call DebugColor_PrintTMHMMove
 	ret
+	
+DebugColorPicker_SwapMode:
+	ld a, [wDebugColorIsTrainer]
+	and a
+	jr z, .LoadTrainers
+	xor a
+	jr .ReloadColorPicker
+.LoadTrainers	
+	ld a, 1
+.ReloadColorPicker	
+	ld [wDebugColorIsTrainer], a
+	jp DebugColorPicker	
 
 DebugColor_PrintTMHMMove:
-	hlcoord 10, 11
+	hlcoord 0, 13
 	call .ClearRow
-	hlcoord 10, 12
-	call .ClearRow
-	hlcoord 10, 13
-	call .ClearRow
-	hlcoord 10, 14
+	hlcoord 0, 14
 	call .ClearRow
 
 	ld a, [wDebugColorCurTMHM]
@@ -778,7 +817,7 @@ DebugColor_PrintTMHMMove:
 	ld a, [wTempTMHM]
 	ld [wPutativeTMHMMove], a
 	call GetMoveName
-	hlcoord 8, 12
+	hlcoord 2, 13
 	call PlaceString
 
 	ld a, [wDebugColorCurTMHM]
@@ -812,7 +851,7 @@ DebugColor_PrintTMHMMove:
 	ret
 
 .ClearRow:
-	ld bc, 10
+	ld bc, 20
 	ld a, DEBUGTEST_BLACK
 	call ByteFill
 	ret
@@ -990,9 +1029,9 @@ _DebugColor_PushSGBPals:
 
 DebugColor_PlaceCursor:
 	ld a, DEBUGTEST_BLACK
-	hlcoord 10, 0
+	hlcoord 9, 1
 	ld [hl], a
-	hlcoord 15, 0
+	hlcoord 14, 1
 	ld [hl], a
 	hlcoord 1, 11
 	ld [hl], a
@@ -1019,10 +1058,10 @@ DebugColor_PlaceCursor:
 	and a
 	jr z, .light
 ; dark
-	hlcoord 15, 0
+	hlcoord 14, 1
 	jr .place
 .light
-	hlcoord 10, 0
+	hlcoord 9, 1
 .place
 	ld [hl], "▶"
 
@@ -1060,10 +1099,7 @@ DebugColor_PlaceCursor:
 	ret
 
 DebugColor_AreYouFinishedString:
-	db   "Move:"	
-	next "YES<DOT><DOT><DOT>", DEBUGTEST_A	
-	next "NO<DOT><DOT><DOT> ", DEBUGTEST_B	
-	db   "@"
+	db   "TM/HMs:@"
 
 DebugColor_UpArrowGFX:
 INCBIN "gfx/debug/up_arrow.2bpp"

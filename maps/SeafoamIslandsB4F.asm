@@ -38,7 +38,7 @@ SeafoamIslandsB4F_MapScripts:
 	endcallback
 
 .Articuno:
-	checkevent EVENT_SEAFOAM_ISLANDS_B4F_ARTICUNO
+	checkevent EVENT_SEAFOAM_ISLANDS_B4F_ARTICUNO_AVAILABLE
 	iftrue .NoAppear
 	readvar VAR_BADGES
 	ifequal NUM_BADGES, .Appear
@@ -69,7 +69,7 @@ ArticunoScript:
 	loadwildmon ARTICUNO, 50
 	startbattle
 	disappear SEAFOAMISLANDSB4F_ARTICUNO
-	setevent EVENT_SEAFOAM_ISLANDS_B4F_ARTICUNO
+	setevent EVENT_SEAFOAM_ISLANDS_B4F_ARTICUNO_AVAILABLE
 	reloadmapafterbattle
 	end
 
@@ -103,9 +103,10 @@ SeafoamIslandsB4F_MapEvents:
 	warp_event 21, 19, SEAFOAM_ISLANDS_B3F, 11 ; waterfall
 
 	def_coord_events
-	bg_event 25, 19, BGEVENT_ITEM, SeafoamIslandsB4FHiddenUltraBall
+	
 
 	def_bg_events
+	bg_event 25, 19, BGEVENT_ITEM, SeafoamIslandsB4FHiddenUltraBall
 	bg_event 23,  3, BGEVENT_READ, SeafoamCurrentSign
 	bg_event  9, 17, BGEVENT_READ, SeafoamBoulderSign
 

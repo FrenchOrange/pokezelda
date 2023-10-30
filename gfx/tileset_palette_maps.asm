@@ -16,6 +16,7 @@ TilesetJohtoPalMap:
 INCLUDE "gfx/tilesets/johto_palette_map.asm"
 
 TilesetJohtoModernPalMap:
+TilesetBattleTowerOutsidePalMap:
 INCLUDE "gfx/tilesets/johto_modern_palette_map.asm"
 
 TilesetHousePalMap:
@@ -94,9 +95,6 @@ INCLUDE "gfx/tilesets/forest_palette_map.asm"
 
 TilesetBattleTowerInsidePalMap:
 INCLUDE "gfx/tilesets/battle_tower_inside_palette_map.asm"
-
-TilesetBattleTowerOutsidePalMap:
-INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 
 MapGroupPalettes: ; unreferenced
 ; entries correspond to MAPGROUP_* constants

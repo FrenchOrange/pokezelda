@@ -206,9 +206,6 @@ INCLUDE "data/tilesets/traditional_house_collision.asm"
 
 SECTION "Tileset Data 6", ROMX
 
-TilesetForestGFX::
-INCBIN "gfx/tilesets/forest.2bpp.lz"
-
 TilesetChampionsRoomGFX::
 INCBIN "gfx/tilesets/champions_room.2bpp.lz"
 
@@ -257,12 +254,13 @@ INCLUDE "data/tilesets/battle_tower_outside_collision.asm"
 
 SECTION "Tileset Data 7", ROMX
 
+TilesetForestGFX::
+INCBIN "gfx/tilesets/forest.2bpp.lz"
+
 TilesetRuinsWordRoomColl::
 INCLUDE "data/tilesets/ruins_word_room_collision.asm"
 
 TilesetRuinsOfAlphGFX::
-INCBIN "gfx/tilesets/ruins_of_alph.2bpp.lz"
-
 TilesetRuinsWordRoomGFX::
 INCBIN "gfx/tilesets/ruins_of_alph.2bpp.lz"
 

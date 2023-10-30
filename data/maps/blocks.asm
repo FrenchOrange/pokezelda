@@ -754,6 +754,12 @@ FightingDojo_Blocks:
 SilphCo1F_Blocks:
 	INCBIN "maps/SilphCo1F.blk"
 
+SilphCoElevator_Blocks:
+	INCBIN "maps/SilphCoElevator.blk"
+
+SilphCoRD_Blocks:
+	INCBIN "maps/SilphCoRD.blk"
+
 ViridianGym_Blocks:
 	INCBIN "maps/ViridianGym.blk"
 

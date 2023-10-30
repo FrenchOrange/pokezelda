@@ -142,9 +142,11 @@ DebugSign:
 	setflag ENGINE_MARSHBADGE
 	setflag ENGINE_VOLCANOBADGE
 	setflag ENGINE_EARTHBADGE
+	giveitem BICYCLE
 	giveitem MASTER_BALL, 99
 	giveitem RARE_CANDY, 99
 	giveitem MAX_REPEL, 99
+	giveitem ESCAPE_ROPE, 99
 	giveitem HM_CUT
 	giveitem HM_FLY
 	giveitem HM_SURF
@@ -152,7 +154,7 @@ DebugSign:
 	giveitem HM_FLASH
 	giveitem HM_WHIRLPOOL
 	giveitem HM_WATERFALL
-	giveitem TM_ROCK_SMASH
+	giveitem TM_ROCK_SMASH, 99
 	opentext
 	givepoke FERALIGATR, 100
 	givepoke PIDGEOT, 100
@@ -162,8 +164,7 @@ DebugSign:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-;	warp VERMILION_CITY, 12, 20
-	warp ROUTE_20, 48, 6
+	warp VERMILION_CITY, 12, 20
 	end
 
 PlayersHouse2F_MapEvents:

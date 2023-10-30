@@ -13,9 +13,18 @@ SaffronCity_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
+	callback MAPCALLBACK_TILES, .TrainTracks
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_SAFFRON
+	clearevent EVENT_SILPH_CO_RD_SCIENTIST_1
+	setevent EVENT_SILPH_CO_RD_SCIENTIST_3
+	setmapscene SILPH_CO_ELEVATOR, SCENE_DEFAULT
+	setmapscene SILPH_CO_RD, SCENE_DEFAULT
+	endcallback
+
+.TrainTracks:
+	changeblock -2, 2, $9c ; rail
 	endcallback
 
 SaffronCityLass1Script:
@@ -173,6 +182,7 @@ SaffronCityCooltrainerMText:
 SaffronCityCooltrainerFText:
 	text "This is SILPH CO.,"
 	line "famous for #MON"
+	cont "research and"
 	cont "merchandise."
 
 	para "In the past, TEAM"

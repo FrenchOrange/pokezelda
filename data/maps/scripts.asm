@@ -55,6 +55,7 @@ INCLUDE "maps/RadioTower1F.asm"
 INCLUDE "maps/RadioTower2F.asm"
 INCLUDE "maps/RadioTower3F.asm"
 INCLUDE "maps/RadioTower4F.asm"
+INCLUDE "maps/BillsHouse.asm"
 
 
 SECTION "Map Scripts 4", ROMX
@@ -249,6 +250,8 @@ INCLUDE "maps/HallOfFame.asm"
 INCLUDE "maps/Route12.asm"
 INCLUDE "maps/CeruleanBikeShop.asm"
 INCLUDE "maps/Route4East.asm"
+INCLUDE "maps/CeruleanGymBadgeSpeechHouse.asm"
+INCLUDE "maps/CeruleanPoliceStation.asm"
 
 
 SECTION "Map Scripts 14", ROMX
@@ -272,15 +275,12 @@ INCLUDE "maps/BurnedTowerB1F.asm"
 
 SECTION "Map Scripts 15", ROMX
 
-INCLUDE "maps/CeruleanGymBadgeSpeechHouse.asm"
-INCLUDE "maps/CeruleanPoliceStation.asm"
 INCLUDE "maps/CeruleanTradeSpeechHouse.asm"
 INCLUDE "maps/CeruleanPokecenter1F.asm"
 INCLUDE "maps/CeruleanGym.asm"
 INCLUDE "maps/CeruleanMart.asm"
 INCLUDE "maps/Route10Pokecenter1F.asm"
 INCLUDE "maps/PowerPlant.asm"
-INCLUDE "maps/BillsHouse.asm"
 INCLUDE "maps/FightingDojo.asm"
 INCLUDE "maps/SaffronGym.asm"
 INCLUDE "maps/SaffronMart.asm"
@@ -293,6 +293,8 @@ INCLUDE "maps/CopycatsHouse2F.asm"
 INCLUDE "maps/Route5UndergroundPathEntrance.asm"
 INCLUDE "maps/Route5SaffronGate.asm"
 INCLUDE "maps/Route5CleanseTagHouse.asm"
+INCLUDE "maps/SilphCoElevator.asm"
+INCLUDE "maps/SilphCoRD.asm"
 
 
 SECTION "Map Scripts 16", ROMX

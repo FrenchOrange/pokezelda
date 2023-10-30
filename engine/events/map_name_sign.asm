@@ -82,6 +82,10 @@ InitMapNameSign::
 	ret z
 	cp LANDMARK_POWER_PLANT
 	ret z
+	cp LANDMARK_CELADON_CONDO
+	ret z
+	cp LANDMARK_SILPH_CO
+	ret z
 	ld a, 1
 	and a
 	ret

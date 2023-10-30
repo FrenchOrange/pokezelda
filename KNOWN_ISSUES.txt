@@ -1,14 +1,11 @@
 
-- - Graphical Bugs - -
+- - Graphical Issues - -
 * The title screen is still in progress.
 * The torch animation doesn't loop properly.
-* Colored Daycare icons left to debug.
+* Falling into a body of water turns the surf sprite red if male.
 
 
-- - Miscellaneous Bugs - -
-* Wrong Shuckie dialogue when it's the last Pokémon on your team.
+- - Miscellaneous Issues - -
+* Wrong Shuckie dialogue when it's the last Pokémon on your team. (Vanilla).
 * Puzzle in Lt.Surge's gym left to debug.
 
-
-- - Script Bugs - -
-* The Seafoam Islands boulder puzzles have not yet been implemented. Articuno's room seems to cause crashes.

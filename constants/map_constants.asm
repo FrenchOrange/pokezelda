@@ -501,6 +501,8 @@ ENDM
 	map_const ROUTE_5_SAFFRON_GATE,                         7,  5 ; 13
 	map_const ROUTE_5_CLEANSE_TAG_HOUSE,                    6,  5 ; 14
 	map_const ROUTE_7_UNDERGROUND_PATH_ENTRANCE,            6,  5 ; NEW
+	map_const SILPH_CO_ELEVATOR,                            4,  3 ; NEW
+	map_const SILPH_CO_RD,                                 15,  9 ; NEW
 	endgroup
 
 	newgroup CHERRYGROVE                                          ; 26

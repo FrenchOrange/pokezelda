@@ -96,11 +96,29 @@
 - Reverted edits made to the Sage and Picnicker sprites.
 - Adjusted Nurse Joy's overworld sprite.
 - Fixed the shiny Pokémon egg palette.
+- Updated Poliwhirl's front sprite.
 - Updated Quilava and Lanturn's back sprites.
 - Updated Hoothoot and Furret's sprites. Thanks to Chikorita Lover for the help.
 - Updated Misdreavus' sprites, courtesy of SoupPotato.
-- Updated Poliwhirl's sprite.
 - Updated Forretress' palette.
 - Updated the Pidgey line's menu icons.
 - Gave the game console decorations a different, more appropriate flavor text string.
 
+
+1.1.9
+- Made the overworld red palette less harsh.
+- Made it so Silph Co. and the Celadon Condo don't bring up the landmark sign.
+- Fixed the Legendary Bird events and the Seafoam Islands crash. Seasick, you're the goat!
+- Fixed a collision issue in Silph Co's lobby.
+- Fixed a bug where the Daycare wouldn't load the right colors.
+- Fixed a bug where the Move Deleter's menu wouldn't load the right shiny colors.
+- Removed two redundant tileset/palette maps copies.
+- Implemented tradeback scenario to Silph Co.
+- Implemented revamped running shoes behavior.
+- Implemented colored Poképic.
+- Implemented Forest environment type.
+- Updated Viridian Forest to account for the new environment type.
+- Updated the exterior to Saffron City's train station.
+- Updated Gyarados' front sprite and palette, courtesy of FrancisCu.
+- Updated Stantler's front sprite.
+- Updated Parasect and Seadra's back sprites, courtesy of SoupPotato.

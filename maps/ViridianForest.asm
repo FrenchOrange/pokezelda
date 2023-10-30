@@ -235,8 +235,8 @@ ViridianForestSign4Text:
 
 	para "If you want to"
 	line "avoid battles,"
-	cont "give yourself a"
-	cont "quick REPEL spray!"
+	cont "stay away from"
+	cont "grassy areas!"
 	done
 
 ViridianForestSign5Text:

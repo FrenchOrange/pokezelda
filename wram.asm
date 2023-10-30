@@ -3049,7 +3049,7 @@ wBattleTower1FSceneID::                           db
 wBattleTowerBattleRoomSceneID::                   db
 wBattleTowerElevatorSceneID::                     db
 wBattleTowerHallwaySceneID::                      db
-wBattleTowerOutsideSceneID::                      db
+wVermilionGymSceneID::                            db
 wRoute43GateSceneID::                             db
 wMountMoonSceneID::                               db
 wSproutTower3FSceneID::                           db
@@ -3069,7 +3069,7 @@ wTeamRocketBaseB1FSceneID::                       db
 wTeamRocketBaseB2FSceneID::                       db
 wTeamRocketBaseB3FSceneID::                       db
 wGoldenrodUndergroundSwitchRoomEntrancesSceneID:: db
-wSilverCaveRoom3SceneID::                         db
+wPewterMuseum1FSceneID::                          db
 wVictoryRoadSceneID::                             db
 wDragonsDenB1FSceneID::                           db
 wDragonShrineSceneID::                            db
@@ -3080,8 +3080,10 @@ wFastShipB1FSceneID::                             db
 wMountMoonSquareSceneID::                         db
 wMobileTradeRoomSceneID::                         db
 wMobileBattleRoomSceneID::                        db
+wSilphCoElevatorSceneID::                         db
+wSilphCoRDSceneID::                               db
 
-	ds 49
+	ds 47
 
 ; fight counts
 wJackFightCount::    db

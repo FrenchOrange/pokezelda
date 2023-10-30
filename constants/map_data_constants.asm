@@ -24,7 +24,7 @@ MAP_LENGTH EQU _RS
 	const ROUTE
 	const INDOOR
 	const CAVE
-	const ENVIRONMENT_5
+	const FOREST
 	const GATE
 	const DUNGEON
 NUM_ENVIRONMENTS EQU const_value - 1

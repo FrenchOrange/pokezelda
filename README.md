@@ -16,7 +16,7 @@ While the story and progression are unchanged, here's some new things you can ex
 (Do note that this rom hack is not compatible with base GSC.)*
 
 ## Version
-The current version is **1.1.8**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known bugs listed [here](KNOWN_ISSUES.txt).
+The current version is **1.1.9**, with changes documented in [the changelog](CHANGELOG.txt). Please note that this hack is not 100% done yet, with a list of known issues listed [here](KNOWN_ISSUES.txt).
 
 If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
@@ -28,6 +28,7 @@ Some HUGE thanks to:
 * Artist [LuigiTKO](https://twitter.com/LuigiTKO) for his gorgeous GSC-styled Pokémon icons
 * The artists from Pokémon Showdown and Pokémon Crystal Clear for a few Pokémon icons.
 * SoupPotato, creator of [Sourcrystal](https://github.com/SoupPotato/Sourcrystal), for some incredible new Pokémon sprites.
+* Artist [Dewndeym](https://twitter.com/dewndeym) from the Johto Redrawn project, for their amazing revamped Ilex Shrine.
 * My friends Idain and Seasick, for graphical help, as well as general troubleshooting. I truly wouldn't have been able to finish this hack without them.
 * The original devs and artists over at Nintendo/Capcom who worked on Link's Awakening and the Oracle games.
 

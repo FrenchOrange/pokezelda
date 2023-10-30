@@ -916,7 +916,7 @@ TeruSama22Desc:
 	db   "?@"
 
 UpGradeDesc:
-	db   "A mysterious box"
+	db   "A peculiar device"
 	next "made by SILPH CO.@"
 
 BerryDesc:

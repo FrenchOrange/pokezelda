@@ -40,8 +40,8 @@ MapScenes::
 	scene_var GOLDENROD_MAGNET_TRAIN_STATION,              wGoldenrodMagnetTrainStationSceneID
 	scene_var GOLDENROD_POKECENTER_1F,                     wGoldenrodPokecenter1FSceneID
 	scene_var OLIVINE_CITY,                                wOlivineCitySceneID
-	scene_var ROUTE_34,                                    wRoute34SceneID ; unused
-	scene_var ROUTE_34_ILEX_FOREST_GATE,                   wRoute34IlexForestGateSceneID ; unused
+	scene_var ROUTE_34,                                    wRoute34SceneID
+	scene_var ROUTE_34_ILEX_FOREST_GATE,                   wRoute34IlexForestGateSceneID
 	scene_var ECRUTEAK_TIN_TOWER_ENTRANCE,                 wEcruteakTinTowerEntranceSceneID
 	scene_var WISE_TRIOS_ROOM,                             wWiseTriosRoomSceneID
 	scene_var ECRUTEAK_POKECENTER_1F,                      wEcruteakPokecenter1FSceneID
@@ -53,7 +53,7 @@ MapScenes::
 	scene_var BATTLE_TOWER_BATTLE_ROOM,                    wBattleTowerBattleRoomSceneID
 	scene_var BATTLE_TOWER_ELEVATOR,                       wBattleTowerElevatorSceneID
 	scene_var BATTLE_TOWER_HALLWAY,                        wBattleTowerHallwaySceneID
-	scene_var VERMILION_GYM,                               wBattleTowerOutsideSceneID ; repurposed
+	scene_var VERMILION_GYM,                               wVermilionGymSceneID ; new
 	scene_var ROUTE_43_GATE,                               wRoute43GateSceneID
 	scene_var MOUNT_MOON,                                  wMountMoonSceneID
 	scene_var SPROUT_TOWER_3F,                             wSproutTower3FSceneID
@@ -73,7 +73,7 @@ MapScenes::
 	scene_var TEAM_ROCKET_BASE_B2F,                        wTeamRocketBaseB2FSceneID
 	scene_var TEAM_ROCKET_BASE_B3F,                        wTeamRocketBaseB3FSceneID
 	scene_var GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, wGoldenrodUndergroundSwitchRoomEntrancesSceneID
-	scene_var PEWTER_MUSEUM_1F,                            wSilverCaveRoom3SceneID ; repurposed
+	scene_var PEWTER_MUSEUM_1F,                            wPewterMuseum1FSceneID ; new
 	scene_var VICTORY_ROAD_2F,                             wVictoryRoadSceneID
 	scene_var DRAGONS_DEN_B1F,                             wDragonsDenB1FSceneID
 	scene_var DRAGON_SHRINE,                               wDragonShrineSceneID
@@ -82,4 +82,6 @@ MapScenes::
 	scene_var FAST_SHIP_1F,                                wFastShip1FSceneID
 	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
+	scene_var SILPH_CO_ELEVATOR,                           wSilphCoElevatorSceneID ; new
+	scene_var SILPH_CO_RD,                                 wSilphCoRDSceneID ; new
 	db -1 ; end

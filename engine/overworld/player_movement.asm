@@ -299,6 +299,12 @@ endc
 	bit BIKEFLAGS_DOWNHILL_F, [hl]
 	jr z, .fast
 
+;new starts here
+	ld a, [wCurInput]
+	cp B_BUTTON
+	call .StandInPlace
+;new stops
+
 	ld a, [wWalkingDirection]
 	cp DOWN
 	jr z, .fast

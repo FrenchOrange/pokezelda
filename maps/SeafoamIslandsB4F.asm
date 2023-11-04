@@ -2,6 +2,7 @@
 	const SEAFOAMISLANDSB4F_ARTICUNO
 	const SEAFOAMISLANDSB4F_BOULDER1
 	const SEAFOAMISLANDSB4F_BOULDER2
+	const SEAFOAMISLANDSB4F_CURRENT
 
 SeafoamIslandsB4F_MapScripts:
 	def_scene_scripts
@@ -60,6 +61,9 @@ SeafoamCurrentSign:
 SeafoamBoulderSign:
 	jumptext SeafoamBoulderSignText
 
+SeafoamIslandsB4FCurrent:
+	jumptext SeafoamIslandsB4FCurrentText
+
 ArticunoScript:
 	opentext
 	writetext ArticunoBattleText
@@ -88,6 +92,11 @@ ArticunoBattleText:
 	text "Gyaoo!"
 	done
 
+SeafoamIslandsB4FCurrentText:
+	text "The current is"
+	line "way too strong!"
+	done
+
 SeafoamIslandsB4FHiddenUltraBall:
 	hiddenitem NUGGET, EVENT_SEAFOAM_ISLANDS_B4F_HIDDEN_ULTRA_BALL
 
@@ -114,3 +123,4 @@ SeafoamIslandsB4F_MapEvents:
 	object_event  7,  3, SPRITE_ARTICUNO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ArticunoScript, EVENT_SEAFOAM_ISLANDS_B4F_ARTICUNO
 	object_event  5, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB4FBoulder, EVENT_BOULDER_IN_SEAFOAM_B4F_1
 	object_event  4, 17, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB4FBoulder, EVENT_BOULDER_IN_SEAFOAM_B4F_2
+	object_event  7, 14, SPRITE_BLANK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB4FCurrent, EVENT_BOTH_BOULDERS_IN_SEAFOAM_B4F

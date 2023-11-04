@@ -55,6 +55,7 @@ SpriteMons:
 	db SPEAROW
 	db RATTATA
 	db BELLOSSOM
+	db NOCTOWL
 	db PORYGON2
 	db HO_OH
 	db LUGIA

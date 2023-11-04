@@ -372,40 +372,45 @@ DebugColor_InitScreen:
 	call PlaceString	
 	jr .done
 
-.trainer	
-	ld a, [wTextDecimalByte]	
-	ld [wTrainerClass], a	
-	callfar GetTrainerAttributes	
-	ld de, wStringBuffer1	
-	hlcoord 1, 2	
+.trainer
+	ld a, [wTextDecimalByte]
+	ld [wTrainerClass], a
+	callfar GetTrainerAttributes
+	ld de, wStringBuffer1
+	hlcoord 1, 2
 	call PlaceString
-	hlcoord 1, 17	
-	ld de, .PokemonModeText	
-	call PlaceString	
-	ld de, vTiles2	
-	callfar GetTrainerPic	
-	xor a	
-	ld [wTempEnemyMonSpecies], a	
-	ldh [hGraphicStartTile], a	
-	hlcoord 2, 3	
-	lb bc, 7, 7	
+	hlcoord 1, 17
+	ld de, .PokemonModeText
+	call PlaceString
+	hlcoord 13, 17
+	ld de, .ExitText
+	call PlaceString
+	ld de, vTiles2
+	callfar GetTrainerPic
+	xor a
+	ld [wTempEnemyMonSpecies], a
+	ldh [hGraphicStartTile], a
+	hlcoord 2, 3
+	lb bc, 7, 7
 	predef PlaceGraphic
 
-.done	
-	ld a, DEBUGCOLORMAIN_UPDATESCREEN	
-	ld [wJumptableIndex], a	
+.done
+	ld a, DEBUGCOLORMAIN_UPDATESCREEN
+	ld [wJumptableIndex], a
 	ret
 
-.ShinyText:	
-	db "SHINY@"	
-.NormalText:	
-	db "NORMAL@"	
-.SwitchText:	
-	db DEBUGTEST_A, "▶Color@"
-.ModeText:	
-	db DEBUGTEST_B, "▶Mode@"
-.PokemonModeText:	
-	db DEBUGTEST_A, "▶Pokemon@"	
+.ShinyText:
+	db "SHINY@"
+.NormalText:
+	db "NORMAL@"
+.SwitchText:
+	db DEBUGTEST_A, "▶COLOR@"
+.ModeText:
+	db DEBUGTEST_B, "▶MODE@"
+.PokemonModeText:
+	db DEBUGTEST_A, "▶POKéMON@"
+.ExitText:
+	db DEBUGTEST_B, "▶EXIT@"
 
 DebugColor_LoadRGBMeter:
 	decoord 0, 11, wAttrmap
@@ -556,6 +561,13 @@ DebugColor_PrintHexColor:
 	and $f
 	add DEBUGTEST_0
 	ld [hld], a
+	ret
+
+; move down.
+.exit
+	call ClearBGPalettes ;new
+	ld hl, wJumptableIndex
+	set 7, [hl]
 	ret
 
 DebugColor_Joypad:
@@ -730,10 +742,10 @@ DebugColor_InitTMHM:
 	ret
 
 SwapText_Trainer:	
-	db DEBUGTEST_A,"▶Trainer@"
+	db DEBUGTEST_A,"▶TRAINER@"
 	
 SwapText_Back:	
-	db DEBUGTEST_B,"▶Back@"	
+	db DEBUGTEST_B,"▶BACK@"	
 
 DebugColor_TMHMJoypad:
 	ld hl, hJoyPressed	
@@ -750,11 +762,6 @@ DebugColor_TMHMJoypad:
 	ld a, DEBUGCOLORMAIN_INITSCREEN
 	ld [wJumptableIndex], a
 	ret
-	
-.exit ; unreferenced
-	ld hl, wJumptableIndex
-	set 7, [hl]
-	ret
 
 .scroll:
 	ld hl, hJoyLast
@@ -768,7 +775,7 @@ DebugColor_TMHMJoypad:
 
 .up
 	ld a, [wDebugColorCurTMHM]
-	cp NUM_TM_HM_TUTOR - 1
+	cp NUM_TM_HM_TUTOR - 3
 	jr z, .wrap_down
 	inc a
 	jr .done
@@ -785,7 +792,7 @@ DebugColor_TMHMJoypad:
 	jr .done
 
 .wrap_up
-	ld a, NUM_TM_HM_TUTOR - 1
+	ld a, NUM_TM_HM_TUTOR - 3
 
 .done
 	ld [wDebugColorCurTMHM], a
@@ -1221,67 +1228,6 @@ DebugTileset_LoadPalettes:
 
 	pop af
 	ldh [rSVBK], a
-	ret
-
-DebugColorMain2: ; unreferenced
-	ld hl, hJoyLast
-	ld a, [hl]
-	and SELECT
-	jr nz, .next_palette
-	ld a, [hl]
-	and B_BUTTON
-	jr nz, .cancel
-	call DebugTileset_Joypad
-	ret
-
-.next_palette
-	ld hl, wDebugTilesetCurPalette
-	ld a, [hl]
-	inc a
-	and PALETTE_MASK
-	cp PAL_BG_TEXT
-	jr nz, .palette_ok
-	xor a ; PAL_BG_GRAY
-.palette_ok
-	ld [hl], a
-	decoord 1, 1, 0
-	call DebugColor_DrawAttributeSwatch
-	decoord 6, 1, 0
-	call DebugColor_DrawAttributeSwatch
-	decoord 11, 1, 0
-	call DebugColor_DrawAttributeSwatch
-	decoord 16, 1, 0
-	call DebugColor_DrawAttributeSwatch
-
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(wBGPals2)
-	ldh [rSVBK], a
-
-	ld hl, wBGPals2
-	ld a, [wDebugTilesetCurPalette]
-	ld bc, 1 palettes
-	call AddNTimes
-	ld de, wDebugPalette
-	ld bc, 1 palettes
-	call CopyBytes
-
-	pop af
-	ldh [rSVBK], a
-
-	ld a, 2
-	ldh [hBGMapMode], a
-	ld c, 3
-	call DelayFrames
-	ld a, 1
-	ldh [hBGMapMode], a
-	ret
-
-.cancel
-	call ClearSprites
-	ldh a, [hWY]
-	xor %11010000
-	ldh [hWY], a
 	ret
 
 DebugTileset_UpdatePalettes:

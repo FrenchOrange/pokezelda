@@ -103,6 +103,7 @@
 	const SPRITE_RAIKOU ; 64
  	const SPRITE_CHRIS_RUN ; 65
  	const SPRITE_KRIS_RUN ; 66
+	const SPRITE_BLANK ; 67
 NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
@@ -162,6 +163,7 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_SPEAROW
 	const SPRITE_RATTATA
 	const SPRITE_BELLOSSOM
+	const SPRITE_NOCTOWL
 	const SPRITE_PORYGON2
 	const SPRITE_HO_OH
 	const SPRITE_LUGIA

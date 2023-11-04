@@ -1,11 +1,11 @@
 
 - - Graphical Issues - -
 * The title screen is still in progress.
-* The torch animation doesn't loop properly.
 * Falling into a body of water turns the surf sprite red if male.
 
 
 - - Miscellaneous Issues - -
 * Wrong Shuckie dialogue when it's the last Pokémon on your team. (Vanilla).
 * Puzzle in Lt.Surge's gym left to debug.
-
+* Tweaked Cycling Road behavior doesn't work.
+* Can't exit color picker menu (Debug).

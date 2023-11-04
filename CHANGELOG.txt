@@ -122,3 +122,19 @@
 - Updated Gyarados' front sprite and palette, courtesy of FrancisCu.
 - Updated Stantler's front sprite.
 - Updated Parasect and Seadra's back sprites, courtesy of SoupPotato.
+
+
+1.2.0
+- Updated Tentacool's menu icon.
+- Updated the palette of a good handful of Pokémon.
+- Updated Golbat, Arcanine, and Marowak's front sprites.
+- Updated Clefairy, Rhyhorn, Chansey, and Hoothoot's back sprites.
+- Updated Pidgeot and Feraligatr's sprites.
+- Updated Houndour's front sprite, courtesy of SoupPotato.
+- Fixed the palette of Azumarill's back sprite.
+- Fixed Hoothoot's shiny.
+- Fixed Dragon Fang/Dragon Scale item effect swap.
+- Fixed the torch animation. Animation fix courtesy of Seasick.
+- Gave an animation to Rattata's overworld sprite.
+- Implemented HGSS-style anti-softlock scenarios to Cianwood City and Cinnabar Island.
+- Tweaked the way the current works in Seafoam Islands B4F.

@@ -408,7 +408,6 @@ AnimateFountainTile:
 
 
 AnimateTorchTile:
-; New. Stutters for some reason?
 ; Save the stack pointer in bc for WriteTile to restore
 	ld hl, sp+0
 	ld b, h
@@ -416,9 +415,9 @@ AnimateTorchTile:
 
 	ld hl, .TorchTileFramePointers
 
-; A cycle of 6 frames, updating every tick
+; A cycle of 8 frames, updating every tick
 	ld a, [wTileAnimationTimer]
-	and %101
+	and 7
 
 ; hl = [.TorchTileFramePointers + a * 2]
 	add a
@@ -438,12 +437,14 @@ AnimateTorchTile:
 	jp WriteTile
 
 .TorchTileFramePointers:
-	dw .TorchTile1
-	dw .TorchTile2
-	dw .TorchTile3
-	dw .TorchTile4
-	dw .TorchTile3
-	dw .TorchTile2
+    dw .TorchTile1
+    dw .TorchTile2
+    dw .TorchTile3
+    dw .TorchTile4
+    dw .TorchTile4
+    dw .TorchTile3
+    dw .TorchTile2
+    dw .TorchTile1
 
 .TorchTile1: INCBIN "gfx/tilesets/torch/1.2bpp"
 .TorchTile2: INCBIN "gfx/tilesets/torch/2.2bpp"

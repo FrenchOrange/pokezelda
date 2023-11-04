@@ -111,14 +111,64 @@ PlayersRadioText4:
 
 DebugColor:
 	opentext
-	writetext DebugColorText
+	writetext EnteringMenuText
+	yesorno
+	iftrue .AskInstructions
+	closetext
+	end
+
+.AskInstructions:
+	writetext ReadInstructionsText
+	yesorno
+	iftrue .LoadInstructions
+	writetext LoadingText
+	pause 45
 	special ColorPicker
 	closetext
 	end
 
-DebugColorText:
-	text "Entering the DEBUG"
-	line "COLOR PICKER…"
+.LoadInstructions:
+	writetext InstructionsText
+	waitbutton
+	writetext LoadingText
+	pause 45
+	special ColorPicker
+	closetext
+	end
+
+EnteringMenuText:
+	text "NOW ENTERING..."
+	line "COLOR PICKER MENU."
+
+	para "RUN PROGRAM?"
+	done
+
+ReadInstructionsText:
+	text "READ INSTRUCTIONS?"
+	done
+
+InstructionsText:
+	text "A- COLOR TOGGLE"
+	line "(SHINY/NON-SHINY)"
+
+	para "B- SEE #MON"
+	line "MOVEPOOL (TM/HM)"
+
+	para "SELECT- NEXT ENTRY"
+	line "START- PREVIOUS"
+
+	para "LEFT/RIGHT-"
+	line "PICK HUE"
+
+	para "UP/DOWN-"
+	line "PICK SLIDER"
+
+	para "B- EXIT PROGRAM"
+	line "(TRAINER MENU)"
+	done
+
+LoadingText:
+	text "LOADING..."
 	done
 
 DebugSign:
@@ -160,6 +210,7 @@ DebugSign:
 	givepoke PIDGEOT, 100
 	givepoke LAPRAS, 100
 	givepoke PIKACHU, 100
+	givepoke ABRA, 100
 	closetext
 	playsound SFX_WARP_TO
 	special FadeOutPalettes

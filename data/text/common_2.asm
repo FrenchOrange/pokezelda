@@ -927,7 +927,7 @@ _PCGottaHavePokemonText::
 	prompt
 
 _PCWhatText::
-	text "What?"
+	text "Do what?"
 	done
 
 _PCMonHoldingMailText::

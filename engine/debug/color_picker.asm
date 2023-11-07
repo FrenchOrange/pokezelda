@@ -32,21 +32,12 @@
 	const DEBUGCOLORMAIN_INITTMHM       ; 4
 	const DEBUGCOLORMAIN_TMHMJOYPAD     ; 5
 
-DebugColorPicker:
+_DebugColorPicker:
 ; A debug menu to test monster and trainer palettes at runtime.
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-
-.cgb
-	ldh a, [hInMenu]
-	push af
-	ld a, TRUE
-	ldh [hInMenu], a
-
+	ld hl, wOptions
+	call ClearBGPalettes
+	call ClearSprites
+	call ClearTilemap
 	call DisableLCD
 	call DebugColor_InitVRAM
 	call DebugColor_LoadGFX
@@ -70,10 +61,14 @@ DebugColorPicker:
 	call DebugColor_PlaceCursor
 	call DelayFrame
 	jr .loop
-
 .exit
-	pop af
-	ldh [hInMenu], a
+	ld de, MUSIC_NEW_BARK_TOWN
+	call PlayMusic
+	call ClearBGPalettes
+	call ClearTilemap
+	call ClearSprites
+	ld hl, wOptions
+	res 4, [hl]
 	ret
 
 DebugColor_InitMonOrTrainerColor:
@@ -563,13 +558,6 @@ DebugColor_PrintHexColor:
 	ld [hld], a
 	ret
 
-; move down.
-.exit
-	call ClearBGPalettes ;new
-	ld hl, wJumptableIndex
-	set 7, [hl]
-	ret
-
 DebugColor_Joypad:
 	ldh a, [hJoyLast]
 	and B_BUTTON
@@ -597,6 +585,12 @@ DebugColor_Joypad:
 	ret nz
 	ld a, DEBUGCOLORMAIN_INITTMHM
 	ld [wJumptableIndex], a
+	ret
+
+; new
+.exitmode
+	ld hl, wJumptableIndex
+	set 7, [hl]
 	ret
 
 .toggle_shiny
@@ -809,7 +803,7 @@ DebugColorPicker_SwapMode:
 	ld a, 1
 .ReloadColorPicker	
 	ld [wDebugColorIsTrainer], a
-	jp DebugColorPicker	
+	jp _DebugColorPicker	
 
 DebugColor_PrintTMHMMove:
 	hlcoord 0, 13

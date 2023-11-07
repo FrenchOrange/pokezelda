@@ -3,7 +3,7 @@ MINOR EQU 5
 PATCH EQU 2
 
 wrong_rgbds: MACRO
-	fail "pokecrystal requires rgbds v0.5.2 or newer."
+	fail "pokezelda requires rgbds v0.5.2."
 ENDM
 
 IF !DEF(__RGBDS_MAJOR__) || !DEF(__RGBDS_MINOR__) || !DEF(__RGBDS_PATCH__)

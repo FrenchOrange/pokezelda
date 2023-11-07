@@ -1,6 +1,6 @@
 # Instructions
 
-These instructions explain how to set up the tools required to build **pokecrystal**, including [**rgbds**](https://github.com/gbdev/rgbds), which assembles the source files into a ROM.
+These instructions explain how to set up the tools required to build **pokezelda**, including [**rgbds**](https://github.com/gbdev/rgbds), which assembles the source files into a ROM.
 
 If you run into trouble, ask for help on IRC or Discord (see [README.md](README.md)).
 
@@ -15,9 +15,9 @@ Update WSL's software before continuing. If you chose Debian, Ubuntu, or another
 apt-get update && apt-get upgrade
 ```
 
-WSL has its own file system that's not accessible from Windows, but Windows files *are* accessible from WSL. So you're going to want to install pokecrystal within Windows. You'll have to change the **current working directory** every time you open WSL.
+WSL has its own file system that's not accessible from Windows, but Windows files *are* accessible from WSL. So you're going to want to install pokezelda within Windows. You'll have to change the **current working directory** every time you open WSL.
 
-For example, if you want to store pokecrystal in **C:\Users\\*\<user>*\Desktop**, enter this command:
+For example, if you want to store pokezelda in **C:\Users\\*\<user>*\Desktop**, enter this command:
 
 ```bash
 cd /mnt/c/Users/<user>/Desktop
@@ -42,15 +42,14 @@ Run setup and leave the default settings. At the "**Select Packages**" step, cho
 
 Double click on the text that says "**Skip**" next to each package to select the most recent version to install.
 
-Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install/windows) for Windows with Cygwin to install **rgbds 0.5.2**.
+Then download [**rgbds**](https://rgbds.gbdev.io/install/windows): specifically **version 0.5.2** - older versions may not work, and newer ones won't compile due to incompatibility issues - download win64.zip or win32.zip depending on your install. Extract it and put all the exe and dll files individually in C:\cygwin64\usr\local\bin.
 
-**Note:** If you already have an older rgbds, you will need to update to 0.5.2. Ignore this if you have never installed rgbds before. If a version newer than 0.5.2 does not work, try downloading 0.5.2.
 
 Now open the **Cygwin terminal** and enter the following commands.
 
-Cygwin has its own file system that's within Windows, at **C:\cygwin64\home\\*\<user>***. If you don't want to store pokecrystal there, you'll have to change the **current working directory** every time you open Cygwin.
+Cygwin has its own file system that's within Windows, at **C:\cygwin64\home\\*\<user>***. If you don't want to store pokezelda there, you'll have to change the **current working directory** every time you open Cygwin.
 
-For example, if you want to store pokecrystal in **C:\Users\\*\<user>*\Desktop**:
+For example, if you want to store pokezelda in **C:\Users\\*\<user>*\Desktop**:
 
 ```bash
 cd /cygdrive/c/Users/<user>/Desktop
@@ -58,7 +57,7 @@ cd /cygdrive/c/Users/<user>/Desktop
 
 (The Windows `C:\` drive is called `/cygdrive/c/` in Cygwin. Replace *\<user>* in the example path with your username.)
 
-Now you're ready to [build **pokecrystal**](#build-pokecrystal).
+Now you're ready to [build **pokezelda**](#build-zelda).
 
 
 ## macOS
@@ -69,7 +68,7 @@ Open **Terminal** and prepare to enter commands.
 
 Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install/macos) for macOS to install **rgbds 0.5.2**.
 
-Now you're ready to [build **pokecrystal**](#build-pokecrystal).
+Now you're ready to [build **pokezelda**](#build-pokezelda).
 
 
 ## Linux
@@ -78,7 +77,7 @@ Open **Terminal** and enter the following commands, depending on which distro yo
 
 ### Debian or Ubuntu
 
-To install the software required for **pokecrystal**:
+To install the software required for **pokezelda**:
 
 ```bash
 sudo apt-get install make gcc git
@@ -88,7 +87,7 @@ Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install/source) 
 
 ### OpenSUSE
 
-To install the software required for **pokecrystal**:
+To install the software required for **pokezelda**:
 
 ```bash
 sudo zypper install make gcc git
@@ -98,7 +97,7 @@ Then follow the [**rgbds** instructions](https://rgbds.gbdev.io/install/source) 
 
 ### Arch Linux
 
-To install the software required for **pokecrystal**:
+To install the software required for **pokezelda**:
 
 ```bash
 sudo pacman -S make gcc git rgbds
@@ -110,7 +109,7 @@ If you want to compile and install **rgbds** yourself instead, then follow the [
 
 ### Termux
 
-To install the software required for **pokecrystal**:
+To install the software required for **pokezelda**:
 
 ```bash
 sudo apt install make clang git sed
@@ -135,38 +134,28 @@ If your distro is not listed here, try to find the required software in its repo
 
 If `rgbds` is not available, you'll need to follow the [**rgbds** instructions](https://rgbds.gbdev.io/install/source) to build **rgbds 0.5.2** from source.
 
-Now you're ready to [build **pokecrystal**](#build-pokecrystal).
+Now you're ready to [build **pokezelda**](#build-pokezelda).
 
 
-## Build pokecrystal
+## Build pokezelda
 
-To download the **pokecrystal** source files:
+To download the **pokezelda** source files:
 
 ```bash
-git clone https://github.com/pret/pokecrystal
-cd pokecrystal
+git clone https://github.com/FrenchOrange/pokezelda
+cd pokezelda
 ```
 
-To build **pokecrystal.gbc**:
+To build **pokezelda.gbc**:
 
 ```bash
 make
 ```
 
-To build **pokecrystal11.gbc**:
-
-```bash
-make crystal11
-```
-
 ### Build with a local rgbds version
 
-If you have different projects that require different versions of `rgbds`, it might not be convenient to install rgbds 0.5.2 globally. Instead, you can put its files in a directory within pokecrystal, such as `pokecrystal/rgbds-0.5.2/`. Then specify it when you run `make`:
+If you have different projects that require different versions of `rgbds`, it might not be convenient to install rgbds 0.5.2 globally. Instead, you can put its files in a directory within pokezelda, such as `pokezelda/rgbds-0.5.2/`. Then specify it when you run `make`:
 
 ```bash
 make RGBDS=rgbds-0.5.2/
-```
-
-```bash
-make RGBDS=rgbds-0.5.2/ crystal11
 ```

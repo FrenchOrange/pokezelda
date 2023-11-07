@@ -254,7 +254,9 @@ CheckCoinsAndCoinCase:
 	text_end
 
 ColorPicker:
-	farcall DebugColorPicker
+	call FadeToMenu
+	farcall _DebugColorPicker
+	call ExitAllMenus
 	ret
 
 ScriptReturnCarry:

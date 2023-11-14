@@ -28,14 +28,14 @@ Route7_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11,  9, ROUTE_7_SAFFRON_GATE, 1
-	warp_event 11, 10, ROUTE_7_SAFFRON_GATE, 2
-	warp_event  6, 13, ROUTE_7_UNDERGROUND_PATH_ENTRANCE, 1
+	warp_event 11, 17, ROUTE_7_SAFFRON_GATE, 1
+	warp_event 11, 18, ROUTE_7_SAFFRON_GATE, 2
+	warp_event  6, 21, ROUTE_7_UNDERGROUND_PATH_ENTRANCE, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  3, 13, BGEVENT_READ, Route7UndergroundPathSign
+	bg_event  3, 21, BGEVENT_READ, Route7UndergroundPathSign
 
 	def_object_events
-	object_event  6, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route7OfficerScript, EVENT_OFFICER_BLOCKS_UNDERGROUND_PATH
+	object_event  6, 22, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route7OfficerScript, EVENT_OFFICER_BLOCKS_UNDERGROUND_PATH

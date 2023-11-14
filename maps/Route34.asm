@@ -17,7 +17,12 @@ Route34_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, .SideTreeBlocks
 	callback MAPCALLBACK_OBJECTS, .EggCheckCallback
+
+.SideTreeBlocks:
+	changeblock -2, 44, $8c ; tree
+	endcallback
 
 .EggCheckCallback:
 	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG

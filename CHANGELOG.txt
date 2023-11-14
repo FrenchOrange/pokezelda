@@ -133,9 +133,19 @@
 - Updated Houndour's front sprite, courtesy of SoupPotato.
 - Fixed the palette of Azumarill's back sprite.
 - Fixed Hoothoot's shiny.
-- Fixed Dragon Fang/Dragon Scale item effect swap.
+- Fixed the vanilla Dragon Fang/Dragon Scale item effect swap.
 - Fixed the torch animation. Animation fix courtesy of Seasick.
 - Gave an animation to Rattata's overworld sprite.
 - Updated Kurt's overworld sprite. Courtesy of Chikorita Lover.
 - Implemented HGSS-style anti-softlock scenarios to Cianwood City and Cinnabar Island.
 - Tweaked the way the current works in Seafoam Islands B4F.
+
+
+1.2.1
+- Revamped the trees and paths in the overworld.
+- Fixed incorrect frame order in the tree foliage animation.
+- Fixed incorrect fly order between Celadon and Saffron.
+- Fixed missing "field move" blocks in the Forest and Park tilesets.
+- Updated the look of the Ruins of Alph maps, same for the summit of Mt.Silver.
+- Updated Kabuto's menu icon.
+- Updated Omanyte's menu icon, courtesy of Megaman-Omega.

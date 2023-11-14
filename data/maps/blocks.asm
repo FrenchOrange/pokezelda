@@ -96,9 +96,6 @@ Route34_Blocks:
 Route46_Blocks:
 	INCBIN "maps/Route46.blk"
 
-FuchsiaCity_Blocks:
-	INCBIN "maps/FuchsiaCity.blk"
-
 Route38_Blocks:
 	INCBIN "maps/Route38.blk"
 
@@ -659,6 +656,9 @@ CeladonChiefHouse_Blocks:
 
 
 SECTION "Map Blocks 3", ROMX
+
+FuchsiaCity_Blocks:
+	INCBIN "maps/FuchsiaCity.blk"
 
 SlowpokeWellB1F_Blocks:
 	INCBIN "maps/SlowpokeWellB1F.blk"

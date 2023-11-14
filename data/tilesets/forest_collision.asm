@@ -59,3 +59,16 @@
 	tilecoll HEADBUTT_TREE, TALL_GRASS, HEADBUTT_TREE, TALL_GRASS ; 3a
 	tilecoll TALL_GRASS, HEADBUTT_TREE, TALL_GRASS, HEADBUTT_TREE ; 3b
 	tilecoll TALL_GRASS, TALL_GRASS, TALL_GRASS, TALL_GRASS ; 3c
+	tilecoll WALL, WALL, WALL, WALL ; 3d
+	tilecoll WALL, WALL, WALL, WALL ; 3e
+	tilecoll WALL, WALL, WALL, WALL ; 3f
+	tilecoll WALL, WALL, WALL, WALL ; 40
+	tilecoll WALL, WALL, WALL, WALL ; 41
+	tilecoll WALL, WALL, WALL, WALL ; 42
+	tilecoll WALL, WALL, WALL, WALL ; 43
+	tilecoll WALL, WALL, WALL, WALL ; 44
+	tilecoll WALL, WALL, WALL, WALL ; 45
+	tilecoll WALL, WALL, WALL, WALL ; 46
+	tilecoll WALL, WALL, WALL, WALL ; 47
+	tilecoll WALL, WALL, WALL, WALL ; 48
+	tilecoll WALL, WALL, WALL, WALL ; 49

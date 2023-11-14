@@ -12,7 +12,13 @@ PewterMuseumB1F_MapScripts:
 	def_callbacks
 
 PewterMuseumB1FGuardScript:
-	jumptextfaceplayer PewterMuseumB1FGuardText
+	faceplayer
+	opentext
+	writetext PewterMuseumB1FGuardText
+	waitbutton
+	closetext
+	turnobject PEWTERMUSEUMB1F_GUARD, DOWN
+	end
 
 PewterMuseumB1FScientist1Script:
 	jumptextfaceplayer PewterMuseumB1FScientist1Text
@@ -149,9 +155,10 @@ PewterMuseumB1FScientist5TakeThisOmanyteText:
 	cont "them in the wild."
 
 	para "But those badges"
-	line "you have. Hmm… You"
-	cont "do seem worthy of"
-	cont "such POKéMON."
+	line "you have. Hmm…"
+
+	para "You do seem worthy"
+	line "of such POKéMON."
 
 	para "We have an extra"
 	line "OMANYTE on hand,"

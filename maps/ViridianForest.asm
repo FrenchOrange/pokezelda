@@ -278,30 +278,30 @@ ViridianForest_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  1,  5, VIRIDIAN_NORTH_GATE, 1
-	warp_event 16, 53, VIRIDIAN_SOUTH_GATE, 3
-	warp_event 17, 53, VIRIDIAN_SOUTH_GATE, 4
+	warp_event  3,  5, VIRIDIAN_NORTH_GATE, 1
+	warp_event 18, 53, VIRIDIAN_SOUTH_GATE, 3
+	warp_event 19, 53, VIRIDIAN_SOUTH_GATE, 4
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  2,  7, BGEVENT_READ, ViridianForestSign1
-	bg_event  4, 30, BGEVENT_READ, ViridianForestSign2
-	bg_event 26, 23, BGEVENT_READ, ViridianForestSign3
-	bg_event 24, 46, BGEVENT_READ, ViridianForestSign4
-	bg_event 16, 38, BGEVENT_READ, ViridianForestSign5
-	bg_event 18, 51, BGEVENT_READ, ViridianForestSign6
-	bg_event 19, 13, BGEVENT_ITEM, ViridianForestHiddenMaxEther
-	bg_event 16, 48, BGEVENT_ITEM, ViridianForestHiddenFullRestore
-	bg_event 30, 48, BGEVENT_ITEM, ViridianForestHiddenRevive
+	bg_event  4,  7, BGEVENT_READ, ViridianForestSign1
+	bg_event  6, 30, BGEVENT_READ, ViridianForestSign2
+	bg_event 28, 23, BGEVENT_READ, ViridianForestSign3
+	bg_event 26, 46, BGEVENT_READ, ViridianForestSign4
+	bg_event 18, 38, BGEVENT_READ, ViridianForestSign5
+	bg_event 20, 51, BGEVENT_READ, ViridianForestSign6
+	bg_event 21, 13, BGEVENT_ITEM, ViridianForestHiddenMaxEther
+	bg_event 18, 48, BGEVENT_ITEM, ViridianForestHiddenFullRestore
+	bg_event 32, 48, BGEVENT_ITEM, ViridianForestHiddenRevive
 
 	def_object_events
-	object_event 16, 49, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestCamper, -1
-	object_event  1, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperHarvey, -1
-	object_event  7, 47, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperDale, -1
-	object_event 32, 31, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperThomas, -1
-	object_event  4, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperLeroy, -1
-	object_event 27, 43, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperDavid, -1
-	object_event  1, 49, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestDireHit, EVENT_VIRIDIAN_FOREST_DIRE_HIT
-	object_event 11, 35, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestMaxPotion, EVENT_VIRIDIAN_FOREST_MAX_POTION
-	object_event 31,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2FruitTree, -1
+	object_event 18, 49, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianForestCamper, -1
+	object_event  3, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperHarvey, -1
+	object_event  9, 47, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCamperDale, -1
+	object_event 34, 31, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperThomas, -1
+	object_event  6, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerCamperLeroy, -1
+	object_event 29, 43, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperDavid, -1
+	object_event  3, 49, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestDireHit, EVENT_VIRIDIAN_FOREST_DIRE_HIT
+	object_event 13, 35, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestMaxPotion, EVENT_VIRIDIAN_FOREST_MAX_POTION
+	object_event 33,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route2FruitTree, -1

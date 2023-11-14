@@ -126,7 +126,7 @@ VictoryRoad1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 10, 19, VICTORY_ROAD_GATE, 5
+	warp_event 10, 20, VICTORY_ROAD_GATE, 5
 	warp_event  3,  3, VICTORY_ROAD_2F, 1
 	warp_event 19, 15, VICTORY_ROAD_2F, 1 ; switch
 

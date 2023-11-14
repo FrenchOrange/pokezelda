@@ -24,7 +24,6 @@ SaffronCity_MapScripts:
 	endcallback
 
 .TrainTracks:
-	changeblock -2, 2, $9c ; rail
 	endcallback
 
 SaffronCityLass1Script:

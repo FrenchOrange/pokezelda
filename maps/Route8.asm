@@ -12,6 +12,11 @@ Route8_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, .MountainBlocks
+
+.MountainBlocks:
+	changeblock  0, 18, $28 ; rock wall
+	endcallback
 
 Route8OfficerScript:
 	jumptextfaceplayer Route8OfficerText
@@ -207,21 +212,21 @@ Route8_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  9, ROUTE_8_SAFFRON_GATE, 1
-	warp_event  6, 10, ROUTE_8_SAFFRON_GATE, 2
-	warp_event 12,  3, ROUTE_8_UNDERGROUND_PATH_ENTRANCE, 1
+	warp_event  4,  9, ROUTE_8_SAFFRON_GATE, 1
+	warp_event  4, 10, ROUTE_8_SAFFRON_GATE, 2
+	warp_event 10,  3, ROUTE_8_UNDERGROUND_PATH_ENTRANCE, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 15,  3, BGEVENT_READ, Route8UndergroundPathSign
+	bg_event 13,  3, BGEVENT_READ, Route8UndergroundPathSign
 
 	def_object_events
-	object_event 26,  8, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TrainerBikerDwayne, -1
-	object_event 26,  9, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerBikerHarris, -1
-	object_event 26, 10, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerBikerZeke, -1
-	object_event 46, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerSupernerdSam, -1
-	object_event 34,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerSupernerdTom, -1
-	object_event 17, 15, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyAngelica, -1
-	object_event 12,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route8OfficerScript, EVENT_OFFICER_BLOCKS_UNDERGROUND_PATH
-	object_event 52,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1
+	object_event 24,  8, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TrainerBikerDwayne, -1
+	object_event 24,  9, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerBikerHarris, -1
+	object_event 24, 10, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerBikerZeke, -1
+	object_event 44, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerSupernerdSam, -1
+	object_event 32,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerSupernerdTom, -1
+	object_event 15, 15, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyAngelica, -1
+	object_event 10,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route8OfficerScript, EVENT_OFFICER_BLOCKS_UNDERGROUND_PATH
+	object_event 50,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1

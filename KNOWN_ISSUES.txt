@@ -1,6 +1,6 @@
 
 - - Graphical Issues - -
-* The title screen is still in progress.
+* Title screen is still a work in progress.
 * Falling into a body of water turns the surf sprite red if male.
 
 

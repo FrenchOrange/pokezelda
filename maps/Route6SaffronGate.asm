@@ -60,7 +60,7 @@ Route6SaffronGate_MapEvents:
 
 	def_warp_events
 	warp_event  6,  0, ROUTE_6, 3
-	warp_event  7,  0, ROUTE_6, 3
+	warp_event  7,  0, ROUTE_6, 4
 	warp_event  6,  7, ROUTE_6, 2
 	warp_event  7,  7, ROUTE_6, 2
 

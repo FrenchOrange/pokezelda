@@ -19,9 +19,13 @@ CeruleanCity_MapScripts:
 	endcallback
 
 .CaveEntrance:
+	changeblock 30, -4, $43 ; water
+	changeblock 30, -2, $43 ; water
+	changeblock 40, 36, $a6 ; tree
+	changeblock 42, 36, $a5 ; tree
 	readvar VAR_BADGES
 	ifequal NUM_BADGES, .CaveOpen
-	changeblock 4, 10, $90 ; cave
+	changeblock  4, 10, $90 ; cave
 .CaveOpen:
 	endcallback
 

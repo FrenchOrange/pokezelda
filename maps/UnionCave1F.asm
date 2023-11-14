@@ -196,8 +196,8 @@ UnionCave1F_MapEvents:
 	def_warp_events
 	warp_event  5, 19, UNION_CAVE_B1F, 3
 	warp_event  3, 33, UNION_CAVE_B1F, 4
-	warp_event 16, 31, ROUTE_33, 1
-	warp_event 16,  3, ROUTE_32, 4
+	warp_event 16, 32, ROUTE_33, 1
+	warp_event 16,  4, ROUTE_32, 4
 
 	def_coord_events
 

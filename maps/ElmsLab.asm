@@ -40,13 +40,14 @@ ElmsLab_MapScripts:
 .MoveElmCallback:
 	checkscene
 	iftrue .Skip ; not SCENE_DEFAULT
-	moveobject ELMSLAB_ELM, 6, 3
+	moveobject ELMSLAB_ELM, 5, 4
 .Skip:
 	endcallback
 
 .WalkUpToElm:
 	applymovement PLAYER, ElmsLab_WalkUpToElmMovement
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 15
+	turnobject ELMSLAB_ELM, RIGHT
 	opentext
 	writetext ElmText_Intro
 .MustSayYes:
@@ -64,16 +65,17 @@ ElmsLab_MapScripts:
 	playsound SFX_GLASS_TING
 	pause 30
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 10
-	applymovement ELMSLAB_ELM, ElmsLab_ElmToDefaultPositionMovement1
+	turnobject ELMSLAB_ELM, DOWN
 	opentext
 	writetext ElmText_GotAnEmail
 	waitbutton
 	closetext
 	opentext
-	turnobject ELMSLAB_ELM, DOWN
+	turnobject ELMSLAB_ELM, RIGHT
 	writetext ElmText_MissionFromMrPokemon
 	waitbutton
 	closetext
+	applymovement ELMSLAB_ELM, ElmsLab_ElmToDefaultPositionMovement1
 	turnobject PLAYER, UP
 	applymovement ELMSLAB_ELM, ElmsLab_ElmToDefaultPositionMovement2
 	turnobject PLAYER, RIGHT
@@ -610,6 +612,7 @@ ElmsLab_WalkUpToElmMovement:
 	step UP
 	step UP
 	step UP
+	turn_head LEFT
 	step_end
 
 ElmsLab_CantLeaveMovement:
@@ -685,15 +688,13 @@ ElmJumpRightMovement:
 	step_end
 
 ElmsLab_ElmToDefaultPositionMovement1:
-	step LEFT
-	step LEFT
 	step UP
 	step_end
 
 ElmsLab_ElmToDefaultPositionMovement2:
 	step RIGHT
 	step RIGHT
-	step RIGHT
+	step UP
 	turn_head DOWN
 	step_end
 
@@ -1354,7 +1355,7 @@ ElmsLabPCText:
 	line "#MON EVOLUTION"
 
 	para "…It says on the"
-	line "report…"
+	line "screen…"
 	done
 
 ElmsLab_MapEvents:
@@ -1390,7 +1391,7 @@ ElmsLab_MapEvents:
 	bg_event 11,  7, BGEVENT_READ, ElmsLabBookshelf
 	bg_event 11,  3, BGEVENT_READ, ElmsLabTrashcan
 	bg_event  7,  0, BGEVENT_READ, ElmsLabWindow
-	bg_event  5,  1, BGEVENT_READ, ElmsLabPC
+	bg_event  5,  5, BGEVENT_READ, ElmsLabPC
 
 	def_object_events
 	object_event  7,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1

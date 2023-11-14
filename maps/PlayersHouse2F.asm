@@ -212,10 +212,11 @@ DebugSign:
 	givepoke PIKACHU, 100
 	givepoke ABRA, 100
 	closetext
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
-	warp VERMILION_CITY, 12, 20
+	setevent EVENT_BEAT_ELITE_FOUR
+;	playsound SFX_WARP_TO
+;	special FadeOutPalettes
+;	waitsfx
+;	warp VERMILION_CITY, 12, 20
 	end
 
 PlayersHouse2F_MapEvents:

@@ -35,7 +35,7 @@ AzaleaTown_MapScripts:
 	endcallback
 
 AzaleaTownRivalBattleScene1:
-	moveobject AZALEATOWN_SILVER, 11, 11
+	moveobject AZALEATOWN_SILVER, 9, 11
 	turnobject PLAYER, RIGHT
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
@@ -443,41 +443,41 @@ AzaleaTown_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 15,  9, AZALEA_POKECENTER_1F, 1
-	warp_event 21, 13, CHARCOAL_KILN, 1
-	warp_event 21,  5, AZALEA_MART, 2
-	warp_event  9,  5, KURTS_HOUSE, 1
-	warp_event 10, 15, AZALEA_GYM, 1
-	warp_event 31,  7, SLOWPOKE_WELL_B1F, 1
-	warp_event  2, 10, ILEX_FOREST_AZALEA_GATE, 3
-	warp_event  2, 11, ILEX_FOREST_AZALEA_GATE, 4
+	warp_event 13, 11, AZALEA_POKECENTER_1F, 1
+	warp_event 19, 15, CHARCOAL_KILN, 1
+	warp_event 19,  7, AZALEA_MART, 2
+	warp_event  7,  7, KURTS_HOUSE, 1
+	warp_event  8, 17, AZALEA_GYM, 1
+	warp_event 29,  9, SLOWPOKE_WELL_B1F, 1
+	warp_event  0, 12, ILEX_FOREST_AZALEA_GATE, 3
+	warp_event  0, 13, ILEX_FOREST_AZALEA_GATE, 4
 
 	def_coord_events
-	coord_event  5, 10, SCENE_AZALEATOWN_RIVAL_BATTLE, AzaleaTownRivalBattleScene1
-	coord_event  5, 11, SCENE_AZALEATOWN_RIVAL_BATTLE, AzaleaTownRivalBattleScene2
-	coord_event  9,  6, SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL, AzaleaTownCelebiScene
+	coord_event  3, 12, SCENE_AZALEATOWN_RIVAL_BATTLE, AzaleaTownRivalBattleScene1
+	coord_event  3, 13, SCENE_AZALEATOWN_RIVAL_BATTLE, AzaleaTownRivalBattleScene2
+	coord_event  7,  8, SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL, AzaleaTownCelebiScene
 
 	def_bg_events
-	bg_event 19,  9, BGEVENT_READ, AzaleaTownSign
-	bg_event 10,  9, BGEVENT_READ, KurtsHouseSign
-	bg_event 14, 15, BGEVENT_READ, AzaleaGymSign
-	bg_event 29,  7, BGEVENT_READ, SlowpokeWellSign
-	bg_event 19, 13, BGEVENT_READ, CharcoalKilnSign
-	bg_event 16,  9, BGEVENT_READ, AzaleaTownPokecenterSign
-	bg_event 22,  5, BGEVENT_READ, AzaleaTownMartSign
-	bg_event  3,  9, BGEVENT_READ, AzaleaTownIlextForestSign
-	bg_event 31,  6, BGEVENT_ITEM, AzaleaTownHiddenFullHeal
+	bg_event 17, 11, BGEVENT_READ, AzaleaTownSign
+	bg_event  8, 11, BGEVENT_READ, KurtsHouseSign
+	bg_event 12, 17, BGEVENT_READ, AzaleaGymSign
+	bg_event 27,  9, BGEVENT_READ, SlowpokeWellSign
+	bg_event 17, 15, BGEVENT_READ, CharcoalKilnSign
+	bg_event 14, 11, BGEVENT_READ, AzaleaTownPokecenterSign
+	bg_event 20,  7, BGEVENT_READ, AzaleaTownMartSign
+	bg_event  1, 11, BGEVENT_READ, AzaleaTownIlextForestSign
+	bg_event 29,  8, BGEVENT_ITEM, AzaleaTownHiddenFullHeal
 
 	def_object_events
-	object_event 31,  9, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownRocket1Script, EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
-	object_event 21,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownGrampsScript, -1
-	object_event 15, 13, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaTownTeacherScript, -1
-	object_event  7,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaTownYoungsterScript, -1
-	object_event  8, 17, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
-	object_event 18,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
-	object_event 29,  9, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
-	object_event 15, 15, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
-	object_event  8,  2, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhiteApricornTree, -1
-	object_event 11, 10, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_AZALEA_TOWN
-	object_event 10, 16, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownRocket2Script, EVENT_SLOWPOKE_WELL_ROCKETS
-	object_event  6,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaTownKurtScript, EVENT_AZALEA_TOWN_KURT
+	object_event 29, 11, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownRocket1Script, EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
+	object_event 19, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownGrampsScript, -1
+	object_event 13, 15, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaTownTeacherScript, -1
+	object_event  5, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaTownYoungsterScript, -1
+	object_event  6, 19, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
+	object_event 16, 11, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
+	object_event 27, 11, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
+	object_event 13, 17, SPRITE_SLOWPOKE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, EVENT_AZALEA_TOWN_SLOWPOKES
+	object_event  6,  4, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhiteApricornTree, -1
+	object_event  9, 12, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_AZALEA_TOWN
+	object_event  8, 18, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaTownRocket2Script, EVENT_SLOWPOKE_WELL_ROCKETS
+	object_event  4,  7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AzaleaTownKurtScript, EVENT_AZALEA_TOWN_KURT

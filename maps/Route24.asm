@@ -7,6 +7,13 @@ Route24_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, .MountainBlocks
+
+.MountainBlocks:
+	changeblock 20, 20, $57 ; rock wall
+	changeblock 20, 22, $43 ; water
+	changeblock 20, 24, $43 ; water
+	endcallback
 
 TrainerCamperJohnScript:
 	trainer CAMPER, JOHN, EVENT_BEAT_CAMPER_JOHN, CamperJohnSeenText, CamperJohnBeatenText, 0, .Script

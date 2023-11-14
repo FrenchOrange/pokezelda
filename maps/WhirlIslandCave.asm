@@ -7,7 +7,7 @@ WhirlIslandCave_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  6,  5, WHIRL_ISLAND_B1F, 9
+	warp_event  6,  6, WHIRL_ISLAND_B1F, 9
 	warp_event  3, 13, WHIRL_ISLAND_NW, 4
 
 	def_coord_events

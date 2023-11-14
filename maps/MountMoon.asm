@@ -177,12 +177,12 @@ MountMoon_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 12, 27, ROUTE_4, 1
-	warp_event 28,  7, ROUTE_4_EAST, 1
+	warp_event 12, 28, ROUTE_4, 1
+	warp_event 28,  8, ROUTE_4_EAST, 1
 	warp_event  5,  5, MOUNT_MOON, 7
 	warp_event 27,  3, MOUNT_MOON, 8
-	warp_event 41,  5, MOUNT_MOON_SQUARE, 1
-	warp_event 41, 19, MOUNT_MOON_SQUARE, 2
+	warp_event 41,  6, MOUNT_MOON_SQUARE, 1
+	warp_event 41, 20, MOUNT_MOON_SQUARE, 2
 	warp_event 41,  3, MOUNT_MOON, 3
 	warp_event 41, 17, MOUNT_MOON, 4
 

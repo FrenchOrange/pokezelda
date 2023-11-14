@@ -13,6 +13,7 @@ Route43_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .CheckIfRockets
+	callback MAPCALLBACK_TILES, .CornerTreeBlocks
 
 .CheckIfRockets:
 	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
@@ -22,6 +23,11 @@ Route43_MapScripts:
 
 .NoRockets:
 	setmapscene ROUTE_43_GATE, SCENE_FINISHED
+	endcallback
+
+.CornerTreeBlocks:
+	changeblock -2,  0, $eb ; tree
+	changeblock 24, 42, $ec ; tree
 	endcallback
 
 TrainerCamperSpencer:
@@ -502,25 +508,25 @@ Route43_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  9, 51, ROUTE_43_MAHOGANY_GATE, 1
-	warp_event 10, 51, ROUTE_43_MAHOGANY_GATE, 2
-	warp_event 17, 35, ROUTE_43_GATE, 3
-	warp_event 17, 31, ROUTE_43_GATE, 1
-	warp_event 18, 31, ROUTE_43_GATE, 2
+	warp_event 11, 51, ROUTE_43_MAHOGANY_GATE, 1
+	warp_event 12, 51, ROUTE_43_MAHOGANY_GATE, 2
+	warp_event 19, 35, ROUTE_43_GATE, 3
+	warp_event 19, 31, ROUTE_43_GATE, 1
+	warp_event 20, 31, ROUTE_43_GATE, 2
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 13,  3, BGEVENT_READ, Route43Sign1
-	bg_event 11, 49, BGEVENT_READ, Route43Sign2
-	bg_event 16, 38, BGEVENT_READ, Route43TrainerTips
+	bg_event 15,  3, BGEVENT_READ, Route43Sign1
+	bg_event 13, 49, BGEVENT_READ, Route43Sign2
+	bg_event 18, 38, BGEVENT_READ, Route43TrainerTips
 
 	def_object_events
-	object_event 13,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacBen, -1
-	object_event 13, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacBrent, -1
-	object_event 14,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacRon, -1
-	object_event  4, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1
-	object_event  9, 25, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerTiffany, -1
-	object_event 13, 40, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSpencer, -1
-	object_event  1, 26, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route43FruitTree, -1
-	object_event 12, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route43MaxEther, EVENT_ROUTE_43_MAX_ETHER
+	object_event 15,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacBen, -1
+	object_event 15, 20, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacBrent, -1
+	object_event 16,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacRon, -1
+	object_event  6, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1
+	object_event 11, 25, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerTiffany, -1
+	object_event 15, 40, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSpencer, -1
+	object_event  3, 26, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route43FruitTree, -1
+	object_event 14, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route43MaxEther, EVENT_ROUTE_43_MAX_ETHER

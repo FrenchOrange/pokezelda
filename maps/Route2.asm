@@ -11,6 +11,13 @@ Route2_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, .TopTreeBlocks
+
+.TopTreeBlocks:
+	changeblock -2,  0, $a4 ; tree
+	changeblock 24,  0, $a4 ; tree
+	changeblock 26,  0, $a4 ; tree
+	endcallback
 
 Route2Carbos:
 	itemball CARBOS
@@ -155,24 +162,24 @@ Route2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 15, 19, ROUTE_2_NUGGET_HOUSE, 1
-	warp_event 15, 39, ROUTE_2_GATE, 3
-	warp_event 16, 35, ROUTE_2_GATE, 1
-	warp_event 17, 35, ROUTE_2_GATE, 2
-	warp_event 12,  9, DIGLETTS_CAVE, 3
-	warp_event  3, 11, VIRIDIAN_NORTH_GATE, 3
-	warp_event  4, 43, VIRIDIAN_SOUTH_GATE, 1
+	warp_event 17, 19, ROUTE_2_NUGGET_HOUSE, 1
+	warp_event 17, 39, ROUTE_2_GATE, 3
+	warp_event 18, 35, ROUTE_2_GATE, 1
+	warp_event 19, 35, ROUTE_2_GATE, 2
+	warp_event 14,  9, DIGLETTS_CAVE, 3
+	warp_event  5, 11, VIRIDIAN_NORTH_GATE, 3
+	warp_event  6, 43, VIRIDIAN_SOUTH_GATE, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  5, 65, BGEVENT_READ, Route2Sign
-	bg_event 11, 11, BGEVENT_READ, Route2DiglettsCaveSign
+	bg_event  7, 65, BGEVENT_READ, Route2Sign
+	bg_event 13, 11, BGEVENT_READ, Route2DiglettsCaveSign
 
 	def_object_events
-	object_event 10, 58, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherRob, -1
-	object_event  6,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherEd, -1
-	object_event  0, 50, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherDoug, -1
-	object_event 16, 54, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBeautyKendra, -1
-	object_event 19,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2Carbos, EVENT_ROUTE_2_CARBOS
-	object_event 14, 65, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2Elixer, EVENT_ROUTE_2_ELIXER
+	object_event 12, 58, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherRob, -1
+	object_event  8,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherEd, -1
+	object_event  2, 50, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherDoug, -1
+	object_event 18, 54, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBeautyKendra, -1
+	object_event 21,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2Carbos, EVENT_ROUTE_2_CARBOS
+	object_event 16, 65, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2Elixer, EVENT_ROUTE_2_ELIXER

@@ -36,11 +36,19 @@ CutTreeBlockPointers:
 ; facing block, replacement block, animation
 	db $13, $03, 1 ; grass
 	db $03, $04, 1 ; grass
+	db $44, $04, 1 ; grass
+	db $45, $04, 1 ; grass
+	db $46, $04, 1 ; grass
+	db $47, $04, 1 ; grass
 	db -1 ; end
 
 .forest:
 ; facing block, replacement block, animation
-	db $0f, $17, 0
+	db $39, $38, 1 ; grass
+	db $3a, $0c, 1 ; grass
+	db $3b, $0e, 1 ; grass
+	db $3c, $01, 1 ; grass
+	db $0f, $17, 0 ; tree
 	db -1 ; end
 
 

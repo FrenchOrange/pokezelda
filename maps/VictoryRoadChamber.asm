@@ -42,7 +42,7 @@ VictoryRoadChamber_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11, 19, VICTORY_ROAD_2F, 7
+	warp_event 11, 20, VICTORY_ROAD_2F, 7
 
 	def_coord_events
 

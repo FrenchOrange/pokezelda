@@ -15,6 +15,11 @@ Route42_MapScripts:
 	scene_script .DummyScene1 ; SCENE_ROUTE42_SUICUNE
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, .BottomTreeBlocks
+
+.BottomTreeBlocks:
+	changeblock 34, 20, $eb ; tree
+	endcallback
 
 .DummyScene0:
 	end

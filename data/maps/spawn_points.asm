@@ -19,23 +19,23 @@ SpawnPoints:
 	spawn VERMILION_CITY,             11,  4
 	spawn ROUTE_10,		          11, 20
 	spawn LAVENDER_TOWN,               5,  6
-	spawn CELADON_CITY,               41, 10
 	spawn SAFFRON_CITY,               11, 30
-	spawn FUCHSIA_CITY,               19, 28
+	spawn CELADON_CITY,               41, 12
+	spawn FUCHSIA_CITY,               19, 30
 	spawn CINNABAR_ISLAND,            11, 12
-	spawn ROUTE_23,                    9,  6
+	spawn ROUTE_23,                   11,  6
 
-	spawn NEW_BARK_TOWN,              13,  6
+	spawn NEW_BARK_TOWN,              13,  8
 	spawn CHERRYGROVE_CITY,           29,  4
-	spawn VIOLET_CITY,                31, 26
-	spawn ROUTE_32,                   11, 74
-	spawn AZALEA_TOWN,                15, 10
+	spawn VIOLET_CITY,                31, 28
+	spawn ROUTE_32,                   13, 74
+	spawn AZALEA_TOWN,                13, 12
 	spawn CIANWOOD_CITY,              23, 44
 	spawn GOLDENROD_CITY,             15, 28
 	spawn OLIVINE_CITY,               13, 22
-	spawn ECRUTEAK_CITY,              23, 28
+	spawn ECRUTEAK_CITY,              25, 30
 	spawn MAHOGANY_TOWN,              15, 14
-	spawn LAKE_OF_RAGE,               21, 29
+	spawn LAKE_OF_RAGE,               21, 31
 	spawn BLACKTHORN_CITY,            21, 30
 	spawn SILVER_CAVE_OUTSIDE,        23, 20
 	spawn FAST_SHIP_CABINS_SW_SSW_NW,  8,  3

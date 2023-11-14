@@ -8,7 +8,14 @@ ViridianCity_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, .TreeBlocks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
+
+.TreeBlocks:
+	changeblock 40, 30, $9f ; tree
+	changeblock 40, 32, $b2 ; border
+	changeblock 40, 34, $0a ; grass
+	endcallback
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_VIRIDIAN

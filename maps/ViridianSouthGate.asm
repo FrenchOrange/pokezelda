@@ -1,6 +1,7 @@
 	object_const_def
 	const VIRIDIANNORTHGATE_TWIN
 	const VIRIDIANNORTHGATE_BUG_CATCHER
+	const VIRIDIANNORTHGATE_LASS
 
 ViridianSouthGate_MapScripts:
 	def_scene_scripts
@@ -63,5 +64,5 @@ ViridianSouthGate_MapEvents:
 
 	def_object_events
 	object_event  5,  5, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ViridianSouthGateTwinScript, -1
-	object_event  4,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ViridianSouthGateBugCatcherScript, -1
+	object_event  4,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianSouthGateBugCatcherScript, -1
 	object_event 10,  3, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianSouthGateLassScript, -1

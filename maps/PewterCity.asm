@@ -4,6 +4,7 @@
 	const PEWTERCITY_GRAMPS
 	const PEWTERCITY_FRUIT_TREE1
 	const PEWTERCITY_FRUIT_TREE2
+	const PEWTERCITY_FISHER
 
 PewterCity_MapScripts:
 	def_scene_scripts
@@ -40,6 +41,42 @@ PewterCityGrampsScript:
 	waitbutton
 	closetext
 	end
+
+TrainerDollManiacHorace:
+	trainer DOLL_MANIAC, HORACE, EVENT_BEAT_DOLL_MANIAC_HORACE, DollManiacHoraceSeenText, DollManiacHoraceBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacHoraceAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_JIGGLYPUFF_DOLL
+	writetext GetJigglypuffDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear PEWTERCITY_FISHER
+	pause 30
+	special FadeInQuickly
+	end
+
+DollManiacHoraceSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacHoraceBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacHoraceAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetJigglypuffDollText:
+	text "<PLAYER> obtained"
+	line "JIGGLYPUFF DOLL!"
+	done
 
 PewterCitySign:
 	jumptext PewterCitySignText
@@ -181,3 +218,4 @@ PewterCity_MapEvents:
 	object_event 29, 17, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityGrampsScript, -1
 	object_event 32,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree1, -1
 	object_event 30,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree2, -1
+	object_event  4,  2, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacHorace, EVENT_DECO_JIGGLYPUFF_DOLL

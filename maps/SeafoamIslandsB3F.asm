@@ -99,8 +99,8 @@ SeafoamIslandsB3FCurrent:
 .NeedsBoulderB3F:
 	endcallback
 
-SeafoamIslandsB3FHiddenMaxElixer:
-	hiddenitem MAX_ELIXER, EVENT_SEAFOAM_ISLANDS_B3F_HIDDEN_MAX_ELIXER
+SeafoamIslandsB3FHiddenMaxElixir:
+	hiddenitem MAX_ELIXIR, EVENT_SEAFOAM_ISLANDS_B3F_HIDDEN_MAX_ELIXIR
 
 SeafoamIslandsB3F_MapEvents:
 	db 0, 0 ; filler
@@ -121,7 +121,7 @@ SeafoamIslandsB3F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 11, 18, BGEVENT_ITEM, SeafoamIslandsB3FHiddenMaxElixer
+	bg_event 11, 18, BGEVENT_ITEM, SeafoamIslandsB3FHiddenMaxElixir
 
 	def_object_events
 	object_event 11, 16, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB2FBoulder, -1

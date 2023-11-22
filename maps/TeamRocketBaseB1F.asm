@@ -5,6 +5,7 @@
 	const TEAMROCKETBASEB1F_POKE_BALL1
 	const TEAMROCKETBASEB1F_POKE_BALL2
 	const TEAMROCKETBASEB1F_POKE_BALL3
+	const TEAMROCKETBASEB1F_FISHER
 
 TeamRocketBaseB1F_MapScripts:
 	def_scene_scripts
@@ -18,6 +19,16 @@ TeamRocketBaseB1F_MapScripts:
 
 .HideSecurityGrunt:
 	disappear TEAMROCKETBASEB1F_ROCKET1
+	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
+	iftrue .CheckDollManiac
+.GotVoltorbDoll:
+	disappear TEAMROCKETBASEB1F_FISHER
+	endcallback
+
+.CheckDollManiac:
+	checkevent EVENT_DECO_VOLTORB_DOLL
+	iftrue .GotVoltorbDoll
+	appear TEAMROCKETBASEB1F_FISHER
 	endcallback
 
 SecurityCamera1a:
@@ -500,6 +511,45 @@ TrainerGruntM16:
 	closetext
 	end
 
+TrainerDollManiacMonroe:
+	trainer DOLL_MANIAC, MONROE, EVENT_BEAT_DOLL_MANIAC_MONROE, DollManiacMonroeSeenText, DollManiacMonroeBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacMonroeAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_VOLTORB_DOLL
+	writetext GetVoltorbDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear TEAMROCKETBASEB1F_FISHER
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	pause 15
+	special FadeInQuickly
+	end
+
+DollManiacMonroeSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacMonroeBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacMonroeAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetVoltorbDollText:
+	text "<PLAYER> obtained"
+	line "VOLTORB DOLL!"
+	done
+
 TeamRocketBaseB1FSecurityCamera:
 	jumptext TeamRocketBaseB1FSecurityCameraText
 
@@ -787,3 +837,4 @@ TeamRocketBaseB1F_MapEvents:
 	object_event 27,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FHyperPotion, EVENT_TEAM_ROCKET_BASE_B1F_HYPER_POTION
 	object_event 14, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FNugget, EVENT_TEAM_ROCKET_BASE_B1F_NUGGET
 	object_event 21, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseB1FGuardSpec, EVENT_TEAM_ROCKET_BASE_B1F_GUARD_SPEC
+	object_event 26, 12, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacMonroe, EVENT_BEAT_DOLL_MANIAC_MONROE

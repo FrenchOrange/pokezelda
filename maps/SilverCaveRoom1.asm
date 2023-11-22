@@ -9,8 +9,8 @@ SilverCaveRoom1_MapScripts:
 
 	def_callbacks
 
-SilverCaveRoom1MaxElixer:
-	itemball MAX_ELIXER
+SilverCaveRoom1MaxElixir:
+	itemball MAX_ELIXIR
 
 SilverCaveRoom1Protein:
 	itemball PROTEIN
@@ -41,7 +41,7 @@ SilverCaveRoom1_MapEvents:
 	bg_event 17, 12, BGEVENT_ITEM, SilverCaveRoom1HiddenUltraBall
 
 	def_object_events
-	object_event  4,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveRoom1MaxElixer, EVENT_SILVER_CAVE_ROOM_1_MAX_ELIXER
+	object_event  4,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveRoom1MaxElixir, EVENT_SILVER_CAVE_ROOM_1_MAX_ELIXIR
 	object_event 15, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveRoom1Protein, EVENT_SILVER_CAVE_ROOM_1_PROTEIN
 	object_event  5, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveRoom1EscapeRope, EVENT_SILVER_CAVE_ROOM_1_ESCAPE_ROPE
 	object_event  7, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveRoom1UltraBall, EVENT_SILVER_CAVE_ROOM_1_ULTRA_BALL

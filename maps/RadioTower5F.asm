@@ -134,7 +134,6 @@ RadioTower5FRocketBossScene:
 	applymovement RADIOTOWER5F_DIRECTOR, RadioTower5FDirectorWalksOut
 	playsound SFX_EXIT_BUILDING
 	disappear RADIOTOWER5F_DIRECTOR
-	setevent EVENT_DECO_JIGGLYPUFF_DOLL
 	end
 
 Ben:

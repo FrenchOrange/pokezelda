@@ -711,4 +711,22 @@ KRIS EQU __trainer_class__
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
 
+	trainerclass DOLL_MANIAC ; 44
+	const HUGO
+	const LUCIUS
+	const OLIVER
+	const MASON
+	const MONROE
+	const SHAUN
+	const LOGAN
+	const ADRIAN
+	const HORACE
+	const LUKE
+	const MORGAN
+	const MATEO
+	const CASPER
+	const JACKIE
+	const ARCHIE
+	const RUPERT
+
 NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

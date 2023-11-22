@@ -11,6 +11,7 @@
 	const LAKEOFRAGE_WESLEY
 	const LAKEOFRAGE_POKE_BALL1
 	const LAKEOFRAGE_POKE_BALL2
+	const LAKEOFRAGE_FISHER
 
 LakeOfRage_MapScripts:
 	def_scene_scripts
@@ -187,6 +188,42 @@ TrainerCooltrainerfLois:
 	closetext
 	end
 
+TrainerDollManiacShaun:
+	trainer DOLL_MANIAC, SHAUN, EVENT_BEAT_DOLL_MANIAC_SHAUN, DollManiacShaunSeenText, DollManiacShaunBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacShaunAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_MAGIKARP_DOLL
+	writetext GetMagikarpDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear LAKEOFRAGE_FISHER
+	pause 30
+	special FadeInQuickly
+	end
+
+DollManiacShaunSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacShaunBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacShaunAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetMagikarpDollText:
+	text "<PLAYER> obtained"
+	line "MAGIKARP DOLL!"
+	done
+
 WesleyScript:
 	faceplayer
 	opentext
@@ -202,7 +239,7 @@ WesleyScript:
 .MetWesley:
 	writetext WesleyGivesGiftText
 	promptbutton
-	verbosegiveitem BLACKBELT_I
+	verbosegiveitem BLACK_BELT
 	iffalse WesleyDoneScript
 	setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
 	writetext WesleyGaveGiftText
@@ -223,8 +260,8 @@ WesleyNotWednesdayScript:
 	closetext
 	end
 
-LakeOfRageElixer:
-	itemball ELIXER
+LakeOfRageElixir:
+	itemball ELIXIR
 
 LakeOfRageTMDetect:
 	itemball TM_DETECT
@@ -458,7 +495,7 @@ WesleyGivesGiftText:
 	done
 
 WesleyGaveGiftText:
-	text "WESLEY: BLACKBELT"
+	text "WESLEY: BLACK BELT"
 	line "beefs up the power"
 	cont "of fighting moves."
 	done
@@ -518,5 +555,6 @@ LakeOfRage_MapEvents:
 	object_event 36,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCooltrainerfLois, EVENT_LAKE_OF_RAGE_CIVILIANS
 	object_event 18, 24, SPRITE_GYARADOS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RedGyarados, EVENT_LAKE_OF_RAGE_RED_GYARADOS
 	object_event  4,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, EVENT_LAKE_OF_RAGE_WESLEY_OF_WEDNESDAY
-	object_event  7, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageElixer, EVENT_LAKE_OF_RAGE_ELIXER
+	object_event  7, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageElixir, EVENT_LAKE_OF_RAGE_ELIXIR
 	object_event 35,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT
+	object_event 29,  3, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacShaun, EVENT_DECO_MAGIKARP_DOLL

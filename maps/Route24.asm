@@ -2,6 +2,7 @@
 	const ROUTE24_ROCKET
 	const ROUTE24_CAMPER
 	const ROUTE24_DAMIAN
+	const ROUTE24_FISHER
 
 Route24_MapScripts:
 	def_scene_scripts
@@ -100,8 +101,46 @@ Route24RocketScript:
 	pause 25
 	special FadeInQuickly
 	playmapmusic
-	setevent EVENT_DECO_DIGLETT_DOLL
 	end
+
+TrainerDollManiacMateo:
+	trainer DOLL_MANIAC, MATEO, EVENT_BEAT_DOLL_MANIAC_MATEO, DollManiacMateoSeenText, DollManiacMateoBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacMateoAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_STARYU_DOLL
+	writetext GetStaryuDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear ROUTE24_FISHER
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	pause 15
+	special FadeInQuickly
+	end
+
+DollManiacMateoSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacMateoBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacMateoAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetStaryuDollText:
+	text "<PLAYER> obtained"
+	line "STARYU DOLL!"
+	done
 
 Route24RocketSeenText:
 	text "Hey, kid! Me am a"
@@ -281,3 +320,4 @@ Route24_MapEvents:
 	object_event 10, 23, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route24RocketScript, EVENT_ROUTE_24_ROCKET
 	object_event  5, 26, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperJohnScript, -1
 	object_event  6,  5, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route24DamianScript, -1
+	object_event 15, 16, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacMateo, EVENT_DECO_STARYU_DOLL

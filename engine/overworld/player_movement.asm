@@ -25,6 +25,10 @@ DoPlayerMovement::
 	ret nz
 
 	ld a, c
+	and A_BUTTON | B_BUTTON
+	ret nz
+
+	ld a, c
 	or D_DOWN
 	ld [wCurInput], a
 	ret
@@ -298,12 +302,6 @@ endc
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_DOWNHILL_F, [hl]
 	jr z, .fast
-
-;new starts here
-	ld a, [wCurInput]
-	cp B_BUTTON
-	call .StandInPlace
-;new stops
 
 	ld a, [wWalkingDirection]
 	cp DOWN

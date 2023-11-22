@@ -26,6 +26,7 @@ MaleTrainers:
 	db SAGE
 	db BIKER
 	db SCIENTIST
+	db DOLL_MANIAC
 .End
 
 FemaleTrainers:

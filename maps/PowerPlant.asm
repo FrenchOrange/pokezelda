@@ -234,7 +234,6 @@ PowerPlantManager:
 	setevent EVENT_ROUTE_24_ROCKET
 	setevent EVENT_RESTORED_POWER_TO_KANTO
 	clearevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
-	setevent EVENT_DECO_VOLTORB_DOLL
 	turnobject POWERPLANT_MANAGER, UP
 	writetext PowerPlantManagerHereAndThereText
 	promptbutton

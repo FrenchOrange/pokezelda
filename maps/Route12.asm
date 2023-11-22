@@ -91,8 +91,8 @@ Route12Calcium:
 Route12Nugget:
 	itemball NUGGET
 
-Route12HiddenElixer:
-	hiddenitem ELIXER, EVENT_ROUTE_12_HIDDEN_ELIXER
+Route12HiddenElixir:
+	hiddenitem ELIXIR, EVENT_ROUTE_12_HIDDEN_ELIXIR
 
 Route12HiddenRevive:
 	hiddenitem REVIVE, EVENT_ROUTE_12_HIDDEN_REVIVE
@@ -244,7 +244,7 @@ Route12_MapEvents:
 	def_bg_events
 	bg_event 15, 13, BGEVENT_READ, Route12Sign
 	bg_event 13, 63, BGEVENT_READ, FishingSpotSign
-	bg_event  6, 63, BGEVENT_ITEM, Route12HiddenElixer
+	bg_event  6, 63, BGEVENT_ITEM, Route12HiddenElixir
 	bg_event 17, 34, BGEVENT_ITEM, Route12HiddenRevive
 
 	def_object_events

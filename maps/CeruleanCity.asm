@@ -76,7 +76,6 @@ CeruleanCityCooltrainerFScript:
 	writetext CeruleanCityCooltrainerFText3
 	waitbutton
 	closetext
-	setevent EVENT_DECO_SHELLDER_DOLL
 	end
 
 CeruleanCityFisherScript:

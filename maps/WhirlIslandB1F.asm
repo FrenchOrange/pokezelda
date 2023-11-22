@@ -5,6 +5,7 @@
 	const WHIRLISLANDB1F_POKE_BALL4
 	const WHIRLISLANDB1F_POKE_BALL5
 	const WHIRLISLANDB1F_BOULDER
+	const WHIRLISLANDB1F_FISHER
 
 WhirlIslandB1F_MapScripts:
 	def_scene_scripts
@@ -28,6 +29,45 @@ WhirlIslandB1FEscapeRope:
 
 WhirlIslandB1FBoulder:
 	jumpstd StrengthBoulderScript
+
+TrainerDollManiacAdrian:
+	trainer DOLL_MANIAC, ADRIAN, EVENT_BEAT_DOLL_MANIAC_ADRIAN, DollManiacAdrianSeenText, DollManiacAdrianBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacAdrianAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_SHELLDER_DOLL
+	writetext GetShellderDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear WHIRLISLANDB1F_FISHER
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	pause 15
+	special FadeInQuickly
+	end
+
+DollManiacAdrianSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacAdrianBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacAdrianAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetShellderDollText:
+	text "<PLAYER> obtained"
+	line "SHELLDER DOLL!"
+	done
 
 WhirlIslandB1FHiddenRareCandy:
 	hiddenitem RARE_CANDY, EVENT_WHIRL_ISLAND_B1F_HIDDEN_RARE_CANDY
@@ -66,3 +106,4 @@ WhirlIslandB1F_MapEvents:
 	object_event 17,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB1FNugget, EVENT_WHIRL_ISLAND_B1F_NUGGET
 	object_event 19, 26, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB1FEscapeRope, EVENT_WHIRL_ISLAND_B1F_ESCAPE_ROPE
 	object_event 23, 26, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhirlIslandB1FBoulder, -1
+	object_event 20, 15, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacAdrian, EVENT_DECO_SHELLDER_DOLL

@@ -66,14 +66,14 @@ TilesetParkAnim:
 TilesetForestAnim:
 	dw NULL,  ForestTreeLeftAnimation
 	dw NULL,  ForestTreeRightAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
 	dw NULL,  ForestTreeLeftAnimation2
 	dw NULL,  ForestTreeRightAnimation2
+	dw NULL,  ForestTreeOverlapLeftAnimation
+	dw NULL,  ForestTreeOverlapRightAnimation
+	dw NULL,  ForestTreeOverlapLeftAnimation2
+	dw NULL,  ForestTreeOverlapRightAnimation2
 	dw NULL,  AnimateFlowerTile
 	dw vTiles2 tile $14, AnimateWaterTile
-	dw NULL,  WaitTileAnimation
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
@@ -517,12 +517,12 @@ ForestTreeLeftAnimation:
 	jp WriteTile
 
 ForestTreeLeftFrames:
-	INCBIN "gfx/tilesets/forest-tree/1.2bpp"
-	INCBIN "gfx/tilesets/forest-tree/2.2bpp"
+	INCBIN "gfx/tilesets/forest-tree1/1.2bpp"
+	INCBIN "gfx/tilesets/forest-tree1/2.2bpp"
 
 ForestTreeRightFrames:
-	INCBIN "gfx/tilesets/forest-tree/3.2bpp"
-	INCBIN "gfx/tilesets/forest-tree/4.2bpp"
+	INCBIN "gfx/tilesets/forest-tree1/3.2bpp"
+	INCBIN "gfx/tilesets/forest-tree1/4.2bpp"
 
 ForestTreeRightAnimation:
 ; Save the stack pointer in bc for WriteTile to restore
@@ -644,6 +644,175 @@ ForestTreeRightAnimation2:
 	jp WriteTile
 
 GetForestTreeFrame:
+; Return 0 if a is even, or 2 if odd.
+	and 1
+	add a
+	ret
+
+; new tree anim
+ForestTreeOverlapLeftAnimation:
+; Save the stack pointer in bc for WriteTile to restore
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+; Only animate this during the Celebi event
+	ld a, [wCelebiEvent]
+	bit CELEBIEVENT_FOREST_IS_RESTLESS_F, a
+	jr nz, .do_animation
+	ld hl, ForestTreeOverlapLeftFrames
+	jr .got_frames
+
+.do_animation
+; A cycle of 2 frames, updating every tick
+	ld a, [wTileAnimationTimer]
+	call GetForestTreeOverlapFrame
+
+; hl = ForestTreeOverlapLeftFrames + a * 8
+; (a was pre-multiplied by 2 from GetForestTreeOverlapFrame)
+	add a
+	add a
+	add a
+	add LOW(ForestTreeOverlapLeftFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(ForestTreeOverlapLeftFrames)
+	ld h, a
+
+.got_frames
+; Write the tile graphic from hl (now sp) to tile $52 (now hl)
+	ld sp, hl
+	ld hl, vTiles2 tile $52
+	jp WriteTile
+
+ForestTreeOverlapLeftFrames:
+	INCBIN "gfx/tilesets/forest-tree2/1.2bpp"
+	INCBIN "gfx/tilesets/forest-tree2/2.2bpp"
+
+ForestTreeOverlapRightFrames:
+	INCBIN "gfx/tilesets/forest-tree2/3.2bpp"
+	INCBIN "gfx/tilesets/forest-tree2/4.2bpp"
+
+ForestTreeOverlapRightAnimation:
+; Save the stack pointer in bc for WriteTile to restore
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+; Only animate this during the Celebi event
+	ld a, [wCelebiEvent]
+	bit CELEBIEVENT_FOREST_IS_RESTLESS_F, a
+	jr nz, .do_animation
+	ld hl, ForestTreeOverlapRightFrames
+	jr .got_frames
+
+.do_animation
+; A cycle of 2 frames, updating every tick
+	ld a, [wTileAnimationTimer]
+	call GetForestTreeOverlapFrame
+
+; hl = ForestTreeOverlapRightFrames + a * 8
+; (a was pre-multiplied by 2 from GetForestTreeOverlapFrame)
+	add a
+	add a
+	add a
+	add LOW(ForestTreeOverlapLeftFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(ForestTreeOverlapLeftFrames)
+	ld h, a
+	push bc
+	ld bc, ForestTreeOverlapRightFrames - ForestTreeOverlapLeftFrames
+	add hl, bc
+	pop bc
+
+.got_frames
+; Write the tile graphic from hl (now sp) to tile $51 (now hl)
+	ld sp, hl
+	ld hl, vTiles2 tile $51
+	jp WriteTile
+
+ForestTreeOverlapLeftAnimation2:
+; Save the stack pointer in bc for WriteTile to restore
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+; Only animate this during the Celebi event
+	ld a, [wCelebiEvent]
+	bit CELEBIEVENT_FOREST_IS_RESTLESS_F, a
+	jr nz, .do_animation
+	ld hl, ForestTreeOverlapLeftFrames
+	jr .got_frames
+
+.do_animation
+; A cycle of 2 frames, updating every tick
+	ld a, [wTileAnimationTimer]
+	call GetForestTreeOverlapFrame
+
+; Offset by 1 frame from ForestTreeLeftAnimation
+	xor %10
+
+; hl = ForestTreeOverlapLeftFrames + a * 8
+; (a was pre-multiplied by 2 from GetForestTreeOverlapFrame)
+	add a
+	add a
+	add a
+	add LOW(ForestTreeOverlapLeftFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(ForestTreeOverlapLeftFrames)
+	ld h, a
+
+.got_frames
+; Write the tile graphic from hl (now sp) to tile $52 (now hl)
+	ld sp, hl
+	ld hl, vTiles2 tile $52
+	jp WriteTile
+
+ForestTreeOverlapRightAnimation2:
+; Save the stack pointer in bc for WriteTile to restore
+	ld hl, sp+0
+	ld b, h
+	ld c, l
+
+; Only animate this during the Celebi event
+	ld a, [wCelebiEvent]
+	bit CELEBIEVENT_FOREST_IS_RESTLESS_F, a
+	jr nz, .do_animation
+	ld hl, ForestTreeOverlapRightFrames
+	jr .got_frames
+
+.do_animation
+; A cycle of 2 frames, updating every tick
+	ld a, [wTileAnimationTimer]
+	call GetForestTreeOverlapFrame
+
+; Offset by 1 frame from ForestTreeRightAnimation
+	xor %10
+
+; hl = ForestTreeOverlapRightFrames + a * 8
+; (a was pre-multiplied by 2 from GetForestTreeOverlapFrame)
+	add a
+	add a
+	add a
+	add LOW(ForestTreeOverlapLeftFrames)
+	ld l, a
+	ld a, 0
+	adc HIGH(ForestTreeOverlapLeftFrames)
+	ld h, a
+	push bc
+	ld bc, ForestTreeOverlapRightFrames - ForestTreeOverlapLeftFrames
+	add hl, bc
+	pop bc
+
+.got_frames
+; Write the tile graphic from hl (now sp) to tile $51 (now hl)
+	ld sp, hl
+	ld hl, vTiles2 tile $51
+	jp WriteTile
+
+GetForestTreeOverlapFrame:
 ; Return 0 if a is even, or 2 if odd.
 	and 1
 	add a

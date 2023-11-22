@@ -11,6 +11,7 @@
 	const CIANWOODCITY_POKEFAN_F
 	const CIANWOODCITY_EUSINE
 	const CIANWOODCITY_SUICUNE
+	const CIANWOODCITY_FISHER
 
 CianwoodCity_MapScripts:
 	def_scene_scripts
@@ -108,6 +109,42 @@ CianwoodCityChucksWife:
 .Done:
 	closetext
 	end
+
+TrainerDollManiacLogan:
+	trainer DOLL_MANIAC, LOGAN, EVENT_BEAT_DOLL_MANIAC_LOGAN, DollManiacLoganSeenText, DollManiacLoganBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacLoganAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_TENTACOOL_DOLL
+	writetext GetTentacoolDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear CIANWOODCITY_FISHER
+	pause 30
+	special FadeInQuickly
+	end
+
+DollManiacLoganSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacLoganBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacLoganAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetTentacoolDollText:
+	text "<PLAYER> obtained"
+	line "TENTACOOL DOLL!"
+	done
 
 CianwoodCityYoungster:
 	jumptextfaceplayer CianwoodCityYoungsterText
@@ -402,3 +439,4 @@ CianwoodCity_MapEvents:
 	object_event 10, 46, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityChucksWife, -1
 	object_event 11, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CIANWOOD_CITY_EUSINE
 	object_event 10, 14, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_AT_CIANWOOD_CITY
+	object_event 16,  8, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacLogan, EVENT_DECO_TENTACOOL_DOLL

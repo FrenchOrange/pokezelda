@@ -1,5 +1,6 @@
 	object_const_def
 	const DARKCAVEBLACKTHORNENTRANCE_PHARMACIST
+	const DARKCAVEBLACKTHORNENTRANCE_FISHER
 	const DARKCAVEBLACKTHORNENTRANCE_POKE_BALL1
 	const DARKCAVEBLACKTHORNENTRANCE_POKE_BALL2
 
@@ -24,6 +25,45 @@ DarkCaveBlackthornEntrancePharmacistScript:
 .PackFull:
 	closetext
 	end
+
+TrainerDollManiacHugo:
+	trainer DOLL_MANIAC, HUGO, EVENT_BEAT_DOLL_MANIAC_HUGO, DollManiacHugoSeenText, DollManiacHugoBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacHugoAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_GEODUDE_DOLL
+	writetext GetGeodudeDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear DARKCAVEBLACKTHORNENTRANCE_FISHER
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	pause 15
+	special FadeInQuickly
+	end
+
+DollManiacHugoSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacHugoBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacHugoAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetGeodudeDollText:
+	text "<PLAYER> obtained"
+	line "GEODUDE DOLL!"
+	done
 
 DarkCaveBlackthornEntranceRevive:
 	itemball REVIVE
@@ -72,5 +112,6 @@ DarkCaveBlackthornEntrance_MapEvents:
 
 	def_object_events
 	object_event  7,  3, SPRITE_PHARMACIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DarkCaveBlackthornEntrancePharmacistScript, -1
+	object_event 17, 14, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacHugo, EVENT_DECO_GEODUDE_DOLL
 	object_event 21, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DarkCaveBlackthornEntranceRevive, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_REVIVE
 	object_event  7, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DarkCaveBlackthornEntranceTMSnore, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_TM_SNORE

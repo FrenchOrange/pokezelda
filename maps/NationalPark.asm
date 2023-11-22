@@ -13,6 +13,7 @@
 	const NATIONALPARK_POKE_BALL1
 	const NATIONALPARK_GAMEBOY_KID
 	const NATIONALPARK_POKE_BALL2
+	const NATIONALPARK_FISHER
 
 NationalPark_MapScripts:
 	def_scene_scripts
@@ -68,6 +69,45 @@ NationalParkGameboyKidScript:
 	closetext
 	turnobject NATIONALPARK_GAMEBOY_KID, DOWN
 	end
+
+TrainerDollManiacMason:
+	trainer DOLL_MANIAC, MASON, EVENT_BEAT_DOLL_MANIAC_MASON, DollManiacMasonSeenText, DollManiacMasonBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacMasonAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_WEEDLE_DOLL
+	writetext GetWeedleDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear NATIONALPARK_FISHER
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	pause 15
+	special FadeInQuickly
+	end
+
+DollManiacMasonSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacMasonBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacMasonAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetWeedleDollText:
+	text "<PLAYER> obtained"
+	line "WEEDLE DOLL!"
+	done
 
 TrainerSchoolboyJack1:
 	trainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJack1SeenText, SchoolboyJack1BeatenText, 0, .Script
@@ -543,3 +583,4 @@ NationalPark_MapEvents:
 	object_event 37, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkParlyzHeal, EVENT_NATIONAL_PARK_PARLYZ_HEAL
 	object_event 28,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1
 	object_event  3, 43, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NationalParkTMDig, EVENT_NATIONAL_PARK_TM_DIG
+	object_event  2, 37, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacMason, EVENT_DECO_WEEDLE_DOLL

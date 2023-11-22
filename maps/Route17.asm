@@ -3,6 +3,7 @@
 	const ROUTE17_BIKER2
 	const ROUTE17_BIKER3
 	const ROUTE17_BIKER4
+	const ROUTE17_FISHER
 
 Route17_MapScripts:
 	def_scene_scripts
@@ -102,11 +103,47 @@ TrainerBikerKazu:
 	closetext
 	end
 
+TrainerDollManiacRupert:
+	trainer DOLL_MANIAC, RUPERT, EVENT_BEAT_DOLL_MANIAC_RUPERT, DollManiacRupertSeenText, DollManiacRupertBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacRupertAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_GRIMER_DOLL
+	writetext GetGrimerDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear ROUTE17_FISHER
+	pause 30
+	special FadeInQuickly
+	end
+
+DollManiacRupertSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacRupertBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacRupertAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetGrimerDollText:
+	text "<PLAYER> obtained"
+	line "GRIMER DOLL!"
+	done
+
 Route17HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_17_HIDDEN_MAX_ETHER
 
-Route17HiddenMaxElixer:
-	hiddenitem MAX_ELIXER, EVENT_ROUTE_17_HIDDEN_MAX_ELIXER
+Route17HiddenMaxElixir:
+	hiddenitem MAX_ELIXIR, EVENT_ROUTE_17_HIDDEN_MAX_ELIXIR
 
 Route17HiddenFullRestore:
 	hiddenitem FULL_RESTORE, EVENT_ROUTE_17_HIDDEN_FULL_RESTORE
@@ -241,9 +278,12 @@ Route17Sign2Text:
 	done
 
 Route17Sign3Text:
-	text "Watch your step!"
-	para "The slope makes"
-	line "it hard to steer!"
+	text "TRAINER TIPS"
+
+	para "Press the A or B"
+	line "Button to stay in"
+	cont "place while on a"
+	cont "slope."
 	done
 
 Route17Sign4Text:
@@ -274,7 +314,7 @@ Route17_MapEvents:
 
 	def_bg_events
 	bg_event 16, 17, BGEVENT_ITEM, Route17HiddenMaxEther
-	bg_event  5, 103, BGEVENT_ITEM, Route17HiddenMaxElixer
+	bg_event  5, 103, BGEVENT_ITEM, Route17HiddenMaxElixir
 	bg_event 17, 77, BGEVENT_ITEM, Route17HiddenFullRestore
 	bg_event  8, 70, BGEVENT_ITEM, Route17HiddenRareCandy
 	bg_event  5, -1, BGEVENT_READ, Route16SignExtra
@@ -292,3 +332,4 @@ Route17_MapEvents:
 	object_event 14, 98, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBikerCharles, -1
 	object_event 14, 29, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBikerDarrell, -1
 	object_event 18, 57, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBikerKazu, -1
+	object_event  9, 58, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacRupert, EVENT_DECO_GRIMER_DOLL

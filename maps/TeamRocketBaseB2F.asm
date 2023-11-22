@@ -77,6 +77,7 @@ RocketBaseBossFScript:
 	turnobject PLAYER, LEFT
 	appear TEAMROCKETBASEB2F_DRAGON
 	applymovement TEAMROCKETBASEB2F_DRAGON, RocketBaseDragoniteAttacksMovement
+	playsound SFX_TACKLE
 	applymovement TEAMROCKETBASEB2F_ROCKET_GIRL, RocketBaseBossFHitMovement
 	applymovement TEAMROCKETBASEB2F_ROCKET1, RocketBaseGruntProtectsBossFMovement
 	appear TEAMROCKETBASEB2F_LANCE
@@ -114,6 +115,8 @@ RocketBaseBossFScript:
 	disappear TEAMROCKETBASEB2F_ROCKET2
 	disappear TEAMROCKETBASEB2F_ROCKET3
 	disappear TEAMROCKETBASEB2F_ROCKET4
+	playsound SFX_EXIT_BUILDING
+	waitsfx
 	pause 15
 	special FadeInQuickly
 	setscene SCENE_TEAMROCKETBASEB2F_ELECTRODES
@@ -304,7 +307,6 @@ RocketBaseElectrodeScript:
 	setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
 	setscene SCENE_TEAMROCKETBASEB2F_NOTHING
 	clearevent EVENT_LAKE_OF_RAGE_CIVILIANS
-	setevent EVENT_DECO_MAGIKARP_DOLL
 	setevent EVENT_TURNED_OFF_SECURITY_CAMERAS
 	setevent EVENT_SECURITY_CAMERA_1
 	setevent EVENT_SECURITY_CAMERA_2

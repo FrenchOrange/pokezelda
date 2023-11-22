@@ -10,11 +10,7 @@ SoulHouse_MapScripts:
 	def_callbacks
 
 MrFuji:
-	opentext
-	writetext MrFujiText
-	closetext
-	setevent EVENT_DECO_GENGAR_DOLL
-	end
+	jumptextfaceplayer MrFujiText
 
 SoulHouseTeacherScript:
 	jumptextfaceplayer SoulHouseTeacherText

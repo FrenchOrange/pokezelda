@@ -49,7 +49,6 @@ RuinsOfAlphResearchCenter_MapScripts:
 	playsound SFX_ITEM
 	waitsfx
 	setflag ENGINE_UNOWN_DEX
-	setevent EVENT_DECO_UNOWN_DOLL
 	writetext RuinsOfAlphResearchCenterScientist3Text
 	waitbutton
 	closetext

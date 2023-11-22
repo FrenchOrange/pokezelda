@@ -10,6 +10,7 @@
 	const ILEXFOREST_POKE_BALL2
 	const ILEXFOREST_POKE_BALL3
 	const ILEXFOREST_POKE_BALL4
+	const ILEXFOREST_FISHER
 
 IlexForest_MapScripts:
 	def_scene_scripts
@@ -32,6 +33,16 @@ IlexForest_MapScripts:
 	ifequal  9, .PositionNine
 	ifequal 10, .PositionTen
 .Static:
+	checkevent EVENT_GOT_HM01_CUT
+	iftrue .CheckDollManiac
+.GotOddishDoll:
+	disappear ILEXFOREST_FISHER
+	endcallback
+
+.CheckDollManiac:
+	checkevent EVENT_DECO_ODDISH_DOLL
+	iftrue .GotOddishDoll
+	appear ILEXFOREST_FISHER
 	endcallback
 
 .PositionOne:
@@ -395,6 +406,45 @@ TrainerBugCatcherWayne:
 	waitbutton
 	closetext
 	end
+
+TrainerDollManiacOliver:
+	trainer DOLL_MANIAC, OLIVER, EVENT_BEAT_DOLL_MANIAC_OLIVER, DollManiacOliverSeenText, DollManiacOliverBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacOliverAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_ODDISH_DOLL
+	writetext GetOddishDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear ILEXFOREST_FISHER
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	pause 15
+	special FadeInQuickly
+	end
+
+DollManiacOliverSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacOliverBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacOliverAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetOddishDollText:
+	text "<PLAYER> obtained"
+	line "ODDISH DOLL!"
+	done
 
 IlexForestLassScript:
 	jumptextfaceplayer Text_IlexForestLass
@@ -961,3 +1011,4 @@ IlexForest_MapEvents:
 	object_event 11, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestXAttack, EVENT_ILEX_FOREST_X_ATTACK
 	object_event 19,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestAntidote, EVENT_ILEX_FOREST_ANTIDOTE
 	object_event 29,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestEther, EVENT_ILEX_FOREST_ETHER
+	object_event 27, 24, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacOliver, EVENT_BEAT_DOLL_MANIAC_OLIVER

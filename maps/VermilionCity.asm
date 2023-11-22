@@ -20,11 +20,7 @@ VermilionCityTeacherScript:
 	jumptextfaceplayer VermilionCityTeacherText
 
 VermilionMachopOwner:
-	opentext
-	writetext VermilionMachopOwnerText
-	closetext
-	setevent EVENT_DECO_MACHOP_DOLL
-	end
+	jumptextfaceplayer VermilionMachopOwnerText
 
 VermilionMachop:
 	opentext

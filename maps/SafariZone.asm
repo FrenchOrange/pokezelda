@@ -122,7 +122,7 @@ SafariZoneCameoPartyFullText:
 
 	para "That's okay! Just"
 	line "go to the nearest"
-	cont "POKéMON CENTER."
+	cont "#MON CENTER."
 	done
 
 SafariZoneCameoNoMewText:

@@ -1892,3 +1892,36 @@ _PrestoAllDoneText::
 	text "Presto! All done."
 	line "Come again, OK?"
 	done
+
+_DollManiacSeenText::
+	text "I hang out here to"
+	line "be in peace."
+
+	para "Oh! You train"
+	line "#MON don't you?"
+
+	para "I don't have any"
+	line "rewards ready. Er…"
+
+	para "Beat me and I'll"
+	line "give you one of my"
+	cont "#MON DOLLS."
+
+	para "That's all I have"
+	line "to offer really…"
+	done
+
+_DollManiacBeatenText::
+	text "Oh no!!"
+	done
+
+_DollManiacAfterText::
+	text "Well… I guess you"
+	line "bested me."
+
+	para "There, a promise"
+	line "is a promise."
+
+	para "As for me, I'll be"
+	line "going home soon."
+	done

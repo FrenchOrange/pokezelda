@@ -315,8 +315,8 @@ Route44UltraBall:
 Route44MaxRepel:
 	itemball MAX_REPEL
 
-Route44HiddenElixer:
-	hiddenitem ELIXER, EVENT_ROUTE_44_HIDDEN_ELIXER
+Route44HiddenElixir:
+	hiddenitem ELIXIR, EVENT_ROUTE_44_HIDDEN_ELIXIR
 
 FisherWilton1SeenText:
 	text "Aack! You made me"
@@ -515,7 +515,7 @@ Route44_MapEvents:
 	def_bg_events
 	bg_event 53,  7, BGEVENT_READ, Route44Sign1
 	bg_event  6, 10, BGEVENT_READ, Route44Sign2
-	bg_event 32,  9, BGEVENT_ITEM, Route44HiddenElixer
+	bg_event 32,  9, BGEVENT_ITEM, Route44HiddenElixir
 
 	def_object_events
 	object_event 35,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherWilton1, -1

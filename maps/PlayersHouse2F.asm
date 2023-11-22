@@ -210,7 +210,6 @@ DebugSign:
 	givepoke PIDGEOT, 100
 	givepoke LAPRAS, 100
 	givepoke PIKACHU, 100
-	givepoke ABRA, 100
 	closetext
 	setevent EVENT_BEAT_ELITE_FOUR
 ;	playsound SFX_WARP_TO

@@ -6,6 +6,7 @@
 	const ROUTE11_GENTLEMAN
 	const ROUTE11_FRUIT_TREE
 	const VERMILIONCITY_BIG_SNORLAX
+	const ROUTE11_FISHER
 
 Route11_MapScripts:
 	def_scene_scripts
@@ -107,6 +108,42 @@ TrainerGentlemanVirgil:
 	waitbutton
 	closetext
 	end
+
+TrainerDollManiacJackie:
+	trainer DOLL_MANIAC, JACKIE, EVENT_BEAT_DOLL_MANIAC_JACKIE, DollManiacJackieSeenText, DollManiacJackieBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacJackieAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_MACHOP_DOLL
+	writetext GetMachopDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear ROUTE11_FISHER
+	pause 30
+	special FadeInQuickly
+	end
+
+DollManiacJackieSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacJackieBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacJackieAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetMachopDollText:
+	text "<PLAYER> obtained"
+	line "MACHOP DOLL!"
+	done
 
 Route11FruitTree:
 	fruittree FRUITTREE_ROUTE_11
@@ -230,3 +267,4 @@ Route11_MapEvents:
 	object_event 23, 19, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerGentlemanVirgil, -1
 	object_event 48,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11FruitTree, -1
 	object_event  4,  8, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNORLAX
+	object_event 55,  2, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacJackie, EVENT_DECO_MACHOP_DOLL

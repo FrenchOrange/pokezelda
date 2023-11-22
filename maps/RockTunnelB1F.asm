@@ -5,6 +5,7 @@
 	const ROCKTUNNELB1F_GRANNY1
 	const ROCKTUNNELB1F_GRANNY2
 	const ROCKTUNNELB1F_GRANNY3
+	const ROCKTUNNELB1F_FISHER
 
 RockTunnelB1F_MapScripts:
 	def_scene_scripts
@@ -43,6 +44,45 @@ TrainerMediumEthel:
 	waitbutton
 	closetext
 	end
+
+TrainerDollManiacCasper:
+	trainer DOLL_MANIAC, CASPER, EVENT_BEAT_DOLL_MANIAC_CASPER, DollManiacCasperSeenText, DollManiacCasperBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacCasperAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_GENGAR_DOLL
+	writetext GetGengarDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear ROCKTUNNELB1F_FISHER
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	pause 15
+	special FadeInQuickly
+	end
+
+DollManiacCasperSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacCasperBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacCasperAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetGengarDollText:
+	text "<PLAYER> obtained"
+	line "GENGAR DOLL!"
+	done
 
 RockTunnelB1FIron:
 	itemball IRON
@@ -134,8 +174,9 @@ RockTunnelB1F_MapEvents:
 
 	def_object_events
 	object_event  7, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FIron, EVENT_ROCK_TUNNEL_B1F_IRON
-	object_event  6, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FPPUp, EVENT_ROCK_TUNNEL_B1F_PP_UP
+	object_event  8, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FPPUp, EVENT_ROCK_TUNNEL_B1F_PP_UP
 	object_event 15,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnelB1FRevive, EVENT_ROCK_TUNNEL_B1F_REVIVE
-	object_event  7,  9, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumBethany, -1
+	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumBethany, -1
 	object_event 15, 22, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumMargret, -1
 	object_event 24, 15, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumEthel, -1
+	object_event  3, 19, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacCasper, EVENT_DECO_GENGAR_DOLL

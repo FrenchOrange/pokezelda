@@ -8,10 +8,91 @@ PlayersNeighborsHouse_MapScripts:
 	def_callbacks
 
 PlayersNeighborsDaughterScript:
-	jumptextfaceplayer PlayersNeighborsDaughterText
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .LeftoverStarterGift
+	writetext PlayersNeighborsDaughterText
+	waitbutton
+	closetext
+	end
+
+.LeftoverStarterGift:
+	checkevent EVENT_GOT_LEFTOVER_STARTER
+	iftrue .GotStarter
+	writetext PlayersNeighborsDaughterTakeThisStarterText
+	yesorno
+	iffalse .Refused
+	writetext PlayersNeighborsDaughterCareForItText
+	promptbutton
+	waitsfx
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoom
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .Totodile
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .Chikorita
+; Cyndaquil
+	writetext ReceivedLeftoverChikoritaText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke CHIKORITA, 5, BERRY
+	sjump .AfterStarter
+
+.Totodile:
+	writetext ReceivedLeftoverCyndaquilText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke CYNDAQUIL, 5, BERRY
+	sjump .AfterStarter
+
+.Chikorita:
+	writetext ReceivedLeftoverTotodileText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke TOTODILE, 5, BERRY
+	sjump .AfterStarter
+
+.AfterStarter:
+	setevent EVENT_GOT_LEFTOVER_STARTER
+	promptbutton
+	closetext
+	end
+
+.NoRoom:
+	writetext PlayersNeighborsDaughterPartyFullText
+	waitbutton
+	closetext
+	end
+
+.Refused:
+	writetext PlayersNeighborsDaughterNoStarterText
+	waitbutton
+	closetext
+	end
+
+.GotStarter:
+	writetext PlayersNeighborsDaughterAfterText
+	waitbutton
+	closetext
+	end
+
 
 PlayersNeighborScript:
-	jumptextfaceplayer PlayersNeighborText
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .PlayersNeighborBeatEliteFour
+	writetext PlayersNeighborText
+	waitbutton
+	closetext
+	end
+
+.PlayersNeighborBeatEliteFour:
+	writetext PlayersNeighborAfterLeagueText
+	waitbutton
+	closetext
+	end
 
 PlayersNeighborsHouseBookshelfScript:
 	jumpstd MagazineBookshelfScript
@@ -63,6 +144,81 @@ PlayersNeighborsDaughterText:
 	cont "him…"
 	done
 
+PlayersNeighborsDaughterTakeThisStarterText:
+	text "Ooh, <PLAYER>!"
+
+	para "You're a big shot"
+	line "trainer now, you"
+	cont "even defeated the"
+	cont "ELITE FOUR!"
+
+	para "We're all super"
+	line "proud of you!"
+
+	para "I tried becoming"
+	line "a TRAINER myself,"
+	cont "I even got my own"
+	cont "partner #MON."
+
+	para "But I don't think"
+	line "I'm cut out for it…"
+
+	para "I don't want to"
+	line "abandon the little"
+	cont "guy, but I'm too"
+
+	para "ashamed to hand it"
+	line "back to PROF.ELM."
+
+	para "So, would you"
+	line "like to have it?"
+	done
+
+PlayersNeighborsDaughterCareForItText:
+	text "Wonderful! I know"
+	line "you will do an"
+	cont "infinitely better"
+	cont "job than me."
+	done
+
+ReceivedLeftoverChikoritaText:
+	text "<PLAYER> received"
+	line "CHIKORITA!"
+	done
+
+ReceivedLeftoverCyndaquilText:
+	text "<PLAYER> received"
+	line "CYNDAQUIL!"
+	done
+
+ReceivedLeftoverTotodileText:
+	text "<PLAYER> received"
+	line "TOTODILE!"
+	done
+
+PlayersNeighborsDaughterPartyFullText:
+	text "Oh, your party is"
+	line "full. Too bad…"
+	done
+
+PlayersNeighborsDaughterNoStarterText:
+	text "Alright. I'll keep"
+	line "taking care of it"
+	cont "for now then."
+	done
+
+PlayersNeighborsDaughterAfterText:
+	text "I still adore"
+	line "POKéMON, but now I"
+	cont "know how much of a"
+
+	para "responsability it"
+	line "is to raise one."
+
+	para "They're living"
+	line "beings after all."
+	done
+
 PlayersNeighborText:
 	text "My daughter is"
 	line "adamant about"
@@ -74,6 +230,24 @@ PlayersNeighborText:
 	line "#MON!"
 
 	para "But then, so do I!"
+	done
+
+PlayersNeighborAfterLeagueText:
+	text "<PLAYER>! They"
+	line "were talking about"
+	cont "you on the radio!"
+
+	para "You took on the"
+	line "LEAGUE! You've"
+	cont "grown so much!"
+
+	para "Same for my little"
+	line "girl."
+
+	para "…sniff…"
+
+	para "You kids grow up"
+	line "so fast."
 	done
 
 PlayerNeighborRadioText1:

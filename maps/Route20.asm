@@ -16,7 +16,6 @@ Route20_MapScripts:
 
 .ClearRocks:
 	setevent EVENT_CINNABAR_ROCKS_CLEARED
-	setevent EVENT_DECO_TENTACOOL_DOLL
 	endcallback
 
 TrainerSwimmerfNicole:

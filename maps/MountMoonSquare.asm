@@ -67,7 +67,6 @@ ClefairyDance:
 	stopfollow
 	clearevent EVENT_MOUNT_MOON_SQUARE_HIDDEN_MOON_STONE
 	setflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
- 	setevent EVENT_DECO_CLEFAIRY_DOLL
 	end
 
 .NoDancing:

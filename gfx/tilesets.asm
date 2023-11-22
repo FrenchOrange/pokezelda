@@ -106,9 +106,6 @@ INCBIN "data/tilesets/train_station_metatiles.bin"
 TilesetTrainStationColl::
 INCLUDE "data/tilesets/train_station_collision.asm"
 
-TilesetForestMeta::
-INCBIN "data/tilesets/forest_metatiles.bin"
-
 
 SECTION "Tileset Data 4", ROMX
 
@@ -195,9 +192,6 @@ INCLUDE "data/tilesets/traditional_house_collision.asm"
 
 
 SECTION "Tileset Data 6", ROMX
-
-TilesetForestGFX::
-INCBIN "gfx/tilesets/forest.2bpp.lz"
 
 TilesetChampionsRoomGFX::
 INCBIN "gfx/tilesets/champions_room.2bpp.lz"
@@ -304,6 +298,12 @@ SECTION "Tileset Data 9", ROMX
 
 TilesetCaveGFX::
 INCBIN "gfx/tilesets/cave.2bpp.lz"
+
+TilesetForestGFX::
+INCBIN "gfx/tilesets/forest.2bpp.lz"
+
+TilesetForestMeta::
+INCBIN "data/tilesets/forest_metatiles.bin"
 
 TilesetBattleTowerOutsideGFX::
 INCBIN "gfx/tilesets/battle_tower_outside.2bpp.lz"

@@ -5,6 +5,7 @@
 	const RUINSOFALPHOUTSIDE_YOUNGSTER2
 	const RUINSOFALPHOUTSIDE_YOUNGSTER3
 	const RUINSOFALPHOUTSIDE_SUPERNERD
+	const RUINSOFALPHOUTSIDE_FISHER2
 
 RuinsOfAlphOutside_MapScripts:
 	def_scene_scripts
@@ -121,6 +122,42 @@ TrainerSuperNerdStan:
 	waitbutton
 	closetext
 	end
+
+TrainerDollManiacLucius:
+	trainer DOLL_MANIAC, LUCIUS, EVENT_BEAT_DOLL_MANIAC_LUCIUS, DollManiacLuciusSeenText, DollManiacLuciusBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacLuciusAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_UNOWN_DOLL
+	writetext GetUnownDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear RUINSOFALPHOUTSIDE_FISHER2
+	pause 30
+	special FadeInQuickly
+	end
+
+DollManiacLuciusSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacLuciusBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacLuciusAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetUnownDollText:
+	text "<PLAYER> obtained"
+	line "UNOWN DOLL!"
+	done
 
 RuinsOfAlphOutsideMysteryChamberSign:
 	jumptext RuinsOfAlphOutsideMysteryChamberSignText
@@ -311,3 +348,4 @@ RuinsOfAlphOutside_MapEvents:
 	object_event 16, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideYoungster1Script, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
 	object_event 14,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideYoungster2Script, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
 	object_event  9, 29, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSuperNerdStan, -1
+	object_event  2, 10, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacLucius, EVENT_DECO_UNOWN_DOLL

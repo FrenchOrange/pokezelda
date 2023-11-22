@@ -5365,13 +5365,13 @@ MoveSelectionScreen:
 	dec a
 	jr z, .got_menu_type
 	dec a
-	jr z, .ether_elixer_menu
+	jr z, .ether_elixir_menu
 	call CheckPlayerHasUsableMoves
 	ret z ; use Struggle
 	ld hl, wBattleMonMoves
 	jr .got_menu_type
 
-.ether_elixer_menu
+.ether_elixir_menu
 	ld a, MON_MOVES
 	call GetPartyParamLocation
 

@@ -379,7 +379,7 @@ ENDM
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
 	map_attributes Route23, ROUTE_23, $4e, 0
-	map_attributes ViridianForest, VIRIDIAN_FOREST, $41, 0
+	map_attributes ViridianForest, VIRIDIAN_FOREST, $7d, 0
 	map_attributes ViridianNorthGate, VIRIDIAN_NORTH_GATE, $00, 0
 	map_attributes ViridianSouthGate, VIRIDIAN_SOUTH_GATE, $00, 0
 	map_attributes CeruleanBikeShop, CERULEAN_BIKE_SHOP, $00, 0

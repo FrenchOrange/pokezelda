@@ -78,8 +78,7 @@ Route25DateScript:
     disappear ROUTE25_MISTY
     clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
     setscene SCENE_ROUTE25_NOTHING
-    special RestartMapMusic
-    setevent EVENT_DECO_STARYU_DOLL    
+    special RestartMapMusic  
     end
 
 TrainerSchoolboyDudley:

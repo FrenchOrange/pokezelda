@@ -1,5 +1,5 @@
 	object_const_def
-	const CELADONCITY_FISHER
+	const CELADONCITY_FISHER1
 	const CELADONCITY_POLIWAG
 	const CELADONCITY_TEACHER1
 	const CELADONCITY_GRAMPS1
@@ -8,6 +8,7 @@
 	const CELADONCITY_YOUNGSTER2
 	const CELADONCITY_TEACHER2
 	const CELADONCITY_LASS
+	const CELADONCITY_FISHER2
 
 CeladonCity_MapScripts:
 	def_scene_scripts
@@ -20,11 +21,7 @@ CeladonCity_MapScripts:
 	endcallback
 
 CeladonCityFisherScript:
-	opentext
-	writetext CeladonCityFisherText
-	closetext
-	setevent EVENT_DECO_POLIWAG_DOLL
-	end
+	jumptextfaceplayer CeladonCityFisherText
 
 CeladonCityPoliwrath:
 	faceplayer
@@ -34,6 +31,42 @@ CeladonCityPoliwrath:
 	waitbutton
 	closetext
 	end
+
+TrainerDollManiacArchie:
+	trainer DOLL_MANIAC, ARCHIE, EVENT_BEAT_DOLL_MANIAC_ARCHIE, DollManiacArchieSeenText, DollManiacArchieBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacArchieAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_POLIWAG_DOLL
+	writetext GetPoliwagDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear CELADONCITY_FISHER2
+	pause 30
+	special FadeInQuickly
+	end
+
+DollManiacArchieSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacArchieBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacArchieAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetPoliwagDollText:
+	text "<PLAYER> obtained"
+	line "POLIWAG DOLL!"
+	done
 
 CeladonCityTeacher1Script:
 	jumptextfaceplayer CeladonCityTeacher1Text
@@ -289,3 +322,4 @@ CeladonCity_MapEvents:
 	object_event 34, 31, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonCityYoungster2Script, -1
 	object_event 16, 16, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonCityTeacher2Script, -1
 	object_event 17, 24, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonCityLassScript, -1
+	object_event  9,  4, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacArchie, EVENT_DECO_POLIWAG_DOLL

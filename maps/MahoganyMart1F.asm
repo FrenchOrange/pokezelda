@@ -64,13 +64,19 @@ MahoganyMart1FLanceUncoversStaircaseScript:
 	pause 15
 	opentext
 	writetext MahoganyMart1FLanceDragoniteHyperBeamText
-	pause 15
+	waitbutton
 	closetext
-	playsound SFX_TACKLE
+	cry DRAGONITE
+	waitsfx
+	pause 15
+	playsound SFX_HYPER_BEAM
+	pause 15
 	applymovement MAHOGANYMART1F_DRAGONITE, MahoganyMart1FDragoniteTackleMovement
 	applymovement MAHOGANYMART1F_BLACK_BELT, MahoganyMart1FBlackBeltKnockedBackMovement
-	pause 15
+	waitsfx
+	pause 30
 	disappear MAHOGANYMART1F_DRAGONITE
+	playsound SFX_BALL_POOF
 	pause 15
 	applymovement MAHOGANYMART1F_LANCE, MahoganyMart1FLanceApproachPlayerMovement
 	opentext
@@ -79,6 +85,7 @@ MahoganyMart1FLanceUncoversStaircaseScript:
 	closetext
 	follow MAHOGANYMART1F_LANCE, PLAYER
 	applymovement MAHOGANYMART1F_LANCE, MahoganyMart1FLanceApproachPharmacistMovement
+	playsound SFX_TACKLE
 	applymovement MAHOGANYMART1F_PHARMACIST, MahoganyMart1FPharmacistShovedAsideMovement
 	applymovement MAHOGANYMART1F_LANCE, MahoganyMart1FLanceApproachHiddenStairsMovement
 	stopfollow
@@ -86,10 +93,12 @@ MahoganyMart1FLanceUncoversStaircaseScript:
 	writetext MahoganyMart1FLanceStairsText
 	waitbutton
 	showemote EMOTE_SHOCK, MAHOGANYMART1F_PHARMACIST, 10
+	pause 15
+	earthquake 15
 	playsound SFX_FAINT
 	changeblock 8, 2, $1e ; stairs
-	reloadmappart
 	closetext
+	reloadmappart
 	setevent EVENT_UNCOVERED_STAIRCASE_IN_MAHOGANY_MART
 	turnobject MAHOGANYMART1F_LANCE, LEFT
 	opentext

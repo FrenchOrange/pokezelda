@@ -1,5 +1,6 @@
 
 - - NOTES - -
+* The Johto starter neither you nor the rival picked can be obtained from the neighbor's daughter in Newbark after beating the League.
 * Heabutt and Rock Smash 'mon now have more varied levels, and the encounter rates have been tweaked as to make Pineco, Aipom, and Shuckle more common.
 * Geodude, Kingler, and Slugma have been added to the Rock Smash Pokémon encounter table.
 * The Goldenrod Game Corner Prize Pokémon were changed to Abra (level 10 / 200 coins), Clefairy (level 12 / 800 coins), and Pikachu (level 12 / 1500 coins).

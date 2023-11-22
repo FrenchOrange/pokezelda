@@ -1,5 +1,6 @@
 	object_const_def
 	const MOUNTMOON_SILVER
+	const MOUNTMOON_FISHER
 
 MountMoon_MapScripts:
 	def_scene_scripts
@@ -81,6 +82,45 @@ MountMoonSilverMovementAfter:
 	step UP
 	step UP
 	step_end
+
+TrainerDollManiacMorgan:
+	trainer DOLL_MANIAC, MORGAN, EVENT_BEAT_DOLL_MANIAC_MORGAN, DollManiacMorganSeenText, DollManiacMorganBeatenText, 0, .Script
+
+.Script:
+	opentext
+	writetext DollManiacMorganAfterBattleText
+	promptbutton
+	setevent EVENT_DECO_CLEFAIRY_DOLL
+	writetext GetClefairyDollText
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	disappear MOUNTMOON_FISHER
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	pause 15
+	special FadeInQuickly
+	end
+
+DollManiacMorganSeenText:
+	text_far _DollManiacSeenText
+	text_end
+
+DollManiacMorganBeatenText:
+	text_far _DollManiacBeatenText
+	text_end
+
+DollManiacMorganAfterBattleText:
+	text_far _DollManiacAfterText
+	text_end
+
+GetClefairyDollText:
+	text "<PLAYER> obtained"
+	line "CLEFAIRY DOLL!"
+	done
 
 MtMoonSquareSign:
 	jumptext MtMoonSquareSignText
@@ -194,3 +234,4 @@ MountMoon_MapEvents:
 
 	def_object_events
 	object_event 12, 23, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL
+	object_event 28, 27, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacMorgan, EVENT_DECO_CLEFAIRY_DOLL

@@ -716,6 +716,7 @@ PorygonBackpic:      INCBIN "gfx/pokemon/porygon/back.2bpp.lz"
 PidgeottoBackpic:    INCBIN "gfx/pokemon/pidgeotto/back.2bpp.lz"
 PolitoedBackpic:     INCBIN "gfx/pokemon/politoed/back.2bpp.lz"
 GrimerFrontpic:      INCBIN "gfx/pokemon/grimer/front.animated.2bpp.lz"
+DollManiacPic:       INCBIN "gfx/trainers/doll_maniac.2bpp.lz"
 
 SECTION "Pics 21", ROMX
 

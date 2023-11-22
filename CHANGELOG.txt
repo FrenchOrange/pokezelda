@@ -149,3 +149,18 @@
 - Updated the look of the Ruins of Alph maps, same for the summit of Mt.Silver.
 - Updated Kabuto's menu icon.
 - Updated Omanyte's menu icon, courtesy of Megaman-Omega.
+
+1.2.2
+- Restored Gen I's Cycling Road behavior (press A or B to stop riding downhill). Fix courtesy of Idain.
+- Fixed Kurt's inconsitent overworld palette.
+- Fixed misaligned rival event in Azalea Town.
+- Made it so Viridian Forest's trees don't animate after Kurt is done examining the GS Ball.
+- Made it so all of a tree's foliage animates after Kurt is done examining the GS Ball.
+- Implemented the Doll Maniac trainer class, which gifts Pokémon Dolls after battle. They're found off the beaten path, so look out for them.
+- Implemented gift Pokémon scenario in Newbark Town. The "leftover" Johto starter Pokémon can now be obtained after beating the League.
+- Updated the whirlpool's graphics in the overworld.
+- Updated the Forest tilest, namely adding path borders.
+- Updated Farfetch'd's menu icon so it matches its overworld sprite more closely.
+- Tweaked two or three overworld sprites.
+- Tweaked the cutscene that plays when the player meets up with Lance at the Mahogany Mart.
+- Renamed the Blackbelt item to "Black Belt", and fixed the spelling of "Elixer" to "Elixir".

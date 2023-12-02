@@ -237,7 +237,7 @@ GentlemanVirgilBeatenText:
 
 GentlemanVirgilAfterBattleText:
 	text "We don't have such"
-	line "large POKéMON as"
+	line "large #MON as"
 	cont "this SNORLAX where"
 	cont "I come from."
 	done

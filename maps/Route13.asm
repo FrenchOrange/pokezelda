@@ -175,15 +175,16 @@ BeautyVeronicaBeatenText:
 
 BeautyVeronicaAfterBattleText:
 	text "Don't you think"
-	line "your POKéMON gets"
+	line "your #MON gets"
 	cont "closer to you the"
+
 	para "more time you"
 	line "spend with them?"
 	done
 
 BeautyTheresaSeenText:
 	text "Every Friday I"
-	line "treat my POKéMON"
+	line "treat my #MON"
 
 	para "to a haircut over"
 	line "in GOLDENROD CITY."

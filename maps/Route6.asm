@@ -136,19 +136,19 @@ CooltrainermErickAfterBattleText:
 	done
 
 CooltrainermAndySeenText:
-	text "Hey, nice POKéMON!"
+	text "Hey, nice #MON!"
 	line "You look like a"
 	cont "good trainer!"
 	para "Let's duke it out!"
 	done
 
 CooltrainermAndyBeatenText:
-	text "With POKéMON, love"
+	text "With #MON, love"
 	line "matters most."
 	done
 
 CooltrainermAndyAfterBattleText:
-	text "I prefer POKéMON"
+	text "I prefer #MON"
 	line "that were raised"
 	cont "with care. They"
 	para "grow fond of you"
@@ -175,3 +175,4 @@ Route6_MapEvents:
 	object_event 14, 20, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerPokefanmAllan, -1
 	object_event  5, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermErick, -1
 	object_event 23, 28, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermAndy, -1
+	object_event  9, 40, SPRITE_OFFICER_JENNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1

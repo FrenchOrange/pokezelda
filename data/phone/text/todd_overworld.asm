@@ -3,7 +3,7 @@ ToddAskNumber1Text:
 	line "see GOLDENROD's"
 
 	para "DEPT.STORE. They"
-	line "have special sales"
+	line "have bargain sales"
 
 	para "up on the rooftop"
 	line "every so often."

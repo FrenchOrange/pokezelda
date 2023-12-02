@@ -41,6 +41,7 @@ ENDM
 	const GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_ROCKET_GIRL
 	const GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_TEACHER
 	const GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SUPER_NERD
+	const GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_BUG_CATCHER
 	const GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_POKE_BALL1
 	const GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_POKE_BALL2
 	const GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
@@ -116,6 +117,9 @@ GoldenrodUndergroundSwitchRoomEntrancesSuperNerdScript:
 
 GoldenrodUndergroundSwitchRoomEntrancesTeacherScript:
 	jumptextfaceplayer GoldenrodUndergroundSwitchRoomEntrances_TeacherText
+
+GoldenrodUndergroundSwitchRoomEntrancesBugCatcherScript:
+	jumptextfaceplayer GoldenrodUndergroundSwitchRoomEntrances_BugCatcherText
 
 UndergroundSilverScene1:
 	turnobject PLAYER, RIGHT
@@ -770,6 +774,22 @@ GoldenrodUndergroundSwitchRoomEntrances_TeacherText:
 	line "down there."
 	done
 
+GoldenrodUndergroundSwitchRoomEntrances_BugCatcherText:
+	text "This place blows,"
+	line "I wanna go to the"
+	cont "DECOR SHOP!"
+
+	para "They even sell big"
+	line "#MON DOLLS, the"
+
+	para "ones that are"
+	line "almost life-sized!"
+
+	para "Though they always"
+	line "sell out as soon"
+	cont "as they're put up…"
+	done
+
 GruntM11SeenText:
 	text "Open one shutter,"
 	line "another closes."
@@ -964,6 +984,7 @@ GoldenrodUndergroundSwitchRoomEntrances_MapEvents:
 	object_event 21, 12, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerGruntF3, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event  7, 27, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodUndergroundSwitchRoomEntrancesTeacherScript, -1
 	object_event 23, 27, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodUndergroundSwitchRoomEntrancesSuperNerdScript, -1
+	object_event 12, 25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodUndergroundSwitchRoomEntrancesBugCatcherScript, -1
 	object_event  3, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GoldenrodUndergroundSwitchRoomEntrancesSmokeBall, EVENT_GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES_SMOKE_BALL
 	object_event 16,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, GoldenrodUndergroundSwitchRoomEntrancesFullHeal, EVENT_GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES_FULL_HEAL
 	object_event 25,  3, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_GOLDENROD_UNDERGROUND

@@ -38,114 +38,8 @@ GoldenrodDeptStoreRoof_MapScripts:
 	endcallback
 
 GoldenrodDeptStoreRoofClerkScript:
-	faceplayer
 	opentext
-	writetext GoldenrodDeptStoreRoofDecorClerkHiThereText
-	waitbutton
-GoldenrodDeptStoreRoofDecorClerk_LoopScript:
-	writetext GoldenrodDeptStoreRoofDecorClerk_AskWhichDecorText
-	special PlaceMoneyTopRight
-	loadmenu GoldenrodDeptStoreRoofDecorClerkMenu
-	verticalmenu
-	closewindow
-	ifequal 1, .Doll1
-	ifequal 2, .Doll2
-	ifequal 3, .Doll3
-	ifequal 4, .Doll4
-	jump GoldenrodDeptStoreRoofDecorClerk_Cancel
-	
-.Doll1
-	checkmoney YOUR_MONEY, 500
-	ifequal HAVE_LESS, GoldenrodDeptStoreRoofDecorClerkNotEnoughMoney
-	writetext GoldenrodDeptStoreRoofDecorClerk_AreYouSureText
-	yesorno
-	iffalse GoldenrodDeptStoreRoofDecorClerk_Cancel
-	checkevent EVENT_DECO_GRIMER_DOLL
-	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_GRIMER_DOLL
-	takemoney YOUR_MONEY, 500
-	jump GoldenrodDeptStoreRoofDecorClerk_FinishScript
-	end
-	
-.Doll2
-	checkmoney YOUR_MONEY, 500
-	ifequal HAVE_LESS, GoldenrodDeptStoreRoofDecorClerkNotEnoughMoney
-	writetext GoldenrodDeptStoreRoofDecorClerk_AreYouSureText
-	yesorno
-	iffalse GoldenrodDeptStoreRoofDecorClerk_Cancel
-	checkevent EVENT_DECO_GEODUDE_DOLL
-	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_GEODUDE_DOLL
-	takemoney YOUR_MONEY, 500
-	jump GoldenrodDeptStoreRoofDecorClerk_FinishScript
-	end
-	
-.Doll3
-	checkmoney YOUR_MONEY, 500
-	ifequal HAVE_LESS, GoldenrodDeptStoreRoofDecorClerkNotEnoughMoney
-	writetext GoldenrodDeptStoreRoofDecorClerk_AreYouSureText
-	yesorno
-	iffalse GoldenrodDeptStoreRoofDecorClerk_Cancel
-	checkevent EVENT_DECO_ODDISH_DOLL
-	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_ODDISH_DOLL
-	takemoney YOUR_MONEY, 500
-	jump GoldenrodDeptStoreRoofDecorClerk_FinishScript
-	end
-
-.Doll4
-	checkmoney YOUR_MONEY, 2500
-	ifequal HAVE_LESS, GoldenrodDeptStoreRoofDecorClerkNotEnoughMoney
-	writetext GoldenrodDeptStoreRoofDecorClerk_AreYouSureText
-	yesorno
-	iffalse GoldenrodDeptStoreRoofDecorClerk_Cancel
-	checkevent EVENT_DECO_BIG_ONIX_DOLL
-	iftrue .AlreadyHaveDecorItem
-	setevent EVENT_DECO_BIG_ONIX_DOLL
-	takemoney YOUR_MONEY, 2500
-	jump GoldenrodDeptStoreRoofDecorClerk_FinishScript
-	end
-	
-.AlreadyHaveDecorItem
-	writetext GoldenrodDeptStoreRoofDecorClerk_AlreadyHaveDecoText
-	waitbutton
-	jump GoldenrodDeptStoreRoofDecorClerk_LoopScript
-
-GoldenrodDeptStoreRoofDecorClerkMenu:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 19, TEXTBOX_Y - 1
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 4 ; items
-	db "GRIMER DOLL  ¥500@"
-	db "GEODUDE DOLL ¥500@"
-	db "ODDISH DOLL  ¥500@"
-	db "ONIX DOLL   ¥2500@"
-
-.AlreadyHaveDecorItem
-	writetext GoldenrodDeptStoreRoofDecorClerk_AlreadyHaveDecoText
-	waitbutton
-	jump GoldenrodDeptStoreRoofDecorClerk_LoopScript
-
-GoldenrodDeptStoreRoofDecorClerk_FinishScript:
-	waitsfx
-	playsound SFX_TRANSACTION
-	writetext GoldenrodDeptStoreRoofDecorClerk_HereYouGoText
-	waitbutton
-	jump GoldenrodDeptStoreRoofDecorClerk_LoopScript
-
-GoldenrodDeptStoreRoofDecorClerk_Cancel:
-	writetext GoldenrodDeptStoreRoofDecorClerkTakeCare
-	waitbutton
-	closetext
-	end
-
-GoldenrodDeptStoreRoofDecorClerkNotEnoughMoney:
-	writetext GoldenrodDeptStoreRoofDecorClerkNotEnoughMoneyText
-	waitbutton
+	pokemart MARTTYPE_ROOFTOP, 0
 	closetext
 	end
 
@@ -219,18 +113,9 @@ GoldenrodDeptStoreRoofFisherText:
 	done
 
 GoldenrodDeptStoreRoofTwinText:
-	text "They have special"
+	text "They have bargain"
 	line "sales here every"
 	cont "so often."
-
-	para "They sell rare"
-	line "POKéMON DOLLs."
-
-	para "Even that huge"
-	line "ONIX DOLL! The one"
-
-	para "that is almost"
-	line "life-sized!"
 	done
 
 GoldenrodDeptStoreRoofSuperNerdOhWowText:
@@ -256,7 +141,7 @@ GoldenrodDeptStoreRoofPokefanMText:
 
 GoldenrodDeptStoreRoofTeacherText:
 	text "Oh, everything is"
-	line "so cute!"
+	line "so cheap!"
 
 	para "I bought so much,"
 	line "my PACK's crammed!"
@@ -272,8 +157,8 @@ GoldenrodDeptStoreRoofBugCatcherText:
 	para "So I came to buy"
 	line "some FULL HEAL."
 
-	para "Welp… There goes"
-	line "my pocket change."
+	para "I wonder if"
+	line "there's any left?"
 	done
 
 Binoculars1Text:
@@ -321,42 +206,6 @@ CapsuleToysVendingMachineText:
 
 	para "But it's almost"
 	line "empty…"
-	done
-
-GoldenrodDeptStoreRoofDecorClerkHiThereText:
-	text "Hi there! Looking"
-	line "to give your room"
-	cont "a new look?"
-	done
-
-GoldenrodDeptStoreRoofDecorClerk_AskWhichDecorText:
-	text "See anything that"
-	line "interests you?"
-	done
-
-GoldenrodDeptStoreRoofDecorClerk_AreYouSureText:
-	text "Are you sure?"
-	done
-
-GoldenrodDeptStoreRoofDecorClerk_AlreadyHaveDecoText:
-	text "Don't you already"
-	line "own this DECOR?"
-	done
-
-GoldenrodDeptStoreRoofDecorClerk_HereYouGoText:
-	text "Here you go! We"
-	line "will deliver this"
-	cont "item to your home"
-	cont "without delay!"
-	done
-
-GoldenrodDeptStoreRoofDecorClerkNotEnoughMoneyText:
-	text "Sorry. You don't"
-	line "have enough money."
-	done
-	
-GoldenrodDeptStoreRoofDecorClerkTakeCare:
-	text "Please come again!"
 	done
 
 GoldenrodDeptStoreRoof_MapEvents:

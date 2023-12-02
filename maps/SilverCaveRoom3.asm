@@ -27,6 +27,8 @@ Red:
 	special ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
 	setevent EVENT_DECO_GOLD_TROPHY
+	setevent EVENT_VIRIDIAN_GYM_BLUE
+	clearevent EVENT_OAKS_LAB_BLUE
 	pause 15
 	special FadeInQuickly
 	pause 30

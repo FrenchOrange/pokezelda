@@ -35,6 +35,9 @@ SafariZoneRestHouseBookshelf1Text:
 	para "-Twitter artist"
 	line "LuigiTKO."
 
+	para "-Twitter artist"
+	line "GuiAbel."
+
 	para "-The team over at"
 	line "#MON SHOWDOWN."
 

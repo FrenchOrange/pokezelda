@@ -59,7 +59,7 @@ AnthonyHangUpScript:
 	sjump PhoneScript_HangUpText_Male
 
 ToddNoItemScript:
-	farwritetext ToddSavingUpForSpecialSaleText
+	farwritetext ToddSavingUpForBargainSaleText
 	promptbutton
 	sjump PhoneScript_HangUpText_Male
 

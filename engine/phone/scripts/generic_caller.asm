@@ -951,7 +951,7 @@ PhoneScript_FoundItem_Female:
 	end
 
 ToddItemScript:
-	farwritetext ToddDepartmentStoreSpecialSaleText
+	farwritetext ToddDepartmentStoreBargainSaleText
 	promptbutton
 	sjump PhoneScript_HangUpText_Male
 

@@ -55,7 +55,6 @@ PlayersNeighborsDaughterScript:
 
 .AfterStarter:
 	setevent EVENT_GOT_LEFTOVER_STARTER
-	promptbutton
 	closetext
 	end
 
@@ -175,7 +174,7 @@ PlayersNeighborsDaughterTakeThisStarterText:
 	done
 
 PlayersNeighborsDaughterCareForItText:
-	text "Wonderful! I know"
+	text "Awesome! I know"
 	line "you will do an"
 	cont "infinitely better"
 	cont "job than me."
@@ -209,7 +208,7 @@ PlayersNeighborsDaughterNoStarterText:
 
 PlayersNeighborsDaughterAfterText:
 	text "I still adore"
-	line "POKéMON, but now I"
+	line "#MON, but now I"
 	cont "know how much of a"
 
 	para "responsability it"

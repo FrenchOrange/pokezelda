@@ -183,6 +183,9 @@ CopycatsDodrio:
 CopycatsHouse2FDoll:
 	jumptext CopycatsHouse2FDollText
 
+CopycatsHouse2FSNESScript:
+	jumptext CopycatsHouse2FSNESText
+
 CopycatSpinAroundMovementData:
 	turn_head DOWN
 	turn_head LEFT
@@ -355,6 +358,12 @@ CopycatsHouse2FDollText:
 	para "It's only a doll…"
 	done
 
+CopycatsHouse2FSNESText:
+	text "A game where you"
+	line "stack cookies for"
+	cont "a green dinosaur!"
+	done
+
 CopycatsHouse2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -364,6 +373,7 @@ CopycatsHouse2F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  5,  5, BGEVENT_READ, CopycatsHouse2FSNESScript
 
 	def_object_events
 	object_event  6,  3, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_1

@@ -258,7 +258,7 @@ Route24DamianBrag:
 
 Route24DamianTakeThisCharmanderText:
 	text "How did you get"
-	line "so many POKéMON?!"
+	line "so many #MON?!"
 
 	para "Urgh… I would have"
 	line "caught more, if"

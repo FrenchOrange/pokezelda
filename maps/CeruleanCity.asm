@@ -313,7 +313,7 @@ CeruleanCityCaveNPC2Text:
 	cont "horribly powerful"
 	cont "#MON."
 
-	para "As for me I will…"
+	para "As for me, I will…"
 	line "Cheer you from the"
 	cont "side-lines. Yes!"
 	done

@@ -218,7 +218,7 @@ SwimmermWalterAfterBattleText:
 SwimmermTonySeenText:
 	text "A FISHER tried to"
 	line "hook me! I'm no"
-	cont "fish POKéMON!"
+	cont "fish #MON!"
 	done
 
 SwimmermTonyBeatenText:
@@ -228,7 +228,7 @@ SwimmermTonyBeatenText:
 
 SwimmermTonyAfterBattleText:
 	text "Did you know that"
-	line "different POKéMON"
+	line "different #MON"
 	cont "can be reeled in"
 	cont "at different time?"
 

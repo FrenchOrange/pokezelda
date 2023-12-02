@@ -55,7 +55,7 @@ INCLUDE "maps/RadioTower1F.asm"
 INCLUDE "maps/RadioTower2F.asm"
 INCLUDE "maps/RadioTower3F.asm"
 INCLUDE "maps/RadioTower4F.asm"
-INCLUDE "maps/BillsHouse.asm"
+INCLUDE "maps/OaksLab.asm"
 
 
 SECTION "Map Scripts 4", ROMX
@@ -67,6 +67,7 @@ INCLUDE "maps/GoldenrodPokecenter1F.asm"
 INCLUDE "maps/IlexForestAzaleaGate.asm"
 INCLUDE "maps/Route34IlexForestGate.asm"
 INCLUDE "maps/DayCare.asm"
+INCLUDE "maps/BillsHouse.asm"
 
 
 SECTION "Map Scripts 5", ROMX
@@ -388,7 +389,6 @@ INCLUDE "maps/Route43Gate.asm"
 INCLUDE "maps/RedsHouse1F.asm"
 INCLUDE "maps/RedsHouse2F.asm"
 INCLUDE "maps/BluesHouse.asm"
-INCLUDE "maps/OaksLab.asm"
 
 
 SECTION "Map Scripts 20", ROMX

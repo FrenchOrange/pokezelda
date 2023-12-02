@@ -143,7 +143,7 @@ PewterMuseumB1FScientist5TakeThisOmanyteText:
 	text "If you go against"
 	line "PEWTER's BROCK, you"
 	cont "may notice he uses"
-	cont "fossil POKéMON."
+	cont "fossil #MON."
 
 	para "Both OMASTAR and"
 	line "KABUTOPS were"
@@ -158,7 +158,7 @@ PewterMuseumB1FScientist5TakeThisOmanyteText:
 	line "you have. Hmm…"
 
 	para "You do seem worthy"
-	line "of such POKéMON."
+	line "of such #MON."
 
 	para "We have an extra"
 	line "OMANYTE on hand,"

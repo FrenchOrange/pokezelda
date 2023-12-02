@@ -28,8 +28,8 @@ CeruleanCave2F_MapEvents:
 	def_coord_events
 
 	def_bg_events
+
+	def_object_events
 	object_event 31, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave2FTwistedSpoon, EVENT_CERULEAN_CAVE_2F_TWISTEDSPOON
 	object_event 18,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave2FSunStone, EVENT_CERULEAN_CAVE_2F_SUN_STONE
 	object_event  7, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave2FBigMushroom, EVENT_CERULEAN_CAVE_2F_BIG_MUSHROOM
-
-	def_object_events

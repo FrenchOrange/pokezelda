@@ -225,7 +225,7 @@ SwimmerfKatieAfterBattleText:
 SwimmerfMarySeenText:
 	text "My BFF taught me"
 	line "all about how hard"
-	cont "POKéMON battles"
+	cont "#MON battles"
 	cont "can get!"
 	done
 

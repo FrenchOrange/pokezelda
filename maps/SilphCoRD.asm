@@ -207,7 +207,7 @@ SilphCoRDScientistExplainText:
 
 	para "Don't worry, we"
 	line "won't ask for any"
-	cont "of your POKéMON."
+	cont "of your #MON."
 
 	para "We're merely asking"
 	line "if we can subject"

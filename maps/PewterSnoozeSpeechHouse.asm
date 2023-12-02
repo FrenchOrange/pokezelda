@@ -124,7 +124,7 @@ PewterSnoozeSpeechHouseZapdosText:
 
 	para "Blame a stormy"
 	line "harvest on this"
-	cont "POKéMON."
+	cont "#MON."
 	done
 
 PewterSnoozeSpeechHouseMoltresText:

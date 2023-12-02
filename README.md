@@ -16,7 +16,7 @@ While the story and progression are unchanged, here's some new things you can ex
 (Do note that this rom hack is not compatible with base GSC.)*
 
 ## Version
-The current version is **1.2.2**, with changes documented in [the changelog](CHANGELOG.txt). Please note that while it can be played from start to end, this hack is not 100% done yet. Some small hiccups are still left to be taken care of, with a list of known issues listed [here](KNOWN_ISSUES.txt).
+The current version is **1.2.3**, with changes documented in [the changelog](CHANGELOG.txt). Please note that while it can be played from start to end, this hack is not 100% done yet. Some small hiccups are still left to be taken care of, with a list of known issues listed [here](KNOWN_ISSUES.txt).
 
 If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
@@ -28,7 +28,7 @@ Some HUGE thanks to:
 * All the amazing people who worked tirelessly on the different Pokémon disassemblies.
 * The awesome folks who wrote down the various tutorials for Pokecrystal.
 * The Polished Crystal team, for some script changes and new trainer sprites.
-* Artist [LuigiTKO](https://twitter.com/LuigiTKO) for his gorgeous GSC-styled Pokémon icons
+* Artists [LuigiTKO](https://twitter.com/LuigiTKO) and [GuiAbel](https://twitter.com/guiabel/) for their gorgeous GSC-styled Pokémon icons.
 * The artists from Pokémon Showdown and Pokémon Crystal Clear for a few Pokémon icons.
 * SoupPotato, creator of [Sourcrystal](https://github.com/SoupPotato/Sourcrystal), for some incredible new Pokémon sprites.
 * Artist [Dewndeym](https://twitter.com/dewndeym) from the Johto Redrawn project, for their amazing revamped Ilex Shrine.

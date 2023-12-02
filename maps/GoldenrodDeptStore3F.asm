@@ -5,6 +5,7 @@
 	const GOLDENRODDEPTSTORE3F_POKEFAN_M
 	const GOLDENRODDEPTSTORE3F_POKEFAN_F
 	const GOLDENRODDEPTSTORE3F_YOUNGSTER
+	const GOLDENRODDEPTSTORE3F_RECEPTIONIST
 
 GoldenrodDeptStore3F_MapScripts:
 	def_scene_scripts
@@ -223,6 +224,45 @@ GoldenrodDeptStore3FDirectory:
 GoldenrodDeptStore3FElevatorButton:
 	jumpstd ElevatorButtonScript
 
+GoldenrodDeptStore3FReceptionistScript:
+	faceplayer
+	opentext
+	checkevent EVENT_DECO_BIG_ONIX_DOLL
+	iftrue .GotOnixDoll
+	writetext GoldenrodDeptStore3FReceptionistPhewText
+	special PlaceMoneyTopRight
+	yesorno
+	iffalse ReceptionistScript_NoSale
+	checkmoney YOUR_MONEY, 2500
+	ifequal HAVE_LESS, ReceptionistScript_NoMoney
+	setevent EVENT_DECO_BIG_ONIX_DOLL
+	takemoney YOUR_MONEY, 2500
+	special PlaceMoneyTopRight
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GoldenrodDeptStore3FDecorClerk_HereYouGoText
+	promptbutton
+	closetext
+	end
+
+.GotOnixDoll:
+	writetext GoldenrodDeptStore3FReceptionistYetAgainText
+	waitbutton
+	closetext
+	end
+
+ReceptionistScript_NoMoney:
+	writetext GoldenrodDeptStore3FDecorClerkNotEnoughMoneyText
+	waitbutton
+	closetext
+	end
+
+ReceptionistScript_NoSale:
+	writetext ReceptionistText_NoSale
+	waitbutton
+	closetext
+	end
+
 GoldenrodDeptStore3FDecorClerkHiThereText:
 	text "Hi there! Looking"
 	line "to give your room"
@@ -257,6 +297,31 @@ GoldenrodDeptStore3FDecorClerkNotEnoughMoneyText:
 	
 GoldenrodDeptStore3FDecorClerkTakeCare:
 	text "Please come again!"
+	done
+
+GoldenrodDeptStore3FReceptionistPhewText:
+	text "Pheeew."
+
+	para "I'm barely done"
+	line "restocking the"
+	cont "aisles that they"
+	cont "get picked clean."
+
+	para "All that is left"
+	line "is this ONIX DOLL."
+
+	para "Hmm? Do you want"
+	line "to buy it perhaps?"
+	cont "It's worth ¥2500."
+	done
+
+ReceptionistText_NoSale:
+	text "Come again!"
+	done
+
+GoldenrodDeptStore3FReceptionistYetAgainText:
+	text "Time to pack the"
+	line "shelves yet again."
 	done
 
 GoldenrodDeptStore3FTwinText:
@@ -323,7 +388,8 @@ GoldenrodDeptStore3F_MapEvents:
 	def_object_events
 	object_event  8,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FClerk1Script, -1
 	object_event  9,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FClerk2Script, -1
-	object_event  4,  5, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FTwinScript, -1
+	object_event  4,  6, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FTwinScript, -1
 	object_event 10,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FPokefanMScript, -1
 	object_event 16,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FPokefanFScript, -1
 	object_event 12,  1, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FYoungsterScript, -1
+	object_event  8,  5, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStore3FReceptionistScript, EVENT_ONIX_DOLL_RECEPTIONIST

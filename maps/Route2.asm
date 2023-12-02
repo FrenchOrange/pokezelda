@@ -142,7 +142,8 @@ BeautyKendraBeatenText:
 
 BeautyKendraAfterBattleText:
 	text "What do you mean?"
-	para "My POKéMON aren't"
+
+	para "My #MON aren't"
 	line "bugs, they're too"
 	cont "cute for that!"
 	done

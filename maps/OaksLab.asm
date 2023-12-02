@@ -3,6 +3,7 @@
 	const OAKSLAB_SCIENTIST1
 	const OAKSLAB_SCIENTIST2
 	const OAKSLAB_SCIENTIST3
+	const OAKSLAB_BLUE
 
 OaksLab_MapScripts:
 	def_scene_scripts
@@ -49,6 +50,118 @@ Oak:
 	writetext OakYesKantoBadgesText
 	promptbutton
 	sjump .CheckPokedex
+
+OaksLabBlue:
+	faceplayer
+	checkevent EVENT_TALKED_TO_BLUE_IN_OAKS_LAB
+	iftrue .SpareStarterGift
+	opentext
+	writetext OaksLabBlueText
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, OAKSLAB_BLUE, 15
+	opentext
+	writetext OaksLabBlueYouBeatRedText
+	waitbutton
+	closetext
+	readvar VAR_XCOORD
+	ifequal 2, .BlueScriptLeft
+	ifequal 4, .BlueScriptRight
+.BlueScriptBottom
+	turnobject OAKSLAB_BLUE, RIGHT
+	opentext
+	writetext OaksLabBlueCelebratingText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, DOWN
+	setevent EVENT_TALKED_TO_BLUE_IN_OAKS_LAB
+	sjump .SpareStarterGift
+
+.BlueScriptLeft:
+	turnobject OAKSLAB_BLUE, RIGHT
+	opentext
+	writetext OaksLabBlueCelebratingText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, LEFT
+	setevent EVENT_TALKED_TO_BLUE_IN_OAKS_LAB
+	sjump .SpareStarterGift
+
+
+.BlueScriptRight:
+	turnobject OAKSLAB_BLUE, LEFT
+	opentext
+	writetext OaksLabBlueCelebratingText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, RIGHT
+	setevent EVENT_TALKED_TO_BLUE_IN_OAKS_LAB
+	sjump .SpareStarterGift
+
+
+.SpareStarterGift:
+	opentext
+	checkevent EVENT_GOT_SPARE_STARTER
+	iftrue .GotStarter
+	writetext OaksLabBlueTakeThisStarterText
+	yesorno
+	iffalse .Refused
+	writetext OaksLabBlueCareForItText
+	promptbutton
+	waitsfx
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoom
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .Totodile
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .Chikorita
+; Cyndaquil
+	writetext ReceivedSpareTotodileText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke TOTODILE, 5, BERRY
+	sjump .AfterStarter
+
+.Totodile:
+	writetext ReceivedSpareChikoritaText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke CHIKORITA, 5, BERRY
+	sjump .AfterStarter
+
+.Chikorita:
+	writetext ReceivedSpareCyndaquilText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke CYNDAQUIL, 5, BERRY
+	sjump .AfterStarter
+
+.AfterStarter:
+	setevent EVENT_GOT_SPARE_STARTER
+	closetext
+	turnobject OAKSLAB_BLUE, UP
+	end
+
+.NoRoom:
+	writetext OaksLabBluePartyFullText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, UP
+	end
+
+.Refused:
+	writetext OaksLabBlueNoStarterText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, UP
+	end
+
+.GotStarter:
+	writetext OaksLabBlueAfterText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, UP
+	end
 
 OaksAssistant1Script:
 	jumptextfaceplayer OaksAssistant1Text
@@ -135,11 +248,11 @@ OakOpenMtSilverText:
 	line "exception in your"
 	cont "case, <PLAY_G>."
 
-	para "Go up to INDIGO"
-	line "PLATEAU. You can"
+	para "MT.SILVER can be"
+	line "reached from the"
 
-	para "reach MT.SILVER"
-	line "from there."
+	para "gate that leads to"
+	line "VICTORY ROAD."
 	done
 
 OakNoKantoBadgesText:
@@ -177,6 +290,124 @@ OakYesKantoBadgesText:
 
 	para "Keep trying hard,"
 	line "<PLAY_G>!"
+	done
+
+OaksLabBlueText:
+	text "GARY: Oh, nice to"
+	line "see you <PLAYER>!"
+
+	para "What am I doing"
+	line "here? You see,"
+	cont "gramps is getting"
+
+	para "old, so I help him"
+	line "out with his work"
+	cont "whenever I can."
+
+	para "Nice, eh?"
+
+	para "I could be the"
+	line "first GYM LEADER"
+	cont "to also work as a"
+	cont "#MON PROFESSOR."
+
+	para "But anyway, what"
+	line "are you up to now?"
+
+	para "… … …"
+	line "… …!!"
+	done
+
+OaksLabBlueYouBeatRedText:
+	text "You beat RED?!"
+	line "Unbelievable!"
+	done
+
+OaksLabBlueCelebratingText:
+	text "That's something"
+	line "worth celebrating!"
+
+	para "Now let me just--"
+	line "Where did I put"
+	cont "it again… There!"
+	done
+
+OaksLabBlueTakeThisStarterText:
+	text "GARY: PROF.ELM was"
+	line "paying us a visit"
+	cont "recently, and this"
+
+	para "goof forgot some-"
+	line "thing at our lab."
+
+	para "It's a # BALL"
+	line "containing a JOHTO"
+	cont "partner POKéMON."
+
+	para "I know it's not"
+	line "mine to give, but"
+	cont "I wanted you to"
+	cont "have it."
+
+	para "How does this"
+	line "sound to you?"
+	done
+
+OaksLabBlueCareForItText:
+	text "Wonderful! "
+	line "Say hello to your"
+	cont "new companion."
+	done
+
+ReceivedSpareChikoritaText:
+	text "<PLAYER> received"
+	line "CHIKORITA!"
+	done
+
+ReceivedSpareCyndaquilText:
+	text "<PLAYER> received"
+	line "CYNDAQUIL!"
+	done
+
+ReceivedSpareTotodileText:
+	text "<PLAYER> received"
+	line "TOTODILE!"
+	done
+
+OaksLabBluePartyFullText:
+	text "Your team is full."
+	line "Err… Gramps never"
+	cont "told me what to do"
+	cont "when that happens."
+	done
+
+OaksLabBlueNoStarterText:
+	text "No, I understand."
+
+	para "I'll keep it around"
+	line "until PROF.ELM"
+	cont "comes back."
+	done
+
+OaksLabBlueAfterText:
+	text "To tell you the"
+	line "truth, I have been"
+	cont "practicing this"
+	cont "partner #MON"
+
+	para "thing for a while"
+	line "with gramps."
+
+	para "But handing out a"
+	line "#MON to a real"
+	cont "trainer like that."
+
+	para "It sent shivers"
+	line "down my spine!"
+
+	para "People don't become"
+	line "#MON PROFESSORS"
+	cont "for nothing!"
 	done
 
 OaksAssistant1Text:
@@ -282,4 +513,5 @@ OaksLab_MapEvents:
 	object_event  6,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Oak, -1
 	object_event  3,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant1Script, -1
 	object_event 10,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant2Script, -1
-	object_event  3,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
+	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
+	object_event  3,  2, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OaksLabBlue, EVENT_OAKS_LAB_BLUE

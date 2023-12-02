@@ -3,13 +3,13 @@ RedsHouse2F_MapScripts:
 
 	def_callbacks
 
-RedsHouse2FN64Script:
-	jumptext RedsHouse2FN64Text
+RedsHouse2FSNESScript:
+	jumptext RedsHouse2FSNESText
 
 RedsHouse2FPCScript:
 	jumptext RedsHouse2FPCText
 
-RedsHouse2FN64Text:
+RedsHouse2FSNESText:
 	text "<PLAYER> played the"
 	line "SNES."
 
@@ -32,7 +32,7 @@ RedsHouse2F_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  5,  5, BGEVENT_READ, RedsHouse2FN64Script
+	bg_event  5,  5, BGEVENT_READ, RedsHouse2FSNESScript
 	bg_event  2,  1, BGEVENT_READ, RedsHouse2FPCScript
 
 	def_object_events

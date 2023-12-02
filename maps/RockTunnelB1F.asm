@@ -149,7 +149,7 @@ MediumEthelBeatenText:
 	done
 
 MediumEthelAfterBattleText:
-	text "The POKéMON TOWER"
+	text "The #MON TOWER"
 	line "was converted into"
 	cont "the RADIO TOWER."
 

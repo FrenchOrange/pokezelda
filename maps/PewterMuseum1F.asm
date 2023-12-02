@@ -188,7 +188,7 @@ PewterMuseum1FAmberScientistText:
 	done
 
 PewterMuseum1FLoreScientistText:
-	text "The POKéMON LAB on"
+	text "The #MON LAB on"
 	line "CINNABAR was lost"
 	cont "when the volcano"
 	cont "erupted."

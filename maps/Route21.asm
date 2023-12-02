@@ -12,6 +12,16 @@ Route21_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, .LandBlocks
+
+.LandBlocks:
+	changeblock -2, 10, $74 ; grass
+	changeblock -4, 10, $0a ; grass
+	changeblock -2, 12, $0a ; grass
+	changeblock -4, 12, $0a ; grass
+	changeblock -2, 14, $1f ; shore
+	changeblock -4, 14, $1f ; shore
+	endcallback
 
 TrainerSwimmermSeth:
 	trainer SWIMMERM, SETH, EVENT_BEAT_SWIMMERM_SETH, SwimmermSethSeenText, SwimmermSethBeatenText, 0, .Script
@@ -260,7 +270,7 @@ BurglarEvanSeenText:
 	line "for precious stuff"
 	cont "to steal in the"
 
-	para "POKéMON MANSION,"
+	para "#MON MANSION,"
 	line "but it's gone now!"
 	done
 

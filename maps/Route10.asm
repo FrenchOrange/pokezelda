@@ -47,7 +47,7 @@ TrainerGuitaristEli:
 	end
 
 LassSarahSeenText:
-	text "My POKéMON doesn't"
+	text "My #MON doesn't"
 	line "do well with those"
 	cont "scary GHOST types."
 	done

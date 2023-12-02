@@ -50,11 +50,11 @@ SafariZoneWorker1Script:
 
 SafariZoneWorker1TakeThisKabutoText:
 	text "The SAFARI ZONE"
-	line "POKéMON were all"
+	line "#MON were all"
 	cont "set free."
 
 	para "This goes for the"
-	line "old exhibit POKé-"
+	line "old exhibit #-"
 	cont "MON too."
 
 	para "Well… aside from"

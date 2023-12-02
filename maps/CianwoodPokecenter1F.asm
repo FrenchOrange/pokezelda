@@ -146,7 +146,7 @@ CianwoodPokecenter1FFishingGuruNormalText:
 	text "Do you know about"
 	line "fishing?"
 
-	para "Some POKéMON are"
+	para "Some #MON are"
 	line "picky. They won't"
 	cont "bite cheap bait!"
 

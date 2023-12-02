@@ -75,7 +75,7 @@ SafariZoneCameoHello:
 	line "SAFARI ZONE."
 
 	para "Come back once you"
-	line "catch 250 POKéMON!"
+	line "catch 250 #MON!"
 	done
 
 SafariZoneCameoTakeThisMewText:

@@ -150,6 +150,7 @@
 - Updated Kabuto's menu icon.
 - Updated Omanyte's menu icon, courtesy of Megaman-Omega.
 
+
 1.2.2
 - Restored Gen I's Cycling Road behavior (press A or B to stop riding downhill). Fix courtesy of Idain.
 - Fixed Kurt's inconsitent overworld palette.
@@ -164,3 +165,17 @@
 - Tweaked two or three overworld sprites.
 - Tweaked the cutscene that plays when the player meets up with Lance at the Mahogany Mart.
 - Renamed the Blackbelt item to "Black Belt", and fixed the spelling of "Elixer" to "Elixir".
+
+
+1.2.3
+- Updated a serious handful of menu icons, most of them courtesy of Twitter user Guiabel.
+- Updated the overworld sprites of the Johto gym leaders, courtesy of TheBrawlUnit.
+- Updated Jasmine's battle sprite, courtesy of SoupPotato.
+- Restored the Goldenrod bargain rooftop sale, although with better item selection.
+- Added the big Onix doll as a buyable item in Goldenrod after beating the League.
+- Added a unique sprite for the tailless Slowpoke in Slowpoke Well's Team Rocket scenario.
+- Added a little reference in the Copycat's room.
+- Fixed a scripting oopsie in a late-game dungeon which made it impossible to traverse.
+- Fixed a layout issue on Route 21.
+- Fixed issue where the Officer Jenny in Vermilion City wasn't visible from Route 6.
+- Implemented gift Pokémon scenario in Pallet Town. The Johto starter Pokémon the Rival chose can now be obtained after beating Red.

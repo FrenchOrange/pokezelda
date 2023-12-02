@@ -48,7 +48,7 @@ Route16FuchsiaSpeechHouseTeacherText:
 
 	para "Her FEAROW is so"
 	line "majestic, I wish"
-	cont "my POKéMON could"
+	cont "my #MON could"
 	cont "FLY that well…"
 	done
 

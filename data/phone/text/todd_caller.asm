@@ -56,13 +56,13 @@ ToddHangUpText:
 	text "See you later!"
 	done
 
-ToddDepartmentStoreSpecialSaleText:
+ToddDepartmentStoreBargainSaleText:
 	text "This is it--the"
 	line "one we've all been"
 	cont "waiting for!"
 
 	para "GOLDENROD DEPT."
-	line "STORE's special"
+	line "STORE's bargain"
 	cont "sale is on now!"
 
 	para "Get the best room"
@@ -82,9 +82,9 @@ ToddDepartmentStoreSpecialSaleText:
 	cont "soon as you can!"
 	done
 
-ToddSavingUpForSpecialSaleText:
+ToddSavingUpForBargainSaleText:
 	text "I'm saving up for"
-	line "the next special"
+	line "the next bargain"
 
 	para "sale. When's the"
 	line "next one?"
@@ -110,7 +110,7 @@ ToddHaveYouGoneToDepartmentStoreText:
 	line "it out already!"
 
 	para "They had some real"
-	line "options."
+	line "bargains."
 
 	para "You should get"
 	line "there quickly."

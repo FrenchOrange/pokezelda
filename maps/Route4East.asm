@@ -130,14 +130,20 @@ PicnickerSharonAfterBattleText:
 
 LassChloeSeenText:
 	text "I'm looking for"
-	line "POKéMON to catch."
+	line "#MON to catch."
 	para "Yours look cool,"
 	line "can I have them?"
 	done
 
 LassChloeBeatenText:
 	text "But I want a cool"
-	line "POKéMON of my own…"
+	line "#MON of my own…"
+	done
+
+LassChloeAfterBattleText:
+	text "I'm still a newbie."
+	line "So please don't be"
+	cont "too harsh on me."
 	done
 
 Route4EastOfficerText:
@@ -153,12 +159,6 @@ Route4EastOfficerText:
 	para "He could be linked"
 	line "to the POWER PLANT"
 	cont "incident."
-	done
-
-LassChloeAfterBattleText:
-	text "I'm still a newbie."
-	line "So please don't be"
-	cont "too harsh on me."
 	done
 
 MtMoonRouteSignText:

@@ -272,9 +272,6 @@ VermilionGymGuideScript:
 	closetext
 	end
 
-VermilionGymTrashCan:
-	jumptext VermilionGymTrashCanText
-
 VermilionGymGarbage:
 	jumptext VermilionGymGarbageText
 
@@ -487,21 +484,21 @@ VermilionGym_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  3,  9, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  5,  9, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  7,  9, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  9,  9, BGEVENT_READ, VermilionGymTrashCan
-	bg_event 11,  9, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  3, 11, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  5, 11, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  7, 11, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  9, 11, BGEVENT_READ, VermilionGymTrashCan
-	bg_event 11, 11, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  3, 13, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  5, 13, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  7, 13, BGEVENT_READ, VermilionGymTrashCan
-	bg_event  9, 13, BGEVENT_READ, VermilionGymTrashCan
-	bg_event 11, 13, BGEVENT_READ, VermilionGymTrashCan
+	bg_event  3,  9, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  5,  9, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  7,  9, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  9,  9, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event 11,  9, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  3, 11, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  5, 11, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  7, 11, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  9, 11, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event 11, 11, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  3, 13, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  5, 13, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  7, 13, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event  9, 13, BGEVENT_READ, VermilionGymTrashCanScript
+	bg_event 11, 13, BGEVENT_READ, VermilionGymTrashCanScript
 	bg_event  8,  3, BGEVENT_READ, VermilionGymGarbage
 	bg_event  5, 17, BGEVENT_READ, VermilionGymStatue
 	bg_event  8, 17, BGEVENT_READ, VermilionGymStatue

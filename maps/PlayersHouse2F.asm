@@ -212,10 +212,10 @@ DebugSign:
 	givepoke PIKACHU, 100
 	closetext
 	setevent EVENT_BEAT_ELITE_FOUR
-;	playsound SFX_WARP_TO
-;	special FadeOutPalettes
-;	waitsfx
-;	warp VERMILION_CITY, 12, 20
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp VERMILION_CITY, 12, 20
 	end
 
 PlayersHouse2F_MapEvents:

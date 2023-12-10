@@ -141,7 +141,7 @@ ENDM
 	map_const SILVER_CAVE_ITEM_ROOMS,                      10,  9 ; 77
 	map_const DARK_CAVE_VIOLET_ENTRANCE,                   20, 18 ; 78
 	map_const DARK_CAVE_BLACKTHORN_ENTRANCE,               15, 18 ; 79
-	map_const DRAGONS_DEN_1F,                               5,  9 ; 80
+	map_const DRAGONS_DEN_1F,                               5, 10 ; 80
 	map_const DRAGONS_DEN_B1F,                             20, 18 ; 81
 	map_const DRAGON_SHRINE,                                7,  7 ; 82
 	map_const TOHJO_FALLS,                                 15,  9 ; 83

@@ -11,10 +11,18 @@
 
 BlackthornCity_MapScripts:
 	def_scene_scripts
+	scene_script .DummyScene0 ; SCENE_DEFAULT
+	scene_script .DummyScene1 ; SCENE_FINISHED
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 	callback MAPCALLBACK_OBJECTS, .Santos
+
+.DummyScene0:
+	end
+
+.DummyScene1:
+	end
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_BLACKTHORN
@@ -58,7 +66,35 @@ BlackthornGramps1Script:
 	jumptextfaceplayer BlackthornGrampsRefusesEntryText
 
 BlackthornGramps2Script:
-	jumptextfaceplayer BlackthornGrampsGrantsEntryText
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_HM07_WATERFALL
+	iftrue .GotHM07
+	writetext BlackthornGrampsGrantsEntryText
+	waitbutton
+	closetext
+	end
+
+.GotHM07:
+	writetext BlackthornGrampsGrantsYouveGoneFarText
+	waitbutton
+	closetext
+	end
+
+BlackthornWaterfallGramps:
+	showemote EMOTE_SHOCK, BLACKTHORNCITY_GRAMPS2, 20
+	turnobject BLACKTHORNCITY_GRAMPS2, LEFT
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext BlackthornWaterfallGrampsIntroText
+	promptbutton
+	verbosegiveitem HM_WATERFALL
+	setevent EVENT_GOT_HM07_WATERFALL
+	writetext BlackthornWaterfallGrampsExplanationText
+	waitbutton
+	closetext
+	setscene SCENE_DEFAULT
+	end
 
 BlackthornBlackBeltScript:
 	faceplayer
@@ -198,6 +234,56 @@ BlackthornGrampsGrantsEntryText:
 	para "You may enter."
 	done
 
+BlackthornGrampsGrantsYouveGoneFarText:
+	text "You still have a"
+	line "long way to go,"
+
+	para "but you are"
+	line "following the way"
+	cont "of the dragon."
+
+	para "To keep trying,"
+	line "again and again."
+
+	para "You've gone far,"
+	line "young one."
+	done
+
+BlackthornWaterfallGrampsIntroText:
+	text "Ahh, young one."
+	line "Wait!"
+
+	para "I've heard you met"
+	line "the elders of the"
+	cont "DRAGON SHRINE."
+
+	para "You've passed their"
+	line "test, and you even"
+	cont "left the stern"
+	cont "CLAIR flustered!"
+
+	para "This means you are"
+	line "a trainer worthy"
+	cont "of BLACKTHORN's"
+	cont "ancestral gift."
+	done
+
+BlackthornWaterfallGrampsExplanationText:
+	text "Legends tell that"
+	line "a measly carp may"
+	cont "grow into a fierce"
+
+	para "dragon by swimming"
+	line "upstream through"
+	cont "the strong current"
+	cont "of a waterfall."
+
+	para "Now you too may"
+	line "utilize this power"
+	cont "and achieve your"
+	cont "true potential."
+	done
+
 BlackBeltText_WeirdRadio:
 	text "My radio's busted?"
 	line "Lately, I only get"
@@ -324,6 +410,7 @@ BlackthornCity_MapEvents:
 	warp_event 20,  1, DRAGONS_DEN_1F, 1
 
 	def_coord_events
+	coord_event 20,  2, SCENE_FINISHED, BlackthornWaterfallGramps
 
 	def_bg_events
 	bg_event 34, 24, BGEVENT_READ, BlackthornCitySign

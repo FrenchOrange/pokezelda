@@ -3051,6 +3051,7 @@ wBattleTowerElevatorSceneID::                     db
 wBattleTowerHallwaySceneID::                      db
 wVermilionGymSceneID::                            db
 wRoute43GateSceneID::                             db
+wBlackthornCitySceneID::			  db
 wMountMoonSceneID::                               db
 wSproutTower3FSceneID::                           db
 wTinTower1FSceneID::                              db
@@ -3078,12 +3079,10 @@ wVermilionPortSceneID::                           db
 wFastShip1FSceneID::                              db
 wFastShipB1FSceneID::                             db
 wMountMoonSquareSceneID::                         db
-wMobileTradeRoomSceneID::                         db
-wMobileBattleRoomSceneID::                        db
 wSilphCoElevatorSceneID::                         db
 wSilphCoRDSceneID::                               db
 
-	ds 47
+	ds 48
 
 ; fight counts
 wJackFightCount::    db

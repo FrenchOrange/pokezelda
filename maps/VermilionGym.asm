@@ -423,7 +423,7 @@ VermilionGymGuideText:
 	cont "better that way!"
 
 	para "Make up your mind"
-	line "and head to SURGE!"
+	line "and take on SURGE!"
 	done
 
 VermilionGymGuideWinText:

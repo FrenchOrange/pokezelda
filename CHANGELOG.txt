@@ -183,6 +183,7 @@
 
 1.2.4
 - The puzzle in Lt.Surge's gym is now properly implemented. Huge thanks to Seasick, as always!
+- The Waterfall HM is now no longer a missable item. The old HM07 itemball in Ice Path now contains a generic item.
+- Fixed a small layout issue with the first floor of the Dragon's Den.
 - Updated Jasmine's portrait in the Trainer Card.
 - Reverted changes to Igglybuff's menu icon.
-

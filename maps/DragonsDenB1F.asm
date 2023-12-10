@@ -79,6 +79,7 @@ DragonsDenB1F_ClairScene:
 	special RestartMapMusic
 	disappear DRAGONSDENB1F_CLAIR
 	setscene SCENE_DRAGONSDENB1F_NOTHING
+	setmapscene BLACKTHORN_CITY, SCENE_FINISHED
 	end
 
 TrainerCooltrainermDarin:

@@ -7,10 +7,9 @@
 
 VermilionGym_MapScripts:
 	def_scene_scripts
-	scene_script .VermilionGymDoorsScript ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
 
 	def_callbacks
+	callback MAPCALLBACK_OBJECTS, .VermilionGymDoorsScript
 	callback MAPCALLBACK_TILES, .VermilionGymDoorsCallback
 
 .VermilionGymDoorsScript:
@@ -23,11 +22,6 @@ VermilionGym_MapScripts:
 .done
 	endcallback
 
-
-.DummyScene1:
-	end
-
-
 .VermilionGymDoorsCallback:
 	checkevent EVENT_VERMILION_GYM_SWITCH_2
 	iftrue .NoDoors
@@ -36,7 +30,6 @@ VermilionGym_MapScripts:
 .NoDoors:
 	changeblock 6, 6, $01 ; floor
 	endcallback
-
 
 VermilionGymTrashCanScript:
 	checkevent EVENT_VERMILION_GYM_SWITCH_2
@@ -68,8 +61,6 @@ VermilionGymTrashCanScript:
 	setevent EVENT_VERMILION_GYM_SWITCH_2
 	changeblock 6, 6, $01 ; floor
 	reloadmappart
-	setscene SCENE_FINISHED
-	waitbutton
 	closetext
 	end
 
@@ -141,7 +132,12 @@ CheckVermilionGymTrashCan:
 	push af
 	ld a, BANK(wVermilionGymTrashCan1)
 	ldh [rSVBK], a
-	checkevent EVENT_VERMILION_GYM_SWITCH_1
+;	checkevent EVENT_VERMILION_GYM_SWITCH_1
+	ld de, EVENT_VERMILION_GYM_SWITCH_1
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	ld a, c
+	and a
 	jr z, .first
 	ld a, [wVermilionGymTrashCan2]
 	call .CheckTrashCan
@@ -188,8 +184,13 @@ CheckVermilionGymTrashCan:
 	add a
 	add e
 	add d
+	dec a
+	dec a
+	dec a
+	dec a
+	dec a
+	dec a
 	ret
-
 
 VermilionGymSurgeScript:
 	faceplayer

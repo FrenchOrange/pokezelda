@@ -179,3 +179,8 @@
 - Fixed a layout issue on Route 21.
 - Fixed issue where the Officer Jenny in Vermilion City wasn't visible from Route 6.
 - Implemented gift Pokémon scenario in Pallet Town. The Johto starter Pokémon the Rival chose can now be obtained after beating Red.
+
+
+1.2.4
+- The puzzle in Lt.Surge's gym is now properly implemented. Huge thanks to Seasick, as always!
+- Updated Jasmine's portrait in the Trainer Card.

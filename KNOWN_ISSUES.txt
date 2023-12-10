@@ -5,6 +5,4 @@
 
 
 - - Miscellaneous Issues - -
-* Wrong Shuckie dialogue when it's the last Pokémon on your team. (Vanilla).
-* Puzzle in Lt.Surge's gym left to debug.
 * Can't exit color picker menu (Debug).

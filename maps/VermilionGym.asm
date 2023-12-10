@@ -57,6 +57,7 @@ VermilionGymTrashCanScript:
 
 .second_switch
 	writetext VermilionGymFoundSecondSwitchText
+	waitbutton
 	playsound SFX_ENTER_DOOR
 	setevent EVENT_VERMILION_GYM_SWITCH_2
 	changeblock 6, 6, $01 ; floor
@@ -132,7 +133,6 @@ CheckVermilionGymTrashCan:
 	push af
 	ld a, BANK(wVermilionGymTrashCan1)
 	ldh [rSVBK], a
-;	checkevent EVENT_VERMILION_GYM_SWITCH_1
 	ld de, EVENT_VERMILION_GYM_SWITCH_1
 	ld b, CHECK_FLAG
 	call EventFlagAction
@@ -445,34 +445,31 @@ VermilionGymGarbageText:
 	done
 
 VermilionGymFoundSwitchText:
-	text "A secret switch"
-	line "beneath the trash?"
+	text "Hey!"
+
+	para "There's a switch"
+	line "under the trash!"
 
 	para "Better press it."
 	done
 
 VermilionGymFoundFirstSwitchText:
 	text "The first electric"
-	line "fence unlocked!"
+	line "lock opened!"
 	done
 
 VermilionGymFoundSecondSwitchText:
 	text "The second"
-	line "electric fence"
+	line "electric lock"
+	cont "opened!"
 
-	para "unlocked! The"
-	line "path is clear!"
+	para "The path ahead is"
+	line "clear!"
 	done
 
 VermilionGymResetSwitchesText:
-	text "Oh no, the elec-"
-	line "tric fence locked"
-	cont "again!"
-	done
-
-VermilionGymElectricFenceText:
-	text "An electric fence!"
-	line "Don't touch it!"
+	text "Hey! The electric"
+	line "locks were reset!"
 	done
 
 VermilionGym_MapEvents:

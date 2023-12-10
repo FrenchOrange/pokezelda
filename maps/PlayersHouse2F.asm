@@ -186,7 +186,7 @@ DebugSign:
 	setflag ENGINE_GLACIERBADGE
 	setflag ENGINE_BOULDERBADGE
 	setflag ENGINE_CASCADEBADGE
-;	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_THUNDERBADGE
 	setflag ENGINE_RAINBOWBADGE
 	setflag ENGINE_SOULBADGE
 	setflag ENGINE_MARSHBADGE
@@ -211,11 +211,11 @@ DebugSign:
 	givepoke LAPRAS, 100
 	givepoke PIKACHU, 100
 	closetext
-	setevent EVENT_BEAT_ELITE_FOUR
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp VERMILION_CITY, 12, 20
+	warp SEAFOAM_ISLANDS_B2F, 19, 05
+;	warp ROUTE_23, 11, 06
 	end
 
 PlayersHouse2F_MapEvents:

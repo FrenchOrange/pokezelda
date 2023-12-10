@@ -184,3 +184,5 @@
 1.2.4
 - The puzzle in Lt.Surge's gym is now properly implemented. Huge thanks to Seasick, as always!
 - Updated Jasmine's portrait in the Trainer Card.
+- Reverted changes to Igglybuff's menu icon.
+

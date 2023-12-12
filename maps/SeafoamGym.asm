@@ -356,8 +356,8 @@ SeafoamGym_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 31, 17, ROUTE_20, 1
-	warp_event 31,  5, ROUTE_20, 2
+	warp_event 31, 18, ROUTE_20, 1
+	warp_event 31,  6, ROUTE_20, 2
 	warp_event 33,  1, SEAFOAM_ISLANDS_1F, 1
 	warp_event 33, 13, SEAFOAM_ISLANDS_1F, 2
 	warp_event 11, 21, SEAFOAM_GYM, 6

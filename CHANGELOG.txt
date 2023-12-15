@@ -187,4 +187,4 @@
 - Fixed a small layout issue with the first floor of the Dragon's Den.
 - Fixed a layout issue with both the entrances to the Seafoam Islands.
 - Updated Jasmine's portrait in the Trainer Card.
-- Reverted changes to Igglybuff's menu icon.
+- Reverted changes to Ledyba and Igglybuff's menu icons.

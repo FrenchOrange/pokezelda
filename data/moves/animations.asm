@@ -2086,7 +2086,7 @@ BattleAnim_Headbutt:
 
 BattleAnim_Tackle:
 	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row
+	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_TACKLE, $0, BG_EFFECT_USER, $0
 	anim_wait 4
 	anim_sound 0, 1, SFX_TACKLE

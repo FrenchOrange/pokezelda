@@ -98,7 +98,7 @@ SeafoamIslandsB4FCurrentText:
 	done
 
 SeafoamIslandsB4FHiddenUltraBall:
-	hiddenitem NUGGET, EVENT_SEAFOAM_ISLANDS_B4F_HIDDEN_ULTRA_BALL
+	hiddenitem ULTRA_BALL, EVENT_SEAFOAM_ISLANDS_B4F_HIDDEN_ULTRA_BALL
 
 SeafoamIslandsB4F_MapEvents:
 	db 0, 0 ; filler

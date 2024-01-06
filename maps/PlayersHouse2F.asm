@@ -214,8 +214,7 @@ DebugSign:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp SEAFOAM_ISLANDS_B2F, 19, 05
-;	warp ROUTE_23, 11, 06
+	warp ROUTE_23, 11, 06
 	end
 
 PlayersHouse2F_MapEvents:
@@ -232,7 +231,7 @@ PlayersHouse2F_MapEvents:
 	bg_event  7,  1, BGEVENT_READ, PlayersHouseBookshelfScript
 	bg_event  8,  0, BGEVENT_IFSET, PlayersHousePosterScript
 	bg_event  2,  0, BGEVENT_READ, DebugColor
-	bg_event  3,  0, BGEVENT_READ, DebugSign
+	bg_event  5,  0, BGEVENT_READ, DebugSign
 
 	def_object_events
 	object_event  6,  2, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersHouseGameConsoleScript, EVENT_PLAYERS_HOUSE_2F_CONSOLE

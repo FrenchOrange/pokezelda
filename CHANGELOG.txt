@@ -185,6 +185,7 @@
 - Fixed vanilla issue with Tackle's impact graphic. Fix courtesy of SoupPotato.
 - Fixed vanilla issue with the "running away from battle" sfx. Fix courtesy of SoupPotato.
 - Fixed issue with incorrect hidden item in Seafoam Islands B4F.
+- Fixed issue with incorrect surf sprite color in Seafoam Islands. Fix courtesy of Ferropexola.
 - The puzzle in Lt.Surge's gym is now properly implemented. Huge thanks to Seasick, as always!
 - The Waterfall HM is now no longer a missable item. The old HM07 itemball in Ice Path now contains a generic item.
 - Fixed a small layout issue with the first floor of the Dragon's Den.

@@ -264,7 +264,7 @@ ENDM
 	endgroup
 
 	newgroup GOLDENROD                                            ; 11
-	map_const ROUTE_34,                                    11, 27 ;  1
+	map_const ROUTE_34,                                    12, 27 ;  1
 	map_const GOLDENROD_CITY,                              20, 18 ;  2
 	map_const GOLDENROD_GYM,                               12, 11 ;  3
 	map_const GOLDENROD_BIKE_SHOP,                          6,  5 ;  4

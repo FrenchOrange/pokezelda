@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type
-	db 45 ; catch rate
+	db 85 ; catch rate
 	db 167 ; base exp
 	db BURNT_BERRY, BURNT_BERRY ; items
 	db GENDER_F25 ; gender ratio

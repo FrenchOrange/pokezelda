@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 45 ; catch rate
+	db 85 ; catch rate
 	db 136 ; base exp
 	db NO_ITEM, MYSTERYBERRY ; items
 	db GENDER_F50 ; gender ratio

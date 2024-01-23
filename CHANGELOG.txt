@@ -186,7 +186,6 @@
 - Fixed vanilla issue with the "running away from battle" sfx. Fix courtesy of SoupPotato.
 - Fixed issue with incorrect hidden item in Seafoam Islands B4F.
 - Fixed issue with incorrect surf sprite color in Seafoam Islands. Fix courtesy of Ferropexola.
-- Fixed issue with cave entrances when using Flash in a dark cave.
 - The puzzle in Lt.Surge's gym is now properly implemented. Huge thanks to Seasick, as always!
 - The Waterfall HM is now no longer a missable item. The old HM07 itemball in Ice Path now contains a generic item.
 - Fixed a small layout issue with the first floor of the Dragon's Den.
@@ -194,3 +193,10 @@
 - Fixed the look of boulders and mountain corners in the overworld. Based on a map made by Spriters Resource user Leinglo.
 - Updated Jasmine's portrait in the Trainer Card.
 - Reverted changes to Ledyba and Igglybuff's menu icons.
+
+
+1.2.5
+- Fixed issue with cave entrances when using Flash in a dark cave.
+- Adjusted that catch rates of a handful of newly added wild Pokémon.
+
+

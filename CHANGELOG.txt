@@ -197,6 +197,7 @@
 
 1.2.5
 - Fixed issue with cave entrances when using Flash in a dark cave.
+- Fixed issue where Pokémaniac Ron made mention of his vanilla team.
 - Adjusted that catch rates of a handful of newly added wild Pokémon.
 
 

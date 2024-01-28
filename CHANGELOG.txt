@@ -200,4 +200,4 @@
 - Fixed issue where Pokémaniac Ron made mention of his vanilla team.
 - Fixed outdoor spriteset issue in Cianwood City.
 - Adjusted that catch rates of a handful of newly added wild Pokémon.
-- Adjusted the levels of Morty, Pryce, and Mahogany's female Rocket Executive.
+- Adjusted the levels of Morty, Pryce, and most Rocket Executives.

@@ -52,7 +52,7 @@ VictoryRoad3F_MapScripts:
 	refreshscreen $86
 	playsound SFX_STRENGTH
 	earthquake 80
-	changeblock  4,  6, $24 ; switch
+	changeblock  4,  6, $4E ; switch
 	changeblock  8, 12, $03 ; wall
 	reloadmappart
 	closetext
@@ -64,7 +64,7 @@ VictoryRoad3F_MapScripts:
 VictoryRoad3FSwitchCallback:
 	checkevent EVENT_SWITCH_IN_VICTORY_ROAD_3F
 	iffalse .SwitchNotTriggered
-	changeblock  4,  6, $24 ; switch
+	changeblock  4,  6, $4E ; switch
 	changeblock  8, 12, $03 ; wall
 .SwitchNotTriggered:
 	endcallback	

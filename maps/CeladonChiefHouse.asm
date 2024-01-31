@@ -17,7 +17,7 @@ CeladonChiefHouseSailor:
 
 CeladonChiefHouseGrampsText:
 	text "The GAME CORNER"
-	line "got a bad wrap for"
+	line "got a bad rap for"
 	cont "being associated"
 	cont "with TEAM ROCKET."
 

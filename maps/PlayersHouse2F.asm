@@ -205,6 +205,7 @@ DebugSign:
 	giveitem HM_WHIRLPOOL
 	giveitem HM_WATERFALL
 	giveitem TM_ROCK_SMASH, 99
+	giveitem TM_HEADBUTT, 99
 	opentext
 	givepoke FERALIGATR, 100
 	givepoke PIDGEOT, 100

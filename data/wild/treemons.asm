@@ -1,7 +1,7 @@
 TreeMons:
 ; entries correspond to TREEMON_SET_* constants
 	table_width 2, TreeMons
-	dw TreeMonSet_City
+	dw TreeMonSet_Unused
 	dw TreeMonSet_Canyon
 	dw TreeMonSet_Town
 	dw TreeMonSet_Route
@@ -9,12 +9,14 @@ TreeMons:
 	dw TreeMonSet_Lake
 	dw TreeMonSet_Forest
 	dw TreeMonSet_Rock
+	dw TreeMonSet_City
 	assert_table_length NUM_TREEMON_SETS
 
 ; Two tables each (common, rare).
 ; Structure:
 ;	db  %, species, level
 
+TreeMonSet_Unused:
 TreeMonSet_City:
 ; common
 	db 50, VENONAT,    15

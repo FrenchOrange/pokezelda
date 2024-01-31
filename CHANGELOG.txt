@@ -200,8 +200,11 @@
 - Fixed changeblock issue in Victory Road 3F.
 - Fixed issue where Pokémaniac Ron made mention of his vanilla team.
 - Fixed outdoor spriteset issue in Cianwood City.
+- Fixed issue that made it impossible to wake up the sleeping Snorlax.
 - Fixed issue with using Headbutt within cities. Fix courtesy of Crystal_ and Proto.
 - Fixed a typo and a layout issue in the Celadon "Chief" house.
+- Adjusted the placement of the trainers on Route 25, making all of them required to battle.
 - Adjusted that catch rates of a handful of newly added wild Pokémon.
 - Adjusted the levels of Morty, Pryce, and most Rocket Executives.
 - Slightly tweaked the teams of Janine and one of the Rocket Executives.
+- Updated Delibird's back sprite. Courtesy of SoupPotato.

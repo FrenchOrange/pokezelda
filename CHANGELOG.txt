@@ -207,4 +207,5 @@
 - Adjusted that catch rates of a handful of newly added wild Pokémon.
 - Adjusted the levels of Morty, Pryce, and most Rocket Executives.
 - Slightly tweaked the teams of Janine and one of the Rocket Executives.
+- Updated Mewtwo's back sprite.
 - Updated Delibird's back sprite. Courtesy of SoupPotato.

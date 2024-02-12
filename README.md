@@ -21,7 +21,7 @@ The current version is **1.2.5**, with changes documented in [the changelog](CHA
 If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
 
-To compile this rom hack, pokezelda requires RGBDS v0.5.2.
+To compile this rom hack, pokezelda requires [RGBDS v0.5.2](https://github.com/gbdev/rgbds/releases/tag/v0.5.2).
 
 ## Credits
 Some HUGE thanks to:

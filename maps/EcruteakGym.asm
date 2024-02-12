@@ -92,7 +92,7 @@ EcruteakGymClosed:
 	special FadeOutPalettes
 	playsound SFX_ENTER_DOOR
 	waitsfx
-	warp ECRUTEAK_CITY, 6, 27
+	warp ECRUTEAK_CITY, 8, 29
 	end
 
 TrainerSageJeffrey:

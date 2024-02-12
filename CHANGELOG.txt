@@ -196,9 +196,11 @@
 
 
 1.2.5
+- Fixed issues with some shiny palettes and menu icon palettes.
 - Fixed issue with cave entrances when using Flash in a dark cave.
 - Fixed changeblock issue in Victory Road 3F.
 - Fixed issue where Pokémaniac Ron made mention of his vanilla team.
+- Fixed warp issue in Ecruteak City.
 - Fixed outdoor spriteset issue in Cianwood City.
 - Fixed issue that made it impossible to wake up the sleeping Snorlax.
 - Fixed issue with using Headbutt within cities. Fix courtesy of Crystal_ and Proto.

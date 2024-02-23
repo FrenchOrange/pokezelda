@@ -231,7 +231,7 @@ PlayersHouse2F_MapEvents:
 	bg_event  5,  1, BGEVENT_READ, PlayersHouseRadioScript
 	bg_event  7,  1, BGEVENT_READ, PlayersHouseBookshelfScript
 	bg_event  8,  0, BGEVENT_IFSET, PlayersHousePosterScript
-	bg_event  2,  0, BGEVENT_READ, DebugColor
+	bg_event  4,  0, BGEVENT_READ, DebugColor
 	bg_event  5,  0, BGEVENT_READ, DebugSign
 
 	def_object_events

@@ -149,6 +149,7 @@ GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
 FuchsiaCityFisherHouse_Blocks:
+EcruteakEvoGuyHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
 Route43MahoganyGate_Blocks:

@@ -68,6 +68,7 @@ INCLUDE "maps/IlexForestAzaleaGate.asm"
 INCLUDE "maps/Route34IlexForestGate.asm"
 INCLUDE "maps/DayCare.asm"
 INCLUDE "maps/BillsHouse.asm"
+INCLUDE "maps/EcruteakEvoGuyHouse.asm"
 
 
 SECTION "Map Scripts 5", ROMX

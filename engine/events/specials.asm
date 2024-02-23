@@ -419,3 +419,7 @@ TrainerHouse:
 TradebackNPC:
 	farcall TradebackGuy
 	ret
+
+EvolutionNPC:
+	farcall EvolutionGuy
+	ret

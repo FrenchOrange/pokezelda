@@ -178,6 +178,7 @@ ENDM
 	map_const ECRUTEAK_GYM,                                 7, 10 ;  7
 	map_const ECRUTEAK_ITEMFINDER_HOUSE,                    6,  5 ;  8
 	map_const ECRUTEAK_CITY,                               21, 19 ;  9
+	map_const ECRUTEAK_EVO_GUY_HOUSE,                       6,  5 ; 10
 	endgroup
 
 	newgroup BLACKTHORN                                           ;  5

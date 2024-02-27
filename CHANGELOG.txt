@@ -206,6 +206,7 @@
 - Fixed issue with using Headbutt within cities. Fix courtesy of Crystal_ and Proto.
 - Fixed a typo and a layout issue in the Celadon "Chief" house.
 - Implemented a scientist with an "evolution database" in Ecruteak City.
+- Implemented unique Team Rocket-themed battle transition.
 - Adjusted the placement of the trainers on Route 25, making all of them required to battle.
 - Adjusted that catch rates of a handful of newly added wild Pokémon.
 - Adjusted the levels of Morty, Pryce, and most Rocket Executives.

@@ -310,7 +310,7 @@ ENDM
 	connection south, Route13, ROUTE_13, -19
 	connection west, Route11, ROUTE_11, 26
 
-	map_attributes Route11, ROUTE_11, $0f, WEST | EAST
+	map_attributes Route11, ROUTE_11, $a5, WEST | EAST
 	connection west, VermilionCity, VERMILION_CITY, -3
 	connection east, Route12, ROUTE_12, -27
 

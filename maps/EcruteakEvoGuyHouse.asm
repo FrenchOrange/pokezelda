@@ -12,6 +12,9 @@ EcruteakEvoGuyHouse_MapScripts:
 	changeblock 8,  0, $1C ; pc
 	endcallback
 
+EcruteakEvoGuyHousePC:
+	jumptext EcruteakEvoGuyHousePCText
+
 EvolutionGuyScript:
 	faceplayer
 	opentext
@@ -97,6 +100,16 @@ EcruteakEvoGuyHouseEeveeText:
 	text "EEVEE: Vee! Vee!"
 	done
 
+EcruteakEvoGuyHousePCText:
+	text "Laid out on-screen"
+	line "is a messy web of"
+	cont "interconnected"
+	cont "speadsheets."
+
+	para "It hurts just to"
+	line "look at it."
+	done
+
 EcruteakEvoGuyHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -107,6 +120,7 @@ EcruteakEvoGuyHouse_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event  9,  1, BGEVENT_READ, EcruteakEvoGuyHousePC
 
 	def_object_events
 	object_event  9,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EvolutionGuyScript, -1

@@ -49,9 +49,9 @@ CherrygrovePokecenter1FGentlemanText:
 	done
 
 CherrygrovePokecenter1FTeacherText:
-	text "The COMMUNICATION"
-	line "CENTER upstairs"
-	cont "was just built."
+	text "The CABLE CLUB"
+	line "upstairs was built"
+	cont "very recently."
 
 	para "But they're still"
 	line "finishing it up."

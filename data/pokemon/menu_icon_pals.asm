@@ -22,7 +22,7 @@ MonMenuIconPals:
 	icon_pals RED, GREEN   ; BEEDRILL
 	icon_pals BROWN, GREEN ; PIDGEY
 	icon_pals BROWN, GREEN ; PIDGEOTTO
-	icon_pals BROWN, GREEN ; PIDGEOT
+	icon_pals RED, GREEN   ; PIDGEOT
 	icon_pals PINK, GREEN  ; RATTATA
 	icon_pals BROWN, RED   ; RATICATE
 	icon_pals BROWN, GREEN ; SPEAROW
@@ -98,7 +98,7 @@ MonMenuIconPals:
 	icon_pals PINK, BLUE   ; CLOYSTER
 	icon_pals PINK, BLUE   ; GASTLY
 	icon_pals PINK, BLUE   ; HAUNTER
-	icon_pals PINK, BLUE   ; GENGAR
+	icon_pals RED, BLUE    ; GENGAR
 	icon_pals BROWN, GREEN ; ONIX
 	icon_pals BROWN, PINK  ; DROWZEE
 	icon_pals BROWN, PINK  ; HYPNO

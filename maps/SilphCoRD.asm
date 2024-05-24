@@ -54,15 +54,8 @@ ScientistGetsIntoPlace_MovementData:
 	step DOWN
 	step DOWN
 	step RIGHT
-	step RIGHT
-	step DOWN
-	step_end
-
 PlayerGetsIntoPlace_MovementData:
 	step RIGHT
-	step DOWN
-	step_end
-
 PlayerStepsDown_MovementData:
 	step DOWN
 	step_end
@@ -242,9 +235,9 @@ SilphCoRDScientistThanksAgainText:
 	line "going back down to"
 	cont "the lobby so…"
 
-	para "Let me just use"
-	line "this experimental"
-	cont "warp device you'll"
+	para "Let me use this"
+	line "experimental warp"
+	cont "device, and you'll"
 	cont "be on your way."
 
 	para "Bye bye!"

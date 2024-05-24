@@ -43,7 +43,13 @@ PewterMuseum1FLoreScientistScript:
 	jumptextfaceplayer PewterMuseum1FLoreScientistText
 
 PewterMuseum1FClerkScript:
-	jumptextfaceplayer PewterMuseum1FClerkText
+	faceplayer
+	opentext
+	writetext PewterMuseum1FClerkText
+	waitbutton
+	closetext
+	turnobject PEWTERMUSEUM1F_CLERK, LEFT
+	end
 
 PewterMuseum1FBookshelf:
 	jumpstd DifficultBookshelfScript

@@ -213,3 +213,15 @@
 - Slightly tweaked the teams of Janine and one of the Rocket Executives.
 - Updated Arbok's front sprite and Mewtwo's back sprite.
 - Updated Scizor and Delibird's back sprites. Courtesy of SoupPotato.
+
+
+1.2.6
+- Fixed some capitalization and ellipses here and there.
+- Fixed the Pewter City storybook so it always prints the "Read which tale?" string when on the chapter list.
+- Fixed Medium Bethany being able to phase through a rock.
+- Fixed a dialogue crash tied to the Hiker in Saffron's Pokémon Center.
+- Adjusted the player's position in the Mt.Moon rival cutscene.
+- Added some more dialogue to a handful NPCs in Kanto.
+- Made it so the Coin Case is available in Celadon if the player didn't grab it in the Goldenrod udnerground.
+- Changed the reward for the Lake of Rage record-sized Magikarp event.
+- Updated a large amount of menu icons. Courtesy of SoupPotato.

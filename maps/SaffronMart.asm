@@ -24,6 +24,10 @@ SaffronMartCooltrainerMText:
 	text "There's a big"
 	line "RADIO TOWER in"
 	cont "LAVENDER."
+
+	para "But GOLDENROD CITY"
+	line "in JOHTO has an"
+	cont "even bigger one!"
 	done
 
 SaffronMartCooltrainerFText:

@@ -35,6 +35,13 @@ CeruleanPoliceStationFishingGuruText:
 CeruleanPoliceStationPokefanFText:
 	text "We were held up by"
 	line "robbers before."
+
+	para "So we created a"
+	line "neighborhood watch"
+	cont "program, so others"
+
+	para "won't go through"
+	line "what we did."
 	done
 
 CeruleanDiglettText:

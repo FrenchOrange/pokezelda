@@ -154,7 +154,7 @@ CamperThomasSeenText:
 
 CamperThomasBeatenText:
 	text "No ray of hope nor"
-	line "sun for me..."
+	line "sun for me…"
 	done
 
 CamperThomasAfterBattleText:

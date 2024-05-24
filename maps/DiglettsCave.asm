@@ -15,10 +15,13 @@ DiglettsCaveHiddenMaxRevive:
 
 DiglettsCavePokefanMText:
 	text "A bunch of DIGLETT"
-	line "popped out of the"
+	line "popped out from"
+	cont "under the ground."
 
-	para "ground! That was"
-	line "shocking."
+	para "I was so startled"
+	line "I almost fell in"
+	cont "the hole they'd"
+	cont "just made."
 	done
 
 TrainerDollManiacLuke:

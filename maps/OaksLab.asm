@@ -342,7 +342,7 @@ OaksLabBlueTakeThisStarterText:
 
 	para "It's a # BALL"
 	line "containing a JOHTO"
-	cont "partner POKéMON."
+	cont "partner #MON."
 
 	para "I know it's not"
 	line "mine to give, but"

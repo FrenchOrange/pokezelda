@@ -49,10 +49,17 @@ Route6SaffronGuardWelcomeText:
 
 Route6SaffronGuardMagnetTrainText:
 	text "The MAGNET TRAIN"
-	line "is the most famous"
+	line "is but one of the"
 
-	para "thing about SAF-"
-	line "FRON."
+	para "many things to go"
+	line "see in SAFFRON."
+
+	para "Visit the old"
+	line "FIGHTING DOJO, or"
+	cont "pay a visit to the"
+
+	para "mind-bendingly"
+	line "beautiful SABRINA."
 	done
 
 Route6SaffronGate_MapEvents:

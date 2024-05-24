@@ -328,7 +328,13 @@ PowerPlantFisher1Script:
 	jumptextfaceplayer PowerPlantFisher1Text
 
 PowerPlantFisher2Script:
-	jumptextfaceplayer PowerPlantFisher2Text
+	faceplayer
+	opentext
+	writetext PowerPlantFisher2Text
+	waitbutton
+	closetext
+	turnobject POWERPLANT_FISHER2, UP
+	end
 
 PowerPlantReceptionist1Script:
 	jumptextfaceplayer PowerPlantReceptionist1Text

@@ -170,7 +170,7 @@ SilphCoScientistAreYouLost:
 
 SilphCoScientistYoureATrainer:
 	text "Oooh! You're a"
-	line "#MON TRAINER!"
+	line "#MON trainer!"
 
 	para "Oh that's great,"
 	line "marvelous even!"

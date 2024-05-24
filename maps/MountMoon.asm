@@ -20,6 +20,7 @@ MountMoon_MapScripts:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
 	pause 15
+	applymovement PLAYER, MountMoonPlayerMovementStepUp
 	applymovement MOUNTMOON_SILVER, MountMoonSilverMovementBefore
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
@@ -64,7 +65,7 @@ MountMoon_MapScripts:
 	closetext
 	applymovement MOUNTMOON_SILVER, MountMoonSilverMovementAfter
 	disappear MOUNTMOON_SILVER
-	pause 15
+	pause 30
 	setscene SCENE_FINISHED
 	setevent EVENT_BEAT_RIVAL_IN_MT_MOON
 	playmapmusic
@@ -79,6 +80,7 @@ MountMoonSilverMovementBefore:
 MountMoonSilverMovementAfter:
 	step UP
 	step UP
+MountMoonPlayerMovementStepUp:
 	step UP
 	step UP
 	step_end
@@ -233,5 +235,5 @@ MountMoon_MapEvents:
 	bg_event 13, 20, BGEVENT_READ, MtMoonZubatSign
 
 	def_object_events
-	object_event 12, 23, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL
+	object_event 12, 22, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL
 	object_event 28, 27, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacMorgan, EVENT_DECO_CLEFAIRY_DOLL

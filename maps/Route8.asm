@@ -113,10 +113,11 @@ BikerDwayneAfterBattleText:
 	done
 
 BikerHarrisSeenText:
-	text "The cops shut down"
-	line "our UNDERGROUND"
+	text "The cops are"
+	line "surveiling our"
+	cont "UNDERGROUND PATH!"
 
-	para "PATH! That really"
+	para "Man, that really"
 	line "fries me!"
 	done
 

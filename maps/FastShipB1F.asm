@@ -232,7 +232,7 @@ TrashCanText2:
 	done
 
 TrashCanText3:
-	text "Eww... Poor guy."
+	text "Eww… Poor guy."
 	done
 
 FastShipB1FSailorBlocksRightMovement:

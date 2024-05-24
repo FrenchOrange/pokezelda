@@ -167,13 +167,12 @@ SwimmerfDawnAfterBattleText:
 	text "It's a quick swim"
 	line "between FUCHSIA"
 
-	para "and SEAFOAM IS-"
-	line "LANDS…"
+	para "and the SEAFOAM"
+	line "ISLANDS…"
 
 	para "Sheesh, some big"
 	line "man my boyfriend"
-
-	para "is! What a wimp!"
+	cont "is! What a wimp!"
 	done
 
 SwimmermJeromeSeenText:
@@ -227,14 +226,14 @@ SwimmermTonyBeatenText:
 	done
 
 SwimmermTonyAfterBattleText:
-	text "Did you know that"
-	line "different #MON"
-	cont "can be reeled in"
-	cont "at different time?"
+	text "Different #MON"
+	line "can be reeled in"
+	cont "at different times"
+	cont "of the day."
 
 	para "Take STARYU! At"
-	line "night, it gathers"
-	cont "near the shore."
+	line "night, they gather"
+	cont "near the surface."
 	done
 
 SwimmermRickSeenText:

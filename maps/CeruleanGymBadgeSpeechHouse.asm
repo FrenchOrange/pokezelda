@@ -29,6 +29,15 @@ CeruleanGymBadgeSpeechHouseTwinScript:
 CeruleanGymBadgeSpeechHousePokefanMText:
 	text "Are you collecting"
 	line "KANTO GYM BADGES?"
+
+	para "BADGES are a sign"
+	line "of your status as"
+	cont "a #MON TRAINER."
+
+	para "Even #MON seem"
+	line "to recognize and"
+	cont "respect a trainer"
+	cont "with many BADGES."
 	done
 
 CeruleanGymBadgeSpeechHouseTwinText:

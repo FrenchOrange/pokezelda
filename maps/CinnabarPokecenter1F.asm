@@ -58,18 +58,26 @@ CinnabarPokecenter1FNoctowlScript:
 	end
 
 CinnabarPokecenter1FCooltrainerFText:
-	text "CINNABAR GYM's"
-	line "BLAINE apparently"
+	text "CINNABAR's BLAINE"
+	line "couldn't bear to"
+	cont "lose his precious"
 
-	para "lives alone in the"
-	line "SEAFOAM ISLANDS"
-	cont "cave…"
+	para "GYM, so he built"
+	line "a new one in the"
+	cont "SEAFOAM ISLANDS."
 	done
 
 CinnabarPokecenter1FFisherText:
 	text "It's been a year"
 	line "since the volcano"
 	cont "erupted."
+
+	para "Everything was"
+	line "destroyed by it."
+
+	para "The GYM, the LAB,"
+	line "even that old"
+	cont "rickety MANSION…"
 	done
 
 CinnabarPokecenter1FGentlemanNormalText:
@@ -86,9 +94,9 @@ CinnabarPokecenter1FGentlemanNormalText:
 	cont "ocean."
 
 	para "What are we still"
-	line "doing here? Well"
-	cont "we still paid for"
-	cont "this trip!"
+	line "doing here?"
+	cont "Well we still paid"
+	cont "for this trip!"
 
 	para "May as well enjoy"
 	line "it as best we can."

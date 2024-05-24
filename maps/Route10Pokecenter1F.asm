@@ -68,11 +68,9 @@ Route10Pokecenter1FGymGuideText_ReturnedMachinePart:
 	done
 
 Route10Pokecenter1FCooltrainerFText:
-	text "When you go out-"
-	line "side, you can see"
-
-	para "the roof of a big"
-	line "building."
+	text "There is a large"
+	line "building just"
+	para "south of here."
 
 	para "That's the POWER"
 	line "PLANT."

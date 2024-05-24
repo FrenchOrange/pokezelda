@@ -194,6 +194,10 @@ HikerSidneyAfterBattleText:
 	text "The POWER PLANT is"
 	line "across a small"
 	cont "river."
+
+	para "My #MON don't"
+	line "know SURF, so I"
+	cont "can't get to it."
 	done
 
 Route9SignText:

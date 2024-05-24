@@ -19,7 +19,20 @@ PewterCity_MapScripts:
 	endcallback
 
 PewterCityCooltrainerFScript:
-	jumptextfaceplayer PewterCityCooltrainerFText
+	faceplayer
+	opentext
+	checkflag ENGINE_PLAYER_IS_FEMALE
+	iftrue .PlayerIsFemale
+	writetext PewterCityCooltrainerFText
+	waitbutton
+	closetext
+	end
+
+.PlayerIsFemale:
+	writetext PewterCityCooltrainerFGirlText
+	waitbutton
+	closetext
+	end
 
 PewterCityBugCatcherScript:
 	jumptextfaceplayer PewterCityBugCatcherText
@@ -111,6 +124,33 @@ PewterCityCooltrainerFText:
 
 	para "The LEADER uses"
 	line "rock-type #MON."
+
+	para "He really matured"
+	line "these last few"
+	cont "years, but he's"
+	para "still a big dork"
+	line "at heart."
+
+	para "You boys are all"
+	line "cut from the same"
+	cont "cloth. Ha!"
+	done
+
+PewterCityCooltrainerFGirlText:
+	text "Have you visited"
+	line "PEWTER GYM?"
+
+	para "The LEADER uses"
+	line "rock-type #MON."
+
+	para "From one girl to"
+	line "another, let me"
+	cont "tell you… He's a"
+	cont "hopeless romantic!"
+
+	para "Wink at him, and"
+	line "his brain will"
+	cont "shut down. Ha!"
 	done
 
 PewterCityBugCatcherText:

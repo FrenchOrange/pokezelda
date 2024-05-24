@@ -15,6 +15,14 @@ Route8SaffronGateOfficerText:
 
 	para "There's a tall"
 	line "RADIO TOWER there."
+
+	para "The building was"
+	line "once full of the"
+	cont "tombs of #MON."
+
+	para "I wonder if even"
+	line "now a spirit or"
+	cont "two still lingers…"
 	done
 
 Route8SaffronGate_MapEvents:

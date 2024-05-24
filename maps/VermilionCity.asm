@@ -338,7 +338,7 @@ VermilionCityOfficerPartyFullText:
 	done
 
 VermilionCityOfficerNoSquirtleText:
-	text "Oh... What am I"
+	text "Oh… What am I"
 	line "to do now?"
 	done
 

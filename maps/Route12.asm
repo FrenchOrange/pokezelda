@@ -161,11 +161,13 @@ FisherBarneyAfterBattleText:
 	done
 
 FisherKyleSeenText:
-	text "Do you remember?"
+	text "Ah… Fishing…"
+
+	para "You know?"
 	done
 
 FisherKyleBeatenText:
-	text "You do remember?"
+	text "You do know?"
 	done
 
 FisherKyleAfterBattleText:

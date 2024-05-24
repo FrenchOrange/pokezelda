@@ -145,6 +145,9 @@ SwimmerfLoriAfterBattleText:
 	text "SURF is no longer"
 	line "the only HM move"
 	cont "you use in water."
+
+	para "You can even go"
+	line "up waterfalls now!"
 	done
 
 SwimmermCameronSeenText:
@@ -208,6 +211,7 @@ SwimmermPatonAfterBattleText:
 SwimmerfKatieSeenText:
 	text "My MARILL is like"
 	line "a beach-ball."
+
 	para "There, catch!"
 	done
 

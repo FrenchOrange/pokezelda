@@ -252,7 +252,7 @@ CooltrainerMText:
 	para "He offers a reward"
 	line "to whoever will"
 	cont "show him such a"
-	cont "MAGIKARP..."
+	cont "MAGIKARP…"
 	done
 
 Route43Gate_MapEvents:

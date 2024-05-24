@@ -68,13 +68,14 @@ PokemonFanClubClefairyGuyScript:
 .FoundClefairyDoll:
 	writetext PokemonFanClubClefairyGuyMakingDoWithADollIFoundText
 	checkevent EVENT_MET_COPYCAT_FOUND_OUT_ABOUT_LOST_ITEM
-	iftrue .MetCopycat
 	waitbutton
 	closetext
+	iftrue .MetCopycat
 	end
 
 .MetCopycat:
-	promptbutton
+	showemote EMOTE_QUESTION, POKEMONFANCLUB_CLEFAIRY_GUY, 15
+	opentext
 	writetext PokemonFanClubClefairyGuyTakeThisDollBackToGirlText
 	promptbutton
 	waitsfx

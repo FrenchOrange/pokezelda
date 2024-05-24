@@ -105,8 +105,8 @@ CeruleanBikeShopMotherText:
 	line "nasty BIKERS on"
 	cont "CYCLING ROAD."
 
-	para "They don't hold"
-	line "back!"
+	para "They're one really"
+	line "bad lot."
 	done
 
 CeruleanBikeShopLittleBoyText:

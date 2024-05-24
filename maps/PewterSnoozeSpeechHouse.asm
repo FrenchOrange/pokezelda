@@ -38,21 +38,25 @@ PewterSnoozeSpeechHousePokedexScript:
 .Foreword:
 	writetext PewterSnoozeSpeechHouseForewordText
 	waitbutton
+	writetext PewterSnoozeSpeechHousePokedexText
 	sjump .Loop
 
 .Articuno:
 	writetext PewterSnoozeSpeechHouseArticunoText
 	waitbutton
+	writetext PewterSnoozeSpeechHousePokedexText
 	sjump .Loop
 
 .Zapdos:
 	writetext PewterSnoozeSpeechHouseZapdosText
 	waitbutton
+	writetext PewterSnoozeSpeechHousePokedexText
 	sjump .Loop
 
 .Moltres:
 	writetext PewterSnoozeSpeechHouseMoltresText
 	waitbutton
+	writetext PewterSnoozeSpeechHousePokedexText
 	sjump .Loop
 
 .PokedexMenuHeader:
@@ -79,7 +83,9 @@ PewterSnoozeSpeechHouseBookshelf:
 	jumpstd PictureBookshelfScript
 
 PewterSnoozeSpeechHouseGrampsText:
-	text "I like snoozing"
+	text "Zzzz… Hmm…"
+
+	para "I like snoozing"
 	line "with the radio on…"
 	cont "…Zzzz…"
 	done

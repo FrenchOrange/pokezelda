@@ -133,7 +133,7 @@ FuchsiaCityTeacherText:
 	text "The SAFARI ZONE is"
 	line "closed… It's sad,"
 
-	para "considering it's"
+	para "considering it was"
 	line "FUCHSIA's main"
 	cont "attraction."
 	done

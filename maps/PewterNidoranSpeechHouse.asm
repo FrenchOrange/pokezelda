@@ -8,7 +8,23 @@ PewterNidoranSpeechHouse_MapScripts:
 	def_callbacks
 
 PewterNidoranSpeechHouseSuperNerdScript:
-	jumptextfaceplayer PewterNidoranSpeechHouseSuperNerdText
+	opentext 
+	writetext PewterNidoranSpeechHouseSuperNerdText
+	waitbutton
+	closetext
+	cry NIDORAN_M
+	waitsfx
+	showemote EMOTE_HAPPY, PEWTERNIDORANSPEECHHOUSE_NIDORAN_M, 15
+	pause 20
+	showemote EMOTE_HEART, PEWTERNIDORANSPEECHHOUSE_SUPER_NERD, 15
+	pause 20
+	faceplayer
+	opentext
+	writetext PewterNidoranSpeechHouseSuperNerdTricksText
+	waitbutton
+	closetext
+	turnobject PEWTERNIDORANSPEECHHOUSE_SUPER_NERD, RIGHT
+	end
 
 PewterNidoran:
 	opentext
@@ -20,6 +36,11 @@ PewterNidoran:
 
 PewterNidoranSpeechHouseSuperNerdText:
 	text "NIDORAN, shake!"
+	done
+
+PewterNidoranSpeechHouseSuperNerdTricksText:
+	text "I'm teaching my"
+	line "POKéMON tricks!"
 	done
 
 PewterNidoranText:

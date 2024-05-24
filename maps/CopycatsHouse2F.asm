@@ -186,6 +186,9 @@ CopycatsHouse2FDoll:
 CopycatsHouse2FSNESScript:
 	jumptext CopycatsHouse2FSNESText
 
+CopycatsHouse2FPCScript:
+	jumptext CopycatsHouse2FPCText
+
 CopycatSpinAroundMovementData:
 	turn_head DOWN
 	turn_head LEFT
@@ -364,6 +367,16 @@ CopycatsHouse2FSNESText:
 	cont "a green dinosaur!"
 	done
 
+CopycatsHouse2FPCText:
+	text "COPYCAT's PC. It"
+	line "lists her likes"
+	cont "and dislikes."
+
+	para "…She likes dolls"
+	line "and mimicking"
+	cont "things? No way."
+	done
+
 CopycatsHouse2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -374,6 +387,7 @@ CopycatsHouse2F_MapEvents:
 
 	def_bg_events
 	bg_event  5,  5, BGEVENT_READ, CopycatsHouse2FSNESScript
+	bg_event  2,  1, BGEVENT_READ, CopycatsHouse2FPCScript
 
 	def_object_events
 	object_event  6,  3, SPRITE_COPYCAT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Copycat, EVENT_COPYCAT_1

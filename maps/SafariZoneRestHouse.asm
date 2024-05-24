@@ -38,6 +38,9 @@ SafariZoneRestHouseBookshelf1Text:
 	para "-Twitter artist"
 	line "GuiAbel."
 
+	para "-PRET artist"
+	line "SoupPotato."
+
 	para "-The team over at"
 	line "#MON SHOWDOWN."
 
@@ -85,7 +88,7 @@ SafariZoneRestHouseBookshelf4Text:
 
 	para "Credits 4:"
 
-	para "-POKéMON CRYSTAL"
+	para "-#MON CRYSTAL"
 	line "by GAME FREAK."
 
 	para "-LINK'S AWAKENING"

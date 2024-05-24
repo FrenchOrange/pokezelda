@@ -98,8 +98,9 @@ CooltrainermTylerAfterBattleText:
 CooltrainerfGemmaSeenText:
 	text "You just entered"
 	line "VICTORY ROAD."
-	cont "Do you know what"
-	cont "that means?"
+
+	para "Do you know what"
+	line "that means?"
 	done
 
 CooltrainerfGemmaBeatenText:

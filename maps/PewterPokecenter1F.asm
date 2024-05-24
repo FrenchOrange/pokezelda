@@ -37,10 +37,11 @@ Chris:
 
 PewterPokecenter1FTeacherText:
 	text "…Yeah, and the"
-	line "GYM in CINNABAR's"
+	line "recent TEAM ROCKET"
+	cont "sightings were"
 
-	para "gone. I was really"
-	line "amazed."
+	para "true after all."
+	line "I was so shocked."
 
 	para "…Yes? I'm on the"
 	line "phone. Go away!"

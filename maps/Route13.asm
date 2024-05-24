@@ -198,6 +198,7 @@ BeautyTheresaBeatenText:
 BeautyTheresaAfterBattleText:
 	text "The service is"
 	line "always great, but"
+
 	para "the result depends"
 	line "on who's working"
 	cont "that day."

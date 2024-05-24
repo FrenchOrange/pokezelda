@@ -91,7 +91,7 @@ ReceivedKabutoText:
 
 SafariZoneWorker1KabutoText:
 	text "KABUTO is a rare"
-	line "POKéMON. I heard"
+	line "#MON. I heard"
 	cont "only fossils of it"
 	cont "remain today."
 	done

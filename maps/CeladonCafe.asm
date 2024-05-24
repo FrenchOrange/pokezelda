@@ -168,8 +168,9 @@ TeacherText_NoCoinCase:
 	text "Nobody here will"
 	line "give you a COIN"
 
-	para "CASE. You should"
-	line "look in JOHTO."
+	para "CASE. Go pester"
+	line "the GAME CORNER"
+	cont "patrons now, shoo!"
 	done
 
 TeacherText_KeepEating:

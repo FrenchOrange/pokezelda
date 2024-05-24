@@ -60,14 +60,14 @@ SaffronPokecenter1FFisherText:
 	done
 
 SaffronPokecenter1FFisherReturnedMachinePartText:
-	para "One day, all is"
+	text "One day, all is"
 	line "fine. The next?"
 
 	para "A volcano erupts"
 	line "and destroys an"
 	cont "entire island."
 
-	text "Nature truly is"
+	para "Nature truly is"
 	line "unpredictable."
 
 	para "As a pro HIKER,"

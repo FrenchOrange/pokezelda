@@ -25,61 +25,61 @@ Route25_MapScripts:
 	end
 
 Route25PreDate1Script:
-    showemote EMOTE_QUESTION, PLAYER, 20
-    applymovement PLAYER, Route25PlayerMovement1
-    sjump Route25DateScript
+	showemote EMOTE_QUESTION, PLAYER, 20
+	applymovement PLAYER, Route25PlayerMovement1
+	sjump Route25DateScript
 Route25PreDate2Script:
-    showemote EMOTE_QUESTION, PLAYER, 20
-    applymovement PLAYER, Route25PlayerMovement2
-    sjump Route25DateScript
+	showemote EMOTE_QUESTION, PLAYER, 20
+	applymovement PLAYER, Route25PlayerMovement2
+	sjump Route25DateScript
 Route25PreDate3Script:
-    showemote EMOTE_QUESTION, PLAYER, 20
-    applymovement PLAYER, Route25PlayerMovement3
-    sjump Route25DateScript
+	showemote EMOTE_QUESTION, PLAYER, 20
+	applymovement PLAYER, Route25PlayerMovement3
+	sjump Route25DateScript
 Route25PreDate4Script:
-    showemote EMOTE_QUESTION, PLAYER, 20
-    applymovement PLAYER, Route25PlayerMovement4
-    sjump Route25DateScript
+	showemote EMOTE_QUESTION, PLAYER, 20
+	applymovement PLAYER, Route25PlayerMovement4
+	sjump Route25DateScript
 Route25PreDate5Script:
-    showemote EMOTE_QUESTION, PLAYER, 20
-    applymovement PLAYER, Route25PlayerMovement5
-    sjump Route25DateScript
+	showemote EMOTE_QUESTION, PLAYER, 20
+	applymovement PLAYER, Route25PlayerMovement5
+	sjump Route25DateScript
 Route25PreDate6Script:
-    showemote EMOTE_QUESTION, PLAYER, 20
-    applymovement PLAYER, Route25PlayerMovement6
-    sjump Route25DateScript
-    
+	showemote EMOTE_QUESTION, PLAYER, 20
+	applymovement PLAYER, Route25PlayerMovement6
+	sjump Route25DateScript
+	
 Route25DateScript:
-    pause 20
-    showemote EMOTE_HEART, ROUTE25_MISTY, 15
-    pause 30
-    showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
-    pause 30
-    turnobject ROUTE25_COOLTRAINER_M1, UP
-    showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
-    pause 20
-    turnobject ROUTE25_MISTY, DOWN
-    applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
-    disappear ROUTE25_COOLTRAINER_M1
-    pause 15
-    playmusic MUSIC_BEAUTY_ENCOUNTER
-    turnobject ROUTE25_MISTY, UP
-    pause 10
-    applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement
-    turnobject PLAYER, RIGHT
-    opentext
-    writetext Route25MistyDateText
-    waitbutton
-    closetext
-    turnobject PLAYER, UP
-    applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement
-    turnobject PLAYER, LEFT
-    applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
-    disappear ROUTE25_MISTY
-    clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
-    setscene SCENE_ROUTE25_NOTHING
-    special RestartMapMusic  
-    end
+	pause 20
+	showemote EMOTE_HEART, ROUTE25_MISTY, 15
+	pause 30
+	showemote EMOTE_HEART, ROUTE25_COOLTRAINER_M1, 15
+	pause 30
+	turnobject ROUTE25_COOLTRAINER_M1, UP
+	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 15
+	pause 20
+	turnobject ROUTE25_MISTY, DOWN
+	applymovement ROUTE25_COOLTRAINER_M1, Route25MistysDateLeavesMovement
+	disappear ROUTE25_COOLTRAINER_M1
+	pause 15
+	playmusic MUSIC_BEAUTY_ENCOUNTER
+	turnobject ROUTE25_MISTY, UP
+	pause 10
+	applymovement ROUTE25_MISTY, Route25MistyApproachesPlayerMovement
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext Route25MistyDateText
+	waitbutton
+	closetext
+	turnobject PLAYER, UP
+	applymovement ROUTE25_MISTY, Route25MistyLeavesPlayerMovement
+	turnobject PLAYER, LEFT
+	applymovement ROUTE25_MISTY, Route25MistyLeavesMovement
+	disappear ROUTE25_MISTY
+	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
+	setscene SCENE_ROUTE25_NOTHING
+	special RestartMapMusic  
+	end
 
 TrainerSchoolboyDudley:
 	trainer SCHOOLBOY, DUDLEY, EVENT_BEAT_SCHOOLBOY_DUDLEY, SchoolboyDudleySeenText, SchoolboyDudleyBeatenText, 0, .Script
@@ -87,7 +87,7 @@ TrainerSchoolboyDudley:
 .Script:
 	endifjustbattled
 	opentext
-	writetext SchoolboyDudleyAfterBattleText
+	writetext Route25TrainersAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -98,7 +98,7 @@ TrainerLassEllen:
 .Script:
 	endifjustbattled
 	opentext
-	writetext LassEllenAfterBattleText
+	writetext Route25TrainersAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -109,7 +109,7 @@ TrainerSchoolboyJoe:
 .Script:
 	endifjustbattled
 	opentext
-	writetext SchoolboyJoeAfterBattleText
+	writetext Route25TrainersAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -120,7 +120,7 @@ TrainerLassLaura:
 .Script:
 	endifjustbattled
 	opentext
-	writetext LassLauraAfterBattleText
+	writetext Route25TrainersAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -131,7 +131,7 @@ TrainerCamperLloyd:
 .Script:
 	endifjustbattled
 	opentext
-	writetext CamperLloydAfterBattleText
+	writetext Route25TrainersAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -142,7 +142,7 @@ TrainerLassShannon:
 .Script:
 	endifjustbattled
 	opentext
-	writetext LassShannonAfterBattleText
+	writetext Route25TrainersAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -325,7 +325,7 @@ SchoolboyDudleyBeatenText:
 	text "Whoo! Good stuff."
 	done
 
-SchoolboyDudleyAfterBattleText:
+Route25TrainersAfterBattleText:
 	text "I did my best."
 	line "I have no regrets."
 	done
@@ -339,11 +339,6 @@ LassEllenBeatenText:
 	text "How could I lose?"
 	done
 
-LassEllenAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
-	done
-
 SchoolboyJoeSeenText:
 	text "Here's No. 3!"
 	line "I won't be easy."
@@ -351,11 +346,6 @@ SchoolboyJoeSeenText:
 
 SchoolboyJoeBeatenText:
 	text "Ow! Stomped flat!"
-	done
-
-SchoolboyJoeAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
 	done
 
 LassLauraSeenText:
@@ -367,11 +357,6 @@ LassLauraBeatenText:
 	text "I lost too…"
 	done
 
-LassLauraAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
-	done
-
 CamperLloydSeenText:
 	text "OK! I'm No. 5."
 	line "I'll stomp you!"
@@ -379,11 +364,6 @@ CamperLloydSeenText:
 
 CamperLloydBeatenText:
 	text "Whoa! Too much."
-	done
-
-CamperLloydAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
 	done
 
 LassShannonSeenText:
@@ -394,11 +374,6 @@ LassShannonSeenText:
 
 LassShannonBeatenText:
 	text "You're kidding."
-	done
-
-LassShannonAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
 	done
 
 SupernerdPatSeenText:

@@ -24,7 +24,7 @@ ViridianSouthGateTwinText:
 	cont "to eat me!"
 
 	para "And what did my"
-	line "boy-friend do?"
+	line "boyfriend do?"
 
 	para "The idiot tried"
 	line "to catch it!"

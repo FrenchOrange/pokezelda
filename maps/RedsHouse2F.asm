@@ -9,6 +9,9 @@ RedsHouse2FSNESScript:
 RedsHouse2FPCScript:
 	jumptext RedsHouse2FPCText
 
+RedsHouse2FBedScript:
+	jumptext RedsHouse2FBedText
+
 RedsHouse2FSNESText:
 	text "<PLAYER> played the"
 	line "SNES."
@@ -23,6 +26,11 @@ RedsHouse2FPCText:
 	cont "in a long time…"
 	done
 
+RedsHouse2FBedText:
+	text "The sheets are"
+	line "folded neatly."
+	done
+
 RedsHouse2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -34,5 +42,7 @@ RedsHouse2F_MapEvents:
 	def_bg_events
 	bg_event  5,  5, BGEVENT_READ, RedsHouse2FSNESScript
 	bg_event  2,  1, BGEVENT_READ, RedsHouse2FPCScript
+	bg_event  2,  6, BGEVENT_READ, RedsHouse2FBedScript
+	bg_event  2,  7, BGEVENT_READ, RedsHouse2FBedScript
 
 	def_object_events

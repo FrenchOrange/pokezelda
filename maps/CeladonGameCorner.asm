@@ -91,7 +91,32 @@ CeladonGameCornerFisherScript:
 	end
 
 CeladonGymGuideScript:
-	jumptextfaceplayer CeladonGymGuideText
+	faceplayer
+	opentext
+	checkevent EVENT_GOLDENROD_UNDERGROUND_COIN_CASE
+	iffalse .NoCoinCase
+	writetext CeladonGymGuideGotCoinCaseText
+	waitbutton
+	closetext
+	end
+
+.NoCoinCase:
+	writetext CeladonGymGuideNoCoinCaseText1
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, CELADONGAMECORNER_GYM_GUIDE, 15
+	opentext
+	writetext CeladonGymGuideNoCoinCaseText2
+	promptbutton
+	waitsfx
+	giveitem COIN_CASE
+	setevent EVENT_GOLDENROD_UNDERGROUND_COIN_CASE
+	writetext CeladonGameCorner_GotCoinCaseText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	itemnotify
+	closetext
+	end
 
 CeladonGameCornerGrampsScript:
 	faceplayer
@@ -233,7 +258,32 @@ CeladonGameCornerFisherFullCoinCaseText:
 	cont "too."
 	done
 
-CeladonGymGuideText:
+CeladonGymGuideNoCoinCaseText1:
+	text "Hey! CHAMP in"
+	line "making!"
+
+	para "Fancy seeing you"
+	line "here!"
+
+	para "Decided to partake"
+	line "in some harmless"
+	cont "slots action too?"
+	done
+
+CeladonGymGuideNoCoinCaseText2:
+	text "Uh? You don't have"
+	line "a COIN CASE?"
+
+	para "That's terrible!"
+	line "Here, have a spare"
+	cont "one of mine."
+
+	para "I keep it around"
+	line "just in case this"
+	cont "happens."
+	done
+
+CeladonGymGuideGotCoinCaseText:
 	text "Hey! CHAMP in"
 	line "making!"
 
@@ -246,6 +296,11 @@ CeladonGymGuideText:
 
 	para "But I don't have"
 	line "enough coins yet…"
+	done
+
+CeladonGameCorner_GotCoinCaseText:
+	text "<PLAYER> received"
+	line "COIN CASE."
 	done
 
 CeladonGameCornerGrampsText:

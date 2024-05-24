@@ -222,6 +222,6 @@
 - Fixed a dialogue crash tied to the Hiker in Saffron's Pokémon Center.
 - Adjusted the player's position in the Mt.Moon rival cutscene.
 - Added some more dialogue to a handful NPCs in Kanto.
-- Made it so the Coin Case is available in Celadon if the player didn't grab it in the Goldenrod udnerground.
+- Made it so the Coin Case is available in Celadon if the player didn't grab it in the Goldenrod Underground.
 - Changed the reward for the Lake of Rage record-sized Magikarp event.
 - Updated a large amount of menu icons. Courtesy of SoupPotato.

@@ -38,6 +38,7 @@ SpriteMons:
 	db DODRIO
 	db SKARMORY
 	db RHYDON
+	db GROWLITHE
 	db MACHOKE
 	db ABRA
 	db GYARADOS
@@ -54,6 +55,7 @@ SpriteMons:
 	db MURKROW
 	db SPEAROW
 	db RATTATA
+	db BELLSPROUT
 	db BELLOSSOM
 	db NOCTOWL
 	db PORYGON2

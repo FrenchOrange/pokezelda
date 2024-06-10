@@ -248,6 +248,9 @@ PokefanfRuthAfterBattleText:
 
 	para "I bet they're just"
 	line "adorable!"
+
+	para "Even PIKACHU has a"
+	line "baby form, I hear!"
 	done
 
 PokefanMDerekPikachuIsItText:

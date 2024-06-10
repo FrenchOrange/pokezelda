@@ -65,6 +65,9 @@ RocketBaseRival:
 	turnobject PLAYER, LEFT
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
 	appear TEAMROCKETBASEB3F_SILVER
 	applymovement TEAMROCKETBASEB3F_SILVER, RocketBaseRivalEnterMovement
 	turnobject PLAYER, LEFT
@@ -76,6 +79,9 @@ RocketBaseRival:
 	playsound SFX_TACKLE
 	applymovement PLAYER, RocketBaseRivalShovesPlayerMovement
 	applymovement TEAMROCKETBASEB3F_SILVER, RocketBaseRivalLeavesMovement
+	pause 15
+	playsound SFX_EXIT_BUILDING
+	waitsfx
 	disappear TEAMROCKETBASEB3F_SILVER
 	setscene SCENE_TEAMROCKETBASEB3F_ROCKET_BOSS
 	special RestartMapMusic
@@ -113,6 +119,8 @@ RocketBaseBoss:
 	applymovement TEAMROCKETBASEB3F_ROCKET1, RocketBaseBossHitsTableMovement
 	playsound SFX_TACKLE
 	applymovement TEAMROCKETBASEB3F_ROCKET1, RocketBaseBossLeavesMovement
+	playsound SFX_EXIT_BUILDING
+	waitsfx
 	disappear TEAMROCKETBASEB3F_ROCKET1
 	setscene SCENE_TEAMROCKETBASEB3F_NOTHING
 	end
@@ -321,7 +329,7 @@ LanceGetPasswordText:
 	line "two passwords to"
 
 	para "get into the"
-	line "boss's quarters."
+	line "boss' quarters."
 
 	para "Those passwords"
 	line "are known only to"
@@ -427,8 +435,8 @@ ExecutiveM4AfterText:
 	done
 
 RocketBaseMurkrowText:
-	text "MURKROW: The"
-	line "password is…"
+	text "MURKROW: Kroow!"
+	line "The password is…"
 
 	para "HAIL GIOVANNI."
 	done

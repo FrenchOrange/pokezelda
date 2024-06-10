@@ -38,22 +38,7 @@ PewterCityBugCatcherScript:
 	jumptextfaceplayer PewterCityBugCatcherText
 
 PewterCityGrampsScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_SILVER_WING
-	iftrue .GotSilverWing
-	writetext PewterCityGrampsText
-	promptbutton
-	verbosegiveitem SILVER_WING
-	setevent EVENT_GOT_SILVER_WING
-	closetext
-	end
-
-.GotSilverWing:
-	writetext PewterCityGrampsText_GotSilverWing
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PewterCityGrampsText
 
 TrainerDollManiacHorace:
 	trainer DOLL_MANIAC, HORACE, EVENT_BEAT_DOLL_MANIAC_HORACE, DollManiacHoraceSeenText, DollManiacHoraceBeatenText, 0, .Script
@@ -163,34 +148,12 @@ PewterCityBugCatcherText:
 	done
 
 PewterCityGrampsText:
-	text "Ah, you came all"
-	line "the way out here"
-	cont "from JOHTO?"
+	text "The museum's reno-"
+	line "vations are over."
 
-	para "That brings back"
-	line "memories. When I"
-
-	para "was young, I went"
-	line "to JOHTO to train."
-
-	para "You remind me so"
-	line "much of what I was"
-
-	para "like as a young"
-	line "man."
-
-	para "Here. I want you"
-	line "to have this item"
-	cont "I found in JOHTO."
-	done
-
-PewterCityGrampsText_GotSilverWing:
-	text "Going to new, un-"
-	line "known places and"
-	cont "seeing new people…"
-
-	para "Those are the joys"
-	line "of travel."
+	para "They added a whole"
+	line "new floor, and"
+	cont "then some!"
 	done
 
 PewterCitySignText:

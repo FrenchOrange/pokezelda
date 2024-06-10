@@ -45,8 +45,10 @@ GoldenrodPPSpeechHouseLassText:
 
 	para "If that happens,"
 	line "heal it at a #-"
-	cont "MON CENTER or use"
-	cont "an item."
+	cont "MON CENTER, or use"
+
+	para "either an ETHER or"
+	line "an ELIXIR."
 	done
 
 GoldenrodPPSpeechHouse_MapEvents:

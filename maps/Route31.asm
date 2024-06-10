@@ -186,14 +186,14 @@ Route31MailRecipientScript:
 	opentext
 	checkevent EVENT_GOT_TM50_NIGHTMARE
 	iftrue .DescribeNightmare
-	checkevent EVENT_GOT_KENYA
-	iftrue .TryGiveKenya
+	checkevent EVENT_GOT_TALON
+	iftrue .TryGiveTalon
 	writetext Text_Route31SleepyMan
 	waitbutton
 	closetext
 	end
 
-.TryGiveKenya:
+.TryGiveTalon:
 	writetext Text_Route31SleepyManGotMail
 	promptbutton
 	checkpokemail ReceivedSpearowMailText
@@ -206,7 +206,7 @@ Route31MailRecipientScript:
 	promptbutton
 	writetext Text_Route31ReadingMail
 	promptbutton
-	setevent EVENT_GAVE_KENYA
+	setevent EVENT_GAVE_TALON
 	verbosegiveitem TM_NIGHTMARE
 	iffalse .NoRoomForItems
 	setevent EVENT_GOT_TM50_NIGHTMARE
@@ -269,9 +269,9 @@ Route31PokeBall:
 Route31CooltrainerMText:
 	text "DARK CAVE…"
 
-	para "If #MON could"
-	line "light it up, I'd"
-	cont "explore it."
+	para "If my #MON"
+	line "could light it up,"
+	cont "I'd explore it."
 	done
 
 BugCatcherWade1SeenText:

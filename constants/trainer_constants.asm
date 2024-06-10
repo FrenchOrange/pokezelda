@@ -106,9 +106,6 @@ KRIS EQU __trainer_class__
 	const JED
 	const MARC
 	const RICH
-	const RUSS
-	const NORTON
-	const AVERY
 
 	trainerclass ERIKA ; 15
 	const ERIKA1
@@ -728,5 +725,10 @@ KRIS EQU __trainer_class__
 	const JACKIE
 	const ARCHIE
 	const RUPERT
+
+	trainerclass GOOD_SCIENTIST ; 45
+	const RUSS
+	const NORTON
+	const AVERY
 
 NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

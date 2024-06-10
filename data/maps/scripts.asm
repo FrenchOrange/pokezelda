@@ -69,6 +69,7 @@ INCLUDE "maps/Route34IlexForestGate.asm"
 INCLUDE "maps/DayCare.asm"
 INCLUDE "maps/BillsHouse.asm"
 INCLUDE "maps/EcruteakEvoGuyHouse.asm"
+INCLUDE "maps/SafariZoneRestHouse.asm"
 
 
 SECTION "Map Scripts 5", ROMX
@@ -272,6 +273,7 @@ INCLUDE "maps/TinTower8F.asm"
 INCLUDE "maps/TinTower9F.asm"
 INCLUDE "maps/BurnedTower1F.asm"
 INCLUDE "maps/BurnedTowerB1F.asm"
+INCLUDE "maps/SilverCaveOutside.asm"
 
 
 SECTION "Map Scripts 15", ROMX
@@ -395,14 +397,13 @@ INCLUDE "maps/BluesHouse.asm"
 SECTION "Map Scripts 20", ROMX
 
 INCLUDE "maps/CherrygroveCity.asm"
+INCLUDE "maps/Route26.asm"
 INCLUDE "maps/Route35.asm"
 INCLUDE "maps/Route43.asm"
 INCLUDE "maps/Route44.asm"
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
-INCLUDE "maps/SilverCaveOutside.asm"
-INCLUDE "maps/SafariZoneRestHouse.asm"
 
 
 SECTION "Map Scripts 21", ROMX
@@ -425,7 +426,6 @@ SECTION "Map Scripts 22", ROMX
 
 INCLUDE "maps/EcruteakCity.asm"
 INCLUDE "maps/BlackthornCity.asm"
-INCLUDE "maps/Route26.asm"
 INCLUDE "maps/Route28.asm"
 INCLUDE "maps/Route31.asm"
 INCLUDE "maps/Route39.asm"
@@ -433,6 +433,7 @@ INCLUDE "maps/Route40.asm"
 INCLUDE "maps/Route41.asm"
 INCLUDE "maps/PewterMuseum1F.asm"
 INCLUDE "maps/PewterMuseum2F.asm"
+INCLUDE "maps/PewterMuseum3F.asm"
 INCLUDE "maps/PewterMuseumB1F.asm"
 
 

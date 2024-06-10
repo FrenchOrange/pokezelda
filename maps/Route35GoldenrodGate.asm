@@ -13,10 +13,10 @@ RandyScript:
 	opentext
 	checkevent EVENT_GOT_HP_UP_FROM_RANDY
 	iftrue .gothpup
-	checkevent EVENT_GAVE_KENYA
+	checkevent EVENT_GAVE_TALON
 	iftrue .questcomplete
-	checkevent EVENT_GOT_KENYA
-	iftrue .alreadyhavekenya
+	checkevent EVENT_GOT_TALON
+	iftrue .alreadyhavetalon
 	writetext Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText
 	yesorno
 	iffalse .refused
@@ -30,8 +30,8 @@ RandyScript:
 	waitsfx
 	givepoke SPEAROW, 10, NO_ITEM, GiftSpearowName, GiftSpearowOTName
 	givepokemail GiftSpearowMail
-	setevent EVENT_GOT_KENYA
-.alreadyhavekenya
+	setevent EVENT_GOT_TALON
+.alreadyhavetalon
 	writetext Route35GoldenrodGateRandyWeirdTreeBlockingRoadText
 	waitbutton
 	closetext
@@ -68,7 +68,7 @@ GiftSpearowMail:
 	next "to another road@"
 
 GiftSpearowName:
-	db "KENYA@"
+	db "TALON@"
 
 GiftSpearowOTName:
 	db "RANDY@"
@@ -170,9 +170,8 @@ Route35GoldenrodGatePokefanFText:
 
 	para "I heard it became"
 	line "wild when someone"
-
-	para "watered it with a"
-	line "SQUIRTBOTTLE."
+	cont "watered it with a"
+	cont "SQUIRTBOTTLE."
 	done
 
 Route35GoldenrodGatePokefanFText_FoughtSudowoodo:
@@ -184,15 +183,18 @@ Route35GoldenrodGatePokefanFText_FoughtSudowoodo:
 Route35GoldenrodGateFisherText:
 	text "I wonder how many"
 	line "kinds of #MON"
-
-	para "there are in the"
-	line "world."
+	cont "there are in the"
+	cont "world."
 
 	para "Three years ago,"
 	line "PROF.OAK said that"
+	cont "there were 150"
+	cont "different kinds."
 
-	para "there were 150"
-	line "different kinds."
+	para "But PROF.ELM came"
+	line "along and helped"
+	cont "expand that number"
+	cont "by close to 100!"
 	done
 
 Route35GoldenrodGate_MapEvents:

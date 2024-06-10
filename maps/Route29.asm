@@ -329,6 +329,10 @@ Route29FisherText:
 
 	para "to record my"
 	line "progress."
+
+	para "I learned that"
+	line "from a book in"
+	cont "PROF.ELM's LAB!"
 	done
 
 Route29CooltrainerMText_WaitingForDay:

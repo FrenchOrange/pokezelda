@@ -102,7 +102,7 @@ TrainerSuperNerdDave:
 	end
 
 TrainerScientistRuss:
-	trainer SCIENTIST, RUSS, EVENT_BEAT_SCIENTIST_RUSS, ScientistRussSeenText, ScientistRussBeatenText, 0, .Script
+	trainer GOOD_SCIENTIST, RUSS, EVENT_BEAT_SCIENTIST_RUSS, ScientistRussSeenText, ScientistRussBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -113,7 +113,7 @@ TrainerScientistRuss:
 	end
 
 TrainerScientistNorton:
-	trainer SCIENTIST, NORTON, EVENT_BEAT_SCIENTIST_NORTON, ScientistNortonSeenText, ScientistNortonBeatenText, 0, .Script
+	trainer GOOD_SCIENTIST, NORTON, EVENT_BEAT_SCIENTIST_NORTON, ScientistNortonSeenText, ScientistNortonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -124,7 +124,7 @@ TrainerScientistNorton:
 	end
 
 TrainerScientistAvery:
-	trainer SCIENTIST, AVERY, EVENT_BEAT_SCIENTIST_AVERY, ScientistAverySeenText, ScientistAveryBeatenText, 0, .Script
+	trainer GOOD_SCIENTIST, AVERY, EVENT_BEAT_SCIENTIST_AVERY, ScientistAverySeenText, ScientistAveryBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -282,8 +282,9 @@ ScientistNortonSeenText:
 	text "It's ironic how"
 	line "this GYM was built"
 	cont "right next to an"
-	para "ice cave."
-	line "Don't you think?"
+	cont "icy cave."
+
+	para "Don't you think?"
 	done
 
 ScientistNortonBeatenText:
@@ -367,11 +368,11 @@ SeafoamGym_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event 11, 12, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SeafoamGymBlaineScript, -1
-	object_event 12, 18, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SeafoamGymGuideScript, -1
+	object_event 11, 12, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamGymBlaineScript, -1
+	object_event 12, 18, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamGymGuideScript, -1
 	object_event 16, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSuperNerdGregg, -1
 	object_event  8,  8, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSuperNerdJay, -1
 	object_event 10,  5, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSuperNerdDave, -1
-	object_event 10, 15, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerScientistRuss, -1
-	object_event 13,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerScientistNorton, -1
-	object_event  6, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerScientistAvery, -1
+	object_event 10, 15, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerScientistRuss, -1
+	object_event 13,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerScientistNorton, -1
+	object_event  6, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerScientistAvery, -1

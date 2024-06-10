@@ -1,6 +1,7 @@
 	object_const_def
 	const ROUTE36RUINSOFALPHGATE_OFFICER
 	const ROUTE36RUINSOFALPHGATE_GRAMPS
+	const ROUTE36RUINSOFALPHGATE_TEACHER
 
 Route36RuinsOfAlphGate_MapScripts:
 	def_scene_scripts
@@ -13,9 +14,12 @@ Route36RuinsOfAlphGateOfficerScript:
 Route36RuinsOfAlphGateGrampsScript:
 	jumptextfaceplayer Route36RuinsOfAlphGateGrampsText
 
+Route36RuinsOfAlphGateTeacherScript:
+	jumptextfaceplayer Route36RuinsOfAlphGateTeacherText
+
 Route36RuinsOfAlphGateOfficerText:
 	text "Don't you wonder"
-	line "who'd make some-"
+	line "who'd build some-"
 	cont "thing like this?"
 	cont "And why?"
 	done
@@ -30,6 +34,20 @@ Route36RuinsOfAlphGateGrampsText:
 
 	para "are visiting the"
 	line "RUINS OF ALPH."
+	done
+
+Route36RuinsOfAlphGateTeacherText:
+	text "I was out visiting"
+	line "the RUINS when my"
+	cont "POKéMON suddenly"
+	cont "became restless."
+
+	para "It kept barking at"
+	line "the walls."
+
+	para "To be honest… It"
+	line "was like we weren't"
+	cont "alone in there."
 	done
 
 Route36RuinsOfAlphGate_MapEvents:
@@ -48,3 +66,4 @@ Route36RuinsOfAlphGate_MapEvents:
 	def_object_events
 	object_event  2,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route36RuinsOfAlphGateOfficerScript, -1
 	object_event  9,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route36RuinsOfAlphGateGrampsScript, -1
+	object_event  8,  1, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route36RuinsOfAlphGateTeacherScript, EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_FISHER

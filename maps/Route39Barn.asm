@@ -2,6 +2,7 @@
 	const ROUTE39BARN_TWIN1
 	const ROUTE39BARN_TWIN2
 	const ROUTE39BARN_MOOMOO
+	const ROUTE39BARN_MOOMOO_HEALED
 
 Route39Barn_MapScripts:
 	def_scene_scripts
@@ -105,6 +106,7 @@ MoomooScript:
 	waitbutton
 	closetext
 	setevent EVENT_HEALED_MOOMOO
+	clearevent EVENT_ANIMATED_MOOMOO
 	end
 
 .NoBerriesInBag:
@@ -130,8 +132,8 @@ MoomooScript:
 Route39BarnTwinMoomooIsSickText:
 	text "MOOMOO is sick…"
 
-	para "She needs lots of"
-	line "BERRIES."
+	para "Maybe papa knows"
+	line "what to do?"
 	done
 
 Route39BarnTwinWereFeedingMoomooText:
@@ -202,4 +204,5 @@ Route39Barn_MapEvents:
 	def_object_events
 	object_event  4,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39BarnTwin1Script, -1
 	object_event  6,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route39BarnTwin2Script, -1
-	object_event  5,  3, SPRITE_MILTANK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MoomooScript, -1
+	object_event  5,  3, SPRITE_MILTANK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MoomooScript, EVENT_HEALED_MOOMOO
+	object_event  5,  3, SPRITE_MILTANK, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MoomooScript, EVENT_ANIMATED_MOOMOO

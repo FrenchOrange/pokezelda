@@ -138,7 +138,7 @@ SwimmermSimonSeenText:
 	done
 
 SwimmermSimonBeatenText:
-	text "OK! Uncle! I give!"
+	text "OK! Man! I give!"
 	done
 
 SwimmermSimonAfterBattleText:

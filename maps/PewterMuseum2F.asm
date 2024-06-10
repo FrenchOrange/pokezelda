@@ -52,6 +52,12 @@ PewterMuseum2FDisplay:
 PewterMuseum2FShuttle:
 	jumptext PewterMuseum2FShuttleText
 
+PewterMuseum2FPoster1:
+	jumptext PewterMuseum2FPoster1Text
+
+PewterMuseum2FPoster2:
+	jumptext PewterMuseum2FPoster2Text
+
 PewterMuseum2FReceptionistText:
 	text "A journey into"
 	line "outer-space."
@@ -123,17 +129,42 @@ PewterMuseum2FShuttleText:
 	line "(Replica)"
 	done
 
+PewterMuseum2FPoster1Text:
+	text "A map of our solar"
+	line "system! Hmm…"
+
+	para "Do #MON exist"
+	line "on other planets?"
+	done
+
+PewterMuseum2FPoster2Text:
+	text "A chart explaining"
+	line "the intricacies of"
+	cont "space travel."
+
+	para "It's very dense,"
+	line "but at the bottom"
+	cont "is a cute drawing"
+
+	para "of an astronaut"
+	line "shaking hands with"
+	cont "a CLEFAIRY."
+	done
+
 PewterMuseum2F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
 	warp_event  9,  7, PEWTER_MUSEUM_1F, 5
+	warp_event 15,  7, PEWTER_MUSEUM_3F, 1
 
 	def_coord_events
 
 	def_bg_events
 	bg_event  4,  5, BGEVENT_READ, PewterMuseum2FDisplay
 	bg_event 14,  2, BGEVENT_READ, PewterMuseum2FShuttle
+	bg_event  9,  0, BGEVENT_READ, PewterMuseum2FPoster1
+	bg_event  5,  0, BGEVENT_READ, PewterMuseum2FPoster2
 
 	def_object_events
 	object_event  9,  5, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterMuseum2FReceptionistScript, -1

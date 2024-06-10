@@ -81,7 +81,7 @@ RuinsOfAlphOmanyteChamberDescriptionSign:
 
 RuinsOfAlphOmanyteChamberWallPatternLeft:
 	opentext
-	writetext RuinsOfAlphOmanyteChamberWallPatternLeftText
+	writetext RuinsOfAlphOmanyteChamberWallPatternText
 	setval UNOWNWORDS_WATER
 	special DisplayUnownWords
 	closetext
@@ -91,7 +91,7 @@ RuinsOfAlphOmanyteChamberWallPatternRight:
 	checkevent EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
 	iftrue .WallOpen
 	opentext
-	writetext RuinsOfAlphOmanyteChamberWallPatternRightText
+	writetext RuinsOfAlphOmanyteChamberWallPatternText
 	setval UNOWNWORDS_WATER
 	special DisplayUnownWords
 	closetext
@@ -108,12 +108,7 @@ RuinsOfAlphOmanyteChamberSkyfallTopMovement:
 	skyfall_top
 	step_end
 
-RuinsOfAlphOmanyteChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
-
-RuinsOfAlphOmanyteChamberWallPatternRightText:
+RuinsOfAlphOmanyteChamberWallPatternText:
 	text "Patterns appeared"
 	line "on the walls…"
 	done

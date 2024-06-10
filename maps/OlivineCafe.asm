@@ -24,8 +24,8 @@ OlivineCafeStrengthSailorScript:
 	closetext
 	end
 
-OlivineCafeFishingGuruScript:
-	jumptextfaceplayer OlivineCafeFishingGuruText
+OlivineCafeSuperNerdScript:
+	jumptextfaceplayer OlivineCafeSuperNerdText
 
 OlivineCafeSailorScript:
 	jumptextfaceplayer OlivineCafeSailorText
@@ -55,7 +55,7 @@ OlivineCafeStrengthSailorText_GotStrength:
 	line "buff bod!"
 	done
 
-OlivineCafeFishingGuruText:
+OlivineCafeSuperNerdText:
 	text "OLIVINE CAFE's"
 	line "menu is chock full"
 
@@ -98,6 +98,6 @@ OlivineCafe_MapEvents:
 
 	def_object_events
 	object_event  6,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeStrengthSailorScript, -1
-	object_event  9,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeFishingGuruScript, -1
+	object_event  9,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, OlivineCafeSuperNerdScript, -1
 	object_event  8,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeSailorScript, -1
 	object_event  4,  4, SPRITE_FISHING_GURU, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Tim, -1

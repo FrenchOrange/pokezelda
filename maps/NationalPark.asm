@@ -336,6 +336,12 @@ NationalParkBattleNoticeSign:
 NationalParkTrainerTipsSign:
 	jumptext NationalParkTrainerTipsText
 
+NationalParkWaterFeature:
+	jumptext NationalParkWaterFeatureText
+
+NationalParkTrashcan:
+	jumpstd TrashCanScript
+
 NationalParkParlyzHeal:
 	itemball PARLYZ_HEAL
 
@@ -551,6 +557,12 @@ NationalParkTrainerTipsText:
 	cont "pressing START."
 	done
 
+NationalParkWaterFeatureText:
+	text "A water feature"
+	line "for bird #MON"
+	cont "to drink out of."
+	done
+
 NationalPark_MapEvents:
 	db 0, 0 ; filler
 
@@ -567,6 +579,9 @@ NationalPark_MapEvents:
 	bg_event 29, 31, BGEVENT_READ, NationalParkBattleNoticeSign
 	bg_event  8, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal
 	bg_event 14,  4, BGEVENT_READ, NationalParkTrainerTipsSign
+	bg_event 23, 40, BGEVENT_READ, NationalParkWaterFeature
+	bg_event 14, 40, BGEVENT_READ, NationalParkTrashcan
+	bg_event 32, 40, BGEVENT_READ, NationalParkTrashcan
 
 	def_object_events
 	object_event 17, 24, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkLassScript, -1

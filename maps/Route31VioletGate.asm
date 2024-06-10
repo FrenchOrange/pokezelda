@@ -17,6 +17,11 @@ Route31VioletGateOfficerText:
 	text "Hi there!"
 	line "Did you visit"
 	cont "SPROUT TOWER?"
+
+	para "It's a good place"
+	line "for those who want"
+	cont "to train their"
+	cont "POKéMON."
 	done
 
 Route31VioletGateCooltrainerFText:

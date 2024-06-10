@@ -113,7 +113,13 @@ Route32RoarTMGuyScript:
 
 Route32WannaBuyASlowpokeTailScript:
 	turnobject ROUTE32_FISHER4, DOWN
+	showemote EMOTE_SHOCK, ROUTE32_FISHER4, 15
+	opentext
+	writetext Text_HeyKid
+	waitbutton
+	closetext
 	turnobject PLAYER, UP
+	showemote EMOTE_QUESTION, PLAYER, 15
 	sjump _OfferToSellSlowpokeTail
 
 SlowpokeTailSalesmanScript:
@@ -579,6 +585,10 @@ Route32CooltrainerMText_ExperiencesShouldBeUseful:
 
 	para "should be useful"
 	line "for your journey."
+	done
+
+Text_HeyKid:
+	text "Hey, kiddo!"
 	done
 
 Text_MillionDollarSlowpokeTail:

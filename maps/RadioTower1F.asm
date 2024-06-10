@@ -178,10 +178,22 @@ RadioTower1FRadioCardWomanScript:
 	end
 
 RadioTower1FLassScript:
-	jumptextfaceplayer RadioTower1FLassText
+	faceplayer
+	opentext
+	writetext RadioTower1FLassText
+	waitbutton
+	closetext
+	turnobject RADIOTOWER1F_LASS, LEFT
+	end
 
 RadioTower1FYoungsterScript:
-	jumptextfaceplayer RadioTower1FYoungsterText
+	faceplayer
+	opentext
+	writetext RadioTower1FYoungsterText
+	waitbutton
+	closetext
+	turnobject RADIOTOWER1F_YOUNGSTER, RIGHT
+	end
 
 TrainerGruntM3:
 	trainer GRUNTM, GRUNTM_3, EVENT_BEAT_ROCKET_GRUNTM_3, GruntM3SeenText, GruntM3BeatenText, 0, .Script

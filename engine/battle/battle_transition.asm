@@ -738,6 +738,8 @@ INCLUDE "gfx/overworld/trainer_battle_dark.pal"
 	ret z
 	cp EXECUTIVEF
 	ret z
+	cp SCIENTIST
+	ret z
  	ld de, PokeBallTransition
  	ret
 

@@ -118,7 +118,7 @@ RuinsOfAlphKabutoChamberDescriptionSign:
 
 RuinsOfAlphKabutoChamberWallPatternLeft:
 	opentext
-	writetext RuinsOfAlphKabutoChamberWallPatternLeftText
+	writetext RuinsOfAlphKabutoChamberWallPatternText
 	setval UNOWNWORDS_ESCAPE
 	special DisplayUnownWords
 	closetext
@@ -128,7 +128,7 @@ RuinsOfAlphKabutoChamberWallPatternRight:
 	checkevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
 	iftrue .WallOpen
 	opentext
-	writetext RuinsOfAlphKabutoChamberWallPatternRightText
+	writetext RuinsOfAlphKabutoChamberWallPatternText
 	setval UNOWNWORDS_ESCAPE
 	special DisplayUnownWords
 	closetext
@@ -200,12 +200,7 @@ RuinsOfAlphKabutoChamberScientistTremorText:
 	cont "this wall here…"
 	done
 
-RuinsOfAlphKabutoChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
-
-RuinsOfAlphKabutoChamberWallPatternRightText:
+RuinsOfAlphKabutoChamberWallPatternText:
 	text "Patterns appeared"
 	line "on the walls…"
 	done

@@ -1,7 +1,3 @@
 
 - - Graphical Issues - -
-* Title screen is still a work in progress.
-
-
-- - Miscellaneous Issues - -
-* Can't exit color picker menu (Debug).
+* The title screen is still a work in progress.

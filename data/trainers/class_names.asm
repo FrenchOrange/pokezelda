@@ -69,4 +69,5 @@ TrainerClassNames::
 	li "ROCKET"
 	li "MYSTICALMAN"
 	li "DOLL MANIAC"
+	li "SCIENTIST"
 	assert_list_length NUM_TRAINER_CLASSES

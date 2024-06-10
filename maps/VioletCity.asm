@@ -215,11 +215,13 @@ VioletCityLassText:
 	line "to appear in"
 	cont "SPROUT TOWER."
 
-	para "They said normal-"
-	line "type #MON moves"
+	para "My best friend"
+	line "swears he saw one."
 
-	para "had no effect on"
-	line "ghosts."
+	para "All the TACKLES"
+	line "he threw at it"
+	cont "just phased right"
+	cont "through!"
 	done
 
 VioletCitySuperNerdText:

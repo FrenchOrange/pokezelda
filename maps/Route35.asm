@@ -284,10 +284,10 @@ Route35FruitTree:
 
 CamperIvanSeenText:
 	text "I've been getting"
-	line "#MON data off"
+	line "#MON info off"
 
 	para "my radio. I think"
-	line "I'm good."
+	line "I'm good to go."
 	done
 
 CamperIvanBeatenText:
@@ -436,6 +436,11 @@ FirebreatherWaltAfterBattleText:
 	text "The #MON March"
 	line "on the radio lures"
 	cont "wild #MON."
+
+	para "But what parade is"
+	line "complete without"
+	cont "some firebreathing"
+	cont "action?"
 	done
 
 OfficerDirkSeenText:

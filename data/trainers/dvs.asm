@@ -70,4 +70,5 @@ TrainerClassDVs:
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
 	dn  9,  8,  8,  8 ; DOLL_MANIAC
+	dn  9,  8,  8,  8 ; SCIENTIST
 	assert_table_length NUM_TRAINER_CLASSES

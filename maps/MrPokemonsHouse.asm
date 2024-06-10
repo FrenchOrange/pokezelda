@@ -152,6 +152,9 @@ MrPokemonsHouse_BrokenComputer:
 MrPokemonsHouse_StrangeCoins:
 	jumptext MrPokemonsHouse_StrangeCoinsText
 
+MrPokemonsHouse_PCEmail:
+	jumptext MrPokemonsHouse_PCEmailText
+
 MrPokemonsHouse_PlayerWalksToMrPokemon:
 	step RIGHT
 	step UP
@@ -370,6 +373,17 @@ MrPokemonsHouse_StrangeCoinsText:
 	line "another country…"
 	done
 
+MrPokemonsHouse_PCEmailText:
+	text "It's an exchange"
+	line "between PROF.ELM"
+	cont "and PROF.OAK!"
+
+	para "PROF.ELM seems to"
+	line "like making faces"
+	cont "out of characters"
+	cont "and punctuation."
+	done
+
 MrPokemonsHouse_MapEvents:
 	db 0, 0 ; filler
 
@@ -385,6 +399,7 @@ MrPokemonsHouse_MapEvents:
 	bg_event  8,  1, BGEVENT_READ, MrPokemonsHouse_BrokenComputer
 	bg_event  9,  1, BGEVENT_READ, MrPokemonsHouse_BrokenComputer
 	bg_event  8,  4, BGEVENT_READ, MrPokemonsHouse_StrangeCoins
+	bg_event  9,  4, BGEVENT_READ, MrPokemonsHouse_PCEmail
 
 	def_object_events
 	object_event  5,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MrPokemonsHouse_MrPokemonScript, -1

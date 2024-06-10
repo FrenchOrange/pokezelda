@@ -242,11 +242,17 @@ GoldenrodFlowerShopFloriaYouBeatWhitneyText:
 GoldenrodFlowerShopFloriaItReallyWasAMonText:
 	text "So it really was a"
 	line "#MON!"
+
+	para "Uh? But it wasn't"
+	line "a grass type one?"
+
+	para "How odd!"
 	done
 
 GoldenrodFlowerShopTeacherMannersText:
 	text "Oh! But where are"
 	line "my manners."
+
 	para "I run a business"
 	line "after all!"
 	done
@@ -296,7 +302,7 @@ FlowerShopBellossomText:
 	line "spreads a lovely"
 	cont "aroma around."
 
-	para "You feel relaxed…"
+	para "So relaxing…"
 	done
 
 GoldenrodFlowerShop_MapEvents:

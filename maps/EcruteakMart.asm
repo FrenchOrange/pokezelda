@@ -18,7 +18,13 @@ EcruteakMartSuperNerdScript:
 	jumptextfaceplayer EcruteakMartSuperNerdText
 
 EcruteakMartGrannyScript:
-	jumptextfaceplayer EcruteakMartGrannyText
+	faceplayer
+	opentext
+	writetext EcruteakMartGrannyText
+	waitbutton
+	closetext
+	turnobject ECRUTEAKMART_GRANNY, UP
+	end
 
 EcruteakMartSuperNerdText:
 	text "My EEVEE evolved"

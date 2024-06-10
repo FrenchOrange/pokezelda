@@ -4,6 +4,7 @@
 	const SPROUTTOWER1F_GRANNY
 	const SPROUTTOWER1F_TEACHER
 	const SPROUTTOWER1F_SAGE3
+	const SPROUTTOWER1F_BELLSPROUT
 	const SPROUTTOWER1F_POKE_BALL
 
 SproutTower1F_MapScripts:
@@ -30,6 +31,14 @@ TrainerSageChow:
 	endifjustbattled
 	opentext
 	writetext SageChowAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SproutTower1FBellsprout:
+	cry BELLSPROUT
+	opentext
+	writetext SproutTower1FBellsproutText
 	waitbutton
 	closetext
 	end
@@ -100,6 +109,15 @@ SproutTower1FStatueText:
 	line "distinguished."
 	done
 
+SproutTower1FBellsproutText:
+	text "BELLSPROUT sways"
+	line "and dances around."
+
+	para "It's fascinated by"
+	line "the motion of the"
+	cont "central pillar."
+	done
+
 SproutTower1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -122,4 +140,5 @@ SproutTower1F_MapEvents:
 	object_event 11, 12, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SproutTower1FGrannyScript, -1
 	object_event  9,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SproutTower1FTeacherScript, -1
 	object_event  3,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageChow, -1
+	object_event 12,  7, SPRITE_BELLSPROUT, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SproutTower1FBellsprout, -1
 	object_event 16,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTower1FParlyzHeal, EVENT_SPROUT_TOWER_1F_PARLYZ_HEAL

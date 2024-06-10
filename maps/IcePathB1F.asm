@@ -92,7 +92,7 @@ BoarderJulienSeenText:
 
 BoarderJulienBeatenText:
 	text "Check it out"
-	cont "y'all!"
+	line "y'all!"
 	done
 
 BoarderJulienAfterBattleText:

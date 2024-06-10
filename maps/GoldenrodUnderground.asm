@@ -385,6 +385,9 @@ BasementDoorScript::
 	writetext GoldenrodUndergroundBasementKeyOpenedDoorText
 	waitbutton
 	closetext
+	waitsfx
+	playsound SFX_FAINT
+	waitsfx
 	changeblock 18, 6, $2e ; unlocked door
 	reloadmappart
 	closetext
@@ -480,6 +483,13 @@ PokemaniacIssacAfterBattleText:
 
 	para "you give them"
 	line "haircuts."
+
+	para "It doesn't matter"
+	line "if your POKéMON"
+	cont "even has hair."
+
+	para "Everybody loves"
+	line "getting pampered!"
 	done
 
 PokemaniacDonaldSeenText:

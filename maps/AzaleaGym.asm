@@ -277,8 +277,8 @@ BugCatcherJoshSeenText:
 	line "SLOWPOKE? Whew,"
 	cont "you're mighty!"
 
-	para "But my grown-up"
-	line "#MON are pretty"
+	para "But my bug #MON"
+	line "team is pretty"
 	cont "tough too!"
 	done
 
@@ -288,8 +288,8 @@ BugCatcherJoshBeatenText:
 
 BugCatcherJoshAfterBattleText:
 	text "I guess I should"
-	line "teach them better"
-	cont "moves…"
+	line "teach my PARAS"
+	cont "better moves…"
 	done
 
 TwinsAmyandmay1SeenText:
@@ -373,7 +373,7 @@ AzaleaGym_MapEvents:
 	bg_event  8, 15, BGEVENT_READ, AzaleaGymStatue
 
 	def_object_events
-	object_event  7,  9, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
+	object_event  7,  9, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
 	object_event  7,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherBenny, -1
 	object_event 10, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherAl, -1
 	object_event  2,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherJosh, -1

@@ -4,7 +4,7 @@ _FruitBearingTreeText::
 	done
 
 _HeyItsFruitText::
-	text "Hey! It's"
+	text "Hey! It's a"
 	line "@"
 	text_ram wStringBuffer3
 	text "!"

@@ -325,6 +325,7 @@ ENDM
 	map_const PEWTER_SNOOZE_SPEECH_HOUSE,                   6,  5 ;  7
 	map_const PEWTER_MUSEUM_1F,                            12,  5 ;  NEW
 	map_const PEWTER_MUSEUM_2F,                             9,  5 ;  NEW
+	map_const PEWTER_MUSEUM_3F,                             9,  5 ;  NEW
 	map_const PEWTER_MUSEUM_B1F,                           12,  5 ;  NEW
 	endgroup
 

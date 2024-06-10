@@ -350,14 +350,14 @@ AzaleaTownYoungsterText:
 	line "and you'll be in"
 	cont "ILEX FOREST."
 
-	para "But these skinny"
-	line "trees make it"
+	para "But these pesky"
+	line "bushes make it"
+	cont "impossible to get"
+	cont "through."
 
-	para "impossible to get"
-	line "through."
-
-	para "The CHARCOAL MAN's"
-	line "#MON can CUT"
+	para "Looks like only"
+	line "the CHARCOAL MAN's"
+	cont "#MON can CUT"
 	cont "down trees."
 	done
 

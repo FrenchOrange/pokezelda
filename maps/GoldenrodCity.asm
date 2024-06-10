@@ -350,7 +350,7 @@ GoldenrodCityLassText:
 	cont "#MON names."
 
 	para "He can even rename"
-	line "your #MON."
+	line "them if you want."
 	done
 
 GoldenrodCityGrampsText:

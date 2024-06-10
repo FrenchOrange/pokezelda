@@ -146,3 +146,13 @@
 	tilecoll FLOOR, FLOOR, DOOR, FLOOR ; 91
 	tilecoll WALL, WALL, WALL, WALL ; 92
 	tilecoll WALL, WALL, WALL, WALL ; 93
+	tilecoll WALL, WALL, WALL, WALL ; 94
+	tilecoll WALL, WALL, WALL, WALL ; 95
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 96
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 97
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 98
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 99
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 9a
+	tilecoll WALL, WALL, WALL, WALL ; 9b
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 9c
+	tilecoll WATER, WATER, WATER, WATER ; 9d

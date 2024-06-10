@@ -111,64 +111,15 @@ PlayersRadioText4:
 
 DebugColor:
 	opentext
-	writetext EnteringMenuText
-	yesorno
-	iftrue .AskInstructions
-	closetext
-	end
-
-.AskInstructions:
-	writetext ReadInstructionsText
-	yesorno
-	iftrue .LoadInstructions
-	writetext LoadingText
+	writetext NowEnteringText
 	pause 45
 	special ColorPicker
 	closetext
 	end
 
-.LoadInstructions:
-	writetext InstructionsText
-	waitbutton
-	writetext LoadingText
-	pause 45
-	special ColorPicker
-	closetext
-	end
-
-EnteringMenuText:
+NowEnteringText:
 	text "NOW ENTERING..."
 	line "COLOR PICKER MENU."
-
-	para "RUN PROGRAM?"
-	done
-
-ReadInstructionsText:
-	text "READ INSTRUCTIONS?"
-	done
-
-InstructionsText:
-	text "A- COLOR TOGGLE"
-	line "(SHINY/NON-SHINY)"
-
-	para "B- SEE #MON"
-	line "MOVEPOOL (TM/HM)"
-
-	para "SELECT- NEXT ENTRY"
-	line "START- PREVIOUS"
-
-	para "LEFT/RIGHT-"
-	line "PICK HUE"
-
-	para "UP/DOWN-"
-	line "PICK SLIDER"
-
-	para "B- EXIT PROGRAM"
-	line "(TRAINER MENU)"
-	done
-
-LoadingText:
-	text "LOADING..."
 	done
 
 DebugSign:
@@ -197,6 +148,7 @@ DebugSign:
 	giveitem RARE_CANDY, 99
 	giveitem MAX_REPEL, 99
 	giveitem ESCAPE_ROPE, 99
+	giveitem BERRY, 99
 	giveitem HM_CUT
 	giveitem HM_FLY
 	giveitem HM_SURF

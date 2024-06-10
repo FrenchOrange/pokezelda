@@ -722,7 +722,7 @@ Route34SignText:
 	line "AZALEA TOWN"
 
 	para "ILEX FOREST"
-	line "SOMEWHERE BETWEEN"
+	line "IN-BETWEEN"
 	done
 
 Route34TrainerTipsText:

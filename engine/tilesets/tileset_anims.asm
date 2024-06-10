@@ -219,7 +219,7 @@ TilesetBattleTowerInsideAnim:
 TilesetFacilityAnim:
 	dw vTiles2 tile $09, AnimateWaterTile
 	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
+	dw vTiles2 tile $16, AnimateFountainTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

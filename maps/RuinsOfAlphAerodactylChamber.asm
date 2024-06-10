@@ -80,7 +80,7 @@ RuinsOfAlphAerodactylChamberDescriptionSign:
 
 RuinsOfAlphAerodactylChamberWallPatternLeft:
 	opentext
-	writetext RuinsOfAlphAerodactylChamberWallPatternLeftText
+	writetext RuinsOfAlphAerodactylChamberWallPatternText
 	setval UNOWNWORDS_LIGHT
 	special DisplayUnownWords
 	closetext
@@ -90,7 +90,7 @@ RuinsOfAlphAerodactylChamberWallPatternRight:
 	checkevent EVENT_WALL_OPENED_IN_AERODACTYL_CHAMBER
 	iftrue .WallOpen
 	opentext
-	writetext RuinsOfAlphAerodactylChamberWallPatternRightText
+	writetext RuinsOfAlphAerodactylChamberWallPatternText
 	setval UNOWNWORDS_LIGHT
 	special DisplayUnownWords
 	closetext
@@ -107,12 +107,7 @@ RuinsOfAlphAerodactylChamberSkyfallTopMovement:
 	skyfall_top
 	step_end
 
-RuinsOfAlphAerodactylChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
-
-RuinsOfAlphAerodactylChamberWallPatternRightText:
+RuinsOfAlphAerodactylChamberWallPatternText:
 	text "Patterns appeared"
 	line "on the walls…"
 	done

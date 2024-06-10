@@ -40,6 +40,7 @@ CutTreeBlockPointers:
 	db $45, $04, 1 ; grass
 	db $46, $04, 1 ; grass
 	db $47, $04, 1 ; grass
+	db $59, $04, 1 ; grass
 	db -1 ; end
 
 .forest:

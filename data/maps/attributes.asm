@@ -713,6 +713,7 @@ ENDM
 	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $09, 0
 	map_attributes PewterMuseum1F, PEWTER_MUSEUM_1F, $00, 0
 	map_attributes PewterMuseum2F, PEWTER_MUSEUM_2F, $00, 0
+	map_attributes PewterMuseum3F, PEWTER_MUSEUM_3F, $00, 0
 	map_attributes PewterMuseumB1F, PEWTER_MUSEUM_B1F, $00, 0
 	map_attributes SummerBeachHouse, SUMMER_BEACH_HOUSE, $00, 0
 	map_attributes SafariZoneRestHouse, SAFARI_ZONE_REST_HOUSE, $00, 0

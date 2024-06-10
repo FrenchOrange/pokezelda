@@ -81,7 +81,7 @@ RuinsOfAlphHoOhChamberDescriptionSign:
 
 RuinsOfAlphHoOhChamberWallPatternLeft:
 	opentext
-	writetext RuinsOfAlphHoOhChamberWallPatternLeftText
+	writetext RuinsOfAlphHoOhChamberWallPatternText
 	setval UNOWNWORDS_HO_OH
 	special DisplayUnownWords
 	closetext
@@ -91,7 +91,7 @@ RuinsOfAlphHoOhChamberWallPatternRight:
 	checkevent EVENT_WALL_OPENED_IN_HO_OH_CHAMBER
 	iftrue .WallOpen
 	opentext
-	writetext RuinsOfAlphHoOhChamberWallPatternRightText
+	writetext RuinsOfAlphHoOhChamberWallPatternText
 	setval UNOWNWORDS_HO_OH
 	special DisplayUnownWords
 	closetext
@@ -108,12 +108,7 @@ RuinsOfAlphHoOhChamberSkyfallTopMovement:
 	skyfall_top
 	step_end
 
-RuinsOfAlphHoOhChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
-
-RuinsOfAlphHoOhChamberWallPatternRightText:
+RuinsOfAlphHoOhChamberWallPatternText:
 	text "Patterns appeared"
 	line "on the walls…"
 	done

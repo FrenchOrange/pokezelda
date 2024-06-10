@@ -71,4 +71,5 @@ BTTrainerClassGenders:
 	db FEMALE ; GRUNTF
 	db MALE   ; MYSTICALMAN
 	db MALE   ; DOLL_MANIAC
+	db MALE   ; GOOD_SCIENTIST
 	assert_table_length NUM_TRAINER_CLASSES

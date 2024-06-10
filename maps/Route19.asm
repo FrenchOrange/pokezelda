@@ -231,9 +231,12 @@ SwimmermTonyAfterBattleText:
 	cont "at different times"
 	cont "of the day."
 
-	para "Take STARYU! At"
-	line "night, they gather"
-	cont "near the surface."
+	para "A fisherman's got"
+	line "to fish!"
+
+	para "No matter the time"
+	line "and no matter the"
+	cont "weather."
 	done
 
 SwimmermRickSeenText:

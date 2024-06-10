@@ -61,6 +61,10 @@ GoldenrodDeptStore4FCooltrainerMText:
 GoldenrodDeptStore4FBugCatcherText:
 	text "IRON adds to your"
 	line "#MON's DEFENSE."
+
+	para "My METAPOD may as"
+	line "well be a steel-"
+	cont "type by now!"
 	done
 
 GoldenrodDeptStore4FGameboyKidText:

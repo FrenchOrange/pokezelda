@@ -953,6 +953,9 @@ PewterMuseum1F_Blocks:
 PewterMuseum2F_Blocks:
 	INCBIN "maps/PewterMuseum2F.blk"
 
+PewterMuseum3F_Blocks:
+	INCBIN "maps/PewterMuseum3F.blk"
+
 PewterMuseumB1F_Blocks:
 	INCBIN "maps/PewterMuseumB1F.blk"
 

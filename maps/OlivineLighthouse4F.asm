@@ -69,14 +69,13 @@ LassConnieBeatenText:
 LassConnieAfterBattleText:
 	text "Right. Anybody"
 	line "would be worried"
-	cont "if his or her own"
-	cont "#MON were hurt."
+	cont "if their own #-"
+	cont "MON were hurt."
 
 	para "I'll pray for the"
 	line "#MON here, so"
-
-	para "JASMINE can come"
-	line "back to the GYM."
+	cont "JASMINE can come"
+	cont "back to the GYM."
 	done
 
 OlivineLighthouse4F_MapEvents:

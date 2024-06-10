@@ -106,6 +106,12 @@ NationalParkBugContestBattleNoticeSign:
 NationalParkBugContestTrainerTipsSign:
 	jumptext NationalParkBugContestTrainerTipsText
 
+NationalParkBugContestWaterFeature:
+	jumptext NationalParkBugContestWaterFeatureText
+
+NationalParkBugContestTrashcan:
+	jumpstd TrashCanScript
+
 NationalParkBugContestParlyzHeal:
 	itemball PARLYZ_HEAL
 
@@ -218,6 +224,12 @@ NationalParkBugContestTrainerTipsText:
 	cont "pressing START."
 	done
 
+NationalParkBugContestWaterFeatureText:
+	text "A water feature"
+	line "for bird #MON"
+	cont "to drink out of."
+	done
+
 NationalParkBugContest_MapEvents:
 	db 0, 0 ; filler
 
@@ -234,6 +246,9 @@ NationalParkBugContest_MapEvents:
 	bg_event 27, 31, BGEVENT_READ, NationalParkBugContestBattleNoticeSign
 	bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
 	bg_event 12,  4, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
+	bg_event 23, 40, BGEVENT_READ, NationalParkBugContestWaterFeature
+	bg_event 14, 40, BGEVENT_READ, NationalParkBugContestTrashcan
+	bg_event 32, 40, BGEVENT_READ, NationalParkBugContestTrashcan
 
 	def_object_events
 	object_event 19, 29, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant1AScript, EVENT_BUG_CATCHING_CONTESTANT_1A

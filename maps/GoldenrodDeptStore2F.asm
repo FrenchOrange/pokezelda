@@ -40,9 +40,9 @@ GoldenrodDeptStore2FElevatorButton:
 	jumpstd ElevatorButtonScript
 
 GoldenrodDeptStore2FYoungsterText:
-	text "#GEAR can store"
-	line "up to ten phone"
-	cont "numbers."
+	text "The #GEAR can"
+	line "store up to ten"
+	cont "phone numbers."
 
 	para "It's hard to de-"
 	line "cide which numbers"

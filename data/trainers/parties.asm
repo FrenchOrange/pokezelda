@@ -335,21 +335,6 @@ ScientistGroup:
 	db 30, PORYGON,    CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
 	db -1 ; end
 
-	; SCIENTIST (6)
-	db "RUSS@", TRAINERTYPE_NORMAL
-	db 44, NINETALES
-	db -1 ; end
-
-	; SCIENTIST (7)
-	db "NORTON@", TRAINERTYPE_NORMAL
-	db 42, ARCANINE
-	db -1 ; end
-
-	; SCIENTIST (8)
-	db "AVERY@", TRAINERTYPE_NORMAL
-	db 42, CHARMELEON
-	db -1 ; end
-
 ErikaGroup:
 	; ERIKA (1)
 	db "ERIKA@", TRAINERTYPE_MOVES
@@ -717,8 +702,8 @@ BirdKeeperGroup:
 LassGroup:
 	; LASS (1)
 	db "CARRIE@", TRAINERTYPE_MOVES
+	db 12, EEVEE,   TACKLE, TAIL_WHIP, SAND_ATTACK, NO_MOVE
 	db 18, SNUBBULL,   SCARY_FACE, CHARM, BITE, LICK
-	db 14, TOTODILE,   SCRATCH, LEER, RAGE, WATER_GUN
 	db -1 ; end
 
 	; LASS (2)
@@ -739,6 +724,7 @@ LassGroup:
 	db "KRISE@", TRAINERTYPE_NORMAL
 	db 12, ODDISH
 	db 15, SUNKERN
+	db 14, TOTODILE
 	db -1 ; end
 
 	; LASS (5)
@@ -3714,4 +3700,20 @@ DollManiacGroup:
 	; DOLLMANIAC (16)
 	db "RUPERT@", TRAINERTYPE_NORMAL
 	db 15, GRIMER
+	db -1 ; end
+
+GoodScientistGroup:
+	; SCIENTIST (6)
+	db "RUSS@", TRAINERTYPE_NORMAL
+	db 44, NINETALES
+	db -1 ; end
+
+	; SCIENTIST (7)
+	db "NORTON@", TRAINERTYPE_NORMAL
+	db 42, ARCANINE
+	db -1 ; end
+
+	; SCIENTIST (8)
+	db "AVERY@", TRAINERTYPE_NORMAL
+	db 42, CHARMELEON
 	db -1 ; end

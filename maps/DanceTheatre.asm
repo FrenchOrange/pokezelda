@@ -130,7 +130,13 @@ DanceTheatreCooltrainerMScript:
 	jumptextfaceplayer DanceTheatreCooltrainerMText
 
 DanceTheatreGrannyScript:
-	jumptextfaceplayer DanceTheatreGrannyText
+	faceplayer
+	opentext
+	writetext DanceTheatreGrannyText
+	waitbutton
+	closetext
+	turnobject DANCETHEATRE_GRANNY, UP
+	end
 
 DanceTheatreFancyPanel:
 	jumptext DanceTheatreFancyPanelText
@@ -331,8 +337,8 @@ DanceTheatreGrannyText:
 
 DanceTheatreFancyPanelText:
 	text "It's a fancy panel"
-	line "that's decorated"
-	cont "with flowers."
+	line "decorated with a"
+	cont "gorgeous sunset."
 	done
 
 DanceTheatre_MapEvents:

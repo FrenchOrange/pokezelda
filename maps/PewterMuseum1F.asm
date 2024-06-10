@@ -57,6 +57,9 @@ PewterMuseum1FBookshelf:
 PewterMuseum1FDisplay:
 	jumptext PewterMuseum1FDisplayText
 
+PewterMuseum1FPoster:
+	jumptext PewterMuseum1FPosterText
+
 PewterMuseum1FEntranceSideScript:
 	turnobject PEWTERMUSEUM1F_CLERK, LEFT
 	opentext
@@ -220,6 +223,18 @@ PewterMuseum1FDisplayText:
 	cont "horseshoe crab!"
 	done
 
+PewterMuseum1FPosterText:
+	text "A poster for the"
+	line "fossils exhibit."
+
+	para "On it is a PIKACHU"
+	line "dressed like an"
+	cont "archaeologist,"
+
+	para "surrounded by"
+	line "giant dinosaurs!"
+	done
+
 PewterMuseum1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -243,6 +258,7 @@ PewterMuseum1F_MapEvents:
 	bg_event 20,  1, BGEVENT_READ, PewterMuseum1FBookshelf
 	bg_event 21,  1, BGEVENT_READ, PewterMuseum1FBookshelf
 	bg_event  4,  3, BGEVENT_READ, PewterMuseum1FDisplay
+	bg_event  5,  0, BGEVENT_READ, PewterMuseum1FPoster
 	bg_event 13,  4, BGEVENT_READ, PewterMuseum1FEntranceSideScript
 	bg_event 14,  5, BGEVENT_READ, PewterMuseum1FEntranceDownScript
 

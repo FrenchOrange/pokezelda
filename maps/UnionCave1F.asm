@@ -164,8 +164,9 @@ FirebreatherBillBeatenText:
 	done
 
 FirebreatherBillAfterBattleText:
-	text "On weekends, you"
-	line "can hear strange"
+	text "As the week comes"
+	line "to an end, you"
+	cont "can hear strange"
 
 	para "roars from deep in"
 	line "the cave."

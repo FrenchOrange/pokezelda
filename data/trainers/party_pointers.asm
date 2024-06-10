@@ -71,4 +71,5 @@ TrainerGroups:
 	dw GruntFGroup
 	dw MysticalmanGroup
 	dw DollManiacGroup
+	dw GoodScientistGroup
 	assert_table_length NUM_TRAINER_CLASSES

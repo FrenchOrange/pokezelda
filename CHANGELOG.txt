@@ -217,11 +217,18 @@
 
 1.2.6
 - Fixed some capitalization and ellipses here and there.
+- Added more dialogue and flavor to a handful places in Johto and Kanto.
+- Fixed incorrect tile reload when using Cut in tall grass.
+- Fixed vanilla issue where the Charcoal Kiln apprentice has an inconsistent overworld palette.
+- Fixed the Goldenrod link receptionist being visible chilling in the void, far to the right.
+- Fixed changeblock issue in Burned Tower B1F.
+- Fixed an event flag issue with the Dragon's Den twins.
 - Fixed the Pewter City storybook so it always prints the "Read which tale?" string when on the chapter list.
 - Fixed Medium Bethany being able to phase through a rock.
 - Fixed a dialogue crash tied to the Hiker in Saffron's Pokémon Center.
 - Adjusted the player's position in the Mt.Moon rival cutscene.
-- Added some more dialogue to a handful NPCs in Kanto.
+- Added a new floor to the Pewter City Museum. This is now where the player obtains the Silver Wing.
+- Made it so the Scientists allied with Team Rocket also use the new Rocket battle transition.
 - Made it so the Coin Case is available in Celadon if the player didn't grab it in the Goldenrod Underground.
 - Changed the reward for the Lake of Rage record-sized Magikarp event.
-- Updated a large amount of menu icons. Courtesy of SoupPotato.
+- Updated a large amount of menu icons. Courtesy of SoupPotato (and Damien for helping with Umbreon's icon).

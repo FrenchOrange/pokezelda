@@ -87,6 +87,6 @@
 	tilecoll WALL, WALL, WALL, WALL ; 56
 	tilecoll WALL, WALL, WALL, WALL ; 57
 	tilecoll WALL, WALL, WALL, WALL ; 58
-	tilecoll WALL, WALL, WALL, WALL ; 59
+	tilecoll TALL_GRASS, TALL_GRASS, TALL_GRASS, TALL_GRASS ; 59
 	tilecoll WALL, WALL, WALL, WALL ; 5a
 	tilecoll WALL, WALL, WALL, WALL ; 5b

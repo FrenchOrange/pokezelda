@@ -26,7 +26,7 @@ BurnedTowerB1F_MapScripts:
 .LadderCallback:
 	checkevent EVENT_RELEASED_THE_BEASTS
 	iftrue .HideLadder
-	changeblock 6, 14, $24 ; floor
+	changeblock 6, 14, $4e ; floor
 .HideLadder:
 	endcallback
 
@@ -186,22 +186,21 @@ BurnedTowerB1FEusineMovement1:
 	step_end
 
 BurnedTowerB1FEusineText:
-	text "EUSINE: I dug a"
-	line "hole here, too…"
+	text "EUSINE: I just"
+	line "found a hidden"
+	cont "stairway."
 
-	para "I was shocked!"
+	para "Are you alright?"
 
 	para "SUICUNE raced by"
 	line "like a blur, right"
-
-	para "in front of my"
-	line "eyes!"
+	cont "in front of my"
+	cont "eyes!"
 
 	para "For ten years I"
 	line "chased SUICUNE,"
-
-	para "and I finally got"
-	line "to see it."
+	cont "and I finally got"
+	cont "to see it."
 
 	para "I'm all choked up!"
 
@@ -212,12 +211,11 @@ BurnedTowerB1FEusineText:
 
 	para "I heard that the"
 	line "legendary #MON"
+	cont "of ECRUTEAK test"
 
-	para "of ECRUTEAK test"
-	line "chosen humans by"
-
-	para "allowing them to"
-	line "get close."
+	para "chosen humans by"
+	line "allowing them to"
+	cont "get close."
 
 	para "I'm going to track"
 	line "SUICUNE."

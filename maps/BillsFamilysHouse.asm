@@ -238,6 +238,9 @@ BillsSisterStorageSystemText:
 
 	para "#MON storage"
 	line "system."
+
+	para "He's like, a big"
+	line "deal among nerds."
 	done
 
 BillsFamilysHouse_MapEvents:

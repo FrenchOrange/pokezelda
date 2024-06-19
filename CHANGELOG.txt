@@ -218,6 +218,7 @@
 1.2.6
 - Fixed some capitalization and ellipses here and there.
 - Added more dialogue and flavor to a handful places in Johto and Kanto.
+- Changed the special "tree" palette so it blends in better.
 - Fixed incorrect tile reload when using Cut in tall grass.
 - Fixed vanilla issue where the Charcoal Kiln apprentice has an inconsistent overworld palette.
 - Fixed the Goldenrod link receptionist being visible chilling in the void, far to the right.

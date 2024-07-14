@@ -1378,7 +1378,7 @@ _NoCoinCaseText::
 
 _NPCTradeCableText::
 	text "OK, connect the"
-	line "Game Link Cable."
+	line "GAME LINK cable."
 	prompt
 
 Text_NPCTraded::

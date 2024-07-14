@@ -66,7 +66,7 @@ LinkReceptionistScript_Trade:
 	iffalse .Cancel
 	special Mobile_DummyReturnFalse ; always returns false
 	iffalse .NoMobile
-	writetext Text_TradeReceptionistMobile
+	writetext Text_PleaseWait
 	special AskMobileOrCable
 	iffalse .Cancel
 	ifequal $1, .Mobile
@@ -168,7 +168,7 @@ LinkReceptionistScript_Battle:
 	iffalse .Cancel
 	special Mobile_DummyReturnFalse ; always returns false
 	iffalse .NoMobile
-	writetext Text_BattleReceptionistMobile
+	writetext Text_PleaseWait
 	special AskMobileOrCable
 	iffalse .Cancel
 	ifequal $1, .Mobile
@@ -772,22 +772,6 @@ Pokecenter2FMovementData_ReceptionistStepsRightLooksLeft_2:
 	slow_step RIGHT
 	turn_head LEFT
 	step_end
-
-Text_BattleReceptionistMobile:
-	text "Would you like to"
-	line "battle over a GAME"
-
-	para "LINK cable or by"
-	line "mobile phone?"
-	done
-
-Text_TradeReceptionistMobile:
-	text "Would you like to"
-	line "trade over a GAME"
-
-	para "LINK cable or by"
-	line "mobile phone?"
-	done
 
 Text_BattleReceptionistIntro:
 	text "Welcome to CABLE"

@@ -69,8 +69,8 @@ Landmarks:
 	landmark 108,  28, Route25Name
 	landmark 100,  56, Route5Name
 	landmark 108,  76, UndergroundName
-	landmark 100,  76, Route6Name
-	landmark 100,  84, VermilionCityName
+	landmark 100,  80, Route6Name
+	landmark 100,  92, VermilionCityName
 	landmark  88,  60, DiglettsCaveName
 	landmark  88,  68, Route7Name
 	landmark 116,  68, Route8Name
@@ -84,16 +84,16 @@ Landmarks:
 	landmark  76,  64, CeladonCondoName
 	landmark 100,  68, SaffronCityName
 	landmark 100,  64, SilphCoName
-	landmark 116,  84, Route11Name
+	landmark 116,  92, Route11Name
 	landmark 132,  84, Route12Name
-	landmark 124, 100, Route13Name
-	landmark 116, 108, Route14Name
+	landmark 124, 108, Route13Name
+	landmark 116, 112, Route14Name
 	landmark 108, 116, Route15Name
 	landmark  68,  68, Route16Name
 	landmark  68,  92, Route17Name
 	landmark  76, 116, Route18Name
 	landmark  92, 116, FuchsiaCityName
-	landmark  92, 132, Route19Name
+	landmark  92, 128, Route19Name
 	landmark  76, 132, Route20Name
 	landmark  68, 132, SeafoamIslandsName
 	landmark  52, 132, CinnabarIslandName

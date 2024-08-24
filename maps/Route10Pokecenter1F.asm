@@ -3,6 +3,7 @@
 	const ROUTE10POKECENTER1F_GENTLEMAN
 	const ROUTE10POKECENTER1F_GYM_GUIDE
 	const ROUTE10POKECENTER1F_COOLTRAINER_F
+	const ROUTE10POKECENTER1F_HIKER
 
 Route10Pokecenter1F_MapScripts:
 	def_scene_scripts
@@ -76,6 +77,95 @@ Route10Pokecenter1FCooltrainerFText:
 	line "PLANT."
 	done
 
+Route10Pokecenter1FHikerScript:
+	faceplayer
+	opentext
+	checkitem GOLD_PEARL
+	iftrue .GotGoldPearl
+	checkevent EVENT_GAVE_GOLD_PEARL
+	iftrue .HikerPostStep
+	writetext Route10Pokecenter1FHiker_NoItem
+	waitbutton
+	closetext
+	end
+
+.GotGoldPearl:
+	writetext Route10Pokecenter1FHiker_HasItem
+	promptbutton
+	takeitem GOLD_PEARL
+	giveitem COMPASS
+	writetext Route10Pokecenter1FHiker_GetItem
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_GOLD_PEARL
+	end
+
+.HikerPostStep:
+	writetext Route10Pokecenter1FHiker_After
+	waitbutton
+	closetext
+	end
+
+Route10Pokecenter1FHiker_NoItem:
+	text "I'm not just a"
+	line "mere HIKER, I'm"
+	cont "an adventurer"
+	cont "extraordinaire!"
+
+	para "I crawled through"
+	line "the deepest caves"
+	cont "and climbed the"
+
+	para "highest peaks in"
+	line "search of riches."
+
+	para "A NUGGET is but"
+	line "child's play when"
+	cont "compared to the"
+	cont "treasures I found."
+	done
+
+Route10Pokecenter1FHiker_HasItem:
+	text "My oh my! This"
+	line "PEARL is unlike"
+	cont "any I've seen"
+	cont "before."
+
+	para "Say, from one"
+	line "treasure hoarder"
+	cont "to another, how"
+
+	para "about you trade it"
+	line "to me in exchange"
+	cont "for an adventurer"
+	cont "starter kit?"
+	done
+
+Route10Pokecenter1FHiker_GetItem:
+	text "<PLAYER> obtained a"
+	line "COMPASS."
+	done
+
+Route10Pokecenter1FHiker_After:
+	text "Don't scoff at"
+	line "this COMPASS."
+
+	para "Safety is worth"
+	line "every teasure, ah!"
+
+	para "You may not need"
+	line "it yourself, but"
+	cont "maybe you'll run"
+
+	para "into a lost soul"
+	line "who will."
+
+	para "Treasure-hunt"
+	line "responsibly! Hehe."
+	done
+
 Route10Pokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -92,4 +182,5 @@ Route10Pokecenter1F_MapEvents:
 	object_event  5,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FNurseScript, -1
 	object_event  9,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FGentlemanScript, -1
 	object_event  9,  2, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FGymGuideScript, -1
-	object_event  3,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FCooltrainerFScript, -1
+	object_event  3,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route10Pokecenter1FCooltrainerFScript, -1
+	object_event  6,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, 0, 1, Route10Pokecenter1FHikerScript, -1

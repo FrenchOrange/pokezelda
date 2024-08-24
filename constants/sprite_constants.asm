@@ -104,7 +104,8 @@
  	const SPRITE_CHRIS_RUN ; 65
  	const SPRITE_KRIS_RUN ; 66
  	const SPRITE_ROCKET_SLOWPOKE ; 67
-	const SPRITE_BLANK ; 68
+	const SPRITE_BEEDRILL ; 68
+	const SPRITE_BLANK ; 69
 NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
@@ -169,6 +170,8 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_NOCTOWL
 	const SPRITE_PORYGON2
 	const SPRITE_EEVEE
+	const SPRITE_SMOOCHUM
+	const SPRITE_MR__MIME
 	const SPRITE_HO_OH
 	const SPRITE_LUGIA
 NUM_POKEMON_SPRITES EQU const_value - SPRITE_POKEMON

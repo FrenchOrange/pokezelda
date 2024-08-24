@@ -8,6 +8,8 @@
 	const DANCETHEATRE_RHYDON
 	const DANCETHEATRE_COOLTRAINER_M
 	const DANCETHEATRE_GRANNY
+	const DANCETHEATRE_POKEFAN_F
+	const DANCETHEATRE_SMOOCHUM
 
 DanceTheatre_MapScripts:
 	def_scene_scripts
@@ -341,6 +343,94 @@ DanceTheatreFancyPanelText:
 	cont "gorgeous sunset."
 	done
 
+DanceTheatrePokefanFScript:
+	faceplayer
+	opentext
+	checkitem HAIRTIE
+	iftrue .GotHairtie
+	checkevent EVENT_GAVE_HAIRTIE
+	iftrue .PokefanFPostStep
+	writetext DanceTheatrePokefanF_NoItem
+	waitbutton
+	closetext
+	end
+
+.GotHairtie:
+	writetext DanceTheatrePokefanF_HasItem
+	promptbutton
+	takeitem HAIRTIE
+	giveitem LUCKY_GEM
+	writetext DanceTheatrePokefanF_GetItem
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_HAIRTIE
+	end
+
+.PokefanFPostStep:
+	writetext DanceTheatrePokefanF_After
+	waitbutton
+	closetext
+	end
+
+DanceTheatrePokefanF_NoItem:
+	text "Oh! My SMOOCHUM is"
+	line "just the cutest"
+	cont "darling, isn't it?"
+
+	para "But she's having a"
+	line "bad hair day, and"
+	cont "a mere PINK BOW"
+
+	para "will not cut it"
+	line "for my little"
+	cont "sweetie pie."
+	done
+
+DanceTheatrePokefanF_HasItem:
+	text "Oh, oh! This is"
+	line "one cute HAIRTIE."
+
+	para "Is this for my"
+	line "dearie SMOOCHUM?"
+
+	para "What a life saver"
+	line "you are! My baby's"
+	cont "all dolled up now."
+
+	para "Here, you deserve"
+	line "a little gift."
+	done
+
+DanceTheatrePokefanF_GetItem:
+	text "<PLAYER> obtained a"
+	line "LUCKY GEM."
+	done
+
+DanceTheatrePokefanF_After:
+	text "I knew luck would"
+	line "come my way today"
+	cont "as well, thanks to"
+	cont "this stone!"
+
+	para "Just as the ad in"
+	line "the magazine said"
+	cont "it would."
+	done
+
+SmoochumScript:
+	cry SMOOCHUM
+	opentext
+	writetext DanceTheatreSmoochumText
+	waitbutton
+	closetext
+	end
+
+DanceTheatreSmoochumText:
+	text "SMOOCHUM: Smooch!"
+	done
+
 DanceTheatre_MapEvents:
 	db 0, 0 ; filler
 
@@ -362,5 +452,7 @@ DanceTheatre_MapEvents:
 	object_event 13,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlMiki, -1
 	object_event  9, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheaterSurfGuy, -1
 	object_event  8,  8, SPRITE_RHYDON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DanceTheaterRhydon, -1
-	object_event 12, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DanceTheatreCooltrainerMScript, -1
+	object_event 12, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DanceTheatreCooltrainerMScript, -1
 	object_event  5,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheatreGrannyScript, -1
+	object_event  4, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DanceTheatrePokefanFScript, -1
+	object_event  5, 10, SPRITE_SMOOCHUM, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, SmoochumScript, -1

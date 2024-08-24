@@ -5,6 +5,7 @@
 	const EARLSPOKEMONACADEMY_GAMEBOY_KID2
 	const EARLSPOKEMONACADEMY_YOUNGSTER2
 	const EARLSPOKEMONACADEMY_POKEDEX
+	const EARLSPOKEMONACADEMY_LASS
 
 EarlsPokemonAcademy_MapScripts:
 	def_scene_scripts
@@ -395,6 +396,70 @@ AcademyNotebookText3:
 	line "anymore…"
 	done
 
+EarlsPokemonAcademyLassScript:
+	faceplayer
+	opentext
+	checkitem HONEYPOT
+	iftrue .GotHoneypot
+	checkevent EVENT_GAVE_HONEYPOT
+	iftrue .LassPostStep
+	writetext EarlsPokemonAcademyLass_NoItem
+	waitbutton
+	closetext
+	end
+
+.GotHoneypot:
+	writetext EarlsPokemonAcademyLass_HasItem
+	promptbutton
+	takeitem HONEYPOT
+	giveitem GEL_PEN
+	writetext EarlsPokemonAcademyLass_GetItem
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_HONEYPOT
+	end
+
+.LassPostStep:
+	writetext EarlsPokemonAcademyLass_After
+	waitbutton
+	closetext
+	end
+
+EarlsPokemonAcademyLass_NoItem:
+	text "I can't focus on"
+	line "what the teacher"
+	cont "is saying."
+
+	para "I'm too hungry. I'd"
+	line "looove something"
+	cont "sweet right now…"
+	done
+
+EarlsPokemonAcademyLass_HasItem:
+	text "I-is that… HONEY?!"
+	line "Gimme! Gimme!"
+
+	para "I'll give you my"
+	line "super-cool GEL PEN"
+	cont "in exchange!"
+	done
+
+EarlsPokemonAcademyLass_GetItem:
+	text "<PLAYER> obtained a"
+	line "GEL PEN."
+	done
+
+EarlsPokemonAcademyLass_After:
+	text "Mmhh.. So good!"
+
+	para "It's no wonder why"
+	line "HERACROSS fights"
+	cont "with PINSIR over"
+	cont "this stuff!"
+	done
+
 EarlsPokemonAcademy_MapEvents:
 	db 0, 0 ; filler
 
@@ -417,3 +482,4 @@ EarlsPokemonAcademy_MapEvents:
 	object_event  6, 11, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EarlsPokemonAcademyGameboyKid2Script, -1
 	object_event  6,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EarlsPokemonAcademyYoungster2Script, -1
 	object_event  4,  4, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AcademyNotebook, -1
+	object_event  4,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, EarlsPokemonAcademyLassScript, -1

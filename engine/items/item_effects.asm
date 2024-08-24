@@ -148,27 +148,27 @@ ItemEffects:
 	dw NoEffect            ; STAR_PIECE
 	dw BasementKeyEffect   ; BASEMENT_KEY
 	dw NoEffect            ; PASS
-	dw NoEffect            ; ITEM_87
-	dw NoEffect            ; ITEM_88
-	dw NoEffect            ; ITEM_89
+	dw NoEffect            ; STONE
+	dw NoEffect            ; HONEYPOT
+	dw NoEffect            ; GEL_PEN
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
 	dw NoEffect            ; SCOPE_LENS
-	dw NoEffect            ; ITEM_8D
-	dw NoEffect            ; ITEM_8E
+	dw NoEffect            ; HAIRTIE
+	dw NoEffect            ; LUCKY_GEM
 	dw NoEffect            ; METAL_COAT
 	dw NoEffect            ; DRAGON_FANG
-	dw NoEffect            ; ITEM_91
+	dw NoEffect            ; OLD_SANDWICH
 	dw NoEffect            ; LEFTOVERS
-	dw NoEffect            ; ITEM_93
-	dw NoEffect            ; ITEM_94
-	dw NoEffect            ; ITEM_95
+	dw NoEffect            ; GOLD_PEARL
+	dw NoEffect            ; COMPASS
+	dw NoEffect            ; HARDTACK
 	dw RestorePPEffect     ; MYSTERYBERRY
 	dw NoEffect            ; DRAGON_SCALE
 	dw NoEffect            ; BERSERK_GENE
-	dw NoEffect            ; ITEM_99
-	dw NoEffect            ; ITEM_9A
-	dw NoEffect            ; ITEM_9B
+	dw NoEffect            ; DARK_SHELL
+	dw NoEffect            ; CLIPBOARD
+	dw NoEffect            ; TABLOID
 	dw SacredAshEffect     ; SACRED_ASH
 	dw PokeBallEffect      ; HEAVY_BALL
 	dw NoEffect            ; FLOWER_MAIL
@@ -908,8 +908,6 @@ MoonBallMultiplier:
 	pop bc
 	ret nz
 
-	inc hl
-	inc hl
 	inc hl
 
 	push bc

@@ -135,27 +135,27 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw TeruSama9Desc
-	dw TeruSama10Desc
-	dw TeruSama11Desc
+	dw StoneDesc
+	dw HoneypotDesc
+	dw GelPenDesc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
 	dw ScopeLensDesc
-	dw TeruSama12Desc
-	dw TeruSama13Desc
+	dw HairtieDesc
+	dw LuckyGemDesc
 	dw MetalCoatDesc
 	dw DragonFangDesc
-	dw TeruSama14Desc
+	dw OldSandwichDesc
 	dw LeftoversDesc
-	dw TeruSama15Desc
-	dw TeruSama16Desc
-	dw TeruSama17Desc
+	dw GoldPearlDesc
+	dw CompassDesc
+	dw HardtackDesc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
-	dw TeruSama18Desc
-	dw TeruSama19Desc
-	dw TeruSama20Desc
+	dw DarkShellDesc
+	dw ClipboardDesc
+	dw TabloidDesc
 	dw SacredAshDesc
 	dw HeavyBallDesc
 	dw FlowerMailDesc
@@ -281,6 +281,54 @@ PokeBallDesc:
 
 TeruSama1Desc:
 	db   "?@"
+
+StoneDesc:
+	db   "An average rock."
+	next "Could be useful.@"
+
+HoneypotDesc:
+	db   "A pot overflowing"
+	next "with tasty honey.@"
+
+GelPenDesc:
+	db   "A pen filled with"
+	next "cute glittery ink.@"
+
+HairtieDesc:
+	db   "A scrunchie. Good"
+	next "for messy hair.@"
+
+LuckyGemDesc:
+	db   "A cheap good-luck"
+	next "glass charm.@"
+
+OldSandwichDesc:
+	db   "An old rancid"
+	next "cheese sandwich.@"
+
+GoldPearlDesc:
+	db   "A real underwater"
+	next "NUGGET contender.@"
+
+CompassDesc:
+	db   "Guides its user to"
+	next "their destination.@"
+
+HardtackDesc:
+	db   "A snack for tough,"
+	next "outdoorsy folks.@"
+
+DarkShellDesc:
+	db   "An ancient-looking"
+	next "polished rock.@"
+
+ClipboardDesc:
+	db   "A report for the"
+	next "SILPH CO. office.@"
+
+TabloidDesc:
+	db   "Gossip about a boy"
+	next "from PALLET TOWN.@"
 
 BicycleDesc:
 	db   "A collapsible bike"

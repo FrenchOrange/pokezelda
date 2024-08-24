@@ -155,7 +155,7 @@
 	tilecoll WALL, WALL, DOOR, WALL ; 9a
 	tilecoll LADDER, LADDER, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 9b
 	tilecoll WALL, WALL, WALL, WALL ; 9c
-	tilecoll WALL, WALL, WALL, WALL ; 9d
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 9d
 	tilecoll WATER, WATER, WATER, WATER ; 9e
 	tilecoll WALL, WALL, WALL, WALL ; 9f
 	tilecoll WALL, WALL, WALL, WALL ; a0

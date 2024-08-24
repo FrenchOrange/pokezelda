@@ -233,3 +233,11 @@
 - Made it so the Coin Case is available in Celadon if the player didn't grab it in the Goldenrod Underground.
 - Changed the reward for the Lake of Rage record-sized Magikarp event.
 - Updated a large amount of menu icons. Courtesy of SoupPotato (and Damien for helping with Umbreon's icon).
+
+
+1.2.7
+- Fixed block issue in Olivine and Vermilion port passage maps.
+- Fixed vanilla inconsistency with the Scientist spriteset.
+- Made the colors of thrown Poké Balls more accurate.
+- Updated Gyarados' back sprite. Courtesy of SoupPotato.
+- Implemented an item-trading sequence. To initiate it, talk to the little boy in Cherrygrove.

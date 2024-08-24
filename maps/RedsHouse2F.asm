@@ -1,3 +1,6 @@
+	object_const_def
+	const REDS_HOUSE_POKE_BALL
+
 RedsHouse2F_MapScripts:
 	def_scene_scripts
 
@@ -31,6 +34,9 @@ RedsHouse2FBedText:
 	line "folded neatly."
 	done
 
+RedsHouse2FMasterBall:
+	itemball MASTER_BALL
+
 RedsHouse2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -46,3 +52,4 @@ RedsHouse2F_MapEvents:
 	bg_event  2,  7, BGEVENT_READ, RedsHouse2FBedScript
 
 	def_object_events
+	object_event  7,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RedsHouse2FMasterBall, EVENT_REDS_HOUSE_MASTER_BALL

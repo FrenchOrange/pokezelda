@@ -5,7 +5,7 @@
 	const ROUTE11_YOUNGSTER4
 	const ROUTE11_GENTLEMAN
 	const ROUTE11_FRUIT_TREE
-	const VERMILIONCITY_BIG_SNORLAX
+	const ROUTE11_BIG_SNORLAX
 	const ROUTE11_FISHER
 
 Route11_MapScripts:
@@ -13,35 +13,35 @@ Route11_MapScripts:
 
 	def_callbacks
 
-VermilionSnorlax:
+Route11Snorlax:
 	opentext
 	special SnorlaxAwake
 	iftrue .Awake
-	writetext VermilionCitySnorlaxSleepingText
+	writetext Route11SnorlaxSleepingText
 	waitbutton
 	closetext
 	end
 
 .Awake:
-	writetext VermilionCityRadioNearSnorlaxText
+	writetext Route11RadioNearSnorlaxText
 	pause 15
 	cry SNORLAX
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon SNORLAX, 50
 	startbattle
-	disappear VERMILIONCITY_BIG_SNORLAX
+	disappear ROUTE11_BIG_SNORLAX
 	setevent EVENT_FOUGHT_SNORLAX
 	setevent EVENT_DECO_BIG_SNORLAX_DOLL
 	reloadmapafterbattle
 	end
 
-VermilionCitySnorlaxSleepingText:
+Route11SnorlaxSleepingText:
 	text "SNORLAX is snoring"
 	line "peacefully…"
 	done
 
-VermilionCityRadioNearSnorlaxText:
+Route11RadioNearSnorlaxText:
 	text "The #GEAR was"
 	line "placed near the"
 	cont "sleeping SNORLAX…"
@@ -51,8 +51,8 @@ VermilionCityRadioNearSnorlaxText:
 	para "SNORLAX woke up!"
 	done
 
-VermilionCityDiglettsCaveSign:
-	jumptext VermilionCityDiglettsCaveSignText
+Route11DiglettsCaveSign:
+	jumptext Route11DiglettsCaveSignText
 
 TrainerYoungsterOwen:
 	trainer YOUNGSTER, OWEN, EVENT_BEAT_YOUNGSTER_OWEN, YoungsterOwenSeenText, YoungsterOwenBeatenText, 0, .Script
@@ -242,7 +242,7 @@ GentlemanVirgilAfterBattleText:
 	cont "I come from."
 	done
 
-VermilionCityDiglettsCaveSignText:
+Route11DiglettsCaveSignText:
 	text "DIGLETT'S CAVE"
 	done
 
@@ -257,7 +257,7 @@ Route11_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event  1,  7, BGEVENT_READ, VermilionCityDiglettsCaveSign
+	bg_event  1,  7, BGEVENT_READ, Route11DiglettsCaveSign
 
 	def_object_events
 	object_event 36, 16, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterOwen, -1
@@ -266,5 +266,5 @@ Route11_MapEvents:
 	object_event 16,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicFidel, -1
 	object_event 23, 19, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerGentlemanVirgil, -1
 	object_event 48,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11FruitTree, -1
-	object_event  4,  8, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNORLAX
+	object_event  4,  8, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route11Snorlax, EVENT_VERMILION_CITY_SNORLAX
 	object_event 55,  2, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerDollManiacJackie, EVENT_DECO_MACHOP_DOLL

@@ -315,40 +315,41 @@ SaffronCity_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 28,  3, FIGHTING_DOJO, 1
-	warp_event 36,  3, SAFFRON_GYM, 1
-	warp_event 27, 11, SAFFRON_MART, 2
-	warp_event 11, 29, SAFFRON_POKECENTER_1F, 1
-	warp_event 31, 29, MR_PSYCHICS_HOUSE, 1
-	warp_event  8,  5, SAFFRON_MAGNET_TRAIN_STATION, 2
-	warp_event 20, 21, SILPH_CO_1F, 1
-	warp_event 11, 11, COPYCATS_HOUSE_1F, 1
-	warp_event  0, 17, ROUTE_7_SAFFRON_GATE, 3
-	warp_event  0, 18, ROUTE_7_SAFFRON_GATE, 4
-	warp_event 43, 17, ROUTE_8_SAFFRON_GATE, 3
-	warp_event 43, 18, ROUTE_8_SAFFRON_GATE, 4
+	warp_event 28, 11, FIGHTING_DOJO, 1
+	warp_event 36, 11, SAFFRON_GYM, 1
+	warp_event 27, 19, SAFFRON_MART, 2
+	warp_event 11, 37, SAFFRON_POKECENTER_1F, 1
+	warp_event 31, 37, MR_PSYCHICS_HOUSE, 1
+	warp_event  8, 13, SAFFRON_MAGNET_TRAIN_STATION, 2
+	warp_event 20, 29, SILPH_CO_1F, 1
+	warp_event 11, 19, COPYCATS_HOUSE_1F, 1
+	warp_event  0, 25, ROUTE_7_SAFFRON_GATE, 3
+	warp_event  0, 26, ROUTE_7_SAFFRON_GATE, 4
+	warp_event 43, 25, ROUTE_8_SAFFRON_GATE, 3
+	warp_event 43, 26, ROUTE_8_SAFFRON_GATE, 4
+	warp_event 22,  5, ROUTE_5_SAFFRON_GATE, 3
 
 	def_coord_events
 
 	def_bg_events
-	bg_event 19,  5, BGEVENT_READ, SaffronCitySign
-	bg_event 37,  5, BGEVENT_READ, SaffronGymSign
-	bg_event 29,  5, BGEVENT_READ, FightingDojoSign
-	bg_event 17, 21, BGEVENT_READ, SilphCoSign
-	bg_event 29, 29, BGEVENT_READ, MrPsychicsHouseSign
-	bg_event  5,  5, BGEVENT_READ, SaffronCityMagnetTrainStationSign
-	bg_event 12, 29, BGEVENT_READ, SaffronCityPokecenterSign
-	bg_event 28, 11, BGEVENT_READ, SaffronCityMartSign
-	bg_event  3, 19, BGEVENT_READ, SaffronCitySign2
-	bg_event  7, 21, BGEVENT_READ, SaffronCitySign3
-	bg_event 41, 19, BGEVENT_READ, SaffronCitySign4
+	bg_event 19, 13, BGEVENT_READ, SaffronCitySign
+	bg_event 37, 13, BGEVENT_READ, SaffronGymSign
+	bg_event 29, 13, BGEVENT_READ, FightingDojoSign
+	bg_event 17, 29, BGEVENT_READ, SilphCoSign
+	bg_event 29, 37, BGEVENT_READ, MrPsychicsHouseSign
+	bg_event  5, 13, BGEVENT_READ, SaffronCityMagnetTrainStationSign
+	bg_event 12, 37, BGEVENT_READ, SaffronCityPokecenterSign
+	bg_event 28, 19, BGEVENT_READ, SaffronCityMartSign
+	bg_event  3, 27, BGEVENT_READ, SaffronCitySign2
+	bg_event  7, 29, BGEVENT_READ, SaffronCitySign3
+	bg_event 41, 27, BGEVENT_READ, SaffronCitySign4
 
 	def_object_events
-	object_event  9, 14, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityLass1Script, -1
-	object_event 21, 30, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityPokefanMScript, -1
-	object_event 34,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityCooltrainerMScript, -1
-	object_event 22, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityCooltrainerFScript, -1
-	object_event 29, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityFisherScript, -1
-	object_event 17, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster1Script, -1
-	object_event 37, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster2Script, -1
-	object_event 21,  8, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityLass2Script, -1
+	object_event  9, 22, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityLass1Script, -1
+	object_event 21, 38, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityPokefanMScript, -1
+	object_event 34, 15, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityCooltrainerMScript, -1
+	object_event 22, 32, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityCooltrainerFScript, -1
+	object_event 29, 20, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityFisherScript, -1
+	object_event 17, 27, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster1Script, -1
+	object_event 37, 30, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster2Script, -1
+	object_event 21, 16, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityLass2Script, -1

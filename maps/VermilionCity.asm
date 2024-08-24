@@ -4,7 +4,9 @@
 	const VERMILIONCITY_MACHOP
 	const VERMILIONCITY_SUPER_NERD
 	const VERMILIONCITY_POKEFAN_M
+	const VERMILIONCITY_BIG_SNORLAX
 	const VERMILIONCITY_OFFICER_JENNY
+	const VERMILIONCITY_FISHER
 
 VermilionCity_MapScripts:
 	def_scene_scripts
@@ -355,6 +357,93 @@ GiftSquirtleOTName:
 
 	db FEMALE
 
+VermilionCityFisherScript:
+	faceplayer
+	opentext
+	checkitem OLD_SANDWICH
+	iftrue .GotGoldPearl
+	checkevent EVENT_GAVE_OLD_SANDWICH
+	iftrue .FisherPostStep
+	writetext VermilionCityFisher_NoItem
+	waitbutton
+	closetext
+	turnobject VERMILIONCITY_FISHER, UP
+	end
+
+.GotGoldPearl:
+	writetext VermilionCityFisher_HasItem
+	promptbutton
+	takeitem OLD_SANDWICH
+	giveitem GOLD_PEARL
+	writetext VermilionCityFisher_GetItem
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_OLD_SANDWICH
+	turnobject VERMILIONCITY_FISHER, UP
+	end
+
+.FisherPostStep:
+	writetext VermilionCityFisher_After
+	waitbutton
+	closetext
+	turnobject VERMILIONCITY_FISHER, UP
+	end
+
+VermilionCityFisher_NoItem:
+	text "Grumble. Grumble."
+
+	para "I'm trying to fish"
+	line "up some rarer"
+	cont "#MON, but"
+	cont "nothing works!"
+
+	para "I'd need some better"
+	line "bait. The fish got"
+	cont "a good ense of"
+	cont "smell you know."
+	done
+
+VermilionCityFisher_HasItem:
+	text "Pwah! You stink,"
+	line "kiddo!"
+
+	para "Hey! That sandwich"
+	line "is mighty moldy."
+
+	para "That cheese's just"
+	line "what I needed!"
+
+	para "Say, you give it"
+	line "to me, and as a"
+	cont "trade-off you get"
+
+	para "this shiny thing"
+	line "I reeled in once."
+	done
+
+VermilionCityFisher_GetItem:
+	text "<PLAYER> obtained a"
+	line "GOLD PEARL."
+	done
+
+VermilionCityFisher_After:
+	text "Personally? I'm"
+	line "not one to care"
+	cont "about treasure."
+
+	para "Fish #MON are"
+	line "much more neat."
+
+	para "Take that pearl I"
+	line "gave you, it was a"
+
+	para "funky-colored"
+	line "SHELLDER that was"
+	cont "holding it!"
+	done
+
 VermilionCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -387,5 +476,6 @@ VermilionCity_MapEvents:
 	object_event 30,  7, SPRITE_MACHOP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionMachop, -1
 	object_event 16, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionCitySuperNerdScript, -1
 	object_event 33, 14, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionGymBadgeGuy, -1
-	object_event 44, 14, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNORLAX
+	object_event 44, 14, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_VERMILION_CITY_SNORLAX
 	object_event 15,  4, SPRITE_OFFICER_JENNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityOfficerScript, -1
+	object_event 24, 26, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityFisherScript, -1

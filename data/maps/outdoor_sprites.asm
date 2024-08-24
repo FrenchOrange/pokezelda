@@ -58,7 +58,7 @@ CinnabarGroupSprites:
 	db 0 ; end
 
 CeruleanGroupSprites:
-; Route4East, CeruleanCity, Route24, Route25, Route9, Route10
+; Route4East, Route5, CeruleanCity, Route24, Route25, Route9, Route10
 	db SPRITE_SUPER_NERD
 	db SPRITE_FISHER
 	db SPRITE_YOUNGSTER
@@ -66,9 +66,9 @@ CeruleanGroupSprites:
 	db SPRITE_POKEFAN_M
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_MISTY
-	; max 7 of 9 walking sprites
+	db SPRITE_BLACK_BELT
+	; max 8 of 9 walking sprites
 	db SPRITE_POKE_BALL
-	db SPRITE_FRUIT_TREE
 	db SPRITE_SLOWBRO
 	db SPRITE_COOLTRAINER_F
 	db SPRITE_OFFICER
@@ -79,24 +79,19 @@ CeruleanGroupSprites:
 VermilionGroupSprites:
 ; VermilionCity, Route11
 SaffronGroupSprites:
-; Route5, SaffronCity, Route6
+; SaffronCity, Route6
 	db SPRITE_SUPER_NERD
 	db SPRITE_FISHER
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
 	db SPRITE_POKEFAN_M
 	db SPRITE_COOLTRAINER_M
-	db SPRITE_MISTY
 	db SPRITE_TEACHER
 	db SPRITE_COOLTRAINER_F
-	; max 9 of 9 walking sprites
-	db SPRITE_POKE_BALL
+	; max 8 of 9 walking sprites
 	db SPRITE_FRUIT_TREE
-	db SPRITE_SLOWBRO
 	db SPRITE_BIG_SNORLAX
 	db SPRITE_OFFICER
-	db SPRITE_ROCKET
-	db SPRITE_ROCKER
 	db SPRITE_OFFICER_JENNY
 	db SPRITE_MACHOP
 	db SPRITE_GENTLEMAN
@@ -182,18 +177,19 @@ EcruteakGroupSprites:
 ; EcruteakCity
 	db SPRITE_FISHER
 	db SPRITE_LASS
-	db SPRITE_OFFICER
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_BUG_CATCHER
 	db SPRITE_SUPER_NERD
 	db SPRITE_TWIN
+	db SPRITE_BEEDRILL
 	; 9 of max 9 walking sprites
 	db SPRITE_SUDOWOODO
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db SPRITE_SUICUNE
+	db SPRITE_OFFICER
 	db 0 ; end
 
 AzaleaGroupSprites:
@@ -282,6 +278,8 @@ LakeOfRageGroupSprites:
 
 BlackthornGroupSprites:
 ; Route45, Route46, BlackthornCity
+SilverGroupSprites:
+; Route28, SilverCaveOutside
 	db SPRITE_GRAMPS
 	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
@@ -293,11 +291,6 @@ BlackthornGroupSprites:
 	; 8 of max 9 walking sprites
 	db SPRITE_FRUIT_TREE
 	db SPRITE_POKE_BALL
-	db 0 ; end
-
-SilverGroupSprites:
-; Route28, SilverCaveOutside
-	; 0 of max 9 walking sprites
 	db 0 ; end
 
 DungeonsGroupSprites:

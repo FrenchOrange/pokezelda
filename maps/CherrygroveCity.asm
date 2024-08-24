@@ -4,6 +4,7 @@
 	const CHERRYGROVECITY_TEACHER
 	const CHERRYGROVECITY_YOUNGSTER
 	const CHERRYGROVECITY_FISHER
+	const CHERRYGROVECITY_BUG_CATCHER
 
 CherrygroveCity_MapScripts:
 	def_scene_scripts
@@ -543,6 +544,103 @@ GuideGentsHouseSignText:
 	text "GUIDE GENT'S HOUSE"
 	done
 
+CherrygroveBugCatcherScript:
+	faceplayer
+	opentext
+	checkevent EVENT_RECEIVED_STONE
+	iffalse .GetStoneSequence
+	writetext CherrygroveBugCatcher_After
+	waitbutton
+	closetext
+	end
+
+.GetStoneSequence:
+	writetext CherrygroveBugCatcher_HasItem1
+	waitbutton
+	closetext
+	readvar VAR_XCOORD
+	ifequal 13, .BugCatcherScriptLeft
+.BugCatcherMovementScript
+	applymovement CHERRYGROVECITY_BUG_CATCHER, BugCatcherSearchMovement1
+	wait 5
+	turnobject CHERRYGROVECITY_BUG_CATCHER, LEFT
+	wait 5
+	turnobject CHERRYGROVECITY_BUG_CATCHER, RIGHT
+	wait 10
+	turnobject CHERRYGROVECITY_BUG_CATCHER, DOWN
+	wait 5
+	turnobject CHERRYGROVECITY_BUG_CATCHER, LEFT
+	wait 10
+	turnobject CHERRYGROVECITY_BUG_CATCHER, DOWN
+	wait 5
+	turnobject CHERRYGROVECITY_BUG_CATCHER, UP
+	showemote EMOTE_SHOCK, CHERRYGROVECITY_BUG_CATCHER, 10
+	wait 5
+	applymovement CHERRYGROVECITY_BUG_CATCHER, BugCatcherSearchMovement2
+	faceplayer
+	opentext
+	writetext CherrygroveBugCatcher_HasItem2
+	promptbutton
+	giveitem STONE
+	writetext CherrygroveBugCatcher_GetItem
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	setevent EVENT_RECEIVED_STONE
+	end
+
+.BugCatcherScriptLeft:
+	applymovement PLAYER, CherrygrovePlayerMovementLeft
+	pause 15
+	sjump .BugCatcherMovementScript
+
+CherrygrovePlayerMovementLeft:
+	step UP
+	step RIGHT
+	turn_head DOWN
+	step_end
+
+BugCatcherSearchMovement1:
+	step LEFT
+	step LEFT
+	step LEFT
+	step DOWN
+	step_end
+
+BugCatcherSearchMovement2:
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+
+CherrygroveBugCatcher_HasItem1:
+	text "If you talk to"
+	line "people you meet,"
+	cont "they may give you"
+	cont "cool items!"
+
+	para "Me? Uh… Uh. Give"
+	line "me a second."
+	done
+
+CherrygroveBugCatcher_HasItem2:
+	text "There! That's my"
+	line "gift item."
+	done
+
+CherrygroveBugCatcher_GetItem:
+	text "<PLAYER> obtained a"
+	line "STONE."
+	done
+
+CherrygroveBugCatcher_After:
+	text "You never know,"
+	line "maybe someone else"
+	cont "will need it!"
+	done
+
 CherrygroveCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -569,3 +667,4 @@ CherrygroveCity_MapEvents:
 	object_event 27, 12, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
+	object_event 14,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CherrygroveBugCatcherScript, -1

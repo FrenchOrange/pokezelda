@@ -1,3 +1,6 @@
+	object_const_def
+	const SILVERCAVEOUTSIDE_GRAMPS
+
 SilverCaveOutside_MapScripts:
 	def_scene_scripts
 
@@ -21,6 +24,20 @@ MtSilverSignText:
 	text "MT.SILVER"
 	done
 
+SilverCaveOutsideGrampsScript:
+	faceplayer
+	opentext
+	writetext SilverCaveOutsideGrampsText
+	waitbutton
+	closetext
+	turnobject SILVERCAVEOUTSIDE_GRAMPS, UP
+	end
+
+SilverCaveOutsideGrampsText:
+	text "How does one use a"
+	line "COMPASS again?"
+	done
+
 SilverCaveOutside_MapEvents:
 	db 0, 0 ; filler
 
@@ -36,3 +53,4 @@ SilverCaveOutside_MapEvents:
 	bg_event  9, 25, BGEVENT_ITEM, SilverCaveOutsideHiddenFullRestore
 
 	def_object_events
+	object_event 21, 20, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilverCaveOutsideGrampsScript, EVENT_GRAMPS_OUTSIDE_MT_SILVER

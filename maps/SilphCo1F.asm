@@ -2,6 +2,9 @@
 	const SILPHCO1F_RECEPTIONIST
 	const SILPHCO1F_OFFICER
 	const SILPHCO1F_SCIENTIST
+	const SILPHCO1F_WORKER1
+	const SILPHCO1F_WORKER2
+	const SILPHCO1F_BLACKBELT
 
 SilphCo1F_MapScripts:
 	def_scene_scripts
@@ -13,6 +16,9 @@ SilphCoElevator:
 
 SilphCoReceptionistScript:
 	jumptextfaceplayer SilphCoReceptionistText
+
+SilphCoBlackbeltScript:
+	jumptextfaceplayer SilphCoBlackbeltText
 
 SilphCoOfficerScript:
 	faceplayer
@@ -79,9 +85,6 @@ SilphCoScientistScript:
 	disappear SILPHCO1F_SCIENTIST
 	stopfollow
 	applymovement PLAYER, SilphCoFinishFollowScientist_MovementData
-;	playsound SFX_ENTER_DOOR
-;	special FadeOutPalettes
-;	pause 15
 	warpcheck
 	end
 
@@ -118,6 +121,14 @@ SilphCoReceptionistText:
 	text "Welcome. This is"
 	line "SILPH CO.'s HEAD"
 	cont "OFFICE BUILDING."
+	done
+
+SilphCoBlackbeltText:
+	text "Hey! Glad to see"
+	line "you, kiddo!"
+
+	para "I'm paying my old"
+	line "workplace a visit."
 	done
 
 SilphCoOfficerText:
@@ -207,6 +218,143 @@ SilphCoScientistOhItsYouText:
 	cont "for study?"
 	done
 
+SilphCoWorker1Script:
+	faceplayer
+	opentext
+	checkitem CLIPBOARD
+	iftrue .GotClipboard
+	checkevent EVENT_GAVE_CLIPBOARD
+	iftrue .WorkerPostStep
+	writetext SilphCoWorker1_NoItem
+	waitbutton
+	closetext
+	end
+
+.GotClipboard:
+	writetext SilphCoWorker1_HasItem
+	promptbutton
+	takeitem CLIPBOARD
+	giveitem TABLOID
+	writetext SilphCoWorker1_GetItem
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_CLIPBOARD
+	end
+
+.WorkerPostStep:
+	writetext SilphCoWorker1_After
+	waitbutton
+	closetext
+	end
+
+SilphCoWorker1_NoItem:
+	text "I'm the courrier"
+	line "guy. It's a pretty"
+	cont "boring job."
+
+	para "I spend most of my"
+	line "shifts reading"
+	cont "whatever it is"
+	cont "that comes my way."
+
+	para "I'm just waiting"
+	line "for documents to"
+	cont "come around."
+	done
+
+SilphCoWorker1_HasItem:
+	text "Oh? A report from"
+	line "the PEWTER MUSEUM?"
+
+	para "I'll transfer it"
+	line "right away!"
+
+	para "Hmm? You expect"
+	line "something in"
+	cont "exchange?"
+
+	para "Well, you can have"
+	line "this magazing I've"
+	cont "been reading."
+
+	para "Sound good?"
+	done
+
+SilphCoWorker1_GetItem:
+	text "<PLAYER> obtained a"
+	line "TABLOID."
+	done
+
+SilphCoWorker1_After:
+	text "Enjoy your read!"
+	line "There's some good"
+	cont "articles in there."
+
+	para "'I got engaged"
+	line "with my GRAVELER'"
+	cont "had me shedding a"
+	cont "tear by the end."
+
+	para "But the front page"
+	line "news? Sightings"
+	cont "of the legendary"
+
+	para "trainer RED out"
+	line "in the wild?"
+
+	para "Now that's grand!"
+	done
+
+SilphCoWorker2Script:
+	faceplayer
+	opentext
+	checkevent EVENT_GAVE_HARDTACK
+	iftrue .BlackbeltIsBack
+	writetext SilphCoWorker2_Alone
+	waitbutton
+	closetext
+	end
+
+.BlackbeltIsBack:
+	writetext SilphCoWorker2_NotAlone
+	waitbutton
+	closetext
+	turnobject SILPHCO1F_WORKER2, LEFT
+	end
+
+SilphCoWorker2_Alone:
+	text "SILPH CO. is as"
+	line "prestigious as it"
+	cont "is cut-throat."
+
+	para "Some people just"
+	line "can't handle the"
+	cont "stress and end up"
+
+	para "living off the"
+	line "land in the middle"
+	cont "of nowhere."
+	done
+
+SilphCoWorker2_NotAlone:
+	text "No way, SEBASTIAN"
+	line "came back?!"
+
+	para "We all thought he"
+	line "got eaten by a"
+	cont "wild ODDISH!"
+
+	para "Woah… And he's"
+	line "super jacked now."
+
+	para "Maybe I could"
+	line "spend some time in"
+	cont "the wilderness"
+	cont "myself…"
+	done
+
 SilphCo1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -224,3 +372,6 @@ SilphCo1F_MapEvents:
 	object_event  5,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SilphCoReceptionistScript, -1
 	object_event 25,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoOfficerScript, -1
 	object_event 16, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoScientistScript, -1
+	object_event  5,  9, SPRITE_CLERK, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilphCoWorker1Script, -1
+	object_event 27,  8, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SilphCoWorker2Script, -1
+	object_event 26,  8, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCoBlackbeltScript, EVENT_BLACKBELT_IN_SILPH_CO

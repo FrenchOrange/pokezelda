@@ -13,6 +13,9 @@
 	const ROUTE32_FISHER5
 	const ROUTE32_FRIEDA
 	const ROUTE32_POKE_BALL2
+	const ROUTE32_BUG_CATCHER
+	const ROUTE32_BEEDRILL
+	const ROUTE32_HONEYPOT
 
 Route32_MapScripts:
 	def_scene_scripts
@@ -864,6 +867,203 @@ Route32UnionCaveSignText:
 	line "AHEAD"
 	done
 
+Route32BugCatcherScript:
+	faceplayer
+	opentext
+	checkitem STONE
+	iftrue .GotStone
+	writetext Route32BugCatcher_NoItem
+	waitbutton
+	closetext
+	turnobject ROUTE32_BUG_CATCHER, UP
+	end
+
+.GotStone:
+	writetext Route32BugCatcher_HasItem
+	waitbutton
+	closetext
+	turnobject ROUTE32_BUG_CATCHER, UP
+	readvar VAR_XCOORD
+	ifequal 12, .BugCatcherScriptLeft
+	ifequal 14, .BugCatcherScriptRight
+.BugCatcherScriptMiddle
+	pause 10
+	playsound SFX_TACKLE
+	waitsfx
+	pause 30
+	opentext
+	writetext Route32BugCatcher_Beedrill1
+	waitbutton
+	closetext
+	playsound SFX_GRASS_RUSTLE
+	waitsfx
+	pause 5
+	playsound SFX_GRASS_RUSTLE
+	waitsfx
+	cry BEEDRILL
+	appear ROUTE32_BEEDRILL
+	pause 30
+	opentext
+	writetext Route32BugCatcher_Shock
+	waitbutton
+	closetext
+	pause 15
+	applymovement ROUTE32_BEEDRILL, Route32BeedrillMovesDown
+	cry BEEDRILL
+	opentext
+	writetext Route32BugCatcher_Beedrill2
+	waitbutton
+	closetext
+	applymovement ROUTE32_BUG_CATCHER, Route32BugCatcherMovesLeftRight
+	opentext
+	writetext Route32BugCatcher_Scream
+	waitbutton
+	closetext
+	applymovement ROUTE32_BUG_CATCHER, Route32BugCatcherRunsAway1
+	playsound SFX_TACKLE
+	appear ROUTE32_HONEYPOT
+	pause 15
+	applymovement ROUTE32_BUG_CATCHER, Route32BugCatcherRunsAway2
+	pause 15
+	turnobject ROUTE32_BEEDRILL, RIGHT
+	cry BEEDRILL
+	applymovement ROUTE32_BEEDRILL, Route32BeedrillMovesRunsAfter
+	pause 45
+	disappear ROUTE32_BUG_CATCHER
+	disappear ROUTE32_BEEDRILL
+	applymovement PLAYER, PlayerMovesToHoneypot
+	takeitem STONE
+	giveitem HONEYPOT
+	disappear ROUTE32_HONEYPOT
+	opentext
+	writetext Route32BugCatcher_GetItem
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_STONE
+	end
+
+.BugCatcherScriptLeft:
+	applymovement PLAYER, PlayerMovesLeft
+	pause 15
+	sjump .BugCatcherScriptMiddle
+
+.BugCatcherScriptRight:
+	applymovement PLAYER, PlayerMovesRight
+	pause 15
+	sjump .BugCatcherScriptMiddle
+
+Route32BugCatcher_NoItem:
+	text "There's a rare"
+	line "#MON hiding in"
+	cont "that tree, but"
+
+	para "HEADBUTT won't do"
+	line "the job."
+
+	para "Neither do sweet"
+	line "lures… Maybe I"
+	cont "could catch its"
+
+	para "attention in some"
+	line "other way?"
+	done
+
+Route32BugCatcher_HasItem:
+	text "Hey, you! Pass me"
+	line "that rock."
+
+	para "Hehe. Aim at the"
+	line "tree and watch the"
+	cont "magic unfold."
+	done
+
+Route32BugCatcher_Beedrill1:
+	text "Hiiiii!"
+	done
+
+Route32BugCatcher_Shock:
+	text "Wh- What?"
+	done
+
+Route32BugCatcher_Beedrill2:
+	text "BEEDRILL: Hiii!"
+	line "Hiiiiii!!"
+	done
+
+Route32BugCatcher_Scream:
+	text "AAaaaaa--!!"
+	done
+
+Route32BugCatcher_GetItem:
+	text "… … …"
+
+	para "<PLAYER> obtained a"
+	line "HONEYPOT."
+	done
+
+PlayerMovesLeft:
+	step DOWN
+	step RIGHT
+	turn_head UP
+	step_end
+
+PlayerMovesRight:
+	step DOWN
+	step LEFT
+	turn_head UP
+	step_end
+
+Route32BeedrillMovesDown:
+	step DOWN
+	step_end
+
+Route32BugCatcherMovesLeftRight:
+	big_step RIGHT
+	big_step LEFT
+	big_step RIGHT
+	big_step LEFT
+	big_step RIGHT
+	big_step LEFT
+	step_end
+
+Route32BugCatcherRunsAway1:
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	fix_facing
+	jump_step LEFT
+	remove_fixed_facing
+	step_end
+
+Route32BugCatcherRunsAway2:
+	big_step RIGHT
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	step_end
+
+Route32BeedrillMovesRunsAfter:
+	big_step DOWN
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	step_end
+
+PlayerMovesToHoneypot:
+	step RIGHT
+	step RIGHT
+	step UP
+	step RIGHT
+	step_end
+
 Route32_MapEvents:
 	db 0, 0 ; filler
 
@@ -900,3 +1100,6 @@ Route32_MapEvents:
 	object_event 17, 13, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32RoarTMGuyScript, -1
 	object_event 14, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_32_FRIEDA_OF_FRIDAY
 	object_event  5, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route32Repel, EVENT_ROUTE_32_REPEL
+	object_event 13,  0, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32BugCatcherScript, EVENT_GAVE_STONE
+	object_event 13, -2, SPRITE_BEEDRILL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_HONEYPOT_CUTSCENE
+	object_event 17,  0, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_HONEYPOT_CUTSCENE

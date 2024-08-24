@@ -4,7 +4,7 @@
 	const GOLDENRODCITY_COOLTRAINER_F1
 	const GOLDENRODCITY_COOLTRAINER_F2
 	const GOLDENRODCITY_YOUNGSTER2
-	const GOLDENRODCITY_LASS
+	const GOLDENRODCITY_LASS1
 	const GOLDENRODCITY_GRAMPS
 	const GOLDENRODCITY_ROCKETSCOUT
 	const GOLDENRODCITY_ROCKET1
@@ -14,6 +14,7 @@
 	const GOLDENRODCITY_ROCKET5
 	const GOLDENRODCITY_ROCKET6
 	const GOLDENRODCITY_MOVETUTOR
+	const GOLDENRODCITY_LASS2
 
 GoldenrodCity_MapScripts:
 	def_scene_scripts
@@ -543,6 +544,83 @@ GoldenrodCityMoveTutorMoveText:
 	text_start
 	done
 
+GoldenrodCityLass2Script:
+	faceplayer
+	opentext
+	checkitem GEL_PEN
+	iftrue .GotGelPen
+	checkevent EVENT_GAVE_GEL_PEN
+	iftrue .Lass2PostStep
+	writetext GoldenrodCityLass2_NoItem
+	waitbutton
+	closetext
+	end
+
+.GotGelPen:
+	writetext GoldenrodCityLass2_HasItem
+	promptbutton
+	takeitem GEL_PEN
+	giveitem HAIRTIE
+	writetext GoldenrodCityLass2_GetItem
+	playsound SFX_ITEM
+	waitsfx
+	waitbutton
+	closetext
+	setevent EVENT_GAVE_GEL_PEN
+	end
+
+.Lass2PostStep:
+	writetext GoldenrodCityLass2_After
+	waitbutton
+	closetext
+	end
+
+GoldenrodCityLass2_NoItem:
+	text "Hi! We're doing a"
+	line "survey on resident"
+	cont "satisfaction with"
+
+	para "our latest bake"
+	line "sale."
+
+	para "Do you want to"
+	line "take part in it?"
+
+	para "Oh wait, you don't"
+	line "even have a pen…"
+	done
+
+GoldenrodCityLass2_HasItem:
+	text "Ooh, wait. I love"
+	line "your pen!"
+
+	para "Forget the survey,"
+	line "can I have it?"
+	cont "Pleaaase?"
+
+	para "There, you can"
+	line "have my HAIRTIE"
+	cont "in exchange!"
+	done
+
+GoldenrodCityLass2_GetItem:
+	text "<PLAYER> obtained a"
+	line "HAIRTIE."
+	done
+
+GoldenrodCityLass2_After:
+	text "You're the best."
+
+	para "I'm sure people"
+	line "will be all over"
+	cont "that glitter ink."
+
+	para "Everyone love"
+	line "sparkling things,"
+	cont "like VENOMOTH to a"
+	cont "flame. Haha!"
+	done
+
 GoldenrodCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -595,3 +673,4 @@ GoldenrodCity_MapEvents:
 	object_event 29,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket5Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 31, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket6Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 12, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, EVENT_GOLDENROD_CITY_MOVE_TUTOR
+	object_event 23, 28, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityLass2Script, EVENT_GOLDENROD_CITY_CIVILIANS

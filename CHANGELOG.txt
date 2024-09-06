@@ -238,6 +238,7 @@
 1.2.7
 - Fixed block issue in Olivine and Vermilion port passage maps.
 - Fixed vanilla inconsistency with the Scientist spriteset.
+- Fixed issue where the Vermilion Gym puzzle wouldn't reset properly. Courtesy of SoupPotato.
 - Made the colors of thrown Poké Balls more accurate.
 - Updated Gyarados' back sprite. Courtesy of SoupPotato.
 - Implemented an item-trading sequence. To initiate it, talk to the little boy in Cherrygrove.

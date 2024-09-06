@@ -184,12 +184,6 @@ CheckVermilionGymTrashCan:
 	add a
 	add e
 	add d
-	dec a
-	dec a
-	dec a
-	dec a
-	dec a
-	dec a
 	ret
 
 VermilionGymSurgeScript:

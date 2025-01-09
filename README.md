@@ -7,7 +7,7 @@ While the story and progression are unchanged, here's some new things you can ex
 * Overhauled overworld and interior graphics, alongside some UI elements.
 * Tweaked trainer teams, namely harder rosters for important trainers, such as Gym Leaders.
 * An expanded Kanto, with restored dungeons, more trainers, and more items.
-* More sensible Pokémon distribution (as seen [here](NEW_LOCATIONS.txt)), and more generous HM compatibility.
+* More sensible Pokémon distribution (as seen [here](docs/NEW_LOCATIONS.txt)), and more generous HM compatibility.
 * Fixed off-model Pokémon sprites. Palettes were also improved for a good amount of Pokémon.
 * Some QOL features, like "Running Shoes" (works by holding down B), and an automatic Repel reuse message.
 * Fixed [bugs and glitches](https://github.com/pret/pokecrystal/blob/master/docs/bugs_and_glitches.md).
@@ -16,7 +16,7 @@ While the story and progression are unchanged, here's some new things you can ex
 (Do note that this rom hack is not compatible with base GSC.)*
 
 ## Version
-The current version is **1.2.7**, with changes documented in [the changelog](CHANGELOG.txt). All known issues are listed [here](KNOWN_ISSUES.txt).
+The current version is **1.2.7**, with changes documented in [the changelog](docs/CHANGELOG.txt). All known issues are listed [here](docs/KNOWN_ISSUES.txt).
 
 If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
@@ -36,4 +36,4 @@ Some HUGE thanks to:
 * The original devs and artists over at Nintendo/Capcom who worked on Link's Awakening and the Oracle games.
 
 ## Screenshots
-![main-collage](screenshots/main-collage.png)
+![main-collage](docs/main-collage.png)

@@ -21,6 +21,17 @@ UnusedEggPic::
 INCBIN "gfx/pokemon/egg/unused_front.2bpp.lz"
 
 
+SECTION "Title Screen", ROMX
+
+TitleScreenGFX1::
+INCBIN "gfx/title/logo_bottom.2bpp.lz"
+TitleScreenGFX2::
+INCBIN "gfx/title/logo_top.2bpp.lz"
+
+TitleScreenTilemap::
+INCBIN "gfx/title/logo.tilemap"
+
+
 SECTION "The End", ROMX
 
 TheEndGFX::
@@ -49,6 +60,12 @@ SECTION "Unown Font", ROMX
 
 UnownFont::
 INCBIN "gfx/font/unown_font.2bpp"
+
+
+SECTION "Title Screen 2", ROMX
+
+TitleScreenGFX4::
+INCBIN "gfx/title/suicune.2bpp.lz"
 
 
 SECTION "Pokégear GFX", ROMX

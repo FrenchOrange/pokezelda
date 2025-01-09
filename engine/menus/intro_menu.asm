@@ -1032,15 +1032,20 @@ StartTitleScreen:
 	dw ResetClock
 
 .TitleScreen:
-	farcall _TitleScreen
+	farcall TitleScreen
 	ret
 
 RunTitleScreen:
+	call ScrollTitleScreenClouds
 	ld a, [wJumptableIndex]
 	bit 7, a
 	jr nz, .done_title
 	call TitleScreenScene
-	farcall SuicuneFrameIterator
+	ld a, $1
+	ldh [hOAMUpdate], a
+	farcall PlaySpriteAnimations
+	xor a
+	ldh [hOAMUpdate], a
 	call DelayFrame
 	and a
 	ret
@@ -1049,8 +1054,7 @@ RunTitleScreen:
 	scf
 	ret
 
-UnusedTitlePerspectiveScroll: ; unreferenced
-; Similar behavior to Intro_PerspectiveScrollBG.
+ScrollTitleScreenClouds:
 	ldh a, [hVBlankCounter]
 	and $7
 	ret nz
@@ -1073,7 +1077,6 @@ TitleScreenScene:
 	jp hl
 
 .scenes
-	dw TitleScreenEntrance
 	dw TitleScreenTimer
 	dw TitleScreenMain
 	dw TitleScreenEnd
@@ -1081,53 +1084,6 @@ TitleScreenScene:
 TitleScreenNextScene: ; unreferenced
 	ld hl, wJumptableIndex
 	inc [hl]
-	ret
-
-TitleScreenEntrance:
-; Animate the logo:
-; Move each line by 4 pixels until our count hits 0.
-	ldh a, [hSCX]
-	and a
-	jr z, .done
-	sub 4
-	ldh [hSCX], a
-
-; Lay out a base (all lines scrolling together).
-	ld e, a
-	ld hl, wLYOverrides
-	ld bc, 8 * 10 ; logo height
-	call ByteFill
-
-; Reversed signage for every other line's position.
-; This is responsible for the interlaced effect.
-	ld a, e
-	xor $ff
-	inc a
-
-	ld b, 8 * 10 / 2 ; logo height / 2
-	ld hl, wLYOverrides + 1
-.loop
-	ld [hli], a
-	inc hl
-	dec b
-	jr nz, .loop
-
-	farcall AnimateTitleCrystal
-	ret
-
-.done
-; Next scene
-	ld hl, wJumptableIndex
-	inc [hl]
-	xor a
-	ldh [hLCDCPointer], a
-
-; Play the title screen music.
-	ld de, MUSIC_TITLE
-	call PlayMusic
-
-	ld a, $88
-	ldh [hWY], a
 	ret
 
 TitleScreenTimer:

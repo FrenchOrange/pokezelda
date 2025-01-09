@@ -568,10 +568,12 @@ _CGB_Evolution:
 	ret
 
 _CGB_GSTitleScreen:
+	ld hl, GSTitleBGPals
 	ld de, wBGPals1
-	ld bc, 5 palettes
+	ld bc, 4 palettes
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
+	ld hl, GSTitleOBPals
 	ld de, wOBPals1
 	ld bc, 2 palettes
 	ld a, BANK(wOBPals1)

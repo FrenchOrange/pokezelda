@@ -1174,6 +1174,12 @@ INCLUDE "gfx/diploma/diploma.pal"
 PartyMenuOBPals:
 INCLUDE "gfx/stats/party_menu_ob.pal"
 
+GSTitleBGPals:
+INCLUDE "gfx/title/title_bg.pal"
+
+GSTitleOBPals:
+INCLUDE "gfx/title/title_suicune.pal"
+
 MalePokegearPals:
 INCLUDE "gfx/pokegear/pokegear.pal"
 

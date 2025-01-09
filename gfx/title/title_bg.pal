@@ -1,0 +1,23 @@
+; lower sky + sun
+	RGB 31, 25, 13
+	RGB 31, 21, 16
+	RGB 31, 17, 10
+	RGB 00, 00, 00
+
+; upper sky + logo
+	RGB 31, 17, 10
+	RGB 21, 06, 27
+	RGB 11, 00, 17
+	RGB 00, 00, 00
+
+; copyright
+	RGB 31, 31, 31
+	RGB 23, 16, 31
+	RGB 02, 17, 22
+	RGB 07, 22, 28
+
+; scrolling waves
+	RGB 31, 31, 31
+	RGB 31, 21, 16
+	RGB 02, 17, 22
+	RGB 07, 22, 28

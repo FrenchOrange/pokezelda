@@ -177,10 +177,6 @@ gfx/pokegear/pokegear_sprites.2bpp: tools/gfx += --trim-whitespace
 
 gfx/mystery_gift/mystery_gift.2bpp: tools/gfx += --trim-whitespace
 
-gfx/title/crystal.2bpp: tools/gfx += --interleave --png=$<
-gfx/title/old_fg.2bpp: tools/gfx += --interleave --png=$<
-gfx/title/logo.2bpp: rgbgfx += -x 4
-
 gfx/trade/ball.2bpp: tools/gfx += --remove-whitespace
 gfx/trade/game_boy.2bpp: tools/gfx += --remove-duplicates --preserve=0x23,0x27
 gfx/trade/game_boy_cable.2bpp: gfx/trade/game_boy.2bpp gfx/trade/link_cable.2bpp ; cat $^ > $@
@@ -231,6 +227,9 @@ gfx/font/unused_bold_font.1bpp: tools/gfx += --trim-whitespace
 gfx/sgb/sgb_border.2bpp: tools/gfx += --trim-whitespace
 gfx/sgb/sgb_border.sgb.tilemap: gfx/sgb/sgb_border.bin ; tr < $< -d '\000' > $@
 
+### Misc from Gold/Silver
+gfx/title/logo_bottom.2bpp: tools/gfx += --trim-whitespace
+gfx/title/suicune.2bpp: tools/gfx += --interleave --png=$<
 
 ### Catch-all graphics rules
 

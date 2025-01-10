@@ -1,7 +1,43 @@
+	object_const_def
+	const UNDERGROUNDPATHWESTEAST_TEACHER
+	const UNDERGROUNDPATHWESTEAST_OFFICER
+
 UndergroundPathWestEast_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+
+TrainerTeacherNatalie:
+	trainer TEACHER, NATALIE, EVENT_BEAT_TEACHER_NATALIE, TeacherNatalieSeenText, TeacherNatalieBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext TeacherNatalieAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TeacherNatalieSeenText:
+	text "Don't move! Stay"
+	line "where you are!!"
+	done
+
+TeacherNatalieBeatenText:
+	text "Oh dear, are you"
+	line "all right?"
+	done
+
+TeacherNatalieAfterBattleText:
+	text "My sister gifted"
+	line "me this KOFFING so"
+	cont "I could stay safe"
+	cont "on my way home."
+
+	para "I've got to train"
+	line "it some more, I"
+	cont "suppose."
+	done
 
 TrainerOfficerClaude:
 	trainer OFFICER, CLAUDE, EVENT_BEAT_OFFICER_CLAUDE, OfficerClaudeSeenText, OfficerClaudeBeatenText, 0, .Script
@@ -49,8 +85,9 @@ UndergroundPathWestEast_MapEvents:
 	def_coord_events
 
 	def_bg_events
-	bg_event 27,  5, BGEVENT_ITEM, UndergroundPathWestEastHiddenNugget
-	bg_event  9,  2, BGEVENT_ITEM, UndergroundPathWestEastHiddenXAttack
+	bg_event 25,  5, BGEVENT_ITEM, UndergroundPathWestEastHiddenNugget
+	bg_event 12,  1, BGEVENT_ITEM, UndergroundPathWestEastHiddenXAttack
 
 	def_object_events
+	object_event 10,  4, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerTeacherNatalie, -1
 	object_event 36,  2, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerOfficerClaude, -1

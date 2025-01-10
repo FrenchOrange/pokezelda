@@ -241,4 +241,5 @@
 - Fixed issue where the Vermilion Gym puzzle wouldn't reset properly. Courtesy of SoupPotato.
 - Made the colors of thrown Poké Balls more accurate.
 - Updated Gyarados' back sprite. Courtesy of SoupPotato.
+- Made the Underground Path maps more visually distinct, and added a few NPCs to them.
 - Implemented an item-trading sequence. To initiate it, talk to the little boy in Cherrygrove.

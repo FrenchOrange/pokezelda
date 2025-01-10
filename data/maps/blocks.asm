@@ -374,12 +374,6 @@ NationalPark_Blocks:
 NationalParkBugContest_Blocks:
 	INCBIN "maps/NationalPark.blk"
 
-Route5UndergroundPathEntrance_Blocks:
-Route6UndergroundPathEntrance_Blocks:
-Route7UndergroundPathEntrance_Blocks:
-Route8UndergroundPathEntrance_Blocks:
-	INCBIN "maps/UndergroundPathEntrance.blk"
-
 KurtsHouse_Blocks:
 	INCBIN "maps/KurtsHouse.blk"
 
@@ -657,6 +651,12 @@ CeladonChiefHouse_Blocks:
 
 
 SECTION "Map Blocks 3", ROMX
+
+Route5UndergroundPathEntrance_Blocks:
+Route6UndergroundPathEntrance_Blocks:
+Route7UndergroundPathEntrance_Blocks:
+Route8UndergroundPathEntrance_Blocks:
+	INCBIN "maps/UndergroundPathEntrance.blk"
 
 FuchsiaCity_Blocks:
 	INCBIN "maps/FuchsiaCity.blk"

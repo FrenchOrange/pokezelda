@@ -1522,6 +1522,11 @@ TeacherGroup:
 	db 36, CLEFAIRY
 	db -1 ; end
 
+	; TEACHER (5)
+	db "NATALIE@", TRAINERTYPE_MOVES
+	db 30, KOFFING,     TACKLE, SMOG, SLUDGE_BOMB, PROTECT
+	db -1 ; end
+
 SabrinaGroup:
 	; SABRINA (1)
 	db "SABRINA@", TRAINERTYPE_MOVES

@@ -303,7 +303,7 @@ ENDM
 	map_const VERMILION_DIGLETTS_CAVE_SPEECH_HOUSE,         6,  5 ;  9
 	map_const VERMILION_GYM,                                7, 11 ; 10
 	map_const ROUTE_6_SAFFRON_GATE,                         7,  5 ; 11
-	map_const ROUTE_6_UNDERGROUND_PATH_ENTRANCE,            6,  5 ; 12
+	map_const ROUTE_6_UNDERGROUND_PATH_ENTRANCE,           13, 12 ; 12
 	endgroup
 
 	newgroup PALLET                                               ; 13
@@ -386,7 +386,7 @@ ENDM
 	map_const ROUTE_8_SAFFRON_GATE,                         7,  5 ; 12
 	map_const ROUTE_12_SUPER_ROD_HOUSE,                     6,  5 ; 13
 	map_const ROUTE_12_GATE,                                7,  5 ; NEW
-	map_const ROUTE_8_UNDERGROUND_PATH_ENTRANCE,            6,  5 ; NEW
+	map_const ROUTE_8_UNDERGROUND_PATH_ENTRANCE,           13, 12 ; NEW
 	map_const VIRIDIAN_FOREST,                             19, 29 ; NEW
 	endgroup
 
@@ -499,10 +499,10 @@ ENDM
 	map_const SILPH_CO_1F,                                 15,  9 ;  9
 	map_const COPYCATS_HOUSE_1F,                            6,  5 ; 10
 	map_const COPYCATS_HOUSE_2F,                            6,  5 ; 11
-	map_const ROUTE_5_UNDERGROUND_PATH_ENTRANCE,            6,  5 ; 12
+	map_const ROUTE_5_UNDERGROUND_PATH_ENTRANCE,           13, 12 ; 12
 	map_const ROUTE_5_SAFFRON_GATE,                         7,  5 ; 13
 	map_const ROUTE_5_CLEANSE_TAG_HOUSE,                    6,  5 ; 14
-	map_const ROUTE_7_UNDERGROUND_PATH_ENTRANCE,            6,  5 ; NEW
+	map_const ROUTE_7_UNDERGROUND_PATH_ENTRANCE,           13, 12 ; NEW
 	map_const SILPH_CO_ELEVATOR,                            4,  3 ; NEW
 	map_const SILPH_CO_RD,                                 15,  9 ; NEW
 	endgroup

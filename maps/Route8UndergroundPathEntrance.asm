@@ -7,9 +7,9 @@ Route8UndergroundPathEntrance_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  5,  7, ROUTE_8, 3
-	warp_event  6,  7, ROUTE_8, 3
-	warp_event  6,  3, UNDERGROUND_PATH_WEST_EAST, 2
+	warp_event 19,  8, ROUTE_8, 3
+	warp_event 20,  8, ROUTE_8, 3
+	warp_event 20,  3, UNDERGROUND_PATH_WEST_EAST, 2
 
 	def_coord_events
 

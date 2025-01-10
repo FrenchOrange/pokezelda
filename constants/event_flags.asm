@@ -1057,6 +1057,7 @@
 	const EVENT_BEAT_TEACHER_HILLARY
 	const EVENT_BEAT_TEACHER_SHIRLEY
 	const EVENT_BEAT_TEACHER_SANDRA
+	const EVENT_BEAT_TEACHER_NATALIE
 ; Doll Maniac
 	const EVENT_BEAT_DOLL_MANIAC_HUGO
 	const EVENT_BEAT_DOLL_MANIAC_ADRIAN
@@ -1096,7 +1097,7 @@
 	const EVENT_BEAT_SAGE_GAKU
 	const EVENT_BEAT_SAGE_MASA
 	const EVENT_BEAT_SAGE_KOJI
-; Unused: next 89 events
+; Unused: next 88 events
 
 	const_next 1600
 ; Sprite visibility flags

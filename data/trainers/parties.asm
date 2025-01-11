@@ -2339,6 +2339,11 @@ GuitaristGroup:
 	db 20, ZUBAT
 	db -1 ; end
 
+	; GUITARIST (3)
+	db "TREY@", TRAINERTYPE_NORMAL
+	db 30, GOLBAT
+	db -1 ; end
+
 HikerGroup:
 	; HIKER (1)
 	db "ANTHONY@", TRAINERTYPE_NORMAL
@@ -2596,6 +2601,11 @@ BurglarGroup:
 	; BURGLAR (4)
 	db "EVAN@", TRAINERTYPE_NORMAL
 	db 40, WEEZING
+	db -1 ; end
+
+	; BURGLAR (4)
+	db "WREN@", TRAINERTYPE_NORMAL
+	db 33, MEOWTH
 	db -1 ; end
 
 FirebreatherGroup:

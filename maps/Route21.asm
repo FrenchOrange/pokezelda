@@ -7,6 +7,7 @@
 	const ROUTE21_SWIMMER_GUY2
 	const ROUTE21_SWIMMER_GUY3
 	const ROUTE21_FISHER
+	const ROUTE21_PHARMACIST
 
 Route21_MapScripts:
 	def_scene_scripts

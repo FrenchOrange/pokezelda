@@ -463,6 +463,7 @@ KRIS EQU __trainer_class__
 	const CLYDE
 	const VINCENT
 	const ELI
+	const TREY
 
 	trainerclass HIKER ; 2c
 	const ANTHONY1
@@ -509,6 +510,7 @@ KRIS EQU __trainer_class__
 	const EDDIE
 	const COREY
 	const EVAN
+	const WREN
 
 	trainerclass FIREBREATHER ; 30
 	const OTIS

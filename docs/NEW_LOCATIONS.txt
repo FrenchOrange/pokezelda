@@ -81,7 +81,7 @@ Geodude
 Added as a potential Rock Smash encounter
 
 #077
-Geodude
+Ponyta
 Added to Route 17
 
 #081

@@ -21,7 +21,7 @@ The current version is **1.2.8**, with changes documented in [the changelog](doc
 If you encounter any issues while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
 
-A patch is available in the [corresponding folder](patch/pokezelda.ips), to be applied to a US Crystal rom. Alternatively, to build this project from source, pokezelda requires [RGBDS v0.5.2](https://github.com/gbdev/rgbds/releases/tag/v0.5.2).
+A patch is available in the **Release** tab, apply it to a US Crystal ROM. To build this project from source, pokezelda requires [RGBDS v0.5.2](https://github.com/gbdev/rgbds/releases/tag/v0.5.2).
 
 ## Credits
 Some HUGE thanks to:

@@ -243,3 +243,9 @@
 - Updated Gyarados' back sprite. Courtesy of SoupPotato.
 - Made the Underground Path maps more visually distinct, and added a few NPCs to them.
 - Implemented an item-trading sequence. To initiate it, talk to the little boy in Cherrygrove.
+
+
+1.2.8 
+* Official release version. 
+- The title screen is now finalized (Suicune code by the amazing Seasick).
+- Cleaned-up some stray vanilla bugs.

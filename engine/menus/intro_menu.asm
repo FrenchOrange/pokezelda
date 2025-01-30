@@ -1056,7 +1056,7 @@ RunTitleScreen:
 
 ScrollTitleScreenClouds:
 	ldh a, [hVBlankCounter]
-	and $7
+	and $1
 	ret nz
 	ld hl, wLYOverrides + $5f
 	ld a, [hl]

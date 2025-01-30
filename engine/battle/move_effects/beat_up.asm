@@ -37,9 +37,7 @@ BattleCommand_BeatUp:
 	ld a, [wCurBeatUpPartyMon]
 	ld c, a
 	ld a, [wCurBattleMon]
-	; BUG: this can desynchronize link battles
-	; Change "cp [hl]" to "cp c" to fix
-	cp [hl]
+	cp c
 	ld hl, wBattleMonStatus
 	jr z, .active_mon
 	ld a, MON_STATUS
@@ -198,11 +196,12 @@ BattleCommand_BeatUp:
 	jp SkipToBattleCommand
 
 BattleCommand_BeatUpFailText:
-; beatupfailtext
-
 	ld a, [wBeatUpHitAtLeastOnce]
 	and a
 	ret nz
+
+	inc a
+	ld [wAttackMissed], a
 
 	jp PrintButItFailed
 

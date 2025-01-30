@@ -575,7 +575,6 @@ DefenseDownHit:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	effectchance ; bug: duplicate effectchance shouldn't be here
 	defensedown
 	statdownmessage
 	endmove

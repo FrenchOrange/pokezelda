@@ -1,3 +1,0 @@
-
-- - Graphical Issues - -
-* The title screen is still a work in progress.

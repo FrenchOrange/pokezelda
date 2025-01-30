@@ -16,12 +16,12 @@ While the story and progression are unchanged, here's some new things you can ex
 (Do note that this rom hack is not compatible with base GSC.)*
 
 ## Version
-The current version is **1.2.7**, with changes documented in [the changelog](docs/CHANGELOG.txt). All known issues are listed [here](docs/KNOWN_ISSUES.txt).
+The current version is **1.2.8**, with changes documented in [the changelog](docs/CHANGELOG.txt).
 
-If you encounter any issues *not* listed in "Known Issues" while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
+If you encounter any issues while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
 
-To compile this rom hack, pokezelda requires [RGBDS v0.5.2](https://github.com/gbdev/rgbds/releases/tag/v0.5.2).
+A patch is available in [corresponding folder](patch/pokezelda.bps), to be applied to a US Crystal rom. Alternatively, to build this project from source, pokezelda requires [RGBDS v0.5.2](https://github.com/gbdev/rgbds/releases/tag/v0.5.2).
 
 ## Credits
 Some HUGE thanks to:

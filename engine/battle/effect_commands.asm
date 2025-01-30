@@ -1875,9 +1875,11 @@ BattleCommand_EffectChance:
 	ld hl, wEnemyMoveStruct + MOVE_CHANCE
 .got_move_chance
 
-	; BUG: 1/256 chance to fail even for a 100% effect chance,
-	; since carry is not set if BattleRandom == [hl] == 255
-	call BattleRandom
+	ld a, [hl]
+	sub 100 percent
+	; If chance was 100%, RNG won't be called (carry not set)
+	; Thus chance will be subtracted from 0, guaranteeing a carry
+	call c, BattleRandom
 	cp [hl]
 	pop hl
 	ret c
@@ -5368,8 +5370,7 @@ BattleCommand_EndLoop:
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	res SUBSTATUS_IN_LOOP, [hl]
-	call BattleCommand_BeatUpFailText
-	jp EndMoveEffect
+	ret
 
 .not_triple_kick
 	call BattleRandom
@@ -6687,7 +6688,12 @@ INCLUDE "engine/battle/move_effects/future_sight.asm"
 INCLUDE "engine/battle/move_effects/thunder.asm"
 
 CheckHiddenOpponent:
-; BUG: This routine is completely redundant and introduces a bug, since BattleCommand_CheckHit does these checks properly.
+	ld a, BATTLE_VARS_SUBSTATUS5_OPP
+	call GetBattleVar
+	cpl
+	and 1 << SUBSTATUS_LOCK_ON
+	ret z
+
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND

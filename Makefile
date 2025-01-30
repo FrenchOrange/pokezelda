@@ -229,7 +229,6 @@ gfx/sgb/sgb_border.sgb.tilemap: gfx/sgb/sgb_border.bin ; tr < $< -d '\000' > $@
 
 ### Misc from Gold/Silver
 gfx/title/logo_bottom.2bpp: tools/gfx += --trim-whitespace
-gfx/title/suicune.2bpp: tools/gfx += --interleave --png=$<
 
 ### Catch-all graphics rules
 

@@ -49,7 +49,7 @@ TitleScreen:
 	ld [hli], a
 	ld [hl], a
 	ld hl, rLCDC
-	set rLCDC_SPRITE_SIZE, [hl]
+	res rLCDC_SPRITE_SIZE, [hl] ; 8x8
 	call EnableLCD
 
 ; Reset timing variables
@@ -60,7 +60,7 @@ TitleScreen:
 	ld [hli], a ; wTitleScreenTimer
 	ld [hl], a  ; wTitleScreenTimer + 1
 
-	depixel 14, 11
+	depixel 11, 7
 	ld a, SPRITE_ANIM_INDEX_GS_INTRO_HO_OH_LUGIA
 	call InitSpriteAnimStruct
 	ld hl, wSpriteAnim1

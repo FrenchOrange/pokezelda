@@ -65,8 +65,8 @@ ToddDepartmentStoreBargainSaleText:
 	line "STORE's bargain"
 	cont "sale is on now!"
 
-	para "Get the best room"
-	line "decorations!"
+	para "Want it cheap?"
+	line "Want it lots?"
 
 	para "Don't miss this"
 	line "GOLDENROD chance!"

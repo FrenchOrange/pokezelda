@@ -249,3 +249,4 @@
 * Official release version. 
 - The title screen is now finalized (Suicune code by the amazing Seasick).
 - Cleaned-up some stray vanilla bugs.
+- Updated Misdreavus' back sprite. Courtesy of SoupPotato.

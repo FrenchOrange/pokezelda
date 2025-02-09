@@ -111,7 +111,7 @@ WarpToSaffronScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp SAFFRON_CITY, 20, 22
+	warp SAFFRON_CITY, 20, 30
 	end
 
 SilphCoRDScientist2Script:

@@ -249,4 +249,5 @@
 * Official release version. 
 - The title screen is now finalized (Suicune code by the amazing Seasick).
 - Cleaned-up some stray vanilla bugs.
+- Fixed Saffron City spawn points.
 - Updated Misdreavus' back sprite. Courtesy of SoupPotato.

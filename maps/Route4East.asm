@@ -7,18 +7,19 @@
 	const ROUTE4EAST_COOLTRAINERM
 	const ROUTE4EAST_OFFICER
 	const ROUTE4EAST_BLACKBELT
+	const ROUTE4EAST_ROCK
 
 Route4East_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_TILES, .BlackbeltBoulderBlocks
+	callback MAPCALLBACK_TILES, .CaveEntrance
 
-.BlackbeltBoulderBlocks:
-	checkevent EVENT_GAVE_HARDTACK
-	iftrue .Done
-	changeblock 18, 2, $41 ; boulder
-.Done:
+.CaveEntrance:
+	readvar VAR_BADGES
+	ifequal NUM_BADGES, .CaveOpen
+	changeblock 72, 2, $90 ; cave
+.CaveOpen:
 	endcallback
 
 TrainerBirdKeeperHank:
@@ -195,8 +196,7 @@ Route4EastBlackbeltScript:
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 80
-	changeblock 18, 2, $0a ; grass
-	reloadmappart
+	disappear ROUTE4EAST_ROCK
 	pause 30
 	faceplayer
 	opentext
@@ -265,8 +265,8 @@ Route4EastBlackbelt_NoItem:
 	cont "work on my focus."
 
 	para "But focus is hard"
-	line "on an empy stomach"
-	cont "you know…"
+	line "on an empty"
+	cont "stomach you know…"
 	done
 
 Route4EastBlackbelt_HasItem1:
@@ -307,6 +307,19 @@ Route4EastBlackbelt_GetItem:
 	line "DARK SHELL."
 	done
 
+Route4EastRock:
+	opentext
+	writetext Route4EastRockText
+	waitbutton
+	closetext
+	end
+
+Route4EastRockText:
+	text "That rock looks"
+	line "sturdier than what"
+	cont "you're used to."
+	done
+
 Route4East_MapEvents:
 	db 0, 0 ; filler
 
@@ -328,3 +341,4 @@ Route4East_MapEvents:
 	object_event 71,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCaveNPCScript, -1
 	object_event  2,  6, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route4EastOfficerScript, EVENT_VERMILION_CITY_SNORLAX
 	object_event 19,  3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4EastBlackbeltScript, EVENT_GAVE_HARDTACK
+	object_event 18,  3, SPRITE_ROCK, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route4EastRock, EVENT_GAVE_HARDTACK

@@ -41,7 +41,6 @@ SpriteMons:
 	db GROWLITHE
 	db MACHOKE
 	db ABRA
-	db GYARADOS
 	db PSYDUCK
 	db NIDORINO
 	db PERSIAN

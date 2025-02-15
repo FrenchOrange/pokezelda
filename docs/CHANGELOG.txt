@@ -250,6 +250,8 @@
 - The title screen is now finalized (Suicune code by the amazing Seasick).
 - Cleaned-up some stray vanilla bugs.
 - Fixed Saffron City spawn points.
+- Fixed outdated dialogue in Vermilion Gym.
 - Tweaked the Blackbelt scene on Route 4 to fix a changeblock oversight in Cerulean.
 - Updated Misdreavus' back sprite. Courtesy of SoupPotato.
 - Updated Blue's overworld sprite.
+- Updated Gyarados' menu icon, and added made the shiny one in the Lake of Rage wander.

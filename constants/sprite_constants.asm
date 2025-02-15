@@ -105,7 +105,8 @@
  	const SPRITE_KRIS_RUN ; 66
  	const SPRITE_ROCKET_SLOWPOKE ; 67
 	const SPRITE_BEEDRILL ; 68
-	const SPRITE_BLANK ; 69
+	const SPRITE_SURF_GYARADOS ; 69
+	const SPRITE_BLANK ; 6a
 NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
@@ -151,7 +152,6 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_GROWLITHE
 	const SPRITE_MACHOKE
 	const SPRITE_ABRA
-	const SPRITE_GYARADOS
 	const SPRITE_PSYDUCK
 	const SPRITE_NIDORINO
 	const SPRITE_PERSIAN

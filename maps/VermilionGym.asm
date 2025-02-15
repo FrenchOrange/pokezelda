@@ -373,11 +373,12 @@ GuitaristVincentBeatenText:
 	done
 
 GuitaristVincentAfterBattleText:
-	text "If the GYM's traps"
-	line "were working, you"
+	text "LT.SURGE is no"
+	line "coward! It takes"
+	cont "brawn AND brain"
 
-	para "would have been"
-	line "toast…"
+	para "to solve the traps"
+	line "and get to him!"
 	done
 
 JugglerHortonSeenText:

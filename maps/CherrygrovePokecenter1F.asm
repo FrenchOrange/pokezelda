@@ -58,9 +58,9 @@ CherrygrovePokecenter1FTeacherText:
 	done
 
 CherrygrovePokecenter1FTeacherText_CommCenterOpen:
-	text "The COMMUNICATION"
-	line "CENTER upstairs"
-	cont "was just built."
+	text "The CABLE CLUB"
+	line "upstairs was built"
+	cont "very recently."
 
 	para "I traded #MON"
 	line "there already!"

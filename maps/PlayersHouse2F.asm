@@ -144,6 +144,9 @@ DebugSign:
 	setflag ENGINE_VOLCANOBADGE
 	setflag ENGINE_EARTHBADGE
 	giveitem BICYCLE
+	giveitem OLD_ROD
+	giveitem GOOD_ROD
+	giveitem SUPER_ROD
 	giveitem MASTER_BALL, 99
 	giveitem RARE_CANDY, 99
 	giveitem MAX_REPEL, 99

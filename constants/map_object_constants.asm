@@ -36,6 +36,7 @@ OBJECT_RANGE               rb ; 20
                            rb_skip 7
 OBJECT_LENGTH EQU _RS
 NUM_OBJECT_STRUCTS EQU 13 ; see wObjectStructs
+DEF FIRST_VRAM1_OBJECT_STRUCT EQU 10
 
 ; object_struct OBJECT_FACING values
 OW_DOWN  EQU DOWN  << 2

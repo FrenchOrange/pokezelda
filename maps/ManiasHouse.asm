@@ -30,7 +30,7 @@ ManiaScript:
 
 .alreadyhaveshuckie
 	checkflag ENGINE_GOT_SHUCKIE_TODAY
-	iftrue .returnshuckie ; change to false after testing!
+	iffalse .returnshuckie
 	writetext ManiaText_TakeCareOfShuckle
 	waitbutton
 	closetext
@@ -56,8 +56,7 @@ ManiaScript:
 	ifequal SHUCKIE_WRONG_MON, .wrong
 	ifequal SHUCKIE_REFUSED, .refused
 	ifequal SHUCKIE_HAPPY, .superhappy
-	ifequal SHUCKIE_FAINTED, .default_postevent
-	ifequal SHUCKIE_LAST_MON, .nothingleft
+	ifequal SHUCKIE_FAINTED, .nothingleft
 	; SHUCKIE_RETURNED
 	writetext ManiaText_ThankYou
 	waitbutton

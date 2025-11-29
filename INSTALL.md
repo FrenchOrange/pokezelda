@@ -146,7 +146,7 @@ git clone https://github.com/FrenchOrange/pokezelda
 cd pokezelda
 ```
 
-To build **pokezelda.gbc**:
+To build **crystalawakening.gbc**:
 
 ```bash
 make

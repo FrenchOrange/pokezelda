@@ -1,4 +1,4 @@
-roms := pokezelda.gbc pokezelda_debug.gbc
+roms := crystalawakening.gbc crystalawakening_debug.gbc
 
 rom_obj := \
 audio.o \
@@ -18,8 +18,8 @@ gfx/sprites.o \
 gfx/tilesets.o \
 lib/mobile/main.o
 
-pokezelda_obj         := $(rom_obj:.o=.o)
-pokezelda_debug_obj   := $(rom_obj:.o=_debug.o)
+crystalawakening_obj         := $(rom_obj:.o=.o)
+crystalawakening_debug_obj   := $(rom_obj:.o=_debug.o)
 
 
 ### Build tools
@@ -46,15 +46,15 @@ RGBLINK ?= $(RGBDS)rgblink
 .SECONDARY:
 
 all: crystal
-crystal:         pokezelda.gbc
-crystal_debug:   pokezelda_debug.gbc
+crystal:         crystalawakening.gbc
+crystal_debug:   crystalawakening_debug.gbc
 
 clean: tidy
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" -o -name "*.sgb.tilemap" \) -delete
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 
 tidy:
-	$(RM) $(roms) $(pokezelda_obj) $(pokezelda_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
+	$(RM) $(roms) $(crystalawakening_obj) $(crystalawakening_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -70,8 +70,8 @@ ifeq ($(DEBUG),1)
 RGBASMFLAGS += -E
 endif
 
-$(pokezelda_obj):         RGBASMFLAGS +=
-$(pokezelda_debug_obj):   RGBASMFLAGS += -D _DEBUG
+$(crystalawakening_obj):         RGBASMFLAGS +=
+$(crystalawakening_debug_obj):   RGBASMFLAGS += -D _DEBUG
 
 rgbdscheck.o: rgbdscheck.asm
 	$(RGBASM) -o $@ $<
@@ -91,17 +91,17 @@ ifeq (,$(filter clean tidy tools,$(MAKECMDGOALS)))
 $(info $(shell $(MAKE) -C tools))
 
 # Dependencies for shared objects objects
-$(foreach obj, $(pokezelda_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
-$(foreach obj, $(pokezelda_debug_obj), $(eval $(call DEP,$(obj),$(obj:_debug.o=.asm))))
+$(foreach obj, $(crystalawakening_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(crystalawakening_debug_obj), $(eval $(call DEP,$(obj),$(obj:_debug.o=.asm))))
 
 endif
 
 
-pokezelda_opt         = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-pokezelda_debug_opt   = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+crystalawakening_opt         = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+crystalawakening_debug_opt   = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
 
-pokezelda_base         = us
-pokezelda_debug_base   = dbg
+crystalawakening_base         = us
+crystalawakening_debug_base   = dbg
 
 %.gbc: $$(%_obj) layout.link
 	$(RGBLINK) -n $*.sym -m $*.map -l layout.link -o $@ $(filter %.o,$^)

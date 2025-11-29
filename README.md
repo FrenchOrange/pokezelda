@@ -8,7 +8,7 @@ While story progression is unchanged, here's some new things you can expect when
 * Tweaked trainer teams, namely harder rosters for important trainers, such as Gym Leaders.
 * An expanded Kanto, with restored dungeons, more trainers, and more items.
 * More sensible Pokémon distribution (as seen [here](docs/NEW_LOCATIONS.txt)), and more generous HM compatibility.
-* Every Pokémon available on one save file.
+* Every Pokémon available on one save file, and all room decorations can be bought or are gifted to you.
 * Fixed off-model Pokémon sprites. Palettes were also improved for a good amount of Pokémon.
 * Some QOL features, like "Running Shoes" (works by holding down B), and an automatic Repel reuse message.
 * Fixed [bugs and glitches](https://github.com/pret/pokecrystal/blob/master/docs/bugs_and_glitches.md).
@@ -22,7 +22,7 @@ The current version is **1.2.8**, with changes documented in [the changelog](doc
 If you encounter any issues while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
 
-A patch is available in the **Release** tab, apply it to a US Crystal ROM. To build this project from source, pokezelda requires [RGBDS v0.5.2](https://github.com/gbdev/rgbds/releases/tag/v0.5.2).
+A patch is available in the **Release** tab, apply it to a US Crystal ROM. To build this project from source, Crystal Awakening requires [RGBDS v0.5.2](https://github.com/gbdev/rgbds/releases/tag/v0.5.2).
 
 ## Credits
 Some HUGE thanks to:

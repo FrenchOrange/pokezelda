@@ -1,13 +1,14 @@
-# Pokémon Crystal - Zelda Edition
+# Pokémon Crystal Awakening
 
-A tileset overhaul project based on [the Pokémon Crystal disassembly](https://github.com/pret/pokecrystal). The aim is to give every area the look of a GBC Zelda game, namely styled after Link's Awakening, with cues taken from the Oracle games.
+Crystal Awakening is a tileset overhaul project based on [the Pokémon Crystal disassembly](https://github.com/pret/pokecrystal). The aim is to give every area the look of a GBC Zelda game, namely styled after Link's Awakening, with cues taken from the Oracle games.
 
 ## Changes
-While the story and progression are unchanged, here's some new things you can expect when playing this hack:
+While story progression is unchanged, here's some new things you can expect when playing this hack:
 * Overhauled overworld and interior graphics, alongside some UI elements.
 * Tweaked trainer teams, namely harder rosters for important trainers, such as Gym Leaders.
 * An expanded Kanto, with restored dungeons, more trainers, and more items.
 * More sensible Pokémon distribution (as seen [here](docs/NEW_LOCATIONS.txt)), and more generous HM compatibility.
+* Every Pokémon available on one save file.
 * Fixed off-model Pokémon sprites. Palettes were also improved for a good amount of Pokémon.
 * Some QOL features, like "Running Shoes" (works by holding down B), and an automatic Repel reuse message.
 * Fixed [bugs and glitches](https://github.com/pret/pokecrystal/blob/master/docs/bugs_and_glitches.md).
@@ -32,6 +33,7 @@ Some HUGE thanks to:
 * The artists from Pokémon Showdown and Pokémon Crystal Clear for a few Pokémon icons.
 * SoupPotato, creator of [Sourcrystal](https://github.com/SoupPotato/Sourcrystal), for some incredible new Pokémon sprites.
 * Artist [Dewndeym](https://twitter.com/dewndeym) from the Johto Redrawn project, for their amazing revamped Ilex Shrine.
+* The [fellowship-of-the-roms](https://github.com/fellowship-of-the-roms/CrystalShireEngine) team for their dynamic overworld sprite system.
 * My friends Idain and Seasick, for graphical help, as well as general troubleshooting. I truly wouldn't have been able to finish this hack without them.
 * The original devs and artists over at Nintendo/Capcom who worked on Link's Awakening and the Oracle games.
 

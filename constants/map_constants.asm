@@ -223,7 +223,6 @@ ENDM
 	map_const ROUTE_25,                                    30, 10 ; 14
 	map_const CERULEAN_CITY,                               20, 18 ; 15
 	map_const CERULEAN_BIKE_SHOP,                           6,  5 ; NEW
-	map_const ROUTE_5,                                     14, 18 ; 16
 	endgroup
 
 	newgroup AZALEA                                               ;  8
@@ -488,8 +487,9 @@ ENDM
 	endgroup
 
 	newgroup SAFFRON                                              ; 25
+	map_const ROUTE_5,                                     14, 18 ;  1
 	map_const ROUTE_6,                                     15, 18 ;  1
-	map_const SAFFRON_CITY,                                23, 22 ;  2
+	map_const SAFFRON_CITY,                                23, 18 ;  2
 	map_const FIGHTING_DOJO,                                7,  7 ;  3
 	map_const SAFFRON_GYM,                                 12, 10 ;  4
 	map_const SAFFRON_MART,                                 8,  5 ;  5

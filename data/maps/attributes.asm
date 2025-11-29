@@ -291,7 +291,7 @@ ENDM
 
 	map_attributes Route7, ROUTE_7, $0f, WEST | EAST
 	connection west, CeladonCity, CELADON_CITY, -1
-	connection east, SaffronCity, SAFFRON_CITY, -4
+	connection east, SaffronCity, SAFFRON_CITY, 0
 
 	map_attributes Route15, ROUTE_15, $0f, WEST | EAST
 	connection west, FuchsiaCity, FUCHSIA_CITY, -5
@@ -327,13 +327,15 @@ ENDM
 	connection north, SaffronCity, SAFFRON_CITY, -4
 	connection south, VermilionCity, VERMILION_CITY, -3
 
-	map_attributes SaffronCity, SAFFRON_CITY, $0f, SOUTH | WEST | EAST
+	map_attributes SaffronCity, SAFFRON_CITY, $0f, NORTH | SOUTH | WEST | EAST
+	connection north, Route5, ROUTE_5, 4
 	connection south, Route6, ROUTE_6, 4
-	connection west, Route7, ROUTE_7, 4
-	connection east, Route8, ROUTE_8, 8
+	connection west, Route7, ROUTE_7, 0
+	connection east, Route8, ROUTE_8, 4
 
-	map_attributes Route5, ROUTE_5, $0f, NORTH
+	map_attributes Route5, ROUTE_5, $0f, NORTH | SOUTH
 	connection north, CeruleanCity, CERULEAN_CITY, -3
+	connection south, SaffronCity, SAFFRON_CITY, -4
 
 	map_attributes CeruleanCity, CERULEAN_CITY, $0f, NORTH | SOUTH | WEST | EAST
 	connection north, Route24, ROUTE_24, 5
@@ -365,7 +367,7 @@ ENDM
 	connection east, CeruleanCity, CERULEAN_CITY, -4
 
 	map_attributes Route8, ROUTE_8, $2c, WEST | EAST
-	connection west, SaffronCity, SAFFRON_CITY, -8
+	connection west, SaffronCity, SAFFRON_CITY, -4
 	connection east, LavenderTown, LAVENDER_TOWN, 0
 
 	map_attributes Route10, ROUTE_10, $2c, SOUTH | WEST

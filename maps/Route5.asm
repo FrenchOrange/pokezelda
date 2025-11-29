@@ -45,6 +45,7 @@ Route5_MapEvents:
 	warp_event 13, 29, ROUTE_5_SAFFRON_GATE, 1
 	warp_event 14, 29, ROUTE_5_SAFFRON_GATE, 2
 	warp_event 14, 21, ROUTE_5_CLEANSE_TAG_HOUSE, 1
+	warp_event 14, 33, ROUTE_5_SAFFRON_GATE, 3
 
 	def_coord_events
 

@@ -14,7 +14,7 @@ While story progression is unchanged, here's some new things you can expect when
 * Fixed [bugs and glitches](https://github.com/pret/pokecrystal/blob/master/docs/bugs_and_glitches.md).
 * The Celebi event, now restored! To get it, simply head to Goldenrod's Pokémon Center after beating the League.
 
-(Do note that this rom hack is not compatible with base GSC.)*
+(Do note that link compatiblity cannot be ensured between this rom hack and the base games.)*
 
 ## Version
 The current version is **1.2.8**, with changes documented in [the changelog](docs/CHANGELOG.txt).

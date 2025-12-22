@@ -1,4 +1,7 @@
 	object_const_def
+	const CERULEANCAVE1F_POKE_BALL1
+	const CERULEANCAVE1F_POKE_BALL2
+	const CERULEANCAVE1F_POKE_BALL3
 
 CeruleanCave2F_MapScripts:
 	def_scene_scripts

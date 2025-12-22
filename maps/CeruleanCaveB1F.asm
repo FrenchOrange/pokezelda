@@ -1,4 +1,5 @@
 	object_const_def
+	const CERULEANCAVEB1F_POKE_BALL
 	const CERULEANCAVEB1F_MEWTWO
 
 CeruleanCaveB1F_MapScripts:

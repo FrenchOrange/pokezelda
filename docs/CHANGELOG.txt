@@ -249,7 +249,7 @@
 * Official release version. 
 - The title screen is now finalized (Suicune code by the amazing Seasick).
 - Cleaned-up some stray vanilla bugs (like Mania's incorrect dialogue set).
-- Fixed Mewtwo object not being set to disappear.
+- Fixed a few issues with the Kanto legendary encounters.
 - Fixed Saffron City spawn points.
 - Fixed outdated dialogue in Vermilion Gym.
 - Fixed Cubone being able to learn Fly instead of Cut (oops!)

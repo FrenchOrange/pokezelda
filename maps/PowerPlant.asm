@@ -39,7 +39,7 @@ PowerPlant_MapScripts:
 	endcallback
 
 .Zapdos:
-	checkevent EVENT_POWER_PLANT_ZAPDOS
+	checkevent EVENT_POWER_PLANT_ZAPDOS_AVAILABLE
 	iftrue .NoAppear
 	readvar VAR_BADGES
 	ifequal NUM_BADGES, .Appear
@@ -61,7 +61,7 @@ ZapdosScript:
 	loadwildmon ZAPDOS, 50
 	startbattle
 	disappear POWERPLANT_ZAPDOS
-	setevent EVENT_POWER_PLANT_ZAPDOS
+	setevent EVENT_POWER_PLANT_ZAPDOS_AVAILABLE
 	reloadmapafterbattle
 	end
 

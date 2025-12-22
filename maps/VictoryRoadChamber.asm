@@ -8,7 +8,7 @@ VictoryRoadChamber_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Moltres
 
 .Moltres:
-	checkevent EVENT_VICTORY_ROAD_CHAMBER_MOLTRES
+	checkevent EVENT_VICTORY_ROAD_CHAMBER_MOLTRES_AVAILABLE
 	iftrue .NoAppear
 	readvar VAR_BADGES
 	ifequal NUM_BADGES, .Appear
@@ -30,7 +30,7 @@ MoltresScript:
 	loadwildmon MOLTRES, 50
 	startbattle
 	disappear VICTORYROADCHAMBER_MOLTRES
-	setevent EVENT_VICTORY_ROAD_CHAMBER_MOLTRES
+	setevent EVENT_VICTORY_ROAD_CHAMBER_MOLTRES_AVAILABLE
 	reloadmapafterbattle
 	end
 

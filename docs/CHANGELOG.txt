@@ -253,8 +253,9 @@
 - Fixed Saffron City spawn points.
 - Fixed outdated dialogue in Vermilion Gym.
 - Fixed Cubone being able to learn Fly instead of Cut (oops!)
+- Fixed Grimer not appearing when surfing on Route 34.
 - Tweaked the Blackbelt scene on Route 4 to fix a changeblock oversight in Cerulean.
-- Updated a good handful of Johto Pokémon back sprites.
+- Updated a good handful of Pokémon back sprites.
 - Updated Misdreavus and Granbull's back sprites. Courtesy of SoupPotato.
 - Updated Blue's overworld sprite.
 - Updated Gyarados' menu icon, and made the shiny one in the Lake of Rage wander.

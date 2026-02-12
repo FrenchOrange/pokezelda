@@ -957,23 +957,23 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_17
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
+	db 30, FEAROW
 	db 29, PONYTA
-	db 30, PONYTA
 	db 31, GRIMER
 	db 32, FEAROW
 	db 33, GRIMER
-	db 33, FEAROW
+	db 33, GRIMER
 	db 34, MUK
 	; day
+	db 30, FEAROW
+	db 29, SLUGMA
 	db 29, PONYTA
-	db 30, PONYTA
-	db 31, GRIMER
 	db 32, FEAROW
+	db 32, SLUGMA
 	db 33, GRIMER
-	db 33, FEAROW
 	db 34, MUK
 	; nite
-	db 30, PONYTA
+	db 30, SLUGMA
 	db 29, GRIMER
 	db 31, GRIMER
 	db 32, GRIMER

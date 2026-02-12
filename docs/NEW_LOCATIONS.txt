@@ -33,6 +33,16 @@ Raticate
 Removed from Route 38/39 (Day/Morn)
 Removed from Mt.Mortar 2F/B1F
 
+#029
+Nidoran♀
+Made less frequent (National Park)
+Added to Route 2
+
+032
+Nidoran♂
+Made less frequent (National Park)
+Added to Route 2
+
 #037
 Vulpix
 Added to Burned Tower 1F and Route 8
@@ -43,9 +53,7 @@ Removed from Route 34
 
 #041
 Zubat
-Made more common (Burned Tower 1F, Nite)
-Added to Sprout Tower and Tin Tower (Nite)
-Removed from a handful of places
+Made less frequent
 
 #042
 Golbat
@@ -79,6 +87,10 @@ Removed from Route 34/35 (Nite)
 #074
 Geodude
 Added as a potential Rock Smash encounter
+
+#075
+Graveler
+Made less frequent (Route 45)
 
 #077
 Ponyta
@@ -115,11 +127,11 @@ Removed from Route 9/10
 
 #108
 Lickitung
-Made less frequent (Route 44, Morn/Day)
+Made less frequent (Route 44)
 
 #109
 Koffing
-Added to Route 7/8 (Day, replaces Kadabra)
+Added to Route 7/8 (Day, replaces Abra/Kadabra)
 
 #110
 Weezing
@@ -139,7 +151,7 @@ Added to Whirl Island (Nite)
 
 #121
 Mr.Mime
-Added to Route 11
+Added to Route 11 (Morn/Day)
 
 #125
 Electabuzz
@@ -188,10 +200,6 @@ Mew
 #161
 Sentret
 Added to Route 44 (Morn/Day)
-
-#163
-Hoothoot
-Added to Route 38/39 (Nite)
 
 #165
 Ledyba
@@ -260,6 +268,10 @@ Made more common (Dark Cave)
 Gligar
 Made more common (Route 45 Nite)
 
+#209
+Snubbull
+Added to Route 8 (Day).
+
 #211
 Qwilfish
 Added to Route 32 (Surf)
@@ -279,6 +291,7 @@ Made more common (Dark Cave)
 #218
 Slugma
 Added as a potential Rock Smash encounter
+Added to Route 17 (Nite)
 
 #221
 Piloswine
@@ -294,7 +307,7 @@ Added to Ice Path 1F (Morn/Day) and made more common (Nite)
 
 #228
 Houndour
-Added to Route 34/35 (Nite, replaces Abra), Route 39 (Nite, replaces Magnemite), and Route 42
+Added to Route 34/35 (Nite, replaces Abra), Route 39 (Nite, replaces Magnemite), and Route 42 (Nite)
 
 #232
 Donphan

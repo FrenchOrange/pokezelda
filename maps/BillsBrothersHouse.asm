@@ -23,6 +23,10 @@ BillsBrothersHouseYoungsterText:
 	text "I saw these weird,"
 	line "slow #MON on"
 	cont "CYCLING ROAD."
+
+	para "It's no real wonder"
+	line "what they crawled"
+	cont "crawled out of!"
 	done
 
 BillsBrothersHouse_MapEvents:

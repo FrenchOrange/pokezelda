@@ -19,6 +19,8 @@ While story progression is unchanged, here's some new things you can expect when
 ## Version
 The current version is **1.2.8**, with changes documented in [the changelog](docs/CHANGELOG.txt).
 
+Bugs I'm aware of include incorrect animations for some moves (like Splash), and a question mark appearing in lieu of a space in Pokémon nicknames.
+
 If you encounter any issues while playing, feel free to open an **Issue** or a **Pull Request**, and I'll definitely give it a look. Hope you guys will have fun playing Crystal through a different lens!
 
 
